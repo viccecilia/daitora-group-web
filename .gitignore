@@ -1,0 +1,33 @@
+# Local/system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Tooling and temporary artifacts
+.playwright-cli/
+screenshots/
+daitora-group-review-sample/
+daitora-group-review-sample.zip
+
+# Internal/source working files
+media_audit/
+daitora_ppt_extract/
+GEO_项目矩阵进度表.html
+GEO_项目进度表.md
+crop_logo.py
+daitora_ppt_extract_script.py
+
+# Large video libraries: keep only the production Hero video used by index.html
+assets/videos/**
+!assets/videos/
+!assets/videos/selected/
+!assets/videos/selected/846e659263_pexels_nara_warm-family-nature_japanese-deer_31387243_1920x1080.mp4
+
+# Archives and generated packages
+*.zip
+
+# Secrets and local environment files
+.env
+.env.*
+*.pem
+*.key
