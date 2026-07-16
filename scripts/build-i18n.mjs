@@ -11,6 +11,7 @@ const langs = {
   'zh-TW': { dir: 'zh-tw', html: 'zh-TW', label: '繁體中文', name: '繁體中文' }
 };
 const baseUrl = 'https://daitora-jp.com';
+const ogImagePath = '/assets/images/og/daitora-group-og.jpg';
 
 const meta = {
   'index.html': ['大寅グループ | 大阪・京都のハイヤー・タクシー・中古車販売','大阪・京都を拠点に、ハイヤー、タクシー、中古車販売を展開するDaitora Groupの公式サイトです。'],
@@ -136,6 +137,16 @@ for (const row of rows) {
   dict['zh-TW'].set(row[0], row[4]);
 }
 
+const contentPath = path.join(ROOT, 'scripts', 'i18n-content.json');
+if (fs.existsSync(contentPath)) {
+  const content = JSON.parse(fs.readFileSync(contentPath, 'utf8'));
+  for (const [source, translations] of Object.entries(content)) {
+    for (const lang of ['zh-CN', 'en', 'ko', 'zh-TW']) {
+      if (translations?.[lang]) dict[lang].set(source, translations[lang]);
+    }
+  }
+}
+
 const pageNames = {
   'index.html': ['大寅グループ','Daitora Group','Daitora Group','Daitora Group','Daitora Group'],
   'about.html': ['大寅について','关于大寅','About Daitora','대도라 소개','關於大寅'],
@@ -188,8 +199,17 @@ function seoBlock(lang, page){
     'zh-TW': `Daitora Group 官方網站：${name}。提供關西地區機場接送、包車、計程車、中古車銷售與車輛購買諮詢。`
   };
   const title = lang === 'ja' ? meta[page]?.[0] : `${name} | Daitora Group`;
-  const canonical = pageUrl(page, lang);
+  const canonical = page === 'company.html' ? `${pageUrl('about.html', lang)}#company-profile` : pageUrl(page, lang);
+  if (page === 'company.html') {
+    return `<!-- i18n:head -->
+  <meta name="robots" content="noindex,follow">
+  <meta name="description" content="${escapeAttr(descriptions[lang])}">
+  <link rel="canonical" href="${canonical}">
+  <link rel="icon" href="${lang === 'ja' ? 'favicon.ico' : '../favicon.ico'}">
+  <!-- /i18n:head -->`;
+  }
   const hrefs = Object.keys(langs).map((l) => `  <link rel="alternate" hreflang="${langs[l].html}" href="${pageUrl(page,l)}">`).join('\n');
+  const absoluteOgImage = `${baseUrl}${ogImagePath}`;
   return `<!-- i18n:head -->
   <meta name="description" content="${escapeAttr(descriptions[lang])}">
   <link rel="canonical" href="${canonical}">
@@ -201,6 +221,11 @@ ${hrefs}
   <meta property="og:description" content="${escapeAttr(descriptions[lang])}">
   <meta property="og:url" content="${canonical}">
   <meta property="og:locale" content="${lang === 'ja' ? 'ja_JP' : lang === 'en' ? 'en_US' : lang === 'ko' ? 'ko_KR' : lang === 'zh-TW' ? 'zh_TW' : 'zh_CN'}">
+  <meta property="og:image" content="${absoluteOgImage}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeAttr(title)}">
+  <meta name="twitter:description" content="${escapeAttr(descriptions[lang])}">
+  <meta name="twitter:image" content="${absoluteOgImage}">
   <link rel="icon" href="${lang === 'ja' ? 'favicon.ico' : '../favicon.ico'}">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Daitora Group","url":"${baseUrl}/","telephone":"+81-6-6710-9861","address":{"@type":"PostalAddress","addressCountry":"JP","addressRegion":"Osaka","addressLocality":"Osaka"}}</script>
   <!-- /i18n:head -->`;
@@ -214,10 +239,39 @@ function injectHead(html, lang, page){
   html = html.replace(/(<meta name="viewport"[^>]*>)/, `$1\n  ${seoBlock(lang,page)}`);
   return html;
 }
+function preserveWhitespace(original, translated){
+  const leading = original.match(/^\s*/)?.[0] || '';
+  const trailing = original.match(/\s*$/)?.[0] || '';
+  return `${leading}${translated}${trailing}`;
+}
+function translateTextNode(text, lang){
+  if (lang === 'ja') return text;
+  const trimmed = text.trim();
+  if (!trimmed) return text;
+  const translated = dict[lang].get(trimmed);
+  if (translated) return preserveWhitespace(text, translated);
+  return text;
+}
+function translateSafeAttributes(tag, lang){
+  if (lang === 'ja') return tag;
+  return tag.replace(/\s(placeholder|aria-label|title|alt|value)="([^"]*)"/g, (match, attr, value) => {
+    const translated = dict[lang].get(value.trim());
+    return translated ? ` ${attr}="${escapeAttr(translated)}"` : match;
+  });
+}
 function translate(html, lang){
   if (lang === 'ja') return html;
-  const entries = [...dict[lang].entries()].sort((a,b)=>b[0].length-a[0].length);
-  for (const [from,to] of entries) html = html.split(from).join(to);
+  const protectedBlocks = [];
+  html = html.replace(/<(script|style|svg)\b[\s\S]*?<\/\1>/gi, (block) => {
+    const token = `@@DAITORA_PROTECTED_${protectedBlocks.length}@@`;
+    protectedBlocks.push(block);
+    return token;
+  });
+  const parts = html.split(/(<[^>]+>)/g);
+  html = parts.map((part) => part.startsWith('<') ? translateSafeAttributes(part, lang) : translateTextNode(part, lang)).join('');
+  protectedBlocks.forEach((block, index) => {
+    html = html.replace(`@@DAITORA_PROTECTED_${index}@@`, block);
+  });
   return html;
 }
 function adjustPaths(html, lang){
@@ -239,6 +293,28 @@ function setFormLanguage(html, lang){
   }
   return html;
 }
+function localizedPath(page, lang){
+  if (lang === 'ja') return page;
+  return page;
+}
+function fixCompanyRedirect(html, lang){
+  if (!html.includes('Company profile has moved')) return html;
+  const target = 'about.html#company-profile';
+  const messages = {
+    ja: ['会社概要は移動しました。','自動的に移動しない場合は、下記のボタンから会社概要をご覧ください。','会社概要を見る'],
+    'zh-CN': ['公司概要页面已移动。','如果页面没有自动跳转，请使用下方按钮查看公司概要。','查看公司概要'],
+    en: ['Company profile has moved.','If you are not redirected automatically, please use the button below.','View company profile'],
+    ko: ['회사 개요 페이지가 이동되었습니다.','자동으로 이동하지 않는 경우 아래 버튼으로 회사 개요를 확인해 주세요.','회사 개요 보기'],
+    'zh-TW': ['公司概要頁面已移動。','如果頁面沒有自動跳轉，請使用下方按鈕查看公司概要。','查看公司概要']
+  };
+  const [title, copy, button] = messages[lang] || messages.ja;
+  html = html.replace(/content="0; url=[^"]*"/, `content="0; url=${target}"`);
+  html = html.replace(/location\.replace\('[^']*'\)/, `location.replace('${target}')`);
+  html = html.replace(/<h1 class="section-title">[\s\S]*?<\/h1>/, `<h1 class="section-title">${title}</h1>`);
+  html = html.replace(/<p class="section-copy">[\s\S]*?<\/p>/, `<p class="section-copy">${copy}</p>`);
+  html = html.replace(/<a class="button" href="[^"]*">[\s\S]*?<\/a>/, `<a class="button" href="${target}">${button}</a>`);
+  return html;
+}
 function langSpecificCss(html, lang){
   const cls = `lang-${lang.toLowerCase()}`;
   return html.replace(/<body([^>]*)>/, (m, attrs) => {
@@ -256,6 +332,7 @@ function writePage(lang, page){
   html = injectSwitchers(html, lang, page);
   html = langSpecificCss(html, lang);
   html = adjustPaths(html, lang);
+  if (page === 'company.html') html = fixCompanyRedirect(html, lang);
   const outDir = lang === 'ja' ? ROOT : path.join(ROOT, langs[lang].dir);
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, page), html, 'utf8');
@@ -274,4 +351,4 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://w
 fs.writeFileSync(path.join(ROOT,'sitemap.xml'), sitemap, 'utf8');
 
 const qa = `# Multilingual QA\n\nGenerated: ${new Date().toISOString()}\n\n## Languages\n- ja: root URL, default source language\n- zh-CN: /zh-cn/\n- en: /en/\n- ko: /ko/\n- zh-TW: /zh-tw/\n\n## Pages\n${pages.map(p=>`- ${p}`).join('\n')}\n\n## Checks Performed\n- Static language directories generated without query-parameter routing.\n- Header language switcher links to the equivalent page in each language.\n- Contact forms include hidden site_language.\n- Japanese contact labels corrected: 航空便名 / 手荷物数.\n- sitemap.xml regenerated with hreflang alternates.\n- Shared assets remain under assets/.\n\n## Pending Human Review\n- Translations are implementation draft and should be reviewed by native speakers before publication.\n- Public claims such as 約100台, licenses, G20, EXPO2025, brand event history and contact details still require business confirmation.\n- Final production domain should be confirmed before launch if different from ${baseUrl}.\n\n## Responsive QA To Complete\n- 320px / 390px / 768px / 1024px / 1440px visual check for each language.\n- Verify no horizontal overflow after final native-language copy review.\n`;
-if (!fs.existsSync(path.join(ROOT,'MULTILINGUAL_QA.md'))) fs.writeFileSync(path.join(ROOT,'MULTILINGUAL_QA.md'), qa, 'utf8');
+fs.writeFileSync(path.join(ROOT,'MULTILINGUAL_QA.md'), qa, 'utf8');
