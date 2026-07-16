@@ -66,3 +66,30 @@ Do not trust frontend validation alone. The server must verify:
 ## Current Sample Mode
 
 When `window.DAITORA_CONTACT_FORM_URL` is not set, the submit button is disabled and the page shows a normal customer-facing notice asking users to contact by phone or email.
+
+## Multilingual Static Build
+
+The site uses the Japanese root pages as the source and generates static localized pages with:
+
+```bash
+node scripts/build-i18n.mjs
+```
+
+Generated language directories:
+
+- `/zh-cn/` Simplified Chinese
+- `/en/` English
+- `/ko/` Korean
+- `/zh-tw/` Traditional Chinese
+
+The build also updates:
+
+- language switcher links
+- page-level SEO metadata
+- canonical and hreflang tags
+- `sitemap.xml`
+- contact form hidden `site_language`
+
+Language switching is static-page based. It does not use query parameters and does not force automatic redirects.
+
+Before publishing, review `MULTILINGUAL_QA.md` and confirm all translated copy with native speakers and the business owner.
