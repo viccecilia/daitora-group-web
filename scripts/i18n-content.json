@@ -24,28 +24,28 @@
     "zh-TW": "/ 業務介紹"
   },
   "/ 事業紹介 / 大寅ハイヤー": {
-    "en": "/ Business introduction / Daitora Hire",
-    "ko": "/ 사업 소개 / 오토 히이야",
-    "zh-CN": "/ 业务介绍 / Daitora Hire",
-    "zh-TW": "/ 業務介紹 / Daitora Hire"
+    "en": "/ Business introduction / Daitora Chauffeur & Private Transportation",
+    "ko": "/ 사업 소개 / Daitora Chauffeur & Private Transportation",
+    "zh-CN": "/ 业务介绍 / Daitora Chauffeur & Private Transportation",
+    "zh-TW": "/ 業務介紹 / Daitora Chauffeur & Private Transportation"
   },
   "/ 事業紹介 / 寅丸タクシー": {
     "en": "/ Business introduction / Toramaru Taxi",
-    "ko": "/ 사업 소개 / 토라마루 택시",
-    "zh-CN": "/ 业务介绍 / 虎丸出租车",
-    "zh-TW": "/ 業務介紹 / 虎丸出租車"
+    "ko": "/ 사업 소개 / Toramaru Taxi",
+    "zh-CN": "/ 业务介绍 / Toramaru Taxi",
+    "zh-TW": "/ 業務介紹 / Toramaru Taxi"
   },
   "/ 大寅について": {
     "en": "/ About Daitora",
-    "ko": "/ 오토에 대해",
-    "zh-CN": "/ 关于大虎",
-    "zh-TW": "/ 關於大虎"
+    "ko": "/ Daitora 소개",
+    "zh-CN": "/ 关于Daitora",
+    "zh-TW": "/ 關於Daitora"
   },
   "/ 大寅中古車販売": {
-    "en": "/ Daitora used car sales",
-    "ko": "/ 오토 중고차 판매",
-    "zh-CN": "/ 大虎二手车销售",
-    "zh-TW": "/ 大虎二手車銷售"
+    "en": "/ Daitora Auto / Used Car Sales",
+    "ko": "/ Daitora Auto / Used Car Sales",
+    "zh-CN": "/ Daitora二手车销售",
+    "zh-TW": "/ Daitora二手車銷售"
   },
   "/ 安全・品質": {
     "en": "/ Safety/Quality",
@@ -192,10 +192,10 @@
     "zh-TW": "埃爾法、賓士S級等的安排"
   },
   "Daitora Group / 大寅グループ": {
-    "en": "Daitora Group / Daitora Group",
-    "ko": "Daitora Group / 오토 그룹",
-    "zh-CN": "大虎集团",
-    "zh-TW": "大虎集團"
+    "en": "Daitora Group",
+    "ko": "Daitora Group / Daitora Group",
+    "zh-CN": "Daitora Group",
+    "zh-TW": "Daitora Group"
   },
   "DiDi / Uber 等の外部配車導線は、公開時に正式 URL を確認のうえ掲載します。": {
     "en": "External ride-hailing routes such as DiDi/Uber etc. will be posted after confirming the official URL at the time of publication.",
@@ -236,8 +236,8 @@
   "TORAMARU TAXI の車両。": {
     "en": "TORAMARU TAXI vehicle.",
     "ko": "TORAMARU TAXI 차량.",
-    "zh-CN": "虎丸出租车。",
-    "zh-TW": "虎丸出租車。"
+    "zh-CN": "Toramaru Taxi。",
+    "zh-TW": "Toramaru Taxi。"
   },
   "VIP / 役員 / 要人": {
     "en": "VIP / Executive / VIP",
@@ -313,9 +313,9 @@
   },
   "お問い合わせ | 大寅グループ": {
     "en": "Contact Us | Daitora Group",
-    "ko": "문의 | 오토 그룹",
-    "zh-CN": "联系我们 |大虎集团",
-    "zh-TW": "聯絡我們 |大虎集團"
+    "ko": "문의 | Daitora Group",
+    "zh-CN": "联系我们 | Daitora Group",
+    "zh-TW": "聯絡我們 | Daitora Group"
   },
   "お問い合わせへ": {
     "en": "Contact us",
@@ -607,15 +607,15 @@
   },
   "オートローン事前審査へ": {
     "en": "Go to auto loan pre-examination",
-    "ko": "오토론 사전 심사에",
+    "ko": "자동차 론 사전 심사에",
     "zh-CN": "前往汽车贷款预审",
     "zh-TW": "前往汽車貸款預審"
   },
   "オートローン事前審査へ進む前に、車両の用途、申込区分、必要書類、購入希望時期などを整理しておくと、手続きをよりスムーズに進められます。大寅中古車販売では、状況に合わせて確認事項をご案内します。": {
-    "en": "Before proceeding with the auto loan pre-screening, the process will go more smoothly if you organize the purpose of the vehicle, application category, required documents, desired purchase date, etc. At Daitora Used Car Sales, we will provide you with confirmation items depending on the situation.",
-    "ko": "오토론 사전 심사로 진행하기 전에 차량의 용도, 신청 구분, 필요 서류, 구입 희망 시기 등을 정리해 두면 절차를 더욱 원활하게 진행할 수 있습니다. 오토 중고차 판매에서는 상황에 따라 확인 사항을 안내합니다.",
-    "zh-CN": "在进行汽车贷款预审之前，如果您整理好车辆的用途、申请类别、所需文件、希望购买日期等，流程会更加顺利。在大虎二手车销售处，我们会根据情况为您提供确认项目。",
-    "zh-TW": "在進行汽車貸款預審之前，如果您整理好車輛的用途、申請類別、所需文件、希望購買日期等，流程會更加順利。在大虎二手車銷售處，我們會根據情況為您提供確認項目。"
+    "en": "Before proceeding with the auto loan pre-screening, the process will go more smoothly if you organize the purpose of the vehicle, application category, required documents, desired purchase date, etc. At Daitora Auto / Used Car Sales, we will provide you with confirmation items depending on the situation.",
+    "ko": "자동차 론 사전 심사로 진행하기 전에 차량의 용도, 신청 구분, 필요 서류, 구입 희망 시기 등을 정리해 두면 절차를 더욱 원활하게 진행할 수 있습니다. Daitora Auto / Used Car Sales에서는 상황에 따라 확인 사항을 안내합니다.",
+    "zh-CN": "在进行汽车贷款预审之前，如果您整理好车辆的用途、申请类别、所需文件、希望购买日期等，流程会更加顺利。在Daitora二手车销售处，我们会根据情况为您提供确认项目。",
+    "zh-TW": "在進行汽車貸款預審之前，如果您整理好車輛的用途、申請類別、所需文件、希望購買日期等，流程會更加順利。在Daitora二手車銷售處，我們會根據情況為您提供確認項目。"
   },
   "グループで支える、安定した運行管理。": {
     "en": "Stable operation management supported by the group.",
@@ -751,9 +751,9 @@
   },
   "ニュース | 大寅グループ": {
     "en": "News | Daitora Group",
-    "ko": "뉴스 | 오토 그룹",
-    "zh-CN": "新闻 |大虎集团",
-    "zh-TW": "新聞 |大虎集團"
+    "ko": "뉴스 | Daitora Group",
+    "zh-CN": "新闻 | Daitora Group",
+    "zh-TW": "新聞 | Daitora Group"
   },
   "ニュース一覧": {
     "en": "News list",
@@ -877,9 +877,9 @@
   },
   "プライバシーポリシー | 大寅グループ": {
     "en": "Privacy Policy | Daitora Group",
-    "ko": "개인 정보 보호 정책 | 오토 그룹",
-    "zh-CN": "隐私政策 |大虎集团",
-    "zh-TW": "隱私權政策 |大虎集團"
+    "ko": "개인 정보 보호 정책 | Daitora Group",
+    "zh-CN": "隐私政策 |Daitora Group",
+    "zh-TW": "隱私權政策 |Daitora Group"
   },
   "ページが見つかりません": {
     "en": "Page not found",
@@ -889,9 +889,9 @@
   },
   "ページが見つかりません | 大寅グループ": {
     "en": "Page not found | Daitora Group",
-    "ko": "페이지를 찾을 수 없습니다 | 오토 그룹",
-    "zh-CN": "找不到页面 |大虎集团",
-    "zh-TW": "找不到頁面 |大虎集團"
+    "ko": "페이지를 찾을 수 없습니다 | Daitora Group",
+    "zh-CN": "找不到页面 |Daitora Group",
+    "zh-TW": "找不到頁面 |Daitora Group"
   },
   "ホテル、会場、空港間の移動": {
     "en": "Transfers between hotels, venues, and airports",
@@ -1086,8 +1086,8 @@
     "zh-TW": "二手車銷售、貸款諮詢、購車支援。我們將根據我們對操作現場的了解，支援您找到適合您應用的機器。"
   },
   "中古車販売、ローン相談、車両購入サポートを行う大寅中古車販売をご紹介します。": {
-    "en": "Introducing Daitora Used Car Sales, which sells used cars, provides loan consultation, and provides vehicle purchase support.",
-    "ko": "중고차 판매, 대출 상담, 차량 구입 서포트를 실시하는 대인 중고차 판매를 소개합니다.",
+    "en": "Introducing Daitora Auto / Used Car Sales, which sells used cars, provides loan consultation, and provides vehicle purchase support.",
+    "ko": "중고차 판매, 대출 상담, 차량 구입 서포트를 실시하는 Daitora 중고차 판매를 소개합니다.",
     "zh-CN": "介绍Daitora二手车销售，销售二手车，提供贷款咨询，并提供车辆购买支持。",
     "zh-TW": "介紹Daitora二手車銷售，銷售二手車，提供貸款諮詢，並提供車輛購買支援。"
   },
@@ -1135,7 +1135,7 @@
   },
   "中古車購入、事業用車両、ローン相談、オートローン事前審査に関するご相談。": {
     "en": "Consultation regarding used car purchases, commercial vehicles, loan consultation, and auto loan pre-screening.",
-    "ko": "중고차 구입, 사업용 차량, 대출 상담, 오토론 사전 심사에 관한 상담.",
+    "ko": "중고차 구입, 사업용 차량, 대출 상담, 자동차 론 사전 심사에 관한 상담.",
     "zh-CN": "二手车购买咨询、商用车咨询、贷款咨询、汽车贷款预审。",
     "zh-TW": "二手車購買諮詢、商用車諮詢、貸款諮詢、汽車貸款預審。"
   },
@@ -1201,9 +1201,9 @@
   },
   "乗務員教育、車両管理、配車確認、GPS運行管理、法令遵守、緊急時対応まで。大寅グループの安全と品質を支える運行体制を紹介します。": {
     "en": "From crew training, vehicle management, dispatch confirmation, GPS operation management, legal compliance, and emergency response. Introducing the Daitora Group's operation system that supports safety and quality.",
-    "ko": "승무원 교육, 차량 관리, 배차 확인, GPS 운행 관리, 법령 준수, 긴급시 대응까지. 오토 그룹의 안전과 품질을 지원하는 운행 체제를 소개합니다.",
-    "zh-CN": "从船员培训、车辆管理、调度确认、GPS运行管理、法律合规、应急响应。介绍支持安全和质量的大虎集团的运营体系。",
-    "zh-TW": "從船員訓練、車輛管理、調度確認、GPS運行管理、法律合規、緊急應變。介紹支援安全和品質的大虎集團的營運體系。"
+    "ko": "승무원 교육, 차량 관리, 배차 확인, GPS 운행 관리, 법령 준수, 긴급시 대응까지. Daitora Group의 안전과 품질을 지원하는 운행 체제를 소개합니다.",
+    "zh-CN": "从船员培训、车辆管理、调度确认、GPS运行管理、法律合规、应急响应。介绍支持安全和质量的Daitora Group的运营体系。",
+    "zh-TW": "從船員訓練、車輛管理、調度確認、GPS運行管理、法律合規、緊急應變。介紹支援安全和品質的Daitora Group的營運體系。"
   },
   "乗務員教育、車両管理、配車確認、GPS運行管理、法令遵守など安全品質体制をご紹介します。": {
     "en": "We will introduce our safety and quality system, including crew training, vehicle management, dispatch confirmation, GPS operation management, and legal compliance.",
@@ -1273,9 +1273,9 @@
   },
   "事業紹介 | 大寅グループ": {
     "en": "Business introduction | Daitora Group",
-    "ko": "사업 소개 | 오토 그룹",
-    "zh-CN": "业务介绍 |大虎集团",
-    "zh-TW": "業務介紹 |大虎集團"
+    "ko": "사업 소개 | Daitora Group",
+    "zh-CN": "业务介绍 | Daitora Group",
+    "zh-TW": "業務介紹 | Daitora Group"
   },
   "京都、奈良、神戸、USJ、富士山方面など、行程に合わせた貸切送迎に対応します。": {
     "en": "We offer private transportation to suit your itinerary, such as Kyoto, Nara, Kobe, USJ, and Mt. Fuji.",
@@ -1459,9 +1459,9 @@
   },
   "企業理念、社訓、会社概要、許認可、拠点情報を通じて、大寅グループの考え方と事業基盤をご紹介します。": {
     "en": "We will introduce the philosophy and business foundation of the Daitora Group through our corporate philosophy, company policy, company profile, licenses, and base information.",
-    "ko": "기업이념, 사훈, 회사개요, 허가, 거점정보를 통해 오토 그룹의 사고방식과 사업 기반을 소개합니다.",
-    "zh-CN": "我们将通过企业理念、公司政策、公司简介、许可证和基础信息来介绍大虎集团的理念和业务基础。",
-    "zh-TW": "我們將透過企業理念、公司政策、公司簡介、許可證和基礎資訊來介紹大虎集團的理念和業務基礎。"
+    "ko": "기업이념, 사훈, 회사개요, 허가, 거점정보를 통해 Daitora Group의 사고방식과 사업 기반을 소개합니다.",
+    "zh-CN": "我们将通过企业理念、公司政策、公司简介、许可证和基础信息来介绍Daitora Group的理念和业务基础。",
+    "zh-TW": "我們將透過企業理念、公司政策、公司簡介、許可證和基礎資訊來介紹Daitora Group的理念和業務基礎。"
   },
   "企業視察": {
     "en": "Company inspection",
@@ -1543,9 +1543,9 @@
   },
   "会社概要 | 大寅グループ": {
     "en": "Company Profile | Daitora Group",
-    "ko": "회사 개요 | 오토 그룹",
-    "zh-CN": "公司简介 |大虎集团",
-    "zh-TW": "公司簡介 |大虎集團"
+    "ko": "회사 개요 | Daitora Group",
+    "zh-CN": "公司简介 |Daitora Group",
+    "zh-TW": "公司簡介 |Daitora Group"
   },
   "会社概要は移動しました。": {
     "en": "Company profile has been moved.",
@@ -1651,15 +1651,15 @@
   },
   "公開できる範囲で、大寅グループの大型案件、企業送迎、VIP送迎の対応実績をご紹介します。": {
     "en": "To the extent possible, we would like to introduce Daitora Group's experience in handling large-scale projects, corporate transportation, and VIP transportation.",
-    "ko": "공개할 수 있는 범위에서, 대인 그룹의 대형 안건, 기업 송영, VIP 송영의 대응 실적을 소개합니다.",
-    "zh-CN": "我们希望尽可能向大家介绍大虎集团在大型项目、企业运输、VIP运输方面的经验。",
-    "zh-TW": "我們希望盡可能向大家介紹大虎集團在大型專案、企業運輸、VIP運輸方面的經驗。"
+    "ko": "공개할 수 있는 범위에서, Daitora Group의 대형 안건, 기업 송영, VIP 송영의 대응 실적을 소개합니다.",
+    "zh-CN": "我们希望尽可能向大家介绍Daitora Group在大型项目、企业运输、VIP运输方面的经验。",
+    "zh-TW": "我們希望盡可能向大家介紹Daitora Group在大型專案、企業運輸、VIP運輸方面的經驗。"
   },
   "公開できる範囲で、大寅グループの大型案件・VIP送迎・企業団体送迎の対応実績を紹介します。": {
     "en": "To the extent possible, we will introduce Daitora Group's experience in handling large-scale projects, VIP transportation, and corporate group transportation.",
-    "ko": "공개할 수 있는 범위에서, 대인 그룹의 대형 안건·VIP 송영·기업 단체 송영의 대응 실적을 소개합니다.",
-    "zh-CN": "我们将尽可能介绍大虎集团在处理大型项目、VIP运输、企业团体运输方面的经验。",
-    "zh-TW": "我們將盡可能介紹大虎集團在處理大型專案、VIP運輸、企業團體運輸的經驗。"
+    "ko": "공개할 수 있는 범위에서, Daitora Group의 대형 안건·VIP 송영·기업 단체 송영의 대응 실적을 소개합니다.",
+    "zh-CN": "我们将尽可能介绍Daitora Group在处理大型项目、VIP运输、企业团体运输方面的经验。",
+    "zh-TW": "我們將盡可能介紹Daitora Group在處理大型專案、VIP運輸、企業團體運輸的經驗。"
   },
   "公開できる範囲の主なハイヤー実績。": {
     "en": "Main hire track records that can be disclosed.",
@@ -2053,195 +2053,195 @@
   },
   "大寅が大切にしているのは、運転技術だけではありません。接遇、安全意識、時間管理、地理知識、守秘意識まで含めて、安心して任せられるドライバーを育成しています。": {
     "en": "Driving skills are not the only things Daitora values. We train drivers who can be entrusted with peace of mind, including hospitality, safety awareness, time management, geographical knowledge, and confidentiality awareness.",
-    "ko": "오토시가 소중히 여기는 것은 운전 기술뿐이 아닙니다. 접대, 안전 의식, 시간 관리, 지리 지식, 수비 의식까지 포함하여 안심하고 맡길 수 있는 드라이버를 육성하고 있습니다.",
+    "ko": "Daitora가 소중히 여기는 것은 운전 기술뿐이 아닙니다. 접대, 안전 의식, 시간 관리, 지리 지식, 수비 의식까지 포함하여 안심하고 맡길 수 있는 드라이버를 육성하고 있습니다.",
     "zh-CN": "驾驶技能并不是 Daitora 唯一看重的东西。我们培养可以安心托付的司机，包括热情好客、安全意识、时间管理、地理知识和保密意识。",
     "zh-TW": "駕駛技能並不是 Daitora 唯一重視的東西。我們培養可以安心託付的司機，包括熱情好客、安全意識、時間管理、地理知識和保密意識。"
   },
   "大寅について": {
     "en": "About Daitora",
-    "ko": "오토에 대해",
-    "zh-CN": "关于大虎",
-    "zh-TW": "關於大虎"
+    "ko": "Daitora 소개",
+    "zh-CN": "关于Daitora",
+    "zh-TW": "關於Daitora"
   },
   "大寅について | 大寅グループ": {
     "en": "About Daitora | Daitora Group",
-    "ko": "오토에 대해 | 오토 그룹",
-    "zh-CN": "关于大虎 |大虎集团",
-    "zh-TW": "關於大虎 |大虎集團"
+    "ko": "Daitora 소개 | Daitora Group",
+    "zh-CN": "关于Daitora |Daitora Group",
+    "zh-TW": "關於Daitora |Daitora Group"
   },
   "大寅の品質は、一度の特別な対応ではなく、毎日の確認と共有によって支えられています。乗務員、配車担当、車両管理担当が連携し、一件一件の送迎を安定して運行できる体制を整えています。": {
     "en": "Daitora's quality is not supported by a one-time special response, but by daily confirmation and sharing. Our crew, dispatch staff, and vehicle management staff work together to create a system that allows us to operate each transfer in a stable manner.",
     "ko": "大寅의 품질은 한 번의 특별한 대응이 아니라 매일 확인과 공유에 의해 지원됩니다. 승무원, 배차 담당, 차량 관리 담당이 연계해, 1건 1건의 송영을 안정적으로 운행할 수 있는 체제를 정돈하고 있습니다.",
-    "zh-CN": "大虎的品质不是靠一次性的特别回复来支撑的，而是靠每天的确认和分享来支撑的。我们的工作人员、调度人员和车辆管理人员共同创建了一个系统，使我们能够稳定地运行每一次转运。",
-    "zh-TW": "大虎的品質不是靠一次性的特別回復來支撐的，而是靠每天的確認和分享來支撐的。我們的工作人員、調度人員和車輛管理人員共同創建了一個系統，使我們能夠穩定地運行每一次轉運。"
+    "zh-CN": "Daitora的品质不是靠一次性的特别回复来支撑的，而是靠每天的确认和分享来支撑的。我们的工作人员、调度人员和车辆管理人员共同创建了一个系统，使我们能够稳定地运行每一次转运。",
+    "zh-TW": "Daitora的品質不是靠一次性的特別回復來支撐的，而是靠每天的確認和分享來支撐的。我們的工作人員、調度人員和車輛管理人員共同創建了一個系統，使我們能夠穩定地運行每一次轉運。"
   },
   "大寅の運行管理体制。": {
     "en": "Daitora's operation management system.",
-    "ko": "대인의 운행 관리 체제.",
-    "zh-CN": "大虎的运营管理系统。",
-    "zh-TW": "大虎的營運管理系統。"
+    "ko": "Daitora의 운행 관리 체제.",
+    "zh-CN": "Daitora的运营管理系统。",
+    "zh-TW": "Daitora的營運管理系統。"
   },
   "大寅グループ": {
     "en": "Daitora Group",
-    "ko": "오토 그룹",
-    "zh-CN": "大虎集团",
-    "zh-TW": "大虎集團"
+    "ko": "Daitora Group",
+    "zh-CN": "Daitora Group",
+    "zh-TW": "Daitora Group"
   },
   "大寅グループ | 大阪・京都のハイヤー・タクシー・中古車販売": {
     "en": "Daitora Group | Hire, taxi, and used car sales in Osaka and Kyoto",
-    "ko": "오토 기 그룹 | 오사카 · 교토의 하이어 · 택시 · 중고차 판매",
-    "zh-CN": "大虎集团|大阪和京都的出租、出租车和二手车销售",
-    "zh-TW": "大虎集團|大阪和京都的出租、計程車和二手車銷售"
+    "ko": "Daitora 기 그룹 | 오사카 · 교토의 하이어 · 택시 · 중고차 판매",
+    "zh-CN": "Daitora Group|大阪和京都的出租、出租车和二手车销售",
+    "zh-TW": "Daitora Group|大阪和京都的出租、計程車和二手車銷售"
   },
   "大寅グループからのお知らせ、事業情報、公開できる範囲での主な対応実績をご紹介します。": {
     "en": "We will introduce announcements from the Daitora Group, business information, and our main response results to the extent that we can disclose them.",
-    "ko": "오토 그룹의 소식, 사업 정보, 공개 할 수있는 범위에서의 주요 대응 실적을 소개합니다.",
-    "zh-CN": "我们将在可以披露的范围内介绍大虎集团的公告、业务信息以及我们的主要应对结果。",
-    "zh-TW": "我們將在可以揭露的範圍內介紹大虎集團的公告、業務資訊以及我們的主要應對結果。"
+    "ko": "Daitora Group의 소식, 사업 정보, 공개 할 수있는 범위에서의 주요 대응 실적을 소개합니다.",
+    "zh-CN": "我们将在可以披露的范围内介绍Daitora Group的公告、业务信息以及我们的主要应对结果。",
+    "zh-TW": "我們將在可以揭露的範圍內介紹Daitora Group的公告、業務資訊以及我們的主要應對結果。"
   },
   "大寅グループからのお知らせ、事業情報、公開可能な範囲での対応実績をご紹介します。": {
     "en": "We will introduce announcements from the Daitora Group, business information, and response results to the extent possible.",
-    "ko": "오토 그룹의 소식, 사업 정보, 공개 가능한 범위에서의 대응 실적을 소개합니다.",
-    "zh-CN": "我们将尽可能介绍大虎集团的公告、业务信息和应对结果。",
-    "zh-TW": "我們將盡可能介紹大虎集團的公告、業務資訊和應對結果。"
+    "ko": "Daitora Group의 소식, 사업 정보, 공개 가능한 범위에서의 대응 실적을 소개합니다.",
+    "zh-CN": "我们将尽可能介绍Daitora Group的公告、业务信息和应对结果。",
+    "zh-TW": "我們將盡可能介紹Daitora Group的公告、業務資訊和應對結果。"
   },
   "大寅グループでは、お問い合わせ対応のため、お名前、会社名・団体名、電話番号、メールアドレス、希望言語、送迎内容、車両購入・ローン相談内容、採用相談内容、その他お問い合わせ本文に含まれる情報を取得する場合があります。": {
     "en": "In order to respond to inquiries, the Daitora Group may collect your name, company/organization name, telephone number, email address, preferred language, transportation details, vehicle purchase/loan consultation details, recruitment consultation details, and other information included in the body of the inquiry.",
-    "ko": "오토 그룹에서는 문의 대응을 위해, 이름, 회사명·단체명, 전화 번호, 메일 주소, 희망 언어, 송영 내용, 차량 구입·대출 상담 내용, 채용 상담 내용, 그 외 문의 본문에 포함되는 정보를 취득하는 경우가 있습니다.",
-    "zh-CN": "为了回复询问，大虎集团可能会收集您的姓名、公司/组织名称、电话号码、电子邮件地址、首选语言、交通详情、车辆购买/贷款咨询详情、招聘咨询详情以及咨询正文中包含的其他信息。",
-    "zh-TW": "為了回覆詢問，大虎集團可能會收集您的姓名、公司/組織名稱、電話號碼、電子郵件地址、首選語言、交通詳情、車輛購買/貸款諮詢詳情、招聘諮詢詳情以及諮詢正文中包含的其他資訊。"
+    "ko": "Daitora Group에서는 문의 대응을 위해, 이름, 회사명·단체명, 전화 번호, 메일 주소, 희망 언어, 송영 내용, 차량 구입·대출 상담 내용, 채용 상담 내용, 그 외 문의 본문에 포함되는 정보를 취득하는 경우가 있습니다.",
+    "zh-CN": "为了回复询问，Daitora Group可能会收集您的姓名、公司/组织名称、电话号码、电子邮件地址、首选语言、交通详情、车辆购买/贷款咨询详情、招聘咨询详情以及咨询正文中包含的其他信息。",
+    "zh-TW": "為了回覆詢問，Daitora Group可能會收集您的姓名、公司/組織名稱、電話號碼、電子郵件地址、首選語言、交通詳情、車輛購買/貸款諮詢詳情、招聘諮詢詳情以及諮詢正文中包含的其他資訊。"
   },
   "大寅グループでは、中古車販売事業の拡大に伴い、車両仕入体制を強化しました。ハイヤー・タクシー運行の現場で日々車両を扱う会社として、見た目や年式だけでなく、走行状態、維持管理、用途、乗り出し後の使いやすさまで含めた車両提案を行います。": {
     "en": "The Daitora Group has strengthened its vehicle purchasing system in line with the expansion of its used car sales business. As a company that handles vehicles on a day-to-day basis in the field of hire taxi operations, we make vehicle proposals that take into account not only appearance and model year, but also running condition, maintenance, intended use, and ease of use after the vehicle is launched.",
-    "ko": "오토 그룹은 중고차 판매 사업이 확대됨에 따라 차량 구매 시스템을 강화했습니다. 하이어·택시 운행의 현장에서 매일 차량을 취급하는 회사로서, 외형이나 연식뿐만 아니라, 주행 상태, 유지 관리, 용도, 탈출 후의 사용의 용이함까지 포함한 차량 제안을 실시합니다.",
-    "zh-CN": "大虎集团随着二手车销售业务的扩大，强化了车辆采购体系。作为出租车运营领域的日常车辆处理公司，我们提出的车辆提案不仅考虑外观和年份，还考虑车辆的运行状况、维护、用途以及车辆上市后的易用性。",
-    "zh-TW": "大虎集團隨著二手車銷售業務的擴大，強化了車輛採購系統。作為一家在計程車營運領域日常處理車輛的公司，我們提供的車輛提案不僅考慮了外觀和車型年份，還考慮了車輛的運行狀況、維護、用途以及車輛上市後的易用性。"
+    "ko": "Daitora Group은 중고차 판매 사업이 확대됨에 따라 차량 구매 시스템을 강화했습니다. 하이어·택시 운행의 현장에서 매일 차량을 취급하는 회사로서, 외형이나 연식뿐만 아니라, 주행 상태, 유지 관리, 용도, 탈출 후의 사용의 용이함까지 포함한 차량 제안을 실시합니다.",
+    "zh-CN": "Daitora Group随着二手车销售业务的扩大，强化了车辆采购体系。作为出租车运营领域的日常车辆处理公司，我们提出的车辆提案不仅考虑外观和年份，还考虑车辆的运行状况、维护、用途以及车辆上市后的易用性。",
+    "zh-TW": "Daitora Group隨著二手車銷售業務的擴大，強化了車輛採購系統。作為一家在計程車營運領域日常處理車輛的公司，我們提供的車輛提案不僅考慮了外觀和車型年份，還考慮了車輛的運行狀況、維護、用途以及車輛上市後的易用性。"
   },
   "大寅グループでは、乗務員向けに接遇・安全研修を実施しました。空港送迎、企業送迎、VIP接待、地域交通など、利用シーンに応じた言葉遣い、乗降時の配慮、時間管理、情報共有をテーマに確認を行いました。": {
     "en": "The Daitora Group conducted hospitality and safety training for crew members. We checked the use of language depending on the usage situation, consideration when boarding and disembarking, time management, and information sharing, such as airport transfers, corporate transfers, VIP entertainment, and local transportation.",
-    "ko": "오토 그룹은 승무원을 대상으로 접대 안전 연수를 실시했습니다. 공항 송영, 기업 송영, VIP 접대, 지역 교통 등, 이용 장면에 따른 말투, 승강시의 배려, 시간 관리, 정보 공유를 테마로 확인을 실시했습니다.",
-    "zh-CN": "大虎集团为船员进行了接待和安全培训。我们根据使用情况、上下飞机时的考虑、时间管理和信息共享来检查语言的使用，例如机场接送、公司接送、VIP娱乐和当地交通。",
-    "zh-TW": "大虎集團為船員進行了接待和安全培訓。我們根據使用情況、上下飛機時的考慮、時間管理和資訊共享來檢查語言的使用，例如機場接送、公司接送、VIP娛樂和當地交通。"
+    "ko": "Daitora Group은 승무원을 대상으로 접대 안전 연수를 실시했습니다. 공항 송영, 기업 송영, VIP 접대, 지역 교통 등, 이용 장면에 따른 말투, 승강시의 배려, 시간 관리, 정보 공유를 테마로 확인을 실시했습니다.",
+    "zh-CN": "Daitora Group为船员进行了接待和安全培训。我们根据使用情况、上下飞机时的考虑、时间管理和信息共享来检查语言的使用，例如机场接送、公司接送、VIP娱乐和当地交通。",
+    "zh-TW": "Daitora Group為船員進行了接待和安全培訓。我們根據使用情況、上下飛機時的考慮、時間管理和資訊共享來檢查語言的使用，例如機場接送、公司接送、VIP娛樂和當地交通。"
   },
   "大寅グループでは、乗務員教育、車両管理、配車確認、GPS運行管理、法令遵守、緊急時対応を一体で運用し、一件一件の送迎を安全かつ安定して実行できる体制を整えています。": {
     "en": "The Daitora Group integrates crew training, vehicle management, vehicle dispatch confirmation, GPS operation management, legal compliance, and emergency response, and has established a system that allows each transfer to be carried out safely and stably.",
-    "ko": "오토 그룹은 승무원 교육, 차량 관리, 배차 확인, GPS 운행 관리, 법령 준수, 긴급 대응을 일체로 운용하고, 1건 1건의 송영을 안전하고 안정적으로 실행할 수 있는 체제를 갖추고 있습니다.",
-    "zh-CN": "大虎集团集船员培训、车辆管理、车辆调度确认、GPS运营管理、法律合规、应急响应于一体，建立了让每次转运都能安全稳定进行的体系。",
-    "zh-TW": "大虎集團集船員訓練、車輛管理、車輛調度確認、GPS營運管理、法律合規、緊急應變於一體，建立了讓每次轉運都能安全穩定進行的系統。"
+    "ko": "Daitora Group은 승무원 교육, 차량 관리, 배차 확인, GPS 운행 관리, 법령 준수, 긴급 대응을 일체로 운용하고, 1건 1건의 송영을 안전하고 안정적으로 실행할 수 있는 체제를 갖추고 있습니다.",
+    "zh-CN": "Daitora Group集船员培训、车辆管理、车辆调度确认、GPS运营管理、法律合规、应急响应于一体，建立了让每次转运都能安全稳定进行的体系。",
+    "zh-TW": "Daitora Group集船員訓練、車輛管理、車輛調度確認、GPS營運管理、法律合規、緊急應變於一體，建立了讓每次轉運都能安全穩定進行的系統。"
   },
   "大寅グループでは、出庫前確認、車内清掃、車両状態確認を徹底し、快適な移動空間づくりを進めています。安全な運行だけでなく、お客様が乗車した瞬間に安心できる車内環境を整えることを重視しています。": {
     "en": "The Daitora Group is working to create a comfortable transportation space by thoroughly checking before leaving the warehouse, cleaning the inside of the vehicle, and checking the condition of the vehicle. We not only focus on safe operation, but also on creating an environment inside the vehicle that makes customers feel at ease the moment they board the train.",
-    "ko": "오토 그룹은 출고 전 확인, 차내 청소, 차량 상태 확인을 철저히 해, 쾌적한 이동 공간 만들기를 진행하고 있습니다. 안전한 운행뿐만 아니라, 고객이 승차한 순간에 안심할 수 있는 차내 환경을 정돈하는 것을 중시하고 있습니다.",
-    "zh-CN": "大虎集团通过出库前的彻底检查、车内的清扫、车况的检查等，努力打造舒适的运输空间。我们不仅注重安全运行，更注重营造让乘客上车即安心的车内环境。",
-    "zh-TW": "大虎集團透過出庫前的徹底檢查、車內的清掃、車況的檢查等，努力打造舒適的運輸空間。我們不僅注重安全運行，更注重營造讓乘客上車即安心的車內環境。"
+    "ko": "Daitora Group은 출고 전 확인, 차내 청소, 차량 상태 확인을 철저히 해, 쾌적한 이동 공간 만들기를 진행하고 있습니다. 안전한 운행뿐만 아니라, 고객이 승차한 순간에 안심할 수 있는 차내 환경을 정돈하는 것을 중시하고 있습니다.",
+    "zh-CN": "Daitora Group通过出库前的彻底检查、车内的清扫、车况的检查等，努力打造舒适的运输空间。我们不仅注重安全运行，更注重营造让乘客上车即安心的车内环境。",
+    "zh-TW": "Daitora Group透過出庫前的徹底檢查、車內的清掃、車況的檢查等，努力打造舒適的運輸空間。我們不僅注重安全運行，更注重營造讓乘客上車即安心的車內環境。"
   },
   "大寅グループの企業理念、Mission / Vision / Value、社訓をご紹介します。": {
     "en": "Introducing the Daitora Group's corporate philosophy, Mission/Vision/Value, and company motto.",
-    "ko": "오토 그룹의 기업 이념, Mission / Vision / Value, 사훈을 소개합니다.",
-    "zh-CN": "介绍大虎集团的企业理念、使命/愿景/价值观以及公司座右铭。",
-    "zh-TW": "介紹大虎集團的企業理念、使命/願景/價值觀以及公司座右銘。"
+    "ko": "Daitora Group의 기업 이념, Mission / Vision / Value, 사훈을 소개합니다.",
+    "zh-CN": "介绍Daitora Group的企业理念、使命/愿景/价值观以及公司座右铭。",
+    "zh-TW": "介紹Daitora Group的企業理念、使命/願景/價值觀以及公司座右銘。"
   },
   "大寅グループの個人情報の取り扱いについてご案内します。": {
     "en": "We would like to inform you about the Daitora Group's handling of personal information.",
-    "ko": "오토 그룹의 개인 정보 취급에 대해 안내합니다.",
-    "zh-CN": "我们想告知您大虎集团对个人信息的处理情况。",
-    "zh-TW": "我們想告知您大虎集團對個人資訊的處理。"
+    "ko": "Daitora Group의 개인 정보 취급에 대해 안내합니다.",
+    "zh-CN": "我们想告知您Daitora Group对个人信息的处理情况。",
+    "zh-TW": "我們想告知您Daitora Group對個人資訊的處理。"
   },
   "大寅グループの強みは、車両台数だけではありません。多言語対応、専門ドライバーの育成、整備された車両環境、複数拠点での運行管理により、安心して任せられる移動を支えています。": {
     "en": "Daitora Group's strength lies not only in its number of vehicles. With multilingual support, professional driver training, a well-maintained vehicle environment, and operation management at multiple locations, we support reliable transportation.",
-    "ko": "오토 그룹의 강점은 차량 수만이 아닙니다. 다언어 대응, 전문 드라이버의 육성, 정비된 차량 환경, 복수 거점에서의 운행 관리에 의해, 안심하고 맡길 수 있는 이동을 지지하고 있습니다.",
-    "zh-CN": "大虎集团的优势不仅仅在于其车辆数量。凭借多语言支持、专业驾驶员培训、维护良好的车辆环境以及多地点的运营管理，我们支持可靠的运输。",
-    "zh-TW": "大虎集團的優勢不僅僅在於其擁有的車輛數量。憑藉多語言支援、專業駕駛員培訓、維護良好的車輛環境以及多地點的營運管理，我們支援可靠的運輸。"
+    "ko": "Daitora Group의 강점은 차량 수만이 아닙니다. 다언어 대응, 전문 드라이버의 육성, 정비된 차량 환경, 복수 거점에서의 운행 관리에 의해, 안심하고 맡길 수 있는 이동을 지지하고 있습니다.",
+    "zh-CN": "Daitora Group的优势不仅仅在于其车辆数量。凭借多语言支持、专业驾驶员培训、维护良好的车辆环境以及多地点的运营管理，我们支持可靠的运输。",
+    "zh-TW": "Daitora Group的優勢不僅僅在於其擁有的車輛數量。憑藉多語言支援、專業駕駛員培訓、維護良好的車輛環境以及多地點的營運管理，我們支援可靠的運輸。"
   },
   "大寅グループは、EXPO2025 大阪・関西万博に関連する要人送迎業務を請け負いました。国内外の来賓・関係者の移動に対応し、空港到着時の受け入れから会場・ホテル間の移動まで、一貫した送迎体制を整備しました。": {
     "en": "Daitora Group was contracted to provide transportation services for VIPs related to EXPO2025 Osaka/Kansai Expo. To accommodate the movement of domestic and international guests and related parties, we have established an integrated transportation system, from reception upon arrival at the airport to transportation between venues and hotels.",
-    "ko": "오토 그룹은 EXPO 2025 오사카 · 간사이 박람회와 관련된 요인 송영 업무를 요청했습니다. 국내외의 내빈·관계자의 이동에 대응해, 공항 도착시의 수용으로부터 회장·호텔간의 이동까지, 일관한 송영 체제를 정비했습니다.",
-    "zh-CN": "大虎集团签约为2025年大阪/关西世博会相关贵宾提供交通服务。为满足国内外宾客及相关人员的出行，我们建立了从机场抵达接待到场馆与酒店之间交通的综合交通系统。",
-    "zh-TW": "大虎集團簽約為2025年大阪/關西世博相關貴賓提供交通服務。為滿足國內外賓客及相關人員的出行，我們建立了從機場抵達接待到場館與飯店之間交通的綜合交通系統。"
+    "ko": "Daitora Group은 EXPO 2025 오사카 · 간사이 박람회와 관련된 요인 송영 업무를 요청했습니다. 국내외의 내빈·관계자의 이동에 대응해, 공항 도착시의 수용으로부터 회장·호텔간의 이동까지, 일관한 송영 체제를 정비했습니다.",
+    "zh-CN": "Daitora Group签约为2025年大阪/关西世博会相关贵宾提供交通服务。为满足国内外宾客及相关人员的出行，我们建立了从机场抵达接待到场馆与酒店之间交通的综合交通系统。",
+    "zh-TW": "Daitora Group簽約為2025年大阪/關西世博相關貴賓提供交通服務。為滿足國內外賓客及相關人員的出行，我們建立了從機場抵達接待到場館與飯店之間交通的綜合交通系統。"
   },
   "大寅グループは、ハイヤー、タクシー、中古車販売を軸に、空港送迎、観光貸切、企業送迎、地域交通、車両活用までを一体で支えています。": {
     "en": "The Daitora Group provides integrated support for services ranging from rental cars, taxis, and used car sales to airport transportation, sightseeing charters, corporate transportation, regional transportation, and vehicle utilization.",
     "ko": "다이토 그룹은 하이어, 택시, 중고차 판매를 축으로, 공항 송영, 관광 전세, 기업 송영, 지역 교통, 차량 활용까지를 일체로 지지하고 있습니다.",
-    "zh-CN": "大虎集团提供从租车、出租车、二手车销售到机场交通、观光包车、企业交通、区域交通、车辆利用等综合服务支持。",
-    "zh-TW": "大虎集團提供從租車、計程車、二手車銷售到機場交通、觀光包車、企業交通、區域交通、車輛利用等綜合服務支援。"
+    "zh-CN": "Daitora Group提供从租车、出租车、二手车销售到机场交通、观光包车、企业交通、区域交通、车辆利用等综合服务支持。",
+    "zh-TW": "Daitora Group提供從租車、計程車、二手車銷售到機場交通、觀光包車、企業交通、區域交通、車輛利用等綜合服務支援。"
   },
   "大寅グループは、ハイヤー、タクシー、送迎車両を日々運行している会社です。そのため、車両を単なる商品としてではなく、実際に使う場面、乗りやすさ、荷物の積みやすさ、維持管理、納車後の使いやすさまで含めて考えています。": {
     "en": "Daitora Group is a company that operates hire cars, taxis, and shuttle vehicles on a daily basis. For this reason, we consider vehicles not just as products, but also in terms of how they are actually used, how easy they are to ride, how easy they are to load, how easy they are to maintain, and how easy they are to use after delivery.",
-    "ko": "오토네 그룹은 하이어, 택시, 픽업 차량을 매일 운행하는 회사입니다. 그 때문에, 차량을 단순한 상품으로서는 아니고, 실제로 사용하는 장면, 승차의 용이함, 짐의 적재의 용이함, 유지 관리, 납차 후의 사용의 용이성까지 포함해 생각하고 있습니다.",
+    "ko": "Daitora네 그룹은 하이어, 택시, 픽업 차량을 매일 운행하는 회사입니다. 그 때문에, 차량을 단순한 상품으로서는 아니고, 실제로 사용하는 장면, 승차의 용이함, 짐의 적재의 용이함, 유지 관리, 납차 후의 사용의 용이성까지 포함해 생각하고 있습니다.",
     "zh-CN": "Daitora Group 是一家每天经营出租汽车、出租车和班车的公司。因此，我们不仅将车辆视为产品，而且还考虑其实际使用方式、乘坐的便捷性、装载的便捷性、维护的便捷性以及交付后的使用便捷性。",
     "zh-TW": "Daitora Group 是一家每天經營出租汽車、計程車和接駁車的公司。因此，我們不僅將車輛視為產品，而且還考慮其實際使用方式、乘坐的便利性、裝載的便利性、維護的便利性以及交付後的使用便利性。"
   },
   "大寅グループは、京都エリアにおけるサービス体制強化のため、京都営業所を開設しました。京都市内ホテル、観光地、企業訪問先への配車がよりスムーズになり、大阪・京都間の送迎案件や、京都発着の観光貸切、企業送迎にも柔軟に対応できる体制を整えました。": {
     "en": "The Daitora Group has opened a Kyoto office to strengthen its service system in the Kyoto area. Vehicle dispatch to hotels, sightseeing spots, and corporate destinations in Kyoto has become smoother, and we have created a system that can flexibly handle transfers between Osaka and Kyoto, chartered sightseeing tours to and from Kyoto, and corporate transfers.",
-    "ko": "오토 그룹은 교토 지역의 서비스 체제 강화를 위해 교토 영업소를 개설했습니다. 교토시내 호텔, 관광지, 기업 방문처에의 배차가 보다 부드럽게 되어, 오사카·교토간의 송영 안건이나, 교토 발착의 관광 전세, 기업 송영에도 유연하게 대응할 수 있는 체제를 정돈했습니다.",
-    "zh-CN": "大虎集团开设了京都办事处，以加强其在京都地区的服务体系。京都的酒店、旅游景点、企业目的地的车辆调度变得更加顺畅，我们创建了一个可以灵活处理大阪和京都之间的接送、京都往返包车旅游以及企业接送的系统。",
-    "zh-TW": "大虎集團開設了京都辦事處，以加強在京都地區的服務體系。京都的飯店、旅遊景點、企業目的地的車輛調度變得更加順暢，我們創建了一個可以靈活處理大阪和京都之間的接送、京都往返包車旅遊以及企業接送的系統。"
+    "ko": "Daitora Group은 교토 지역의 서비스 체제 강화를 위해 교토 영업소를 개설했습니다. 교토시내 호텔, 관광지, 기업 방문처에의 배차가 보다 부드럽게 되어, 오사카·교토간의 송영 안건이나, 교토 발착의 관광 전세, 기업 송영에도 유연하게 대응할 수 있는 체제를 정돈했습니다.",
+    "zh-CN": "Daitora Group开设了京都办事处，以加强其在京都地区的服务体系。京都的酒店、旅游景点、企业目的地的车辆调度变得更加顺畅，我们创建了一个可以灵活处理大阪和京都之间的接送、京都往返包车旅游以及企业接送的系统。",
+    "zh-TW": "Daitora Group開設了京都辦事處，以加強在京都地區的服務體系。京都的飯店、旅遊景點、企業目的地的車輛調度變得更加順暢，我們創建了一個可以靈活處理大阪和京都之間的接送、京都往返包車旅遊以及企業接送的系統。"
   },
   "大寅グループは、大阪・京都・堺・港区を軸とした関西複数拠点での運行体制を強化しました。空港送迎、観光貸切、企業送迎、地域タクシーなど、利用目的に応じた車両手配と現場対応をより安定して行えるよう、拠点間の連携を進めています。": {
     "en": "The Daitora Group has strengthened its operation system at multiple locations in the Kansai region, centered around Osaka, Kyoto, Sakai, and Minato wards. We are promoting cooperation between our bases to ensure a more stable arrangement of vehicles and on-site support depending on the purpose of use, such as airport transfers, sightseeing charters, company transfers, and local taxis.",
-    "ko": "오토기 그룹은 오사카・교토・사카이・미나토구를 축으로 한 간사이 복수 거점에서의 운행 체제를 강화했습니다. 공항 송영, 관광 전세, 기업 송영, 지역 택시 등, 이용 목적에 따른 차량 수배와 현장 대응을 보다 안정적으로 실시할 수 있도록, 거점간의 제휴를 진행시키고 있습니다.",
-    "zh-CN": "大虎集团在以大阪、京都、堺、港区为中心的关西地区多个据点强化了运营体系。我们正在推动基地之间的合作，以根据使用目的确保更稳定的车辆安排和现场支持，例如机场接送、观光包车、公司接送和当地出租车。",
-    "zh-TW": "大虎集團在以大阪、京都、堺、港區為中心的關西地區多個據點強化了營運體系。我們正在推動基地之間的合作，以根據使用目的確保更穩定的車輛安排和現場支持，例如機場接送、觀光包車、公司接送和當地出租車。"
+    "ko": "Daitora Group은 오사카・교토・사카이・미나토구를 축으로 한 간사이 복수 거점에서의 운행 체제를 강화했습니다. 공항 송영, 관광 전세, 기업 송영, 지역 택시 등, 이용 목적에 따른 차량 수배와 현장 대응을 보다 안정적으로 실시할 수 있도록, 거점간의 제휴를 진행시키고 있습니다.",
+    "zh-CN": "Daitora Group在以大阪、京都、堺、港区为中心的关西地区多个据点强化了运营体系。我们正在推动基地之间的合作，以根据使用目的确保更稳定的车辆安排和现场支持，例如机场接送、观光包车、公司接送和当地出租车。",
+    "zh-TW": "Daitora Group在以大阪、京都、堺、港區為中心的關西地區多個據點強化了營運體系。我們正在推動基地之間的合作，以根據使用目的確保更穩定的車輛安排和現場支持，例如機場接送、觀光包車、公司接送和當地出租車。"
   },
   "大寅グループは、大阪本社を中心に、京都、堺、港区など関西複数拠点で運行体制を整えています。": {
     "en": "The Daitora Group has an operating system centered on its Osaka head office, with multiple bases in Kansai, including Kyoto, Sakai, and Minato Ward.",
-    "ko": "오토기 그룹은 오사카 본사를 중심으로 교토, 사카이, 미나토구 등 간사이 여러 거점에서 운행 체제를 갖추고 있습니다.",
-    "zh-CN": "大虎集团以大阪总公司为中心，在京都、堺、港区等关西设有多个据点。",
-    "zh-TW": "大虎集團以大阪總公司為中心，在京都、堺、港區等關西設有多個據點。"
+    "ko": "Daitora Group은 오사카 본사를 중심으로 교토, 사카이, 미나토구 등 간사이 여러 거점에서 운행 체제를 갖추고 있습니다.",
+    "zh-CN": "Daitora Group以大阪总公司为中心，在京都、堺、港区等关西设有多个据点。",
+    "zh-TW": "Daitora Group以大阪總公司為中心，在京都、堺、港區等關西設有多個據點。"
   },
   "大寅ハイヤー": {
-    "en": "Daitora Hire",
-    "ko": "오토네 하이어",
-    "zh-CN": "大虎租用",
-    "zh-TW": "大虎租用"
+    "en": "Daitora Chauffeur & Private Transportation",
+    "ko": "Daitora Chauffeur & Private Transportation",
+    "zh-CN": "Daitora Chauffeur & Private Transportation",
+    "zh-TW": "Daitora Chauffeur & Private Transportation"
   },
   "大寅ハイヤー | 大寅グループ": {
-    "en": "Daitora Hire | Daitora Group",
-    "ko": "오토네 하이어 | 오토 그룹",
-    "zh-CN": "大虎租用|大虎集团",
-    "zh-TW": "大虎租用|大虎集團"
+    "en": "Daitora Chauffeur & Private Transportation | Daitora Group",
+    "ko": "Daitora Chauffeur & Private Transportation | Daitora Group",
+    "zh-CN": "Daitora Chauffeur & Private Transportation|Daitora Group",
+    "zh-TW": "Daitora Chauffeur & Private Transportation|Daitora Group"
   },
   "大寅ハイヤー、寅丸タクシー、大寅中古車販売の三つの事業をご紹介します。": {
-    "en": "We would like to introduce our three businesses: Daitora Hire, Toramaru Taxi, and Daitora Used Car Sales.",
-    "ko": "다이토 하이어, 토야마루 택시, 오토 중고차 판매의 세 가지 사업을 소개합니다.",
-    "zh-CN": "我们想介绍一下我们的三项业务：大虎出租、虎丸出租车和大虎二手车销售。",
-    "zh-TW": "我們想介紹我們的三項業務：大虎出租、虎丸出租車和大虎二手車銷售。"
+    "en": "We would like to introduce our three businesses: Daitora Chauffeur & Private Transportation, Toramaru Taxi, and Daitora Auto / Used Car Sales.",
+    "ko": "다이토 하이어, 토야마루 택시, Daitora Auto / Used Car Sales의 세 가지 사업을 소개합니다.",
+    "zh-CN": "我们想介绍一下我们的三项业务：Daitora出租、Toramaru Taxi和Daitora二手车销售。",
+    "zh-TW": "我們想介紹我們的三項業務：Daitora出租、Toramaru Taxi和Daitora二手車銷售。"
   },
   "大寅ハイヤーに関するご相談はこちら": {
-    "en": "Click here for consultation regarding Daitora Hire",
-    "ko": "大寅ハイヤ에 관한 상담은 이쪽",
-    "zh-CN": "有关大虎租赁的咨询请点击此处",
-    "zh-TW": "有關大虎租賃的諮詢請點擊此處"
+    "en": "Click here for consultation regarding Daitora Chauffeur & Private Transportation",
+    "ko": "Daitora Chauffeur & Private Transportation 상담은 여기에서",
+    "zh-CN": "有关Daitora租赁的咨询请点击此处",
+    "zh-TW": "有關Daitora租賃的諮詢請點擊此處"
   },
   "大寅中古車販売": {
-    "en": "Daitora used car sales",
-    "ko": "오토 중고차 판매",
-    "zh-CN": "大虎二手车销售",
-    "zh-TW": "大虎二手車銷售"
+    "en": "Daitora Auto / Used Car Sales",
+    "ko": "Daitora Auto / Used Car Sales",
+    "zh-CN": "Daitora二手车销售",
+    "zh-TW": "Daitora二手車銷售"
   },
   "大寅中古車販売 | 大寅グループ": {
-    "en": "Daitora used car sales | Daitora Group",
-    "ko": "오토 중고차 판매 | 오토 그룹",
-    "zh-CN": "大虎二手车销售|大虎集团",
-    "zh-TW": "大虎二手車銷售|大虎集團"
+    "en": "Daitora Auto / Used Car Sales | Daitora Group",
+    "ko": "Daitora Auto / Used Car Sales | Daitora Group",
+    "zh-CN": "Daitora二手车销售|Daitora Group",
+    "zh-TW": "Daitora二手車銷售|Daitora Group"
   },
   "大寅中古車販売が選ばれる理由": {
-    "en": "Reasons why Daitora used car sales are chosen",
-    "ko": "오토 중고차 판매가 선택되는 이유",
-    "zh-CN": "选择大虎二手车销售的理由",
-    "zh-TW": "選擇大虎二手車銷售的理由"
+    "en": "Reasons why Daitora Auto / Used Car Sales are chosen",
+    "ko": "Daitora Auto / Used Car Sales가 선택되는 이유",
+    "zh-CN": "选择Daitora二手车销售的理由",
+    "zh-TW": "選擇Daitora二手車銷售的理由"
   },
   "大寅中古車販売では、個人利用から事業用車両まで、使用目的、乗車人数、走行距離、維持管理まで考えた車両選びをお手伝いしています。": {
-    "en": "At Daitora Used Car Sales, we help you select a vehicle, from personal use to business vehicles, taking into consideration the purpose of use, number of passengers, mileage, and maintenance.",
-    "ko": "오토 중고차 판매에서는, 개인 이용으로부터 사업용 차량에 이르기까지, 사용 목적, 승차 인원수, 주행 거리, 유지 관리까지 생각한 차량 선택을 돕고 있습니다.",
-    "zh-CN": "在大虎二手车销售处，我们会根据使用目的、乘客数量、行驶里程和维护情况，帮助您选择从个人用车到商务车的车辆。",
-    "zh-TW": "在大虎二手車銷售處，我們會根據使用目的、乘客數量、行駛里程和維護情況，幫助您選擇從個人用車到商務車的車輛。"
+    "en": "At Daitora Auto / Used Car Sales, we help you select a vehicle, from personal use to business vehicles, taking into consideration the purpose of use, number of passengers, mileage, and maintenance.",
+    "ko": "Daitora Auto / Used Car Sales에서는, 개인 이용으로부터 사업용 차량에 이르기까지, 사용 목적, 승차 인원수, 주행 거리, 유지 관리까지 생각한 차량 선택을 돕고 있습니다.",
+    "zh-CN": "在Daitora二手车销售处，我们会根据使用目的、乘客数量、行驶里程和维护情况，帮助您选择从个人用车到商务车的车辆。",
+    "zh-TW": "在Daitora二手車銷售處，我們會根據使用目的、乘客數量、行駛里程和維護情況，幫助您選擇從個人用車到商務車的車輛。"
   },
   "大寅中古車販売では、車両購入をご検討のお客様に対し、必要書類や申込の流れをわかりやすくご案内し、安心して手続きを進められるようサポートいたします。": {
-    "en": "At Daitora Used Car Sales, we provide customers who are considering purchasing a vehicle with easy-to-understand guidance on the required documents and application process, and support them so that they can proceed with the process with peace of mind.",
-    "ko": "오토 중고차 판매에서는, 차량 구입을 검토의 고객에게, 필요 서류나 신청의 흐름을 알기 쉽게 안내해, 안심하고 수속을 진행할 수 있도록 서포트하겠습니다.",
-    "zh-CN": "在大虎二手车销售处，我们为正在考虑购买车辆的客户提供有关所需文件和申请流程的易于理解的指导，并为他们提供支持，以便他们安心地进行流程。",
-    "zh-TW": "在大虎二手車銷售處，我們為正在考慮購買車輛的客戶提供有關所需文件和申請流程的易於理解的指導，並為他們提供支持，以便他們安心地進行流程。"
+    "en": "At Daitora Auto / Used Car Sales, we provide customers who are considering purchasing a vehicle with easy-to-understand guidance on the required documents and application process, and support them so that they can proceed with the process with peace of mind.",
+    "ko": "Daitora Auto / Used Car Sales에서는, 차량 구입을 검토의 고객에게, 필요 서류나 신청의 흐름을 알기 쉽게 안내해, 안심하고 수속을 진행할 수 있도록 서포트하겠습니다.",
+    "zh-CN": "在Daitora二手车销售处，我们为正在考虑购买车辆的客户提供有关所需文件和申请流程的易于理解的指导，并为他们提供支持，以便他们安心地进行流程。",
+    "zh-TW": "在Daitora二手車銷售處，我們為正在考慮購買車輛的客戶提供有關所需文件和申請流程的易於理解的指導，並為他們提供支持，以便他們安心地進行流程。"
   },
   "大手旅行会社、行政団体、企業団体からの依頼案件にも多数対応経験があります。公開できる範囲に限り、今後も実績情報を整理して掲載していきます。": {
     "en": "We have experience in handling numerous requests from major travel agencies, government organizations, and corporate organizations. We will continue to organize and publish performance information to the extent that it is publicly available.",
@@ -2264,8 +2264,8 @@
   "大阪・京都を拠点に、ハイヤー、タクシー、中古車販売を展開するDaitora Groupの公式サイトです。": {
     "en": "This is the official website of Daitora Group, which sells hire cars, taxis, and used cars based in Osaka and Kyoto.",
     "ko": "오사카 교토를 거점으로 하이어, 택시, 중고차 판매를 전개하는 Daitora Group의 공식 사이트입니다.",
-    "zh-CN": "这是以大阪和京都为基地销售出租汽车、出租车和二手车的大虎集团的官方网站。",
-    "zh-TW": "這是以大阪和京都為基地銷售出租汽車、計程車和二手車的大虎集團的官方網站。"
+    "zh-CN": "这是以大阪和京都为基地销售出租汽车、出租车和二手车的Daitora Group的官方网站。",
+    "zh-TW": "這是以大阪和京都為基地銷售出租汽車、計程車和二手車的Daitora Group的官方網站。"
   },
   "大阪・京都を拠点に、地域社会と関係者の皆様に必要とされる企業を目指します。": {
     "en": "Based in Osaka and Kyoto, we aim to be a company that is needed by local communities and everyone involved.",
@@ -2288,8 +2288,8 @@
   "大阪・京都・堺・港区など関西エリアの地域移動を支える寅丸タクシーをご紹介します。": {
     "en": "Introducing Toramaru Taxi, which supports regional transportation in the Kansai area such as Osaka, Kyoto, Sakai, and Minato Ward.",
     "ko": "오사카・교토・사카이・미나토구 등 간사이 지역의 지역 이동을 지지하는 토야마루 택시를 소개합니다.",
-    "zh-CN": "介绍支持大阪、京都、堺、港区等关西地区区域交通的“虎丸出租车”。",
-    "zh-TW": "介紹支援大阪、京都、堺、港區等關西地區區域交通的「虎丸計程車」。"
+    "zh-CN": "介绍支持大阪、京都、堺、港区等关西地区区域交通的“Toramaru Taxi”。",
+    "zh-TW": "介紹支援大阪、京都、堺、港區等關西地區區域交通的「Toramaru計程車」。"
   },
   "大阪・京都・堺・港区など関西エリアの移動を支える。": {
     "en": "Supports movement in the Kansai area such as Osaka, Kyoto, Sakai, and Minato Ward.",
@@ -2449,9 +2449,9 @@
   },
   "安全・品質 | 大寅グループ": {
     "en": "Safety/Quality | Daitora Group",
-    "ko": "안전 · 품질 | 오토 그룹",
-    "zh-CN": "安全/质量|大虎集团",
-    "zh-TW": "安全/品質|大虎集團"
+    "ko": "안전 · 품질 | Daitora Group",
+    "zh-CN": "安全/质量|Daitora Group",
+    "zh-TW": "安全/品質|Daitora Group"
   },
   "安全・品質を見る": {
     "en": "See safety and quality",
@@ -2545,9 +2545,9 @@
   },
   "実績紹介 | 大寅グループ": {
     "en": "Achievements | Daitora Group",
-    "ko": "업적 소개 | 오토 그룹",
-    "zh-CN": "成就 |大虎集团",
-    "zh-TW": "成就 |大虎集團"
+    "ko": "업적 소개 | Daitora Group",
+    "zh-CN": "成就 |Daitora Group",
+    "zh-TW": "成就 |Daitora Group"
   },
   "実績紹介を見る": {
     "en": "View achievements",
@@ -2563,15 +2563,15 @@
   },
   "寅丸タクシー": {
     "en": "Toramaru Taxi",
-    "ko": "토라마루 택시",
-    "zh-CN": "虎丸出租车",
-    "zh-TW": "虎丸出租車"
+    "ko": "Toramaru Taxi",
+    "zh-CN": "Toramaru Taxi",
+    "zh-TW": "Toramaru Taxi"
   },
   "寅丸タクシー | 大寅グループ": {
     "en": "Toramaru Taxi | Daitora Group",
-    "ko": "토라마루 택시 | 오토 그룹",
-    "zh-CN": "虎丸出租车 |大虎集团",
-    "zh-TW": "虎丸出租車 |大虎集團"
+    "ko": "Toramaru Taxi | Daitora Group",
+    "zh-CN": "Toramaru Taxi |Daitora Group",
+    "zh-TW": "Toramaru Taxi |Daitora Group"
   },
   "寅丸タクシーでは、トヨタ・シエンタを中心とした車両を運用しています。コンパクトで乗り降りしやすく、街中や住宅地、駅周辺でも使いやすい車両です。車両には TORAMARU TAXI のサインと緑ナンバーを装着し、地域で安心してご利用いただけるタクシーを目指しています。": {
     "en": "Toramaru Taxi operates a fleet of vehicles, mainly Toyota Sienta. This vehicle is compact and easy to get on and off, making it easy to use around town, in residential areas, and around stations. The vehicles are equipped with TORAMARU TAXI signs and green license plates, aiming to be taxis that can be used with peace of mind in the area.",
@@ -2582,26 +2582,26 @@
   "寅丸タクシーでは、乗務員一人ひとりの安全意識と接遇姿勢を大切にしています。言葉遣い、乗降時の配慮、車内の清潔さ、時間への意識。小さな基本を積み重ねることが、地域で選ばれるタクシーにつながると考えています。": {
     "en": "At Toramaru Taxi, we value the safety awareness and customer service attitude of each and every driver. Language, consideration when getting on and off, cleanliness inside the car, and awareness of time. We believe that accumulating small basics will lead to becoming the taxi of choice in the region.",
     "ko": "토야마루 택시에서는 승무원 한사람 한사람의 안전 의식과 접대 자세를 소중히 하고 있습니다. 말투, 승강시의 배려, 차내의 청결함, 시간에의 의식. 작은 기본을 쌓는 것이 지역에서 선택되는 택시로 이어질 것이라고 생각합니다.",
-    "zh-CN": "在虎丸出租车，我们重视每一位司机的安全意识和客户服务态度。语言、上下车时的体贴、车内的清洁度、时间意识。我们相信，积累一些基本知识将导致成为该地区的首选出租车。",
-    "zh-TW": "在虎丸出租車，我們重視每位司機的安全意識和客戶服務態度。語言、上下車時的體貼、車內的清潔度、時間意識。我們相信，累積一些基本知識將導致成為該地區的首選計程車。"
+    "zh-CN": "在Toramaru Taxi，我们重视每一位司机的安全意识和客户服务态度。语言、上下车时的体贴、车内的清洁度、时间意识。我们相信，积累一些基本知识将导致成为该地区的首选出租车。",
+    "zh-TW": "在Toramaru Taxi，我們重視每位司機的安全意識和客戶服務態度。語言、上下車時的體貼、車內的清潔度、時間意識。我們相信，累積一些基本知識將導致成為該地區的首選計程車。"
   },
   "寅丸タクシーに関するご相談はこちら": {
     "en": "Click here for consultation regarding Toramaru Taxi",
     "ko": "토야마루 택시에 관한 상담은 이쪽",
-    "zh-CN": "关于虎丸出租车的咨询请点击这里",
-    "zh-TW": "關於虎丸計程車的諮詢請點這裡"
+    "zh-CN": "关于Toramaru Taxi的咨询请点击这里",
+    "zh-TW": "關於Toramaru計程車的諮詢請點這裡"
   },
   "寅丸タクシーのご利用、地域移動、ホテル・駅からの移動に関するご相談。": {
     "en": "Consultation regarding the use of Toramaru Taxi, regional transportation, and transportation from hotels and stations.",
     "ko": "토마루 택시 이용, 지역 이동, 호텔·역에서의 이동에 관한 상담.",
-    "zh-CN": "关于虎丸出租车的使用、地区交通、酒店、车站的交通等的咨询。",
-    "zh-TW": "關於虎丸計程車的使用、地區交通、飯店、車站的交通等的諮詢。"
+    "zh-CN": "关于Toramaru Taxi的使用、地区交通、酒店、车站的交通等的咨询。",
+    "zh-TW": "關於Toramaru計程車的使用、地區交通、飯店、車站的交通等的諮詢。"
   },
   "寅丸タクシーは、駅やホテルからの移動、空港アクセス、観光、お出かけ、ビジネス利用まで、関西でのさまざまな移動シーンに対応しています。": {
     "en": "Toramaru Taxi supports a variety of transportation situations in Kansai, including transportation from stations and hotels, airport access, sightseeing, outings, and business use.",
     "ko": "토야마루 택시는 역과 호텔에서의 이동, 공항 액세스, 관광, 외출, 비즈니스 이용까지 간사이에서 다양한 이동 장면을 지원합니다.",
-    "zh-CN": "虎丸出租车支持关西的各种交通方式，包括车站和酒店的交通、机场交通、观光、郊游和商务用途。",
-    "zh-TW": "虎丸計程車支援關西的各種交通方式，包括車站和飯店的交通、機場交通、觀光、郊遊和商務用途。"
+    "zh-CN": "Toramaru Taxi支持关西的各种交通方式，包括车站和酒店的交通、机场交通、观光、郊游和商务用途。",
+    "zh-TW": "Toramaru計程車支援關西的各種交通方式，包括車站和飯店的交通、機場交通、觀光、郊遊和商務用途。"
   },
   "審査結果によっては、ご希望に添えない場合がございます。": {
     "en": "Depending on the screening results, we may not be able to accommodate your request.",
@@ -2881,9 +2881,9 @@
   },
   "数字で見る大寅グループ": {
     "en": "Daitora Group in numbers",
-    "ko": "숫자로 보는 오토 그룹",
-    "zh-CN": "大虎集团的数字",
-    "zh-TW": "大虎集團的數字"
+    "ko": "숫자로 보는 Daitora Group",
+    "zh-CN": "Daitora Group的数字",
+    "zh-TW": "Daitora Group的數字"
   },
   "整備された車両環境": {
     "en": "Well-maintained vehicle environment",
@@ -3031,27 +3031,27 @@
   },
   "株式会社大寅": {
     "en": "Daitora Co., Ltd.",
-    "ko": "주식회사 오토",
-    "zh-CN": "大虎株式会社",
-    "zh-TW": "大虎株式會社"
+    "ko": "Daitora Co., Ltd.",
+    "zh-CN": "Daitora株式会社",
+    "zh-TW": "Daitora株式會社"
   },
   "株式会社大寅では、中古車販売事業として、厳選した車両の販売と購入サポートを提供しています。ハイヤー・タクシー運行の現場を知る会社だからこそ、用途、状態、維持管理、乗り出し後の使いやすさまで考えた車両選びをサポートします。": {
     "en": "As a used car sales business, Daitora Co., Ltd. provides sales and purchasing support for carefully selected vehicles. Because we are a company that knows the field of hire taxi operation, we can support you in selecting a vehicle that takes into consideration the purpose, condition, maintenance, and ease of use after the vehicle is launched.",
-    "ko": "주식회사 오토에서는 중고차 판매 사업으로서 엄선된 차량의 판매 및 구매 지원을 제공하고 있습니다. 하이어·택시 운행의 현장을 아는 회사이기 때문에, 용도, 상태, 유지 관리, 탈출 후의 사용의 용이함까지 생각한 차량 선택을 서포트합니다.",
-    "zh-CN": "作为一家二手车销售企业，大虎株式会社为精心挑选的车辆提供销售和采购支持。因为我们是一家了解出租车运营领域的公司，所以我们可以在车辆推出后帮助您选择考虑用途、状况、维护和易用性的车辆。",
-    "zh-TW": "作為一家二手車銷售企業，大虎株式會社為精心挑選的車輛提供銷售和採購支援。因為我們是一家了解計程車營運領域的公司，所以我們可以在車輛推出後幫助您選擇考慮用途、狀況、維護和易用性的車輛。"
+    "ko": "Daitora Co., Ltd.에서는 중고차 판매 사업으로서 엄선된 차량의 판매 및 구매 지원을 제공하고 있습니다. 하이어·택시 운행의 현장을 아는 회사이기 때문에, 용도, 상태, 유지 관리, 탈출 후의 사용의 용이함까지 생각한 차량 선택을 서포트합니다.",
+    "zh-CN": "作为一家二手车销售企业，Daitora株式会社为精心挑选的车辆提供销售和采购支持。因为我们是一家了解出租车运营领域的公司，所以我们可以在车辆推出后帮助您选择考虑用途、状况、维护和易用性的车辆。",
+    "zh-TW": "作為一家二手車銷售企業，Daitora株式會社為精心挑選的車輛提供銷售和採購支援。因為我們是一家了解計程車營運領域的公司，所以我們可以在車輛推出後幫助您選擇考慮用途、狀況、維護和易用性的車輛。"
   },
   "株式会社大寅の会社情報、許認可、拠点情報をご紹介します。": {
     "en": "Introducing Daitora Co., Ltd.'s company information, licenses, and base information.",
-    "ko": "주식회사 오토의 회사 정보, 허가, 거점 정보를 소개합니다.",
-    "zh-CN": "介绍大虎株式会社的公司信息、许可证和基础信息。",
-    "zh-TW": "介紹大虎株式會社的公司資訊、許可證和基礎資訊。"
+    "ko": "Daitora Co., Ltd.의 회사 정보, 허가, 거점 정보를 소개합니다.",
+    "zh-CN": "介绍Daitora株式会社的公司信息、许可证和基础信息。",
+    "zh-TW": "介紹Daitora株式會社的公司資訊、許可證和基礎資訊。"
   },
   "株式会社大寅は、ハイヤー・貸切送迎サービスを中心に、タクシー事業、中古車販売、旅行関連サービスなど、関西の移動と車両活用に関わる事業を展開しています。": {
     "en": "Daitora Co., Ltd. operates businesses related to transportation and vehicle utilization in the Kansai region, including taxi business, used car sales, and travel-related services, with a focus on hire/private transportation services.",
-    "ko": "주식회사 오토는 하이어·대절 송영 서비스를 중심으로, 택시 사업, 중고차 판매, 여행 관련 서비스 등, 간사이의 이동과 차량 활용에 관련된 사업을 전개하고 있습니다.",
-    "zh-CN": "大虎株式会社在关西地区经营与交通和车辆利用相关的业务，包括出租车业务、二手车销售和旅行相关服务，重点是出租/私人交通服务。",
-    "zh-TW": "大虎株式會社在關西地區經營與交通和車輛利用相關的業務，包括計程車業務、二手車銷售和旅遊相關服務，重點是出租/私人交通服務。"
+    "ko": "Daitora Co., Ltd.는 하이어·대절 송영 서비스를 중심으로, 택시 사업, 중고차 판매, 여행 관련 서비스 등, 간사이의 이동과 차량 활용에 관련된 사업을 전개하고 있습니다.",
+    "zh-CN": "Daitora株式会社在关西地区经营与交通和车辆利用相关的业务，包括出租车业务、二手车销售和旅行相关服务，重点是出租/私人交通服务。",
+    "zh-TW": "Daitora株式會社在關西地區經營與交通和車輛利用相關的業務，包括計程車業務、二手車銷售和旅遊相關服務，重點是出租/私人交通服務。"
   },
   "検討中": {
     "en": "under consideration",
@@ -3444,10 +3444,10 @@
     "zh-TW": "機場接送、觀光包機、企業/VIP 接送。是您放心託付重要交通工具的車輛。"
   },
   "空港送迎、観光貸切、企業・VIP送迎に対応する大寅ハイヤーをご紹介します。": {
-    "en": "Introducing Daitora Hire, which provides airport transfers, sightseeing charters, and corporate/VIP transfers.",
-    "ko": "공항 송영, 관광 전세, 기업·VIP 송영에 대응하는 오토네 하이어를 소개합니다.",
-    "zh-CN": "隆重推出 Daitora Hire，提供机场接送、观光包机和企业/VIP 接送服务。",
-    "zh-TW": "隆重介紹 Daitora Hire，提供機場接送、觀光包機和企業/VIP 接送服務。"
+    "en": "Introducing Daitora Chauffeur & Private Transportation, which provides airport transfers, sightseeing charters, and corporate/VIP transfers.",
+    "ko": "공항 송영, 관광 전세, 기업·VIP 송영에 대응하는 Daitora Chauffeur & Private Transportation를 소개합니다.",
+    "zh-CN": "隆重推出 Daitora Chauffeur & Private Transportation，提供机场接送、观光包机和企业/VIP 接送服务。",
+    "zh-TW": "隆重介紹 Daitora Chauffeur & Private Transportation，提供機場接送、觀光包機和企業/VIP 接送服務。"
   },
   "空港送迎、観光貸切、企業送迎、VIP接待、大型案件に関するご相談。": {
     "en": "Consultation regarding airport transfers, sightseeing charters, corporate transfers, VIP entertainment, and large-scale projects.",
@@ -4248,10 +4248,10 @@
     "zh-TW": "關西南部地區的營運及車輛協調基地"
   },
   "関西空港、伊丹空港、神戸空港の送迎から、京都・奈良・神戸方面の観光貸切、企業視察、国際会議、ブランドイベント、VIP接待まで。大寅ハイヤーは、関西での上質な移動を現場から支えます。": {
-    "en": "From transportation to and from Kansai Airport, Itami Airport, and Kobe Airport, to chartered sightseeing in the Kyoto, Nara, and Kobe areas, corporate tours, international conferences, brand events, and VIP entertainment. Daitora Hire supports quality transportation in Kansai from the field.",
-    "ko": "간사이 공항, 이타미 공항, 고베 공항의 송영부터, 교토·나라·고베 방면의 관광 전세, 기업 시찰, 국제 회의, 브랜드 이벤트, VIP 접대까지. 오토네 하이어는 간사이에서의 양질의 이동을 현장에서 지원합니다.",
-    "zh-CN": "从往返关西机场、伊丹机场、神户机场的交通，到京都、奈良、神户地区的包车观光、企业旅游、国际会议、品牌活动、VIP娱乐等。 Daitora Hire 为关西地区的高质量交通提供现场支持。",
-    "zh-TW": "從往返關西機場、伊丹機場、神戶機場的交通，到京都、奈良、神戶地區的包車觀光、企業旅遊、國際會議、品牌活動、VIP娛樂等。 Daitora Hire 從現場為關西的優質運輸提供支援。"
+    "en": "From transportation to and from Kansai Airport, Itami Airport, and Kobe Airport, to chartered sightseeing in the Kyoto, Nara, and Kobe areas, corporate tours, international conferences, brand events, and VIP entertainment. Daitora Chauffeur & Private Transportation supports quality transportation in Kansai from the field.",
+    "ko": "간사이 공항, 이타미 공항, 고베 공항의 송영부터, 교토·나라·고베 방면의 관광 전세, 기업 시찰, 국제 회의, 브랜드 이벤트, VIP 접대까지. Daitora Chauffeur & Private Transportation는 간사이에서의 양질의 이동을 현장에서 지원합니다.",
+    "zh-CN": "从往返关西机场、伊丹机场、神户机场的交通，到京都、奈良、神户地区的包车观光、企业旅游、国际会议、品牌活动、VIP娱乐等。 Daitora Chauffeur & Private Transportation 为关西地区的高质量交通提供现场支持。",
+    "zh-TW": "從往返關西機場、伊丹機場、神戶機場的交通，到京都、奈良、神戶地區的包車觀光、企業旅遊、國際會議、品牌活動、VIP娛樂等。 Daitora Chauffeur & Private Transportation 從現場為關西的優質運輸提供支援。"
   },
   "関西空港・伊丹空港・神戸空港の送迎から、京都・奈良・神戸方面の観光貸切、企業視察、VIP接待まで対応。人数・荷物・接待規格に合わせて、Alphard、Hiace、Mercedes-Benz S-Class などの車両と乗務員を手配します。": {
     "en": "We offer everything from transportation to and from Kansai Airport, Itami Airport, and Kobe Airport, to chartered sightseeing tours to Kyoto, Nara, and Kobe, corporate tours, and VIP entertainment. We will arrange vehicles such as Alphard, Hiace, Mercedes-Benz S-Class, etc. and crew according to the number of people, luggage, and entertainment standards.",

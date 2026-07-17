@@ -199,7 +199,7 @@ function seoBlock(lang, page){
     'zh-TW': `Daitora Group 官方網站：${name}。提供關西地區機場接送、包車、計程車、中古車銷售與車輛購買諮詢。`
   };
   const title = lang === 'ja' ? meta[page]?.[0] : `${name} | Daitora Group`;
-  const canonical = page === 'company.html' ? `${pageUrl('about.html', lang)}#company-profile` : pageUrl(page, lang);
+  const canonical = page === 'company.html' ? pageUrl('about.html', lang) : pageUrl(page, lang);
   if (page === 'company.html') {
     return `<!-- i18n:head -->
   <meta name="robots" content="noindex,follow">
@@ -293,6 +293,58 @@ function setFormLanguage(html, lang){
   }
   return html;
 }
+function applyBrandLocks(html, lang){
+  if (lang === 'ja') return html;
+  const replacements = [
+    [/Daitora Group\s*\/\s*Daitora Group/g, 'Daitora Group'],
+    [/Daitora Hire/g, 'Daitora Chauffeur & Private Transportation'],
+    [/Daitora used car sales/gi, 'Daitora Auto / Used Car Sales'],
+    [/Daitora Used Car Sales/g, 'Daitora Auto / Used Car Sales'],
+    [/Daitora Auto\s*\/\s*Used Car Sales\s*\/\s*Used Car Sales/g, 'Daitora Auto / Used Car Sales']
+  ];
+  if (lang === 'zh-CN' || lang === 'zh-TW') {
+    replacements.push(
+      [/大虎集团/g, 'Daitora Group'],
+      [/大虎集團/g, 'Daitora Group'],
+      [/大虎/g, 'Daitora'],
+      [/虎丸出租车/g, 'Toramaru Taxi'],
+      [/虎丸出租車/g, 'Toramaru Taxi'],
+      [/虎丸/g, 'Toramaru'],
+      [/大寅租用/g, 'Daitora Chauffeur & Private Transportation'],
+      [/大寅包车接送/g, 'Daitora Chauffeur & Private Transportation'],
+      [/大寅包車接送/g, 'Daitora Chauffeur & Private Transportation'],
+      [/大寅二手车销售/g, 'Daitora Auto / Used Car Sales'],
+      [/大寅二手車銷售/g, 'Daitora Auto / Used Car Sales'],
+      [/大寅中古车销售/g, 'Daitora Auto / Used Car Sales'],
+      [/大寅中古車銷售/g, 'Daitora Auto / Used Car Sales'],
+      [/Daitora租用/g, 'Daitora Chauffeur & Private Transportation']
+    );
+  }
+  if (lang === 'ko') {
+    replacements.push(
+      [/오토기 그룹/g, 'Daitora Group'],
+      [/오토 그룹/g, 'Daitora Group'],
+      [/대인 그룹/g, 'Daitora Group'],
+      [/주식회사 오토/g, 'Daitora Co., Ltd.'],
+      [/오토시/g, 'Daitora'],
+      [/오토에 대해/g, 'Daitora 소개'],
+      [/오토 중고차 판매/g, 'Daitora Auto / Used Car Sales'],
+      [/오토네 하이어/g, 'Daitora Chauffeur & Private Transportation'],
+      [/오토 히이야/g, 'Daitora Chauffeur & Private Transportation'],
+      [/히이야/g, '하이어'],
+      [/오토론/g, '자동차 론'],
+      [/오토/g, 'Daitora'],
+      [/대도라 하이어/g, 'Daitora Chauffeur & Private Transportation'],
+      [/대도라 중고차 판매/g, 'Daitora Auto / Used Car Sales'],
+      [/대도라/g, 'Daitora'],
+      [/토라마루 택시/g, 'Toramaru Taxi'],
+      [/대인/g, 'Daitora'],
+      [/大寅ハイヤ/g, 'Daitora Chauffeur & Private Transportation']
+    );
+  }
+  for (const [from, to] of replacements) html = html.replace(from, to);
+  return html;
+}
 function localizedPath(page, lang){
   if (lang === 'ja') return page;
   return page;
@@ -329,6 +381,7 @@ function writePage(lang, page){
   html = injectHead(html, lang, page);
   html = setFormLanguage(html, lang);
   html = translate(html, lang);
+  html = applyBrandLocks(html, lang);
   html = injectSwitchers(html, lang, page);
   html = langSpecificCss(html, lang);
   html = adjustPaths(html, lang);

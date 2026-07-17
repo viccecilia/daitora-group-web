@@ -1,42 +1,32 @@
 # Multilingual QA
 
-Generated: 2026-07-16T09:02:17.489Z
+Generated: 2026-07-17T04:53:07.880Z
 
-## Languages
-- ja: root URL, default source language
-- zh-CN: /zh-cn/
-- en: /en/
-- ko: /ko/
-- zh-TW: /zh-tw/
+## Automated Audit Summary
 
-## Pages
-- index.html
-- about.html
-- business.html
-- business-hire.html
-- business-taxi.html
-- business-auto.html
-- quality.html
-- works.html
-- company.html
-- news.html
-- contact.html
-- privacy.html
-- 404.html
+| Language | Pages | Japanese kana residuals | Broken links | Missing resources | SEO duplicate/count errors | Duplicate IDs |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| zh-CN | 13 | 0 | 0 | 0 | 0 | 0 |
+| en | 13 | 0 | 0 | 0 | 0 | 0 |
+| ko | 13 | 0 | 0 | 0 | 0 | 0 |
+| zh-TW | 13 | 0 | 0 | 0 | 0 | 0 |
 
-## Checks Performed
-- Static language directories generated without query-parameter routing.
-- Header language switcher links to the equivalent page in each language.
-- Contact forms include hidden site_language.
-- Japanese contact labels corrected: 航空便名 / 手荷物数.
-- sitemap.xml regenerated with hreflang alternates.
-- Shared assets remain under assets/.
+Audit status: PASSED
 
-## Pending Human Review
-- Translations are implementation draft and should be reviewed by native speakers before publication.
-- Public claims such as 約100台, licenses, G20, EXPO2025, brand event history and contact details still require business confirmation.
-- Final production domain should be confirmed before launch if different from https://daitora-jp.com.
+## Responsive Check Status
 
-## Responsive QA To Complete
-- 320px / 390px / 768px / 1024px / 1440px visual check for each language.
-- Verify no horizontal overflow after final native-language copy review.
+- 320px: not automated in this script; visual browser QA still required after translation review.
+- 390px: not automated in this script; visual browser QA still required after translation review.
+- 768px: not automated in this script; visual browser QA still required after translation review.
+- 1024px: not automated in this script; visual browser QA still required after translation review.
+- 1440px: not automated in this script; visual browser QA still required after translation review.
+
+## Errors
+
+- None
+
+## Notes For Human Review
+
+- Brand names are locked to Daitora Group, Daitora Chauffeur & Private Transportation, Toramaru Taxi, and Daitora Auto / Used Car Sales.
+- Official addresses, license numbers, public case claims, dates, and business figures still require business-side confirmation.
+- Server-side 301 redirect recommendation: map /company.html and localized /company.html paths to their corresponding /about.html#company-profile user-facing destinations while keeping canonical URLs without anchors.
