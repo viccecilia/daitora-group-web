@@ -1,6 +1,6 @@
 {
   "/ お問い合わせ": {
-    "en": "/ inquiry",
+    "en": "/ Contact",
     "ko": "/ 문의",
     "zh-CN": "/ 询问",
     "zh-TW": "/ 詢問"
@@ -18,19 +18,19 @@
     "zh-TW": "/隱私權政策"
   },
   "/ 事業紹介": {
-    "en": "/ Business introduction",
+    "en": "/ Businesses",
     "ko": "/ 사업 소개",
     "zh-CN": "/ 业务介绍",
     "zh-TW": "/ 業務介紹"
   },
   "/ 事業紹介 / 大寅ハイヤー": {
-    "en": "/ Business introduction / Daitora Chauffeur & Private Transportation",
+    "en": "/ Businesses / Daitora Chauffeur & Private Transportation",
     "ko": "/ 사업 소개 / Daitora Chauffeur & Private Transportation",
     "zh-CN": "/ 业务介绍 / Daitora Chauffeur & Private Transportation",
     "zh-TW": "/ 業務介紹 / Daitora Chauffeur & Private Transportation"
   },
   "/ 事業紹介 / 寅丸タクシー": {
-    "en": "/ Business introduction / Toramaru Taxi",
+    "en": "/ Businesses / Toramaru Taxi",
     "ko": "/ 사업 소개 / Toramaru Taxi",
     "zh-CN": "/ 业务介绍 / Toramaru Taxi",
     "zh-TW": "/ 業務介紹 / Toramaru Taxi"
@@ -204,10 +204,10 @@
     "zh-TW": "滴滴/Uber等外部叫車路線將在發佈時確認官方網址後發布。"
   },
   "EXPO2025 大阪・関西万博 要人送迎業務を請負しました": {
-    "en": "EXPO2025 Osaka/Kansai Expo Contracted to transport VIPs",
-    "ko": "EXPO2025 오사카 · 간사이 만박 요인 송영 업무를 청부했습니다",
-    "zh-CN": "EXPO2025大阪/关西世博会签约运送贵宾",
-    "zh-TW": "EXPO2025大阪/關西世博會簽約運送貴賓"
+    "en": "Provided Executive Transportation for Expo 2025 Osaka, Kansai",
+    "ko": "2025 오사카·간사이 엑스포 주요 인사 송영 업무를 수행했습니다",
+    "zh-CN": "承接 EXPO 2025 大阪·关西世博会重要来宾接送服务",
+    "zh-TW": "承接 EXPO 2025 大阪・關西世博會重要來賓接送服務"
   },
   "G20大阪サミット 外国要人送迎": {
     "en": "G20 Osaka Summit Transport for foreign dignitaries",
@@ -216,13 +216,13 @@
     "zh-TW": "G20大阪峰會外國政要交通"
   },
   "G20大阪サミット関連送迎": {
-    "en": "G20 Osaka Summit related transportation",
+    "en": "G20 Osaka Summit-related transportation",
     "ko": "G20 오사카 서밋 관련 픽업",
     "zh-CN": "G20大阪峰会相关交通",
     "zh-TW": "G20大阪高峰會相關交通"
   },
   "GPS運行管理": {
-    "en": "GPS operation management",
+    "en": "GPS Operations Monitoring",
     "ko": "GPS 운행 관리",
     "zh-CN": "GPS运营管理",
     "zh-TW": "GPS營運管理"
@@ -234,7 +234,7 @@
     "zh-TW": "從 KIX / ITM / UKB 到飯店、場館和旅遊目的地。我們將根據您的航班號碼、到達時間、行李數量安排車輛。"
   },
   "TORAMARU TAXI の車両。": {
-    "en": "TORAMARU TAXI vehicle.",
+    "en": "The Toramaru Taxi fleet.",
     "ko": "TORAMARU TAXI 차량.",
     "zh-CN": "Toramaru Taxi。",
     "zh-TW": "Toramaru Taxi。"
@@ -270,13 +270,13 @@
     "zh-TW": "用於招待貴賓、高階主管和貴賓。"
   },
   "VIP対応": {
-    "en": "VIP compatible",
+    "en": "VIP transportation",
     "ko": "VIP 대응",
     "zh-CN": "兼容VIP",
     "zh-TW": "相容VIP"
   },
   "VIP接待": {
-    "en": "VIP entertainment",
+    "en": "VIP Transportation",
     "ko": "VIP 접대",
     "zh-CN": "贵宾娱乐",
     "zh-TW": "貴賓娛樂"
@@ -294,10 +294,10 @@
     "zh-TW": "VIP客戶及相關方的交通"
   },
   "VIP顧客・関係者送迎に対応。複数台・複数日にわたる運行管理を行い、車両美観、乗務員の所作、待機中の対応まで品質を重視しました。": {
-    "en": "Supports transportation for VIP customers and related parties. We managed the operation of multiple vehicles and over multiple days, placing emphasis on quality, including vehicle aesthetics, crew behavior, and response during standby.",
-    "ko": "VIP 고객·관계자 송영에 대응. 여러 대·여러 일에 걸친 운행 관리를 실시해, 차량 미관, 승무원의 소작, 대기중의 대응까지 품질을 중시했습니다.",
-    "zh-CN": "支持 VIP 客户及相关方的运输。我们管理多辆车辆在多天内的运行，重点关注质量，包括车辆美观、机组人员行为和待机期间的响应。",
-    "zh-TW": "支援 VIP 客戶及相關方的運輸。我們管理了多輛車輛在多天內的運行，重點是質量，包括車輛美觀、機組人員行為和待機期間的響應。"
+    "en": "Provided VIP and stakeholder transportation across multiple vehicles and dates, with close attention to vehicle presentation, chauffeur conduct and standby support.",
+    "ko": "VIP 고객과 관계자 송영을 위해 여러 대의 차량을 여러 일정에 걸쳐 운영했습니다. 차량 청결과 운전기사의 응대 태도, 대기 중 지원까지 세심하게 관리했습니다.",
+    "zh-CN": "为 VIP 客户及相关人员提供多车、多日接送服务，并重视车辆形象、司机礼仪和待命期间的现场配合。",
+    "zh-TW": "為 VIP 客戶及相關人員提供多車、多日接送服務，並重視車輛形象、司機禮儀與待命期間的現場配合。"
   },
   "お名前": {
     "en": "name",
@@ -306,7 +306,7 @@
     "zh-TW": "姓名"
   },
   "お問い合わせ": {
-    "en": "inquiry",
+    "en": "Contact",
     "ko": "문의",
     "zh-CN": "询问",
     "zh-TW": "詢問"
@@ -342,8 +342,8 @@
     "zh-TW": "查詢詳情"
   },
   "お問い合わせ内容に応じて、行程、車両、料金、当日の連絡体制を確認し、移動に不安が残らないよう手配します。": {
-    "en": "Depending on the content of your inquiry, we will confirm the itinerary, vehicle, fare, and contact system on the day, and make arrangements to ensure that you do not have any concerns about your trip.",
-    "ko": "문의 내용에 따라, 행정, ​​차량, 요금, 당일의 연락 체제를 확인해, 이동에 불안이 남지 않도록 준비합니다.",
+    "en": "We confirm the itinerary, vehicle requirements and day-of-service contact plan, then prepare each detail so your journey can proceed with confidence.",
+    "ko": "문의 내용에 따라 일정, 차량, 이용 조건, 당일 연락 체계를 확인하고 안심할 수 있도록 준비합니다.",
     "zh-CN": "我们将根据您咨询的内容，确认当天的行程、车辆、票价、联系方式等，并作出安排，确保您的行程没有后顾之忧。",
     "zh-TW": "我們將根據您諮詢的內容，確認當天的行程、車輛、票價、聯絡方式等，並作出安排，確保您的行程沒有後顧之憂。"
   },
@@ -366,13 +366,13 @@
     "zh-TW": "詢價項目"
   },
   "お客様5名まで。空港送迎、VIP接待、家族旅行、企業送迎など、快適な車内空間が求められる場面に適しています。": {
-    "en": "Up to 5 customers. It is suitable for situations where a comfortable interior space is required, such as airport transfers, VIP entertainment, family trips, and corporate transfers.",
+    "en": "For up to five passengers. Well suited to airport transfers, VIP transportation, family travel and corporate use where a comfortable cabin matters.",
     "ko": "고객 5명까지. 공항 교통편, VIP 접대, 가족 여행, 기업 교통 등 쾌적한 차내 공간이 요구되는 장면에 적합합니다.",
     "zh-CN": "最多 5 位客户。适用于机场接送、VIP娱乐、家庭旅行、企业接送等需要舒适内部空间的场合。",
     "zh-TW": "最多 5 位客戶。適用於機場接送、VIP娛樂、家庭旅行、企業接送等需要舒適內部空間的場合。"
   },
   "お客様9名まで。企業視察、団体送迎、観光貸切、荷物の多い移動に対応できる大型ワゴンです。": {
-    "en": "Up to 9 customers. This is a large wagon that can be used for company inspections, group transportation, sightseeing charters, and transportation with a lot of luggage.",
+    "en": "A spacious wagon for up to nine passengers, suited to corporate visits, group transportation, private tours and journeys with substantial luggage.",
     "ko": "고객 9명까지. 기업 시찰, 단체 송영, 관광 전세, 짐이 많은 이동에 대응할 수 있는 대형 왜건입니다.",
     "zh-CN": "最多 9 位顾客。这是一款大型旅行车，可用于公司考察、团体运输、观光包车、大件行李运输等。",
     "zh-TW": "最多 9 位顧客。這是一款大型旅行車，可用於公司考察、團體運輸、觀光包車、大型行李運輸等。"
@@ -390,7 +390,7 @@
     "zh-TW": "從最小的細節來看，我們的客戶都能安心無憂。"
   },
   "お客様のご利用相談、ホテル・法人様からの配車相談、乗務員採用のお問い合わせを、それぞれ確認しやすい形で受け付けています。": {
-    "en": "We accept customer usage inquiries, ride allocation inquiries from hotels and corporations, and crew recruitment inquiries in an easy-to-understand format.",
+    "en": "We provide clear inquiry routes for passengers, hotel and corporate dispatch requests, and driver recruitment.",
     "ko": "고객의 이용 상담, 호텔·법인님으로부터의 배차 상담, 승무원 채용의 문의를, 각각 확인하기 쉬운 형태로 받아들이고 있습니다.",
     "zh-CN": "我们以简单易懂的方式接受客户的使用查询、酒店和企业的乘车分配查询以及船员招聘查询。",
     "zh-TW": "我們以簡單易懂的方式接受客戶的使用查詢、飯店和企業的乘車分配查詢以及船員招聘查詢。"
@@ -402,7 +402,7 @@
     "zh-TW": "您還將培養密切關注客戶並冷靜應對意外情況的能力。"
   },
   "お急ぎの確認や、直接相談したい内容がある場合はこちら。": {
-    "en": "Click here if you have an urgent need or want to discuss something directly.",
+    "en": "Call us when your request is time-sensitive or easier to discuss directly.",
     "ko": "급한 확인이나 직접 상담하고 싶은 내용이 있는 경우는 이쪽.",
     "zh-CN": "如果您有紧急需求或想直接讨论某些问题，请单击此处。",
     "zh-TW": "如果您有緊急需求或想直接討論某些問題，請按此處。"
@@ -445,7 +445,7 @@
   },
   "ご入力内容に不備がある場合、確認のご連絡を差し上げる場合がございます。": {
     "en": "If there is a problem with the information you entered, we may contact you to confirm.",
-    "ko": "입력 내용에 미비가 있는 경우, 확인의 연락을 드리는 경우가 있습니다.",
+    "ko": "입력 내용이 불충분한 경우 확인을 위해 연락드릴 수 있습니다.",
     "zh-CN": "如果您输入的信息有问题，我们可能会与您联系进行确认。",
     "zh-TW": "如果您輸入的資訊有問題，我們可能會與您聯絡確認。"
   },
@@ -463,7 +463,7 @@
   },
   "ご利用条件は提携先の審査基準に基づきます。": {
     "en": "Terms of use are based on the screening criteria of our partners.",
-    "ko": "이용 조건은 제휴처의 심사 기준에 근거합니다.",
+    "ko": "이용 조건은 제휴 금융사의 심사 기준에 따릅니다.",
     "zh-CN": "使用条款基于我们合作伙伴的筛选标准。",
     "zh-TW": "使用條款基於我們合作夥伴的篩選標準。"
   },
@@ -486,20 +486,20 @@
     "zh-TW": "如果個人要求披露、更正、刪除、停止使用等個人資訊，我們將在確認該個人身份後，根據法律法規的規定予以回應。"
   },
   "ご相談いただける内容": {
-    "en": "Contents you can discuss",
-    "ko": "상담하실 수 있는 내용",
-    "zh-CN": "可以讨论的内容",
-    "zh-TW": "可以討論的內容"
+    "en": "How we can help",
+    "ko": "상담 가능한 내용",
+    "zh-CN": "可咨询的内容",
+    "zh-TW": "可諮詢的內容"
   },
   "ご相談から納車までの流れ": {
-    "en": "Flow from consultation to delivery",
-    "ko": "상담에서 납차까지의 흐름",
-    "zh-CN": "从咨询到交付的流程",
-    "zh-TW": "從諮詢到交付的流程"
+    "en": "From consultation to vehicle handover",
+    "ko": "상담부터 차량 인도까지",
+    "zh-CN": "从咨询到车辆交付",
+    "zh-TW": "從諮詢到車輛交付"
   },
   "ご相談内容を送る": {
     "en": "Send your consultation details",
-    "ko": "상담 내용 보내기",
+    "ko": "문의 내용 보내기",
     "zh-CN": "发送您的咨询详情",
     "zh-TW": "發送您的諮詢詳情"
   },
@@ -535,27 +535,27 @@
   },
   "その他の相談へ": {
     "en": "For other consultations",
-    "ko": "기타 상담에",
+    "ko": "기타 문의",
     "zh-CN": "其他咨询",
     "zh-TW": "其他諮詢"
   },
   "はい。営業車、送迎車、業務利用を想定した車両のご相談にも対応しています。": {
     "en": "yes. We also respond to inquiries regarding commercial vehicles, courtesy vehicles, and vehicles intended for business use.",
-    "ko": "네. 영업차, 송영차, 업무 이용을 상정한 차량의 상담에도 대응하고 있습니다.",
+    "ko": "네. 영업용, 송영용 등 사업 목적에 맞는 차량 상담도 가능합니다.",
     "zh-CN": "是的。我们还回复有关商用车、礼宾车和商务用车的询问。",
     "zh-TW": "是的。我們也回覆商用車、禮賓車和商務用車的詢問。"
   },
   "はい。日本での車両購入が初めての方にも、必要な確認事項や流れをご案内します。": {
     "en": "yes. Even if it is your first time purchasing a vehicle in Japan, we will guide you through the necessary confirmation items and process.",
-    "ko": "네. 일본에서의 차량 구입이 처음인 분에게도, 필요한 확인 사항이나 흐름을 안내합니다.",
+    "ko": "네. 일본에서 처음 차량을 구매하는 분께도 필요한 확인 사항과 절차를 안내합니다.",
     "zh-CN": "是的。即使您是第一次在日本购买车辆，我们也会指导您完成必要的确认项目和流程。",
     "zh-TW": "是的。即使您是第一次在日本購買車輛，我們也會引導您完成必要的確認項目和流程。"
   },
   "はい。用途やご希望をお聞きした上で、候補車両を一緒に整理します。": {
-    "en": "yes. After listening to your usage and wishes, we will sort out candidate vehicles together.",
-    "ko": "네. 용도와 희망을 듣고 후보 차량을 함께 정리합니다.",
-    "zh-CN": "是的。在听取您的使用情况和意愿后，我们将共同筛选出候选车辆。",
-    "zh-TW": "是的。在聽取您的使用情況和意願後，我們將共同篩選出候選車輛。"
+    "en": "Yes. We first understand your intended use and preferences, then help you narrow down suitable options.",
+    "ko": "네. 용도와 희망 조건을 확인한 뒤 적합한 후보 차량을 함께 정리해 드립니다.",
+    "zh-CN": "可以。我们会先了解您的用车需求和期望，再一起梳理合适的候选车辆。",
+    "zh-TW": "可以。我們會先了解您的用車需求與期望，再一起整理合適的候選車輛。"
   },
   "まずはご希望の内容をお聞かせください。": {
     "en": "First of all, please tell us what you want.",
@@ -565,19 +565,19 @@
   },
   "まずは車両や用途を確認し、必要書類や申込の流れをご案内します。その後、オートローン事前審査フォームへ進んでいただけます。": {
     "en": "First, we will confirm the vehicle and purpose and guide you through the required documents and application process. After that, you can proceed to the auto loan pre-screening form.",
-    "ko": "우선은 차량이나 용도를 확인해, 필요 서류나 신청의 흐름을 안내합니다. 그 후, 자동 대출 사전 심사 양식으로 진행하실 수 있습니다.",
+    "ko": "먼저 희망 차량과 용도를 확인한 뒤 필요 서류와 신청 절차를 안내합니다. 이후 자동차 대출 사전 심사 신청서로 진행하실 수 있습니다.",
     "zh-CN": "首先，我们将确认车辆和用途，并指导您完成所需的文件和申请流程。之后，您可以继续填写汽车贷款预筛选表。",
     "zh-TW": "首先，我們將確認車輛和用途，並指導您完成所需的文件和申請流程。之後，您可以繼續填寫汽車貸款預篩選表。"
   },
   "まだ車種が決まっていませんが、相談できますか？": {
-    "en": "I haven't decided on a car model yet, but can we discuss this with you?",
-    "ko": "아직 차종이 정해져 있지 않습니다만, 상담할 수 있습니까?",
-    "zh-CN": "我还没有决定车型，但是我们可以和你讨论一下吗？",
-    "zh-TW": "我還沒決定車型，但我們可以跟你討論一下嗎？"
+    "en": "Can I contact you before deciding on a model?",
+    "ko": "아직 차종을 정하지 못했는데 상담할 수 있나요?",
+    "zh-CN": "尚未确定车型，也可以咨询吗？",
+    "zh-TW": "尚未確定車型，也可以諮詢嗎？"
   },
   "よくあるご相談": {
     "en": "Frequently asked questions",
-    "ko": "자주 있는 상담",
+    "ko": "자주 묻는 질문",
     "zh-CN": "常见问题",
     "zh-TW": "常見問題"
   },
@@ -588,8 +588,8 @@
     "zh-TW": "並同意由代表聯繫。"
   },
   "アルファード、ハイエース、シエンタ、普通車、事業用車両など。": {
-    "en": "Alphard, Hiace, Sienta, regular cars, business vehicles, etc.",
-    "ko": "알파드, 하이에이스, 시엔타, 보통차, 사업용 차량 등.",
+    "en": "Alphard, Hiace, Sienta, passenger cars and business vehicles.",
+    "ko": "알파드, 하이에이스, 시엔타, 일반 승용차, 사업용 차량 등.",
     "zh-CN": "Alphard、Hiace、Sienta、普通车、商务车等",
     "zh-TW": "Alphard、Hiace、Sienta、普通車、商務車等"
   },
@@ -606,19 +606,19 @@
     "zh-TW": "為了適應活動人員和貴賓的流動，我們提供了包括多個班次和多種車輛運營的交通服務。"
   },
   "オートローン事前審査へ": {
-    "en": "Go to auto loan pre-examination",
-    "ko": "자동차 론 사전 심사에",
-    "zh-CN": "前往汽车贷款预审",
-    "zh-TW": "前往汽車貸款預審"
+    "en": "Start Auto Loan Pre-Screening",
+    "ko": "자동차 대출 사전 심사 신청",
+    "zh-CN": "申请汽车贷款预审",
+    "zh-TW": "申請汽車貸款預審"
   },
   "オートローン事前審査へ進む前に、車両の用途、申込区分、必要書類、購入希望時期などを整理しておくと、手続きをよりスムーズに進められます。大寅中古車販売では、状況に合わせて確認事項をご案内します。": {
-    "en": "Before proceeding with the auto loan pre-screening, the process will go more smoothly if you organize the purpose of the vehicle, application category, required documents, desired purchase date, etc. At Daitora Auto / Used Car Sales, we will provide you with confirmation items depending on the situation.",
-    "ko": "자동차 론 사전 심사로 진행하기 전에 차량의 용도, 신청 구분, 필요 서류, 구입 희망 시기 등을 정리해 두면 절차를 더욱 원활하게 진행할 수 있습니다. Daitora Auto / Used Car Sales에서는 상황에 따라 확인 사항을 안내합니다.",
-    "zh-CN": "在进行汽车贷款预审之前，如果您整理好车辆的用途、申请类别、所需文件、希望购买日期等，流程会更加顺利。在Daitora二手车销售处，我们会根据情况为您提供确认项目。",
-    "zh-TW": "在進行汽車貸款預審之前，如果您整理好車輛的用途、申請類別、所需文件、希望購買日期等，流程會更加順利。在Daitora二手車銷售處，我們會根據情況為您提供確認項目。"
+    "en": "Before applying for auto loan pre-screening, it helps to clarify the vehicle’s purpose, applicant type, required documents and preferred purchase timing. We guide you through the relevant points for your circumstances.",
+    "ko": "자동차 대출 사전 심사를 신청하기 전에 차량 용도, 신청자 구분, 필요 서류, 구매 희망 시기 등을 정리하면 절차를 보다 원활하게 진행할 수 있습니다. Daitora Auto / Used Car Sales가 고객 상황에 맞춰 확인 사항을 안내합니다.",
+    "zh-CN": "申请汽车贷款预审前，可先整理车辆用途、申请人类型、所需资料和计划购车时间，以便更顺畅地推进手续。我们会根据您的情况说明需要确认的事项。",
+    "zh-TW": "申請汽車貸款預審前，可先整理車輛用途、申請人類型、所需文件與預計購車時間，以便更順暢地完成手續。我們會依您的情況說明需要確認的事項。"
   },
   "グループで支える、安定した運行管理。": {
-    "en": "Stable operation management supported by the group.",
+    "en": "Stable operations backed by the wider group.",
     "ko": "그룹에서 지원하는 안정적인 항법 관리.",
     "zh-CN": "集团支持稳定运营管理。",
     "zh-TW": "集團支援穩定營運管理。"
@@ -642,7 +642,7 @@
     "zh-TW": "利用集團內約 100 輛車輛組成的網絡"
   },
   "サービスに関するご相談はこちら": {
-    "en": "Click here for consultation regarding services",
+    "en": "Talk to us about your transportation or vehicle needs",
     "ko": "서비스에 관한 상담은 이쪽",
     "zh-CN": "点击此处咨询相关服务",
     "zh-TW": "點此諮詢相關服務"
@@ -666,7 +666,7 @@
     "zh-TW": "4至6行李箱"
   },
   "タクシー": {
-    "en": "taxi",
+    "en": "Taxi",
     "ko": "택시",
     "zh-CN": "出租车",
     "zh-TW": "計程車"
@@ -678,13 +678,13 @@
     "zh-TW": "計程車/接送相關車輛"
   },
   "タクシー利用": {
-    "en": "Using a taxi",
+    "en": "Request Taxi Service",
     "ko": "택시 이용",
     "zh-CN": "使用出租车",
     "zh-TW": "使用計程車"
   },
   "タクシー利用と採用相談を、分けてご案内します。": {
-    "en": "We will provide separate information on taxi usage and recruitment consultation.",
+    "en": "Choose the appropriate route for a taxi request or a driver recruitment enquiry.",
     "ko": "택시 이용과 채용 상담을 나누어 안내합니다.",
     "zh-CN": "我们将单独提供出租车使用和招聘咨询信息。",
     "zh-TW": "我們將單獨提供出租車使用和招聘諮詢資訊。"
@@ -696,14 +696,14 @@
     "zh-TW": "使用計程車的注意事項"
   },
   "タクシー利用を相談する": {
-    "en": "Ask about taxi usage",
+    "en": "Request Taxi Service",
     "ko": "택시 이용 상담",
     "zh-CN": "询问出租车使用情况",
     "zh-TW": "詢問出租車使用情況"
   },
   "タクシー相談へ": {
     "en": "To taxi consultation",
-    "ko": "택시 상담에",
+    "ko": "택시 이용 상담",
     "zh-CN": "到出租车咨询",
     "zh-TW": "到計程車諮詢"
   },
@@ -732,19 +732,19 @@
     "zh-TW": "司機是服務的關鍵。"
   },
   "ドライバー応募、勤務条件、面談に関するご相談はこちら。": {
-    "en": "Click here for inquiries regarding driver applications, working conditions, and interviews.",
+    "en": "For driver applications, working conditions and interview enquiries.",
     "ko": "드라이버 응모, 근무 조건, 면담에 관한 상담은 이쪽.",
     "zh-CN": "点击此处查询有关司机申请、工作条件和面试的信息。",
     "zh-TW": "點擊此處查詢有關司機申請、工作條件和麵試的資訊。"
   },
   "ドライバー採用、乗務員応募、勤務条件に関するお問い合わせ。": {
-    "en": "Inquiries regarding driver recruitment, crew applications, and working conditions.",
+    "en": "Inquiries about driver recruitment, applications and working conditions.",
     "ko": "운전자 채용, 승무원 응모, 근무 조건에 관한 문의.",
     "zh-CN": "有关司机招聘、船员申请和工作条件的询问。",
     "zh-TW": "有關司機招聘、船員申請和工作條件的詢問。"
   },
   "ニュース": {
-    "en": "news",
+    "en": "News",
     "ko": "뉴스",
     "zh-CN": "消息",
     "zh-TW": "訊息"
@@ -762,28 +762,28 @@
     "zh-TW": "新聞列表"
   },
   "ニュース一覧へ": {
-    "en": "Go to news list",
+    "en": "View All News",
     "ko": "뉴스 목록으로",
     "zh-CN": "前往新闻列表",
     "zh-TW": "前往新聞列表"
   },
   "ハイヤー": {
-    "en": "hire car",
+    "en": "Chauffeur Service",
     "ko": "하이어",
     "zh-CN": "租车",
     "zh-TW": "租車"
   },
   "ハイヤーを相談する": {
-    "en": "Consult a hire car",
+    "en": "Request Chauffeur Service",
     "ko": "하이어 상담",
     "zh-CN": "咨询租车",
     "zh-TW": "諮詢租車"
   },
   "ハイヤー・タクシー運行で培った車両管理の視点から、用途に合う一台を考えます。": {
-    "en": "From the perspective of vehicle management that we have cultivated through hire taxi operations, we will consider a vehicle that is suitable for your application.",
-    "ko": "하이어·택시 운행으로 기른 차량 관리의 시점으로부터, 용도에 맞는 1대를 생각합니다.",
-    "zh-CN": "从我们通过出租车运营培养的车辆管理角度，我们会考虑适合您应用的车辆。",
-    "zh-TW": "從我們透過計程車營運培養的車輛管理角度，我們會考慮適合您應用的車輛。"
+    "en": "We draw on fleet-management experience from chauffeur and taxi operations to identify a vehicle suited to your needs.",
+    "ko": "전용 차량과 택시 운영으로 축적한 차량 관리 경험을 바탕으로 용도에 맞는 차량을 함께 검토합니다.",
+    "zh-CN": "凭借包车接送与出租车运营中积累的车辆管理经验，协助您选择符合实际用途的车辆。",
+    "zh-TW": "憑藉包車接送與計程車營運中累積的車輛管理經驗，協助您選擇符合實際用途的車輛。"
   },
   "ハイヤー・空港送迎": {
     "en": "Hire/airport transfer",
@@ -804,26 +804,26 @@
     "zh-TW": "出租業務、計程車業務、二手車銷售業務。我們想介紹一下支持關西交通和車輛利用的三項業務。"
   },
   "ハイヤー相談": {
-    "en": "Hire consultation",
+    "en": "Request Chauffeur Service",
     "ko": "하이어 상담",
     "zh-CN": "租务咨询",
     "zh-TW": "租務諮詢"
   },
   "ハイヤー相談へ": {
-    "en": "For hire consultation",
-    "ko": "하이어 상담에",
+    "en": "Request Chauffeur Service",
+    "ko": "전용 차량 서비스 상담",
     "zh-CN": "出租咨询",
     "zh-TW": "出租諮詢"
   },
   "ヒアリング": {
-    "en": "hearing",
-    "ko": "청각",
-    "zh-CN": "听力",
-    "zh-TW": "聽力"
+    "en": "Needs assessment",
+    "ko": "상담 및 요구사항 확인",
+    "zh-CN": "了解用车需求",
+    "zh-TW": "了解用車需求"
   },
   "フライト変更、道路渋滞、集合時間変更、急な行程変更にも対応。配車担当と現場が連携し、素早く正確な調整を行います。": {
     "en": "We also handle flight changes, road congestion, meeting time changes, and sudden itinerary changes. Dispatch staff and the field work together to make quick and accurate adjustments.",
-    "ko": "비행 변경, 도로 정체, 집합 시간 변경, 가파른 행정 변경에도 대응. 배차 담당과 현장이 연계해, 빠르고 정확한 조정을 실시합니다.",
+    "ko": "항공편 변경, 도로 정체, 집합 시간 변경, 갑작스러운 일정 변경에도 대응합니다. 배차 담당자와 현장이 협업해 신속하고 정확하게 조정합니다.",
     "zh-CN": "我们还处理航班变更、道路拥堵、会议时间变更和行程突然变更等问题。调度人员和现场协同工作，快速准确地进行调整。",
     "zh-TW": "我們也處理航班變更、道路擁擠、會議時間變更和行程突然變更等問題。調度人員和現場協同工作，快速且準確地進行調整。"
   },
@@ -834,7 +834,7 @@
     "zh-TW": "航班變更當日、路況、現場要求等我們會進行溝通協調。"
   },
   "フライト変更、道路状況、現場要望に応じて、配車担当と乗務員が連携します。": {
-    "en": "Dispatchers and crews work together in response to flight changes, road conditions, and on-site requests.",
+    "en": "Dispatchers and drivers coordinate in response to flight changes, road conditions and on-site requests.",
     "ko": "항공편 변경, 도로 상황, 현장 요망에 따라 배차 담당과 승무원이 연계합니다.",
     "zh-CN": "调度员和机组人员协同工作，响应航班变更、路况和现场请求。",
     "zh-TW": "調度員和機組人員協同工作，回應航班變更、路況和現場請求。"
@@ -852,13 +852,13 @@
     "zh-TW": "確認對航班變更和現場請求的回應"
   },
   "フランス大手ブランドメーカーによる日本国内イベントにおいて、関係者送迎業務を担当しました。来日ゲスト、イベント関係者、VIP顧客などの移動に対応し、会場・宿泊先・主要訪問先を結ぶ送迎手配を行いました。": {
-    "en": "I was in charge of transporting people involved in an event in Japan hosted by a major French brand manufacturer. We arranged transportation between venues, accommodations, and major destinations to accommodate the transportation of guests visiting Japan, event personnel, VIP customers, etc.",
+    "en": "Daitora Group provided transportation for a major French brand event in Japan. We coordinated travel for international guests, event personnel and VIP clients between venues, accommodation and key destinations.",
     "ko": "프랑스 대기업 브랜드 메이커에 의한 일본 국내 이벤트에 있어서, 관계자 송영 ​​업무를 담당했습니다. 일본 게스트, 이벤트 관계자, VIP 고객 등의 이동에 대응해, 회장·숙박처·주요 방문처를 연결하는 송영 준비를 실시했습니다.",
     "zh-CN": "我负责运送参加由法国一家主要品牌制造商在日本主办的活动的人员。我们安排了场馆、住宿和主要目的地之间的交通，以满足访日嘉宾、活动人员、VIP客户等的交通需求。",
     "zh-TW": "我負責運送參加由法國一家主要品牌製造商在日本主辦的活動的人員。我們安排了場館、住宿和主要目的地之間的交通，以滿足訪日嘉賓、活動人員、VIP客戶等的交通需求。"
   },
   "フランス大手ブランドメーカーの日本イベント送迎業務を担当しました": {
-    "en": "I was in charge of transportation for a major French brand manufacturer's event in Japan.",
+    "en": "Provided transportation for a major French brand event in Japan",
     "ko": "프랑스 대형 브랜드 메이커의 일본 이벤트 송영 업무를 담당했습니다",
     "zh-CN": "我负责一家法国大型品牌制造商在日本举办的活动的交通。",
     "zh-TW": "我負責一家法國大型品牌製造商在日本舉辦的活動的交通。"
@@ -955,37 +955,37 @@
   },
   "ローンのご利用には、所定の審査がございます。審査結果やご利用条件は、お客様の状況および提携先の基準により異なります。": {
     "en": "There is a prescribed screening process before using a loan. Screening results and terms of use vary depending on the customer's situation and the standards of the partner.",
-    "ko": "대출 이용에는 소정의 심사가 있습니다. 심사 결과 및 이용 조건은 고객의 상황 및 제휴처의 기준에 따라 다릅니다.",
+    "ko": "자동차 대출 이용에는 소정의 심사가 필요합니다. 심사 결과와 이용 조건은 고객의 상황 및 제휴 금융사의 기준에 따라 달라질 수 있습니다.",
     "zh-CN": "使用贷款之前有规定的筛选过程。筛选结果和使用条款根据客户情况和合作伙伴的标准而有所不同。",
     "zh-TW": "使用貸款前有規定的篩選過程。篩選結果和使用條款會根據客戶狀況和合作夥伴的標準而有所不同。"
   },
   "ローンのご利用には所定の審査がございます。審査結果やご利用条件は、お客様の状況および提携先の基準により異なります。": {
-    "en": "There is a prescribed screening process before using a loan. Screening results and terms of use vary depending on the customer's situation and the standards of the partner.",
-    "ko": "대출 이용에는 소정의 심사가 있습니다. 심사 결과 및 이용 조건은 고객의 상황 및 제휴처의 기준에 따라 다릅니다.",
-    "zh-CN": "使用贷款之前有规定的筛选过程。筛选结果和使用条款根据客户情况和合作伙伴的标准而有所不同。",
-    "zh-TW": "使用貸款前有規定的篩選過程。篩選結果和使用條款會根據客戶狀況和合作夥伴的標準而有所不同。"
+    "en": "Vehicle financing is subject to screening. Results and available terms vary according to the applicant’s circumstances and the finance provider’s criteria.",
+    "ko": "자동차 대출 이용에는 소정의 심사가 필요합니다. 심사 결과와 이용 조건은 고객의 상황 및 제휴 금융사의 기준에 따라 달라질 수 있습니다.",
+    "zh-CN": "汽车贷款需经过规定审查。审查结果及适用条件会根据客户情况和合作金融机构的标准而有所不同。",
+    "zh-TW": "汽車貸款需經過規定審查。審查結果及適用條件會依客戶情況與合作金融機構的標準而有所不同。"
   },
   "ローンをご希望の場合も、必要書類や申込の流れをわかりやすくご案内し、安心して手続きを進められるようサポートします。": {
-    "en": "If you are looking for a loan, we will guide you through the required documents and application process in an easy-to-understand manner, and help you proceed with the process with peace of mind.",
-    "ko": "대출을 희망하시는 경우도, 필요 서류나 신청의 흐름을 알기 쉽게 안내해, 안심하고 수속을 진행할 수 있도록 서포트합니다.",
-    "zh-CN": "如果您正在寻求贷款，我们将以通俗易懂的方式引导您完成所需文件和申请流程，帮助您安心地完成整个流程。",
-    "zh-TW": "如果您正在尋求貸款，我們將以簡單易懂的方式引導您完成所需文件和申請流程，幫助您安心地完成整個流程。"
+    "en": "If you are considering vehicle financing, we explain the required documents and application process clearly so you can proceed with confidence.",
+    "ko": "자동차 대출을 원하시는 경우에도 필요 서류와 신청 절차를 알기 쉽게 안내해 안심하고 진행하실 수 있도록 지원합니다.",
+    "zh-CN": "如需办理汽车贷款，我们会清晰说明所需资料与申请流程，协助您安心完成手续。",
+    "zh-TW": "如需辦理汽車貸款，我們會清楚說明所需文件與申請流程，協助您安心完成手續。"
   },
   "ローンを利用したい場合はどうすればよいですか？": {
     "en": "What should I do if I want to use a loan?",
-    "ko": "대출을 이용하려면 어떻게 해야 하나요?",
+    "ko": "자동차 대출을 이용하려면 어떻게 해야 하나요?",
     "zh-CN": "如果我想使用贷款该怎么办？",
     "zh-TW": "如果我想使用貸款該怎麼辦？"
   },
   "ローン相談": {
-    "en": "Loan consultation",
+    "en": "Loan guidance",
     "ko": "대출 상담",
     "zh-CN": "贷款咨询",
     "zh-TW": "貸款諮詢"
   },
   "ローン相談に関するご案内": {
     "en": "Information regarding loan consultation",
-    "ko": "대출 상담에 관한 안내",
+    "ko": "자동차 대출 상담 안내",
     "zh-CN": "贷款咨询信息",
     "zh-TW": "貸款諮詢資訊"
   },
@@ -997,7 +997,7 @@
   },
   "ローン相談の流れを案内": {
     "en": "Guide you through the loan consultation process",
-    "ko": "대출 상담의 흐름을 안내",
+    "ko": "대출 상담 절차 안내",
     "zh-CN": "指导您完成贷款咨询流程",
     "zh-TW": "指導您完成貸款諮詢流程"
   },
@@ -1044,7 +1044,7 @@
     "zh-TW": "世博相關交通"
   },
   "三つの事業で、": {
-    "en": "In three businesses,",
+    "en": "Three business divisions,",
     "ko": "세 가지 사업에서,",
     "zh-CN": "在三项业务中，",
     "zh-TW": "在三項業務中，"
@@ -1062,28 +1062,28 @@
     "zh-TW": "二手車/貸款諮詢"
   },
   "中古車相談": {
-    "en": "Used car consultation",
+    "en": "Discuss a Vehicle Purchase",
     "ko": "중고차 상담",
     "zh-CN": "二手车咨询",
     "zh-TW": "二手車諮詢"
   },
   "中古車相談へ": {
     "en": "Used car consultation",
-    "ko": "중고차 상담에",
+    "ko": "중고차 구매 상담",
     "zh-CN": "二手车咨询",
     "zh-TW": "二手車諮詢"
   },
   "中古車販売": {
-    "en": "used car sales",
+    "en": "Used Car Sales",
     "ko": "중고차 판매",
     "zh-CN": "二手车销售",
     "zh-TW": "二手車銷售"
   },
   "中古車販売、ローン相談、車両購入サポート。用途に合った一台を、運行現場を知る視点で支援します。": {
-    "en": "Used car sales, loan consultation, vehicle purchase support. We will support you in finding the right machine for your application, based on our knowledge of the operating site.",
-    "ko": "중고차 판매, 대출 상담, 차량 구매 지원. 용도에 맞는 한 대를 운행 현장을 아는 관점에서 지원합니다.",
-    "zh-CN": "二手车销售、贷款咨询、购车支持。我们将根据我们对操作现场的了解，支持您找到适合您应用的机器。",
-    "zh-TW": "二手車銷售、貸款諮詢、購車支援。我們將根據我們對操作現場的了解，支援您找到適合您應用的機器。"
+    "en": "Used car sales, loan consultation and purchase support, informed by our first-hand vehicle operations experience.",
+    "ko": "중고차 판매부터 대출 상담, 차량 구매 지원까지. 실제 차량 운영 경험을 바탕으로 용도에 맞는 차량을 함께 찾습니다.",
+    "zh-CN": "提供二手车销售、贷款咨询与购车支持。凭借实际车辆运营经验，协助您选择符合实际用途的车辆。",
+    "zh-TW": "提供中古車銷售、貸款諮詢與購車支援。憑藉實際車輛營運經驗，協助您選擇符合實際用途的車輛。"
   },
   "中古車販売、ローン相談、車両購入サポートを行う大寅中古車販売をご紹介します。": {
     "en": "Introducing Daitora Auto / Used Car Sales, which sells used cars, provides loan consultation, and provides vehicle purchase support.",
@@ -1092,10 +1092,10 @@
     "zh-TW": "介紹Daitora二手車銷售，銷售二手車，提供貸款諮詢，並提供車輛購買支援。"
   },
   "中古車販売、事業用車両、ローン相談に対応。運行現場を知る会社だからこそ、用途、状態、維持管理、乗り出し後の使いやすさまで考えた車両選びを支援します。": {
-    "en": "We handle used car sales, business vehicles, and loan consultation. Because we are a company that knows the operation site, we will support you in selecting a vehicle that takes into consideration the purpose, condition, maintenance, and ease of use after the vehicle is launched.",
-    "ko": "중고차 판매, 사업용 차량, 대출 상담에 대응. 운행 현장을 아는 회사이기 때문에, 용도, 상태, 유지 관리, 탈출 후의 용이성까지 생각한 차량 선택을 지원합니다.",
-    "zh-CN": "We handle used car sales, business vehicles, and loan consultation.因为我们是一家了解运营现场的公司，所以我们将在车辆推出后支持您选择考虑用途、状况、维护和易用性的车辆。",
-    "zh-TW": "我們處理二手車銷售、商務用車和貸款諮詢。因為我們是一家了解營運現場的公司，所以我們將在車輛推出後支援您選擇考慮用途、狀況、維護和易用性的車輛。"
+    "en": "We support used vehicle purchases, business vehicles and loan consultations. Our first-hand operations experience helps us assess intended use, condition, maintenance and everyday practicality after vehicle handover.",
+    "ko": "중고차 판매, 사업용 차량, 대출 상담을 지원합니다. 실제 차량 운영 경험을 바탕으로 용도, 차량 상태, 유지관리, 차량 인도 후의 사용 편의성까지 고려해 차량 선택을 돕습니다.",
+    "zh-CN": "提供二手车销售、业务用车及贷款咨询。凭借实际车辆运营经验，我们会综合用途、车况、维护管理和交车后的使用便利性，协助选择合适车辆。",
+    "zh-TW": "提供中古車銷售、事業用車輛及貸款諮詢。憑藉實際車輛營運經驗，我們會綜合用途、車況、維護管理與交車後的使用便利性，協助選擇合適車輛。"
   },
   "中古車販売、事業用車両、ローン相談に対応し、用途に合った車両選びを支援します。": {
     "en": "We handle used car sales, commercial vehicles, and loan consultation, and help you choose the vehicle that best suits your purpose.",
@@ -1104,10 +1104,10 @@
     "zh-TW": "我們處理二手車銷售、商用車和貸款諮詢，並協助您選擇最適合您用途的車輛。"
   },
   "中古車販売について相談する": {
-    "en": "Consult about used car sales",
-    "ko": "중고차 판매에 대해 상담",
-    "zh-CN": "咨询二手车销售",
-    "zh-TW": "諮詢二手車銷售"
+    "en": "Discuss a Used Vehicle Purchase",
+    "ko": "중고차 구매 상담",
+    "zh-CN": "咨询二手车购买",
+    "zh-TW": "諮詢中古車購買"
   },
   "中古車販売・ローン相談": {
     "en": "Used car sales/loan consultation",
@@ -1116,7 +1116,7 @@
     "zh-TW": "二手車銷售/貸款諮詢"
   },
   "中古車販売・事業用車両・ローン相談": {
-    "en": "Used car sales/business vehicles/loan consultation",
+    "en": "Used vehicles ・ Business vehicles ・ Loan guidance",
     "ko": "중고차 판매·사업용 차량·대출 상담",
     "zh-CN": "二手车销售/商务用车/贷款咨询",
     "zh-TW": "二手車銷售/商務用車/貸款諮詢"
@@ -1135,7 +1135,7 @@
   },
   "中古車購入、事業用車両、ローン相談、オートローン事前審査に関するご相談。": {
     "en": "Consultation regarding used car purchases, commercial vehicles, loan consultation, and auto loan pre-screening.",
-    "ko": "중고차 구입, 사업용 차량, 대출 상담, 자동차 론 사전 심사에 관한 상담.",
+    "ko": "중고차 구매, 사업용 차량, 대출 상담, 자동차 대출 사전 심사에 관한 문의입니다.",
     "zh-CN": "二手车购买咨询、商用车咨询、贷款咨询、汽车贷款预审。",
     "zh-TW": "二手車購買諮詢、商用車諮詢、貸款諮詢、汽車貸款預審。"
   },
@@ -1146,61 +1146,61 @@
     "zh-TW": "中國人"
   },
   "主要空港対応": {
-    "en": "Compatible with major airports",
+    "en": "Major airport coverage",
     "ko": "주요 공항 대응",
     "zh-CN": "兼容各大机场",
     "zh-TW": "相容各大機場"
   },
   "乗り出し後の使いやすさ、維持管理、事業での活用まで現場目線で相談できます。": {
-    "en": "We can consult with you from an on-site perspective on everything from ease of use after launch to maintenance and business use.",
-    "ko": "탈출 후의 사용의 용이성, 유지 관리, 사업에서의 활용까지 현장 시선으로 상담할 수 있습니다.",
-    "zh-CN": "我们可以从现场角度为您提供从上线后的易用性到维护和业务使用等各个方面的咨询。",
-    "zh-TW": "我們可以從現場角度為您提供從上線後的易用性到維護和業務使用等各個方面的諮詢。"
+    "en": "We can advise on usability after handover, ongoing maintenance and business use from an operator’s perspective.",
+    "ko": "차량 인도 후의 사용 편의성, 유지관리, 사업 활용까지 실제 운영 관점에서 상담해 드립니다.",
+    "zh-CN": "从实际运营角度，为交车后的使用便利性、维护管理及业务应用提供咨询。",
+    "zh-TW": "從實際營運角度，為交車後的使用便利性、維護管理及事業應用提供諮詢。"
   },
   "乗務員と車両管理担当の確認項目共有": {
-    "en": "Sharing confirmation items between crew and vehicle management staff",
+    "en": "Sharing inspection points between drivers and vehicle management staff",
     "ko": "승무원과 차량 관리 담당 확인 항목 공유",
     "zh-CN": "机组人员和车辆管理人员之间共享确认项目",
     "zh-TW": "機組人員和車輛管理人員之間共享確認項目"
   },
   "乗務員への事前共有": {
-    "en": "Share with crew in advance",
+    "en": "Advance Driver Briefing",
     "ko": "승무원에게 사전 공유",
     "zh-CN": "提前与工作人员分享",
     "zh-TW": "提前與工作人員分享"
   },
   "乗務員への接遇方針と運行情報の共有": {
-    "en": "Sharing of crew hospitality policy and operation information",
+    "en": "Briefing drivers on service standards and operating information",
     "ko": "승무원에 대한 접대 정책 및 운행 정보 공유",
     "zh-CN": "共享船员接待政策和运营信息",
     "zh-TW": "共享船員接待政策和營運訊息"
   },
   "乗務員共有": {
-    "en": "Crew sharing",
+    "en": "Driver Briefing",
     "ko": "승무원 공유",
     "zh-CN": "船员共享",
     "zh-TW": "船員共享"
   },
   "乗務員向け接遇・安全研修を実施しました": {
-    "en": "We conducted hospitality and safety training for crew members.",
+    "en": "Conducted Service and Safety Training for Drivers",
     "ko": "승무원용 접대・안전 연수를 실시했습니다",
     "zh-CN": "我们为船员进行了接待和安全培训。",
     "zh-TW": "我們為船員進行了接待和安全訓練。"
   },
   "乗務員採用": {
-    "en": "Crew recruitment",
+    "en": "Driver Recruitment",
     "ko": "승무원 채용",
     "zh-CN": "船员招募",
     "zh-TW": "船員招募"
   },
   "乗務員教育": {
-    "en": "Crew education",
+    "en": "Driver Training",
     "ko": "승무원 교육",
     "zh-CN": "船员教育",
     "zh-TW": "船員教育"
   },
   "乗務員教育、車両管理、配車確認、GPS運行管理、法令遵守、緊急時対応まで。大寅グループの安全と品質を支える運行体制を紹介します。": {
-    "en": "From crew training, vehicle management, dispatch confirmation, GPS operation management, legal compliance, and emergency response. Introducing the Daitora Group's operation system that supports safety and quality.",
+    "en": "Learn how driver training, vehicle management, dispatch checks, GPS monitoring, legal compliance and emergency response work together to support Daitora Group’s safety and service quality.",
     "ko": "승무원 교육, 차량 관리, 배차 확인, GPS 운행 관리, 법령 준수, 긴급시 대응까지. Daitora Group의 안전과 품질을 지원하는 운행 체제를 소개합니다.",
     "zh-CN": "从船员培训、车辆管理、调度确认、GPS运行管理、法律合规、应急响应。介绍支持安全和质量的Daitora Group的运营体系。",
     "zh-TW": "從船員訓練、車輛管理、調度確認、GPS運行管理、法律合規、緊急應變。介紹支援安全和品質的Daitora Group的營運體系。"
@@ -1248,38 +1248,38 @@
     "zh-TW": "業務資訊"
   },
   "事業用車両": {
-    "en": "business vehicle",
+    "en": "Business vehicles",
     "ko": "사업용 차량",
     "zh-CN": "商务车",
     "zh-TW": "商務車"
   },
   "事業用車両にも対応": {
-    "en": "Also compatible with commercial vehicles",
-    "ko": "사업용 차량에도 대응",
-    "zh-CN": "也兼容商用车",
-    "zh-TW": "也相容商用車"
+    "en": "Support for business vehicles",
+    "ko": "사업용 차량 상담",
+    "zh-CN": "支持业务用车咨询",
+    "zh-TW": "支援事業用車輛諮詢"
   },
   "事業用車両も相談できますか？": {
-    "en": "Can you also discuss business vehicles?",
-    "ko": "사업용 차량도 상담할 수 있습니까?",
-    "zh-CN": "您还可以讨论商务车辆吗？",
-    "zh-TW": "您也可以討論商務車輛嗎？"
+    "en": "Can you advise on business vehicles?",
+    "ko": "사업용 차량도 상담할 수 있나요?",
+    "zh-CN": "可以咨询业务用车吗？",
+    "zh-TW": "可以諮詢事業用車輛嗎？"
   },
   "事業紹介": {
-    "en": "Business introduction",
+    "en": "Businesses",
     "ko": "사업소개",
     "zh-CN": "业务介绍",
     "zh-TW": "業務介紹"
   },
   "事業紹介 | 大寅グループ": {
-    "en": "Business introduction | Daitora Group",
+    "en": "Businesses | Daitora Group",
     "ko": "사업 소개 | Daitora Group",
     "zh-CN": "业务介绍 | Daitora Group",
     "zh-TW": "業務介紹 | Daitora Group"
   },
   "京都、奈良、神戸、USJ、富士山方面など、行程に合わせた貸切送迎に対応します。": {
     "en": "We offer private transportation to suit your itinerary, such as Kyoto, Nara, Kobe, USJ, and Mt. Fuji.",
-    "ko": "교토, 나라, 고베, USJ, 후지산 방면 등, 행정에 맞춘 전세 송영에 대응합니다.",
+    "ko": "교토, 나라, 고베, USJ, 후지산 방면 등 일정에 맞춘 전용 차량 서비스를 제공합니다.",
     "zh-CN": "我们提供适合您行程的私人交通，例如京都、奈良、神户、环球影城和富士山。",
     "zh-TW": "我們提供適合您行程的私人交通，例如京都、奈良、神戶、環球影城和富士山。"
   },
@@ -1290,16 +1290,16 @@
     "zh-TW": "為了加強京都地區的應對能力，我們開設了營業所，並將系統擴展到包括機場接送、觀光接送和企業使用。"
   },
   "京都エリアを中心に、VIP顧客・関係者の送迎を担当。車両美観、乗務員の所作、待機中の対応まで重視しています。": {
-    "en": "Responsible for transporting VIP customers and related parties, mainly in the Kyoto area. We place great emphasis on the beauty of the vehicle, the behavior of the crew, and even the way they respond while they are on standby.",
-    "ko": "교토 지역을 중심으로 VIP 고객·관계자의 송영을 담당. 차량 미관, 승무원의 소작, 대기중의 대응까지 중시하고 있습니다.",
-    "zh-CN": "负责运送VIP客户及相关人员，主要在京都地区。我们非常重视车辆的美观、机组人员的行为，甚至他们待命时的反应方式。",
-    "zh-TW": "負責運送VIP客戶及相關人員，主要在京都地區。我們非常重視車輛的美觀、機組人員的行為，甚至他們待命時的反應方式。"
+    "en": "Provided VIP and stakeholder transportation primarily in Kyoto, with careful attention to vehicle presentation, chauffeur conduct and standby support.",
+    "ko": "교토 지역을 중심으로 VIP 고객과 관계자 송영을 담당했습니다. 차량 청결, 운전기사의 응대 태도, 대기 중 지원까지 세심하게 관리했습니다.",
+    "zh-CN": "以京都地区为主，为 VIP 客户及相关人员提供接送，并重视车辆形象、司机礼仪和待命期间的现场配合。",
+    "zh-TW": "以京都地區為主，為 VIP 客戶及相關人員提供接送，並重視車輛形象、司機禮儀與待命期間的現場配合。"
   },
   "京都エリアを中心に、VIP顧客・関係者の送迎を担当。車両美観、乗務員の所作、待機対応まで重視しています。": {
-    "en": "Responsible for transporting VIP customers and related parties, mainly in the Kyoto area. We place great emphasis on vehicle aesthetics, crew behavior, and standby support.",
-    "ko": "교토 지역을 중심으로 VIP 고객·관계자의 송영을 담당. 차량 미관, 승무원의 소작, 대기 대응까지 중시하고 있습니다.",
-    "zh-CN": "负责运送VIP客户及相关人员，主要在京都地区。我们非常重视车辆美观、乘员行为和备用支持。",
-    "zh-TW": "負責運送VIP客戶及相關人員，主要在京都地區。我們非常重視車輛美觀、乘員行為和備用支援。"
+    "en": "Provided VIP and stakeholder transportation primarily in Kyoto, with careful attention to vehicle presentation, chauffeur conduct and standby support.",
+    "ko": "교토 지역을 중심으로 VIP 고객과 관계자 송영을 담당했습니다. 차량 청결, 운전기사의 응대 태도, 대기 지원까지 세심하게 관리했습니다.",
+    "zh-CN": "以京都地区为主，为 VIP 客户及相关人员提供接送，并重视车辆形象、司机礼仪和待命配合。",
+    "zh-TW": "以京都地區為主，為 VIP 客戶及相關人員提供接送，並重視車輛形象、司機禮儀與待命配合。"
   },
   "京都営業所": {
     "en": "Kyoto office",
@@ -1320,7 +1320,7 @@
     "zh-TW": "京都營業所：京都府京都市伏見區武田東小矢之內町95"
   },
   "京都市内ホテル、観光地、企業訪問先への配車": {
-    "en": "Delivery to hotels, sightseeing spots, and corporate destinations in Kyoto City",
+    "en": "Vehicle dispatch to hotels, sightseeing destinations and corporate locations in Kyoto",
     "ko": "교토시내 호텔, 관광지, 기업 방문처로의 배차",
     "zh-CN": "运送至京都市内的酒店、观光景点、企业目的地",
     "zh-TW": "運送至京都市內的飯店、觀光景點、企業目的地"
@@ -1350,7 +1350,7 @@
     "zh-TW": "京都往返接送、觀光包車、企業利用等諮詢"
   },
   "人と運行体制で支える。": {
-    "en": "Supported by people and operation system.",
+    "en": "People and disciplined operations make every journey work.",
     "ko": "사람과 운행 체제로 지원한다.",
     "zh-CN": "由人员和操作系统支持。",
     "zh-TW": "由人員和作業系統支援。"
@@ -1386,7 +1386,7 @@
     "zh-TW": "您可以根據人數和行李的數量選擇車輛。"
   },
   "人数・荷物・用途に合わせて、車両と乗務員を手配。": {
-    "en": "We arrange vehicles and crew according to the number of people, luggage, and purpose.",
+    "en": "Assign the appropriate vehicle and driver based on passenger numbers, luggage and purpose.",
     "ko": "인원수・짐・용도에 맞추어 차량과 승무원을 준비.",
     "zh-CN": "我们根据人数、行李和目的安排车辆和人员。",
     "zh-TW": "我們根據人數、行李和目的安排車輛和人員。"
@@ -1410,7 +1410,7 @@
     "zh-TW": "代表"
   },
   "企業・VIP・大型案件対応": {
-    "en": "For companies, VIPs, and large-scale projects",
+    "en": "Corporate, VIP and large-scale assignments",
     "ko": "기업·VIP·대형 안건 대응",
     "zh-CN": "适用于公司、VIP 和大型项目",
     "zh-TW": "適用於公司、VIP 和大型項目"
@@ -1428,25 +1428,25 @@
     "zh-TW": "企業/商業運輸"
   },
   "企業団体の視察・研修に伴う送迎業務に対応しました。複数都市・複数日程にわたる行程に合わせて、人数、荷物、移動時間、待機場所を事前に確認し、必要な車両と乗務員を手配しました。": {
-    "en": "We provided transportation services for corporate groups' inspections and training. For a multi-city, multi-day itinerary, we confirmed the number of people, luggage, travel time, and waiting area in advance and arranged the necessary vehicles and crew.",
-    "ko": "기업 단체의 시찰·연수에 수반하는 송영 업무에 대응했습니다. 여러 도시·여러 일정에 걸친 행정에 맞추어, 인원수, 짐, 이동 시간, 대기 장소를 사전에 확인해, 필요한 차량과 승무원을 준비했습니다.",
-    "zh-CN": "为企业集团考察、培训提供交通服务。对于多城市、多天的行程，我们提前确认了人数、行李、行程时间、候车区域，并安排了必要的车辆和人员。",
-    "zh-TW": "為企業集團考察、培訓提供交通服務。對於多城市、多天的行程，我們提前確認了人數、行李、行程時間、候車區域，並安排了必要的車輛和人員。"
+    "en": "Supported corporate inspection and training travel across multiple cities and dates. We confirmed passenger numbers, luggage, travel times and waiting locations in advance, then assigned the required vehicles and drivers.",
+    "ko": "기업 단체의 시찰과 연수 이동을 지원했습니다. 여러 도시와 일정으로 구성된 여정에 맞춰 인원, 수하물, 이동 시간, 대기 장소를 사전에 확인하고 필요한 차량과 운전기사를 배정했습니다.",
+    "zh-CN": "为企业团体视察及研修提供接送服务。针对跨多个城市和日期的行程，提前确认人数、行李、移动时间和待命地点，并安排所需车辆与司机。",
+    "zh-TW": "為企業團體視察及研修提供接送服務。針對跨多個城市與日期的行程，提前確認人數、行李、移動時間與待命地點，並安排所需車輛與司機。"
   },
   "企業団体・視察送迎": {
-    "en": "Corporate groups/inspection transportation",
+    "en": "Corporate delegation and inspection tours",
     "ko": "기업 단체·시찰 송영",
     "zh-CN": "企业团体/考察运输",
     "zh-TW": "企業團體/考察運輸"
   },
   "企業団体・視察送迎に対応しました": {
-    "en": "We can accommodate corporate groups and inspection transportation.",
+    "en": "Provided transportation for a corporate delegation and inspection tour",
     "ko": "기업 단체·시찰 송영에 대응했습니다",
     "zh-CN": "兼容企业集团及查验运输",
     "zh-TW": "相容企業集團及檢查運輸"
   },
   "企業団体対応": {
-    "en": "Compatible with corporate organizations",
+    "en": "Corporate group transportation",
     "ko": "기업 단체 대응",
     "zh-CN": "与企业组织兼容",
     "zh-TW": "與企業組織相容"
@@ -1470,20 +1470,20 @@
     "zh-TW": "公司考察"
   },
   "企業視察、商談、会食、会議会場への移動など、時間管理が求められる移動を支えます。": {
-    "en": "We support transportation that requires time management, such as company inspections, business negotiations, dinners, and transportation to conference venues.",
+    "en": "We support time-sensitive transportation for corporate visits, meetings, business dinners and conference venues.",
     "ko": "기업시찰, 상담, 회식, 회의장으로의 이동 등 시간관리가 요구되는 이동을 지원합니다.",
     "zh-CN": "我们支持需要时间管理的交通，例如公司考察、商务谈判、晚餐以及前往会议场地的交通。",
     "zh-TW": "我們支援需要時間管理的交通，例如公司考察、商務談判、晚餐以及前往會議場地的交通。"
   },
   "企業視察、研修旅行、工場見学など、複数名・複数台での移動を伴う案件に対応しています。": {
-    "en": "We handle projects that involve the movement of multiple people and multiple vehicles, such as company inspections, training trips, and factory tours.",
+    "en": "We coordinate multi-passenger and multi-vehicle assignments for corporate visits, training programmes and factory tours.",
     "ko": "기업 시찰, 연수 여행, 공장 견학 등, 복수명·여러대로의 이동을 수반하는 안건에 대응하고 있습니다.",
     "zh-CN": "我们承接涉及多人和多辆车流动的项目，例如公司检查、培训旅行和工厂参观。",
     "zh-TW": "我們承接涉及多人和多輛車流動的項目，例如公司檢查、培訓旅行和工廠參觀。"
   },
   "企業視察、研修行程に合わせた送迎手配": {
     "en": "Transportation arrangements according to company visits and training itineraries",
-    "ko": "기업 시찰, 연수 행정에 맞춘 송영 준비",
+    "ko": "기업 시찰 및 연수 일정에 맞춘 송영 준비",
     "zh-CN": "根据公司参观、培训行程安排交通",
     "zh-TW": "依公司參觀、培訓行程安排交通"
   },
@@ -1560,10 +1560,10 @@
     "zh-TW": "查看公司簡介"
   },
   "使い続けることを考える": {
-    "en": "consider continuing to use it",
-    "ko": "계속 사용하는 생각",
-    "zh-CN": "考虑继续使用它",
-    "zh-TW": "考慮繼續使用它"
+    "en": "Plan for long-term use",
+    "ko": "장기적인 사용까지 고려합니다",
+    "zh-CN": "考虑长期使用",
+    "zh-TW": "考量長期使用"
   },
   "例：7月20日 15時ごろ": {
     "en": "Example: July 20th around 15:00",
@@ -1609,7 +1609,7 @@
   },
   "個人、法人、個人事業主、在日外国人のお客様など。": {
     "en": "Individuals, corporations, sole proprietorships, foreign residents in Japan, etc.",
-    "ko": "개인, 법인, 개인 사업주, 재일 외국인 고객 등.",
+    "ko": "개인, 법인, 개인사업자, 일본 거주 외국인 고객 등.",
     "zh-CN": "个人、法人、独资企业、在日本居住的外国人等",
     "zh-TW": "個人、法人、獨資企業、在日本居住的外國人等"
   },
@@ -1632,10 +1632,10 @@
     "zh-TW": "個人使用"
   },
   "個人利用、家族利用、事業用車両、送迎関連車両まで。用途に合った一台を、無理なく選べるようサポートします。": {
-    "en": "From personal use, family use, business vehicles, and transportation-related vehicles. We will help you choose the one that suits your needs without any difficulty.",
-    "ko": "개인 이용, 가족 이용, 사업용 차량, 송영 관련 차량까지. 용도에 맞는 한 대를 무리없이 선택할 수 있도록 지원합니다.",
-    "zh-CN": "从个人使用、家庭使用、商务车辆、以及交通相关车辆。我们将帮助您毫无困难地选择适合您需求的一款。",
-    "zh-TW": "從個人使用、家庭使用、商務車輛、以及交通相關車輛。我們將協助您毫無困難地選擇適合您需求的一款。"
+    "en": "From personal and family use to business and passenger-transfer vehicles, we help you identify a practical choice for your needs.",
+    "ko": "개인용과 가족용부터 사업용·송영용 차량까지, 용도와 상황에 맞는 차량을 차분히 선택할 수 있도록 지원합니다.",
+    "zh-CN": "从个人及家庭用车，到业务车辆和接送车辆，我们会根据实际用途协助您梳理合适的选择。",
+    "zh-TW": "從個人及家庭用車，到事業用與接送車輛，我們會依實際用途協助您整理合適的選擇。"
   },
   "個人利用、家族利用、法人利用、送迎用、タクシー関連など。": {
     "en": "Personal use, family use, corporate use, transportation, taxi-related, etc.",
@@ -1698,19 +1698,19 @@
     "zh-TW": "確認詳細資料後，進行預約、申請、審查表格等下一程序。"
   },
   "出庫前の点検、車内清掃、外装確認を実施。お客様に安心してご乗車いただける車両状態を維持します。": {
-    "en": "Inspections, interior cleaning, and exterior inspections are carried out before leaving the warehouse. We maintain vehicles in a condition that allows our customers to ride with peace of mind.",
+    "en": "Before dispatch, we inspect each vehicle, clean the cabin and check the exterior to maintain a safe, presentable operating condition.",
     "ko": "출고 전 점검, 차내 청소, 외장 확인을 실시. 고객에게 안심하고 승차하실 수 있는 차량 상태를 유지합니다.",
     "zh-CN": "出库前进行检查、内部清洁和外部检查。我们将车辆维护在让客户安心骑行的状态。",
     "zh-TW": "出庫前進行檢查、內部清潔及外部檢查。我們將車輛維護在讓客戶安心騎乘的狀態。"
   },
   "出庫前の点検、車内清掃、車両状態の確認を行い、快適で安全な移動空間を維持します。": {
-    "en": "We maintain a comfortable and safe moving space by inspecting the vehicle, cleaning the interior of the vehicle, and confirming the condition of the vehicle before leaving the warehouse.",
+    "en": "Pre-dispatch inspection, cabin cleaning and vehicle-condition checks help maintain a safe and comfortable environment.",
     "ko": "출고 전 점검, 차내 청소, 차량 상태의 확인을 실시해, 쾌적하고 안전한 이동 공간을 유지합니다.",
     "zh-CN": "我们通过在出库前检查车辆、清洁车辆内部、确认车辆状况来维持舒适、安全的移动空间。",
     "zh-TW": "我們透過在出庫前檢查車輛、清潔車輛內部、確認車輛狀況來維持舒適、安全的移動空間。"
   },
   "出庫前の車両状態確認": {
-    "en": "Check vehicle condition before leaving the warehouse",
+    "en": "Pre-dispatch vehicle-condition check",
     "ko": "출고 전 차량 상태 확인",
     "zh-CN": "出库前检查车辆状况",
     "zh-TW": "出庫前檢查車輛狀況"
@@ -1722,7 +1722,7 @@
     "zh-TW": "出貨前確認"
   },
   "出庫前確認、車内清掃、車両状態確認を徹底し、快適な移動空間づくりを進めています。": {
-    "en": "We are creating a comfortable transportation space by thoroughly checking the vehicle before leaving the warehouse, cleaning the interior of the vehicle, and checking the condition of the vehicle.",
+    "en": "We strengthened pre-dispatch checks, cabin cleaning and vehicle-condition inspections to maintain a comfortable passenger environment.",
     "ko": "출고 전 확인, 차내 청소, 차량 상태 확인을 철저히 해, 쾌적한 이동 공간 만들기를 진행시키고 있습니다.",
     "zh-CN": "我们通过出库前彻底检查车辆、清洁车辆内部、检查车辆状况，营造舒适的运输空间。",
     "zh-TW": "我們透過出庫前徹底檢查車輛、清潔車輛內部、檢查車輛狀況，營造舒適的運輸空間。"
@@ -1777,7 +1777,7 @@
   },
   "単発送迎、時間貸切、複数日運行、複数台運行など、行程に合わせて調整します。": {
     "en": "We will adjust it to suit your itinerary, such as single pick-up, hourly charter, multi-day service, and multiple-vehicle service.",
-    "ko": "단발 송영, 시간 전세, 복수일 운행, 복수대 운행 등, 행정에 맞추어 조정합니다.",
+    "ko": "편도 송영, 시간제 전세, 여러 날짜 또는 여러 대의 차량 운행 등 일정에 맞춰 조정합니다.",
     "zh-CN": "我们会根据您的行程进行调整，例如单次接送、按小时包车、多日服务、多辆车服务。",
     "zh-TW": "我們會根據您的行程進行調整，例如單次接送、按小時包車、多日服務、多輛車服務。"
   },
@@ -1812,7 +1812,7 @@
     "zh-TW": "古董商執照號碼：321090181755"
   },
   "各国政府関係者、来賓、VVIPの移動に関連する送迎案件に対応。混雑時の運行管理、複数台調整、待機場所確認などを実施しました。": {
-    "en": "We handle transportation matters related to the movement of government officials, guests, and VVIPs from various countries. We managed operations during busy times, adjusted multiple vehicles, and confirmed waiting areas.",
+    "en": "Supported transportation for government representatives, guests and VVIPs from multiple countries, including congestion management, multi-vehicle coordination and standby-point checks.",
     "ko": "각국 정부 관계자, 내빈, VVIP의 이동과 관련된 송영 안건에 대응. 혼잡시의 운행 관리, 복수대 조정, 대기 장소 확인 등을 실시했습니다.",
     "zh-CN": "我们处理与各国政府官员、宾客、VVIP 的出行相关的交通事宜。我们在繁忙时段管理运营，调整多辆车辆，确定候车区域。",
     "zh-TW": "我們處理與各國政府官員、賓客、VVIP 的出行相關的交通事宜。我們在繁忙時段管理運營，調整多輛車輛，確定候車區域。"
@@ -1824,7 +1824,7 @@
     "zh-TW": "合法車輛的運營"
   },
   "品質ポイント": {
-    "en": "quality points",
+    "en": "Quality Focus",
     "ko": "품질 포인트",
     "zh-CN": "质量点",
     "zh-TW": "品質點"
@@ -1855,19 +1855,19 @@
   },
   "営業車、送迎車、事業用車両など、用途に合わせた車両選びをサポートします。": {
     "en": "We support you in selecting vehicles that suit your purpose, such as commercial vehicles, courtesy vehicles, and business vehicles.",
-    "ko": "영업차, 송영차, 사업용 차량 등, 용도에 맞춘 차량 선택을 서포트합니다.",
+    "ko": "영업용, 송영용, 사업용 차량 등 실제 용도에 맞는 차량 선택을 지원합니다.",
     "zh-CN": "我们支持您选择适合您用途的车辆，例如商用车、礼宾车和公务车。",
     "zh-TW": "我們支援您選擇適合您用途的車輛，例如商用車、禮賓車和公務車。"
   },
   "営業車、送迎車、業務利用など、利用目的に合わせた相談に対応します。": {
-    "en": "We will respond to consultations tailored to the purpose of use, such as commercial vehicles, shuttle vehicles, business use, etc.",
-    "ko": "영업차, 송영차, 업무 이용 등, 이용 목적에 맞춘 상담에 대응합니다.",
+    "en": "We advise on commercial, passenger-transfer and other business-use vehicles according to the intended purpose.",
+    "ko": "영업용, 송영용 등 실제 사업 목적에 맞춰 상담해 드립니다.",
     "zh-CN": "我们将根据商用车、接送车、商务用途等使用目的进行咨询。",
     "zh-TW": "我們將根據商用車、接送車、商務用途等使用目的進行諮詢。"
   },
   "団体や荷物の多い行程に。": {
     "en": "For groups or journeys with a lot of luggage.",
-    "ko": "단체나 짐이 많은 행정에.",
+    "ko": "단체 이동이나 수하물이 많은 일정에.",
     "zh-CN": "适合团体或携带大量行李的旅行。",
     "zh-TW": "適合團體或攜帶大量行李的旅行。"
   },
@@ -1914,14 +1914,14 @@
     "zh-TW": "我們也處理過需要時間管理、多車輛操作和現場響應能力的項目，例如國際會議、公司參觀、品牌活動和世博會相關運輸。"
   },
   "国際会議関連の関係者送迎に対応。時間管理、待機場所確認、複数車両の運行調整を経験しました。": {
-    "en": "We provide transportation for people related to international conferences. I gained experience in time management, checking waiting areas, and coordinating the operation of multiple vehicles.",
+    "en": "Supported transportation for an international conference, including schedule control, standby-point checks and coordination across multiple vehicles.",
     "ko": "국제회의 관련 관계자 송영에 대응. 시간 관리, 대기 장소 확인, 여러 차량의 운행 조정을 경험했습니다.",
     "zh-CN": "我们为与国际会议相关的人员提供交通服务。我在时间管理、检查等候区以及协调多辆车的操作方面获得了经验。",
     "zh-TW": "我們為與國際會議相關的人員提供交通服務。我在時間管理、檢查等候區以及協調多輛車的操作方面獲得了經驗。"
   },
   "国際会議関連の関係者送迎に対応し、時間管理、守秘意識、複数車両の運行調整を経験しました。": {
-    "en": "I handled the transportation of people involved in international conferences, and gained experience in time management, confidentiality, and coordinating the operation of multiple vehicles.",
-    "ko": "국제회의 관련 관계자 교통에 대응해, 시간 관리, 수비 의식, 복수 차량의 운행 조정을 경험했습니다.",
+    "en": "Supported stakeholder transportation for an international conference, with disciplined schedule control, confidentiality and multi-vehicle coordination.",
+    "ko": "국제회의 관계자 송영을 수행하며 시간 관리, 기밀 유지, 여러 차량의 운행 조정 경험을 쌓았습니다.",
     "zh-CN": "我负责处理国际会议人员的交通，在时间管理、保密和协调多辆车的操作方面积累了经验。",
     "zh-TW": "我負責處理國際會議人員的交通，在時間管理、保密和協調多輛車的操作方面累積了經驗。"
   },
@@ -1932,14 +1932,14 @@
     "zh-TW": "週六、週日、假日"
   },
   "在日外国人でも相談できますか？": {
-    "en": "Can I consult with foreign nationals residing in Japan?",
-    "ko": "재일 외국인도 상담할 수 있습니까?",
-    "zh-CN": "可以向居住在日本的外国人咨询吗？",
-    "zh-TW": "可以向居住在日本的外國人諮詢嗎？"
+    "en": "Can foreign residents in Japan also inquire?",
+    "ko": "일본에 거주하는 외국인도 상담할 수 있나요?",
+    "zh-CN": "在日外国人也可以咨询吗？",
+    "zh-TW": "在日外國人也可以諮詢嗎？"
   },
   "在日外国人のお客様": {
     "en": "Foreign customers living in Japan",
-    "ko": "재일 외국인 고객",
+    "ko": "일본 거주 외국인 고객",
     "zh-CN": "居住在日本的外国顾客",
     "zh-TW": "居住在日本的外國顧客"
   },
@@ -1956,13 +1956,13 @@
     "zh-TW": "我們將根據當地交通需求和路況進行穩定營運的管理。"
   },
   "地域交通": {
-    "en": "regional transportation",
+    "en": "Local mobility",
     "ko": "지역 교통",
     "zh-CN": "区域交通",
     "zh-TW": "區域交通"
   },
   "地域交通・日常移動・観光利用": {
-    "en": "Regional transportation/daily transportation/tourism use",
+    "en": "Local mobility ・ Daily travel ・ Sightseeing",
     "ko": "지역 교통·일상 이동·관광 이용",
     "zh-CN": "区域交通/日常交通/旅游利用",
     "zh-TW": "區域交通/日常交通/旅遊利用"
@@ -1974,7 +1974,7 @@
     "zh-TW": "區域支持"
   },
   "培った力": {
-    "en": "cultivated power",
+    "en": "Capabilities Demonstrated",
     "ko": "길러진 힘",
     "zh-CN": "培养的力量",
     "zh-TW": "培養的力量"
@@ -2022,10 +2022,10 @@
     "zh-TW": "即使有重要的計劃，也要冷靜地旅行。"
   },
   "大型イベントに関連する関係者送迎に対応し、複数台運行・現場連携を行いました。": {
-    "en": "We operated multiple vehicles and collaborated on-site to provide transportation for people involved in large-scale events.",
-    "ko": "대형 이벤트에 관련하는 관계자 송영에 대응해, 복수대 운행·현장 제휴를 실시했습니다.",
-    "zh-CN": "我们运营多辆车辆并进行现场协作，为参与大型活动的人员提供交通服务。",
-    "zh-TW": "我們營運多輛車輛並進行現場協作，為參與大型活動的人員提供交通服務。"
+    "en": "Coordinated multi-vehicle transportation and on-site communication for a large-scale event.",
+    "ko": "대형 행사 관계자 송영을 위해 여러 대의 차량을 운행하고 현장 담당자와 긴밀히 협업했습니다.",
+    "zh-CN": "为大型活动相关人员提供接送服务，并实施多车协同与现场联络。",
+    "zh-TW": "為大型活動相關人員提供接送服務，並執行多車協同與現場聯絡。"
   },
   "大型イベント対応": {
     "en": "Large event support",
@@ -2040,7 +2040,7 @@
     "zh-TW": "大型工程"
   },
   "大型案件・企業送迎のご相談はこちら": {
-    "en": "Click here for inquiries regarding large-scale projects and corporate transportation.",
+    "en": "Discuss a large-scale or corporate transportation assignment",
     "ko": "대형 안건·기업 송영의 상담은 이쪽",
     "zh-CN": "有关大型项目和企业运输的咨询请点击此处。",
     "zh-TW": "有關大型專案和企業運輸的諮詢請點擊此處。"
@@ -2053,7 +2053,7 @@
   },
   "大寅が大切にしているのは、運転技術だけではありません。接遇、安全意識、時間管理、地理知識、守秘意識まで含めて、安心して任せられるドライバーを育成しています。": {
     "en": "Driving skills are not the only things Daitora values. We train drivers who can be entrusted with peace of mind, including hospitality, safety awareness, time management, geographical knowledge, and confidentiality awareness.",
-    "ko": "Daitora가 소중히 여기는 것은 운전 기술뿐이 아닙니다. 접대, 안전 의식, 시간 관리, 지리 지식, 수비 의식까지 포함하여 안심하고 맡길 수 있는 드라이버를 육성하고 있습니다.",
+    "ko": "Daitora가 중요하게 생각하는 것은 운전 기술만이 아닙니다. 서비스 태도, 안전 의식, 시간 관리, 지리 지식, 기밀 유지까지 갖춘 신뢰할 수 있는 운전기사를 양성합니다.",
     "zh-CN": "驾驶技能并不是 Daitora 唯一看重的东西。我们培养可以安心托付的司机，包括热情好客、安全意识、时间管理、地理知识和保密意识。",
     "zh-TW": "駕駛技能並不是 Daitora 唯一重視的東西。我們培養可以安心託付的司機，包括熱情好客、安全意識、時間管理、地理知識和保密意識。"
   },
@@ -2070,13 +2070,13 @@
     "zh-TW": "關於Daitora |Daitora Group"
   },
   "大寅の品質は、一度の特別な対応ではなく、毎日の確認と共有によって支えられています。乗務員、配車担当、車両管理担当が連携し、一件一件の送迎を安定して運行できる体制を整えています。": {
-    "en": "Daitora's quality is not supported by a one-time special response, but by daily confirmation and sharing. Our crew, dispatch staff, and vehicle management staff work together to create a system that allows us to operate each transfer in a stable manner.",
+    "en": "Daitora’s service quality is built through daily checks and communication. Drivers, dispatchers and vehicle management staff work together to support consistent operation for every journey.",
     "ko": "大寅의 품질은 한 번의 특별한 대응이 아니라 매일 확인과 공유에 의해 지원됩니다. 승무원, 배차 담당, 차량 관리 담당이 연계해, 1건 1건의 송영을 안정적으로 운행할 수 있는 체제를 정돈하고 있습니다.",
     "zh-CN": "Daitora的品质不是靠一次性的特别回复来支撑的，而是靠每天的确认和分享来支撑的。我们的工作人员、调度人员和车辆管理人员共同创建了一个系统，使我们能够稳定地运行每一次转运。",
     "zh-TW": "Daitora的品質不是靠一次性的特別回復來支撐的，而是靠每天的確認和分享來支撐的。我們的工作人員、調度人員和車輛管理人員共同創建了一個系統，使我們能夠穩定地運行每一次轉運。"
   },
   "大寅の運行管理体制。": {
-    "en": "Daitora's operation management system.",
+    "en": "Daitora safety and service quality.",
     "ko": "Daitora의 운행 관리 체제.",
     "zh-CN": "Daitora的运营管理系统。",
     "zh-TW": "Daitora的營運管理系統。"
@@ -2094,13 +2094,13 @@
     "zh-TW": "Daitora Group|大阪和京都的出租、計程車和二手車銷售"
   },
   "大寅グループからのお知らせ、事業情報、公開できる範囲での主な対応実績をご紹介します。": {
-    "en": "We will introduce announcements from the Daitora Group, business information, and our main response results to the extent that we can disclose them.",
+    "en": "News, business updates and selected transportation assignments from Daitora Group, shared within the scope that can be disclosed.",
     "ko": "Daitora Group의 소식, 사업 정보, 공개 할 수있는 범위에서의 주요 대응 실적을 소개합니다.",
     "zh-CN": "我们将在可以披露的范围内介绍Daitora Group的公告、业务信息以及我们的主要应对结果。",
     "zh-TW": "我們將在可以揭露的範圍內介紹Daitora Group的公告、業務資訊以及我們的主要應對結果。"
   },
   "大寅グループからのお知らせ、事業情報、公開可能な範囲での対応実績をご紹介します。": {
-    "en": "We will introduce announcements from the Daitora Group, business information, and response results to the extent possible.",
+    "en": "News, business updates and selected transportation assignments from Daitora Group, shared within the scope that can be disclosed.",
     "ko": "Daitora Group의 소식, 사업 정보, 공개 가능한 범위에서의 대응 실적을 소개합니다.",
     "zh-CN": "我们将尽可能介绍Daitora Group的公告、业务信息和应对结果。",
     "zh-TW": "我們將盡可能介紹Daitora Group的公告、業務資訊和應對結果。"
@@ -2112,25 +2112,25 @@
     "zh-TW": "為了回覆詢問，Daitora Group可能會收集您的姓名、公司/組織名稱、電話號碼、電子郵件地址、首選語言、交通詳情、車輛購買/貸款諮詢詳情、招聘諮詢詳情以及諮詢正文中包含的其他資訊。"
   },
   "大寅グループでは、中古車販売事業の拡大に伴い、車両仕入体制を強化しました。ハイヤー・タクシー運行の現場で日々車両を扱う会社として、見た目や年式だけでなく、走行状態、維持管理、用途、乗り出し後の使いやすさまで含めた車両提案を行います。": {
-    "en": "The Daitora Group has strengthened its vehicle purchasing system in line with the expansion of its used car sales business. As a company that handles vehicles on a day-to-day basis in the field of hire taxi operations, we make vehicle proposals that take into account not only appearance and model year, but also running condition, maintenance, intended use, and ease of use after the vehicle is launched.",
-    "ko": "Daitora Group은 중고차 판매 사업이 확대됨에 따라 차량 구매 시스템을 강화했습니다. 하이어·택시 운행의 현장에서 매일 차량을 취급하는 회사로서, 외형이나 연식뿐만 아니라, 주행 상태, 유지 관리, 용도, 탈출 후의 사용의 용이함까지 포함한 차량 제안을 실시합니다.",
-    "zh-CN": "Daitora Group随着二手车销售业务的扩大，强化了车辆采购体系。作为出租车运营领域的日常车辆处理公司，我们提出的车辆提案不仅考虑外观和年份，还考虑车辆的运行状况、维护、用途以及车辆上市后的易用性。",
-    "zh-TW": "Daitora Group隨著二手車銷售業務的擴大，強化了車輛採購系統。作為一家在計程車營運領域日常處理車輛的公司，我們提供的車輛提案不僅考慮了外觀和車型年份，還考慮了車輛的運行狀況、維護、用途以及車輛上市後的易用性。"
+    "en": "As its used vehicle business expands, Daitora Group has strengthened its sourcing process. Because we operate chauffeur and taxi vehicles every day, our recommendations consider not only appearance and model year, but also driving condition, maintenance, intended use and usability after handover.",
+    "ko": "Daitora Group은 중고차 판매 사업 확대에 맞춰 차량 조달 체계를 강화했습니다. 전용 차량과 택시를 매일 운영하는 회사로서 외관과 연식뿐 아니라 주행 상태, 유지관리, 사용 목적, 차량 인도 후의 실용성까지 고려해 차량을 제안합니다.",
+    "zh-CN": "随着二手车销售业务扩大，Daitora Group 强化了车辆采购体系。作为日常运营包车接送和出租车的企业，我们不仅关注外观和年款，也会综合行驶状况、维护管理、实际用途及交车后的使用便利性提出车辆建议。",
+    "zh-TW": "隨著中古車銷售事業擴大，Daitora Group 強化了車輛採購體系。作為日常營運包車接送與計程車的企業，我們不僅關注外觀與年式，也會綜合行駛狀況、維護管理、實際用途及交車後的使用便利性提出車輛建議。"
   },
   "大寅グループでは、乗務員向けに接遇・安全研修を実施しました。空港送迎、企業送迎、VIP接待、地域交通など、利用シーンに応じた言葉遣い、乗降時の配慮、時間管理、情報共有をテーマに確認を行いました。": {
-    "en": "The Daitora Group conducted hospitality and safety training for crew members. We checked the use of language depending on the usage situation, consideration when boarding and disembarking, time management, and information sharing, such as airport transfers, corporate transfers, VIP entertainment, and local transportation.",
+    "en": "Daitora Group conducted service and safety training for drivers. The program covered professional communication, boarding assistance, time management and information sharing across airport, corporate, VIP and local transportation scenarios.",
     "ko": "Daitora Group은 승무원을 대상으로 접대 안전 연수를 실시했습니다. 공항 송영, 기업 송영, VIP 접대, 지역 교통 등, 이용 장면에 따른 말투, 승강시의 배려, 시간 관리, 정보 공유를 테마로 확인을 실시했습니다.",
     "zh-CN": "Daitora Group为船员进行了接待和安全培训。我们根据使用情况、上下飞机时的考虑、时间管理和信息共享来检查语言的使用，例如机场接送、公司接送、VIP娱乐和当地交通。",
     "zh-TW": "Daitora Group為船員進行了接待和安全培訓。我們根據使用情況、上下飛機時的考慮、時間管理和資訊共享來檢查語言的使用，例如機場接送、公司接送、VIP娛樂和當地交通。"
   },
   "大寅グループでは、乗務員教育、車両管理、配車確認、GPS運行管理、法令遵守、緊急時対応を一体で運用し、一件一件の送迎を安全かつ安定して実行できる体制を整えています。": {
-    "en": "The Daitora Group integrates crew training, vehicle management, vehicle dispatch confirmation, GPS operation management, legal compliance, and emergency response, and has established a system that allows each transfer to be carried out safely and stably.",
+    "en": "Daitora Group integrates driver training, vehicle management, dispatch verification, GPS monitoring, legal compliance and contingency response to deliver each journey safely and consistently.",
     "ko": "Daitora Group은 승무원 교육, 차량 관리, 배차 확인, GPS 운행 관리, 법령 준수, 긴급 대응을 일체로 운용하고, 1건 1건의 송영을 안전하고 안정적으로 실행할 수 있는 체제를 갖추고 있습니다.",
     "zh-CN": "Daitora Group集船员培训、车辆管理、车辆调度确认、GPS运营管理、法律合规、应急响应于一体，建立了让每次转运都能安全稳定进行的体系。",
     "zh-TW": "Daitora Group集船員訓練、車輛管理、車輛調度確認、GPS營運管理、法律合規、緊急應變於一體，建立了讓每次轉運都能安全穩定進行的系統。"
   },
   "大寅グループでは、出庫前確認、車内清掃、車両状態確認を徹底し、快適な移動空間づくりを進めています。安全な運行だけでなく、お客様が乗車した瞬間に安心できる車内環境を整えることを重視しています。": {
-    "en": "The Daitora Group is working to create a comfortable transportation space by thoroughly checking before leaving the warehouse, cleaning the inside of the vehicle, and checking the condition of the vehicle. We not only focus on safe operation, but also on creating an environment inside the vehicle that makes customers feel at ease the moment they board the train.",
+    "en": "Daitora Group has strengthened pre-dispatch checks, cabin cleaning and vehicle-condition inspections. Alongside safe operation, we focus on preparing a clean, reassuring environment from the moment each passenger boards.",
     "ko": "Daitora Group은 출고 전 확인, 차내 청소, 차량 상태 확인을 철저히 해, 쾌적한 이동 공간 만들기를 진행하고 있습니다. 안전한 운행뿐만 아니라, 고객이 승차한 순간에 안심할 수 있는 차내 환경을 정돈하는 것을 중시하고 있습니다.",
     "zh-CN": "Daitora Group通过出库前的彻底检查、车内的清扫、车况的检查等，努力打造舒适的运输空间。我们不仅注重安全运行，更注重营造让乘客上车即安心的车内环境。",
     "zh-TW": "Daitora Group透過出庫前的徹底檢查、車內的清掃、車況的檢查等，努力打造舒適的運輸空間。我們不僅注重安全運行，更注重營造讓乘客上車即安心的車內環境。"
@@ -2154,22 +2154,22 @@
     "zh-TW": "Daitora Group的優勢不僅僅在於其擁有的車輛數量。憑藉多語言支援、專業駕駛員培訓、維護良好的車輛環境以及多地點的營運管理，我們支援可靠的運輸。"
   },
   "大寅グループは、EXPO2025 大阪・関西万博に関連する要人送迎業務を請け負いました。国内外の来賓・関係者の移動に対応し、空港到着時の受け入れから会場・ホテル間の移動まで、一貫した送迎体制を整備しました。": {
-    "en": "Daitora Group was contracted to provide transportation services for VIPs related to EXPO2025 Osaka/Kansai Expo. To accommodate the movement of domestic and international guests and related parties, we have established an integrated transportation system, from reception upon arrival at the airport to transportation between venues and hotels.",
-    "ko": "Daitora Group은 EXPO 2025 오사카 · 간사이 박람회와 관련된 요인 송영 업무를 요청했습니다. 국내외의 내빈·관계자의 이동에 대응해, 공항 도착시의 수용으로부터 회장·호텔간의 이동까지, 일관한 송영 체제를 정비했습니다.",
-    "zh-CN": "Daitora Group签约为2025年大阪/关西世博会相关贵宾提供交通服务。为满足国内外宾客及相关人员的出行，我们建立了从机场抵达接待到场馆与酒店之间交通的综合交通系统。",
-    "zh-TW": "Daitora Group簽約為2025年大阪/關西世博相關貴賓提供交通服務。為滿足國內外賓客及相關人員的出行，我們建立了從機場抵達接待到場館與飯店之間交通的綜合交通系統。"
+    "en": "Daitora Group provided executive transportation related to Expo 2025 Osaka, Kansai. We established an integrated operating plan for domestic and international guests, from airport arrival support to transfers between hotels and venues.",
+    "ko": "Daitora Group은 2025 오사카·간사이 엑스포 관련 주요 인사 송영 업무를 수행했습니다. 국내외 귀빈과 관계자의 이동을 위해 공항 도착 지원부터 행사장과 호텔 간 이동까지 일관된 운행 체계를 구축했습니다.",
+    "zh-CN": "Daitora Group 承接了 EXPO 2025 大阪·关西世博会相关的重要来宾接送服务。针对国内外来宾及相关人员，从机场抵达到会场、酒店之间的移动，建立一体化接送体系。",
+    "zh-TW": "Daitora Group 承接了 EXPO 2025 大阪・關西世博會相關的重要來賓接送服務。針對國內外來賓及相關人員，從機場抵達到會場、飯店之間的移動，建立一體化接送體系。"
   },
   "大寅グループは、ハイヤー、タクシー、中古車販売を軸に、空港送迎、観光貸切、企業送迎、地域交通、車両活用までを一体で支えています。": {
-    "en": "The Daitora Group provides integrated support for services ranging from rental cars, taxis, and used car sales to airport transportation, sightseeing charters, corporate transportation, regional transportation, and vehicle utilization.",
+    "en": "Through chauffeur services, taxis and used car sales, Daitora Group supports airport transfers, private tours, corporate transportation, local mobility and practical vehicle use across Kansai.",
     "ko": "다이토 그룹은 하이어, 택시, 중고차 판매를 축으로, 공항 송영, 관광 전세, 기업 송영, 지역 교통, 차량 활용까지를 일체로 지지하고 있습니다.",
     "zh-CN": "Daitora Group提供从租车、出租车、二手车销售到机场交通、观光包车、企业交通、区域交通、车辆利用等综合服务支持。",
     "zh-TW": "Daitora Group提供從租車、計程車、二手車銷售到機場交通、觀光包車、企業交通、區域交通、車輛利用等綜合服務支援。"
   },
   "大寅グループは、ハイヤー、タクシー、送迎車両を日々運行している会社です。そのため、車両を単なる商品としてではなく、実際に使う場面、乗りやすさ、荷物の積みやすさ、維持管理、納車後の使いやすさまで含めて考えています。": {
-    "en": "Daitora Group is a company that operates hire cars, taxis, and shuttle vehicles on a daily basis. For this reason, we consider vehicles not just as products, but also in terms of how they are actually used, how easy they are to ride, how easy they are to load, how easy they are to maintain, and how easy they are to use after delivery.",
-    "ko": "Daitora네 그룹은 하이어, 택시, 픽업 차량을 매일 운행하는 회사입니다. 그 때문에, 차량을 단순한 상품으로서는 아니고, 실제로 사용하는 장면, 승차의 용이함, 짐의 적재의 용이함, 유지 관리, 납차 후의 사용의 용이성까지 포함해 생각하고 있습니다.",
-    "zh-CN": "Daitora Group 是一家每天经营出租汽车、出租车和班车的公司。因此，我们不仅将车辆视为产品，而且还考虑其实际使用方式、乘坐的便捷性、装载的便捷性、维护的便捷性以及交付后的使用便捷性。",
-    "zh-TW": "Daitora Group 是一家每天經營出租汽車、計程車和接駁車的公司。因此，我們不僅將車輛視為產品，而且還考慮其實際使用方式、乘坐的便利性、裝載的便利性、維護的便利性以及交付後的使用便利性。"
+    "en": "Daitora Group operates chauffeur, taxi and transfer vehicles every day. We therefore assess a vehicle not simply as a product, but in terms of real-world use, ease of access, luggage capacity, maintenance and usability after handover.",
+    "ko": "Daitora Group은 전용 차량, 택시, 송영 차량을 매일 직접 운영합니다. 그래서 차량을 단순한 상품으로 보지 않고 실제 사용 환경, 승하차 편의성, 적재 공간, 유지관리, 차량 인도 후의 사용 편의성까지 함께 고려합니다.",
+    "zh-CN": "Daitora Group 每天实际运营包车接送、出租车及接送车辆。因此，我们不会只把车辆视为商品，而会综合考虑实际使用场景、上下车便利性、行李装载、维护管理以及交车后的日常使用体验。",
+    "zh-TW": "Daitora Group 每天實際營運包車接送、計程車及接送車輛。因此，我們不會只把車輛視為商品，而會綜合考量實際使用情境、上下車便利性、行李裝載、維護管理以及交車後的日常使用體驗。"
   },
   "大寅グループは、京都エリアにおけるサービス体制強化のため、京都営業所を開設しました。京都市内ホテル、観光地、企業訪問先への配車がよりスムーズになり、大阪・京都間の送迎案件や、京都発着の観光貸切、企業送迎にも柔軟に対応できる体制を整えました。": {
     "en": "The Daitora Group has opened a Kyoto office to strengthen its service system in the Kyoto area. Vehicle dispatch to hotels, sightseeing spots, and corporate destinations in Kyoto has become smoother, and we have created a system that can flexibly handle transfers between Osaka and Kyoto, chartered sightseeing tours to and from Kyoto, and corporate transfers.",
@@ -2178,7 +2178,7 @@
     "zh-TW": "Daitora Group開設了京都辦事處，以加強在京都地區的服務體系。京都的飯店、旅遊景點、企業目的地的車輛調度變得更加順暢，我們創建了一個可以靈活處理大阪和京都之間的接送、京都往返包車旅遊以及企業接送的系統。"
   },
   "大寅グループは、大阪・京都・堺・港区を軸とした関西複数拠点での運行体制を強化しました。空港送迎、観光貸切、企業送迎、地域タクシーなど、利用目的に応じた車両手配と現場対応をより安定して行えるよう、拠点間の連携を進めています。": {
-    "en": "The Daitora Group has strengthened its operation system at multiple locations in the Kansai region, centered around Osaka, Kyoto, Sakai, and Minato wards. We are promoting cooperation between our bases to ensure a more stable arrangement of vehicles and on-site support depending on the purpose of use, such as airport transfers, sightseeing charters, company transfers, and local taxis.",
+    "en": "Daitora Group strengthened coordination across its Osaka, Kyoto, Sakai and Minato bases. Closer communication between locations supports more consistent vehicle allocation and on-site response for airport transfers, private tours, corporate transportation and local taxi service.",
     "ko": "Daitora Group은 오사카・교토・사카이・미나토구를 축으로 한 간사이 복수 거점에서의 운행 체제를 강화했습니다. 공항 송영, 관광 전세, 기업 송영, 지역 택시 등, 이용 목적에 따른 차량 수배와 현장 대응을 보다 안정적으로 실시할 수 있도록, 거점간의 제휴를 진행시키고 있습니다.",
     "zh-CN": "Daitora Group在以大阪、京都、堺、港区为中心的关西地区多个据点强化了运营体系。我们正在推动基地之间的合作，以根据使用目的确保更稳定的车辆安排和现场支持，例如机场接送、观光包车、公司接送和当地出租车。",
     "zh-TW": "Daitora Group在以大阪、京都、堺、港區為中心的關西地區多個據點強化了營運體系。我們正在推動基地之間的合作，以根據使用目的確保更穩定的車輛安排和現場支持，例如機場接送、觀光包車、公司接送和當地出租車。"
@@ -2208,7 +2208,7 @@
     "zh-TW": "我們想介紹我們的三項業務：Daitora出租、Toramaru Taxi和Daitora二手車銷售。"
   },
   "大寅ハイヤーに関するご相談はこちら": {
-    "en": "Click here for consultation regarding Daitora Chauffeur & Private Transportation",
+    "en": "Discuss your chauffeur transportation requirements",
     "ko": "Daitora Chauffeur & Private Transportation 상담은 여기에서",
     "zh-CN": "有关Daitora租赁的咨询请点击此处",
     "zh-TW": "有關Daitora租賃的諮詢請點擊此處"
@@ -2226,26 +2226,26 @@
     "zh-TW": "Daitora二手車銷售|Daitora Group"
   },
   "大寅中古車販売が選ばれる理由": {
-    "en": "Reasons why Daitora Auto / Used Car Sales are chosen",
-    "ko": "Daitora Auto / Used Car Sales가 선택되는 이유",
-    "zh-CN": "选择Daitora二手车销售的理由",
-    "zh-TW": "選擇Daitora二手車銷售的理由"
+    "en": "Why Choose Daitora Auto / Used Car Sales",
+    "ko": "Daitora Auto / Used Car Sales를 선택하는 이유",
+    "zh-CN": "选择 Daitora Auto / Used Car Sales 的理由",
+    "zh-TW": "選擇 Daitora Auto / Used Car Sales 的理由"
   },
   "大寅中古車販売では、個人利用から事業用車両まで、使用目的、乗車人数、走行距離、維持管理まで考えた車両選びをお手伝いしています。": {
-    "en": "At Daitora Auto / Used Car Sales, we help you select a vehicle, from personal use to business vehicles, taking into consideration the purpose of use, number of passengers, mileage, and maintenance.",
-    "ko": "Daitora Auto / Used Car Sales에서는, 개인 이용으로부터 사업용 차량에 이르기까지, 사용 목적, 승차 인원수, 주행 거리, 유지 관리까지 생각한 차량 선택을 돕고 있습니다.",
-    "zh-CN": "在Daitora二手车销售处，我们会根据使用目的、乘客数量、行驶里程和维护情况，帮助您选择从个人用车到商务车的车辆。",
-    "zh-TW": "在Daitora二手車銷售處，我們會根據使用目的、乘客數量、行駛里程和維護情況，幫助您選擇從個人用車到商務車的車輛。"
+    "en": "Daitora Auto / Used Car Sales helps customers choose vehicles for personal or business use by considering purpose, passenger capacity, expected mileage and maintenance.",
+    "ko": "Daitora Auto / Used Car Sales는 개인용부터 사업용 차량까지 사용 목적, 승차 인원, 예상 주행거리, 유지관리를 고려한 차량 선택을 돕습니다.",
+    "zh-CN": "Daitora Auto / Used Car Sales 面向个人及业务用车需求，综合使用目的、乘车人数、行驶里程和维护管理，协助选择车辆。",
+    "zh-TW": "Daitora Auto / Used Car Sales 面向個人及事業用車需求，綜合使用目的、乘車人數、行駛里程與維護管理，協助選擇車輛。"
   },
   "大寅中古車販売では、車両購入をご検討のお客様に対し、必要書類や申込の流れをわかりやすくご案内し、安心して手続きを進められるようサポートいたします。": {
     "en": "At Daitora Auto / Used Car Sales, we provide customers who are considering purchasing a vehicle with easy-to-understand guidance on the required documents and application process, and support them so that they can proceed with the process with peace of mind.",
-    "ko": "Daitora Auto / Used Car Sales에서는, 차량 구입을 검토의 고객에게, 필요 서류나 신청의 흐름을 알기 쉽게 안내해, 안심하고 수속을 진행할 수 있도록 서포트하겠습니다.",
+    "ko": "Daitora Auto / Used Car Sales는 차량 구매를 검토하는 고객에게 필요 서류와 신청 절차를 알기 쉽게 안내해 안심하고 진행할 수 있도록 지원합니다.",
     "zh-CN": "在Daitora二手车销售处，我们为正在考虑购买车辆的客户提供有关所需文件和申请流程的易于理解的指导，并为他们提供支持，以便他们安心地进行流程。",
     "zh-TW": "在Daitora二手車銷售處，我們為正在考慮購買車輛的客戶提供有關所需文件和申請流程的易於理解的指導，並為他們提供支持，以便他們安心地進行流程。"
   },
   "大手旅行会社、行政団体、企業団体からの依頼案件にも多数対応経験があります。公開できる範囲に限り、今後も実績情報を整理して掲載していきます。": {
     "en": "We have experience in handling numerous requests from major travel agencies, government organizations, and corporate organizations. We will continue to organize and publish performance information to the extent that it is publicly available.",
-    "ko": "대기업 여행사, 행정 단체, 기업 단체로부터의 의뢰 안건에도 다수 대응 경험이 있습니다. 공개할 수 있는 범위에 한하여 앞으로도 실적 정보를 정리하여 게재해 나갈 것입니다.",
+    "ko": "대형 여행사, 공공기관, 기업 단체의 의뢰에도 다수 대응해 왔습니다. 공개 가능한 범위에서 관련 실적을 지속적으로 정리해 소개하겠습니다.",
     "zh-CN": "我们在处理来自主要旅行社、政府组织和企业组织的大量请求方面拥有丰富的经验。我们将继续组织和发布可公开获取的绩效信息。",
     "zh-TW": "我們在處理來自主要旅行社、政府組織和企業組織的大量請求方面擁有豐富的經驗。我們將繼續組織和發布可公開取得的績效資訊。"
   },
@@ -2256,8 +2256,8 @@
     "zh-TW": "大阪、京都等"
   },
   "大阪で開催された国際会議関連送迎に対応。要人・関係者の移動に求められる時間管理、守秘意識、現場判断を経験しました。": {
-    "en": "Compatible with transportation related to international conferences held in Osaka. I experienced the time management, confidentiality, and on-site judgment required for the movement of VIPs and related parties.",
-    "ko": "오사카에서 개최된 국제회의 관련 송영에 대응. 요인·관계자의 이동에 요구되는 시간 관리, 수비 의식, 현장 판단을 경험했습니다.",
+    "en": "Supported transportation for an international conference in Osaka, applying the schedule control, confidentiality and on-site judgement required for executive and stakeholder movement.",
+    "ko": "오사카에서 열린 국제회의 관련 송영을 수행했습니다. 주요 인사와 관계자 이동에 필요한 시간 관리, 기밀 유지, 현장 판단 역량을 축적했습니다.",
     "zh-CN": "与在大阪举办的国际会议相关的交通兼容。我体验到了VIP及相关人员流动所需的时间管理、保密和现场判断。",
     "zh-TW": "與在大阪舉辦的國際會議相關的交通相容。我體驗到了VIP及相關人員流動所需的時間管理、保密和現場判斷。"
   },
@@ -2274,7 +2274,7 @@
     "zh-TW": "我們的總部設在大阪和京都，我們的目標是成為當地社區和每個參與者都需要的公司。"
   },
   "大阪・京都・堺・港区": {
-    "en": "Osaka, Kyoto, Sakai, Minato Ward",
+    "en": "Osaka, Kyoto, Sakai & Minato",
     "ko": "오사카・교토・사카이・미나토구",
     "zh-CN": "大阪、京都、堺、港区",
     "zh-TW": "大阪、京都、堺、港區"
@@ -2292,7 +2292,7 @@
     "zh-TW": "介紹支援大阪、京都、堺、港區等關西地區區域交通的「Toramaru計程車」。"
   },
   "大阪・京都・堺・港区など関西エリアの移動を支える。": {
-    "en": "Supports movement in the Kansai area such as Osaka, Kyoto, Sakai, and Minato Ward.",
+    "en": "Supporting everyday mobility across Osaka, Kyoto, Sakai and Minato.",
     "ko": "오사카・교토・사카이・미나토구 등 간사이 지역의 이동을 지원한다.",
     "zh-CN": "支援大阪、京都、堺、港区等关西地区的活动。",
     "zh-TW": "支援大阪、京都、堺、港區等關西地區的活動。"
@@ -2316,13 +2316,13 @@
     "zh-TW": "我們將利用關西的多個地點，包括大阪、京都、堺和港區，以及約 100 輛車輛的網路。"
   },
   "大阪・京都・堺・港区など関西複数拠点を軸に、グループ全体で約100台規模の車両ネットワークを運用。": {
-    "en": "The entire group operates a network of approximately 100 vehicles centered around multiple locations in the Kansai region, including Osaka, Kyoto, Sakai, and Minato wards.",
+    "en": "Across locations in Osaka, Kyoto, Sakai and Minato, our group operates a network of approximately 100 vehicles.",
     "ko": "오사카·교토·사카이·미나토구 등 간사이 복수 거점을 축으로, 그룹 전체로 약 100대 규모의 차량 네트워크를 운용.",
     "zh-CN": "整个集团运营着一个由约 100 辆车辆组成的网络，分布在关西地区的多个地点，包括大阪、京都、堺和港区。",
     "zh-TW": "整個集團經營著一個由約 100 輛車輛組成的網絡，分佈在關西地區的多個地點，包括大阪、京都、堺和港區。"
   },
   "大阪・京都・堺・港区など関西複数拠点・約100台規模の車両ネットワーク": {
-    "en": "Multiple bases in Kansai including Osaka, Kyoto, Sakai, and Minato wards, and approximately 100 vehicle network",
+    "en": "Multiple Kansai bases across Osaka, Kyoto, Sakai and Minato ・ An approximately 100-vehicle network",
     "ko": "오사카·교토·사카이·미나토구 등 간사이 복수 거점·약 100대 규모의 차량 네트워크",
     "zh-CN": "大阪、京都、堺、港区等关西多个基地和约100台车辆网络",
     "zh-TW": "大阪、京都、堺、港區等關西多個基地及約100台車輛網絡"
@@ -2401,9 +2401,9 @@
   },
   "守秘意識": {
     "en": "Confidentiality",
-    "ko": "수비 의식",
-    "zh-CN": "保密性",
-    "zh-TW": "保密性"
+    "ko": "기밀 유지 의식",
+    "zh-CN": "保密意识",
+    "zh-TW": "保密意識"
   },
   "安全 / Safety": {
     "en": "Safety",
@@ -2412,7 +2412,7 @@
     "zh-TW": "安全"
   },
   "安全と品質を支える、": {
-    "en": "Supporting safety and quality",
+    "en": "The operating system behind",
     "ko": "안전과 품질을 지원,",
     "zh-CN": "支持安全和质量",
     "zh-TW": "支持安全和品質"
@@ -2442,7 +2442,7 @@
     "zh-TW": "保持安全。珍惜人。不要逃避問題。"
   },
   "安全・品質": {
-    "en": "Safety/quality",
+    "en": "Safety & Quality",
     "ko": "안전·품질",
     "zh-CN": "安全/质量",
     "zh-TW": "安全/品質"
@@ -2538,7 +2538,7 @@
     "zh-TW": "成就"
   },
   "実績紹介": {
-    "en": "Achievements introduction",
+    "en": "Track Record",
     "ko": "실적 소개",
     "zh-CN": "成果介绍",
     "zh-TW": "成果介紹"
@@ -2550,7 +2550,7 @@
     "zh-TW": "成就 |Daitora Group"
   },
   "実績紹介を見る": {
-    "en": "View achievements",
+    "en": "View Our Track Record",
     "ko": "실적 소개 보기",
     "zh-CN": "查看成就",
     "zh-TW": "查看成就"
@@ -2574,19 +2574,19 @@
     "zh-TW": "Toramaru Taxi |Daitora Group"
   },
   "寅丸タクシーでは、トヨタ・シエンタを中心とした車両を運用しています。コンパクトで乗り降りしやすく、街中や住宅地、駅周辺でも使いやすい車両です。車両には TORAMARU TAXI のサインと緑ナンバーを装着し、地域で安心してご利用いただけるタクシーを目指しています。": {
-    "en": "Toramaru Taxi operates a fleet of vehicles, mainly Toyota Sienta. This vehicle is compact and easy to get on and off, making it easy to use around town, in residential areas, and around stations. The vehicles are equipped with TORAMARU TAXI signs and green license plates, aiming to be taxis that can be used with peace of mind in the area.",
+    "en": "Toramaru Taxi operates primarily Toyota Sienta vehicles. Their compact size and accessible doors suit city streets, residential areas and station pickups. Each vehicle carries Toramaru Taxi identification and a commercial green licence plate.",
     "ko": "토야마루 택시에서는 도요타 시엔타를 중심으로 한 차량을 운용하고 있습니다. 컴팩트하고 승하차하기 쉽고, 거리나 주택지, 역 주변에서도 사용하기 쉬운 차량입니다. 차량에는 TORAMARU TAXI 의 사인과 녹색 넘버를 장착해, 지역에서 안심하고 이용하실 수 있는 택시를 목표로 하고 있습니다.",
     "zh-CN": "Toramaru Taxi 运营着一支车队，主要是丰田 Sienta。该车结构紧凑，上下车方便，可在城镇、住宅区、车站周边轻松使用。车辆配备了TORAMARU TAXI标志和绿色车牌，旨在成为在该地区可以放心使用的出租车。",
     "zh-TW": "Toramaru Taxi 經營一支車隊，主要是豐田 Sienta。車結構緊湊，上下車方便，可在城鎮、住宅區、車站週邊輕鬆使用。車輛配備了TORAMARU TAXI標誌和綠色車牌，旨在成為該地區可以放心使用的計程車。"
   },
   "寅丸タクシーでは、乗務員一人ひとりの安全意識と接遇姿勢を大切にしています。言葉遣い、乗降時の配慮、車内の清潔さ、時間への意識。小さな基本を積み重ねることが、地域で選ばれるタクシーにつながると考えています。": {
-    "en": "At Toramaru Taxi, we value the safety awareness and customer service attitude of each and every driver. Language, consideration when getting on and off, cleanliness inside the car, and awareness of time. We believe that accumulating small basics will lead to becoming the taxi of choice in the region.",
+    "en": "Every Toramaru Taxi driver is expected to uphold safe driving, courteous communication, thoughtful boarding assistance, cabin cleanliness and reliable timekeeping. Consistent attention to these fundamentals earns trust in the communities we serve.",
     "ko": "토야마루 택시에서는 승무원 한사람 한사람의 안전 의식과 접대 자세를 소중히 하고 있습니다. 말투, 승강시의 배려, 차내의 청결함, 시간에의 의식. 작은 기본을 쌓는 것이 지역에서 선택되는 택시로 이어질 것이라고 생각합니다.",
     "zh-CN": "在Toramaru Taxi，我们重视每一位司机的安全意识和客户服务态度。语言、上下车时的体贴、车内的清洁度、时间意识。我们相信，积累一些基本知识将导致成为该地区的首选出租车。",
     "zh-TW": "在Toramaru Taxi，我們重視每位司機的安全意識和客戶服務態度。語言、上下車時的體貼、車內的清潔度、時間意識。我們相信，累積一些基本知識將導致成為該地區的首選計程車。"
   },
   "寅丸タクシーに関するご相談はこちら": {
-    "en": "Click here for consultation regarding Toramaru Taxi",
+    "en": "Talk to us about Toramaru Taxi",
     "ko": "토야마루 택시에 관한 상담은 이쪽",
     "zh-CN": "关于Toramaru Taxi的咨询请点击这里",
     "zh-TW": "關於Toramaru計程車的諮詢請點這裡"
@@ -2598,25 +2598,25 @@
     "zh-TW": "關於Toramaru計程車的使用、地區交通、飯店、車站的交通等的諮詢。"
   },
   "寅丸タクシーは、駅やホテルからの移動、空港アクセス、観光、お出かけ、ビジネス利用まで、関西でのさまざまな移動シーンに対応しています。": {
-    "en": "Toramaru Taxi supports a variety of transportation situations in Kansai, including transportation from stations and hotels, airport access, sightseeing, outings, and business use.",
+    "en": "Toramaru Taxi supports station and hotel transfers, airport access, sightseeing, everyday outings and business travel throughout Kansai.",
     "ko": "토야마루 택시는 역과 호텔에서의 이동, 공항 액세스, 관광, 외출, 비즈니스 이용까지 간사이에서 다양한 이동 장면을 지원합니다.",
     "zh-CN": "Toramaru Taxi支持关西的各种交通方式，包括车站和酒店的交通、机场交通、观光、郊游和商务用途。",
     "zh-TW": "Toramaru計程車支援關西的各種交通方式，包括車站和飯店的交通、機場交通、觀光、郊遊和商務用途。"
   },
   "審査結果によっては、ご希望に添えない場合がございます。": {
     "en": "Depending on the screening results, we may not be able to accommodate your request.",
-    "ko": "심사 결과에 따라서는, 희망에 따를 수 없는 경우가 있습니다.",
+    "ko": "심사 결과에 따라 희망하시는 조건을 제공하지 못할 수 있습니다.",
     "zh-CN": "根据筛选结果，我们可能无法满足您的要求。",
     "zh-TW": "根據篩選結果，我們可能無法滿足您的要求。"
   },
   "審査結果は希望通りになりますか？": {
-    "en": "Will the examination results be as expected?",
-    "ko": "심사 결과는 희망대로 됩니까?",
-    "zh-CN": "考试结果会如预期吗？",
-    "zh-TW": "考試結果會如預期嗎？"
+    "en": "Is approval or a preferred loan condition guaranteed?",
+    "ko": "심사 결과가 반드시 희망 조건대로 나오나요?",
+    "zh-CN": "审查结果一定会符合预期吗？",
+    "zh-TW": "審查結果一定會符合預期嗎？"
   },
   "対応内容": {
-    "en": "Compatible content",
+    "en": "Scope of Service",
     "ko": "대응 내용",
     "zh-CN": "兼容内容",
     "zh-TW": "相容內容"
@@ -2664,7 +2664,7 @@
     "zh-TW": "所需語言"
   },
   "希望車種": {
-    "en": "Desired car model",
+    "en": "Preferred vehicle",
     "ko": "희망 차종",
     "zh-CN": "想要的车型",
     "zh-TW": "想要的車型"
@@ -2712,7 +2712,7 @@
     "zh-TW": "對等候區、車輛路線和時間變化的回應"
   },
   "待機調整": {
-    "en": "standby adjustment",
+    "en": "Standby coordination",
     "ko": "대기 조정",
     "zh-CN": "待机调整",
     "zh-TW": "待機調整"
@@ -2731,7 +2731,7 @@
   },
   "必要書類や申込手続きの流れを整理し、確認しながら進められるよう支援します。": {
     "en": "We will help you organize and confirm the required documents and application process as you proceed.",
-    "ko": "필요 서류나 신청 수속의 흐름을 정리해, 확인하면서 진행될 수 있도록 지원합니다.",
+    "ko": "필요 서류와 신청 절차를 정리해 각 단계를 확인하며 진행할 수 있도록 돕습니다.",
     "zh-CN": "当您继续进行时，我们将帮助您整理和确认所需的文件和申请流程。",
     "zh-TW": "當您繼續進行時，我們將協助您整理和確認所需的文件和申請流程。"
   },
@@ -2802,14 +2802,14 @@
     "zh-TW": "招募注意事項"
   },
   "採用・乗務員応募": {
-    "en": "Recruitment/crew application",
+    "en": "Driver Recruitment",
     "ko": "채용·승무원 응모",
     "zh-CN": "招募/船员申请",
     "zh-TW": "招募/船員申請"
   },
   "採用応募": {
-    "en": "Application for employment",
-    "ko": "채용 응모",
+    "en": "Driver Recruitment",
+    "ko": "채용 문의",
     "zh-CN": "就业申请",
     "zh-TW": "就業申請"
   },
@@ -2821,7 +2821,7 @@
   },
   "採用相談へ": {
     "en": "Go to recruitment consultation",
-    "ko": "채용 상담에",
+    "ko": "채용 상담",
     "zh-CN": "前往招聘咨询",
     "zh-TW": "前往招募諮詢"
   },
@@ -2833,12 +2833,12 @@
   },
   "接遇、安全意識、地理知識、時間管理を継続的に確認。お客様への言葉遣い、乗降時の配慮、守秘意識まで含めて教育しています。": {
     "en": "Continuously check customer service, safety awareness, geographic knowledge, and time management. We provide training on topics such as how to speak to customers, consideration when boarding and disembarking, and awareness of confidentiality.",
-    "ko": "접대, 안전 의식, 지리 지식, 시간 관리를 지속적으로 확인. 손님에게의 말투, 승강시의 배려, 수비 의식까지 포함해 교육하고 있습니다.",
+    "ko": "서비스 태도, 안전 의식, 지리 지식, 시간 관리를 지속적으로 점검합니다. 고객 응대 언어, 승하차 배려, 기밀 유지까지 포함해 교육합니다.",
     "zh-CN": "不断检查客户服务、安全意识、地理知识和时间管理。我们提供有关如何与客户交谈、登机和下机时的考虑以及保密意识等主题的培训。",
     "zh-TW": "不斷檢查客戶服務、安全意識、地理知識和時間管理。我們提供有關如何與客戶交談、登機和下機時的考慮以及保密意識等主題的培訓。"
   },
   "接遇、安全意識、時間管理、情報共有をテーマに、乗務員向け研修を実施しました。": {
-    "en": "We conducted training for crew members on the themes of hospitality, safety awareness, time management, and information sharing.",
+    "en": "Conducted driver training focused on service, safety awareness, time management and information sharing.",
     "ko": "접대, 안전 의식, 시간 관리, 정보 공유를 테마로, 승무원용 연수를 실시했습니다.",
     "zh-CN": "我们对船员进行了主题为热情好客、安全意识、时间管理和信息共享的培训。",
     "zh-TW": "我們對船員進行了主題為熱情好客、安全意識、時間管理和資訊共享的培訓。"
@@ -2892,13 +2892,13 @@
     "zh-TW": "車輛環境維護良好"
   },
   "旅行会社・行政団体・企業団体案件": {
-    "en": "Travel agencies, administrative organizations, and corporate organizations",
-    "ko": "여행사·행정단체·기업단체 안건",
+    "en": "Travel agency, public-sector and corporate assignments",
+    "ko": "여행사·공공기관·기업 단체 프로젝트",
     "zh-CN": "旅行社、行政机关、法人团体",
     "zh-TW": "旅行社、行政機關、法人團體"
   },
   "旅行会社対応": {
-    "en": "Compatible with travel agencies",
+    "en": "Travel agency coordination",
     "ko": "여행사 대응",
     "zh-CN": "与旅行社兼容",
     "zh-TW": "與旅行社相容"
@@ -2941,12 +2941,12 @@
   },
   "日時、人数、荷物、行程を確認し、利用目的に合ったプランをご案内します。": {
     "en": "We will confirm the date and time, number of people, luggage, and itinerary, and guide you to a plan that suits your purpose.",
-    "ko": "일시, 인원수, 짐, 행정을 확인해, 이용 목적에 맞는 플랜을 안내합니다.",
+    "ko": "일시, 인원, 수하물, 전체 일정을 확인한 뒤 이용 목적에 맞는 운행 계획을 안내합니다.",
     "zh-CN": "我们将确认日期和时间、人数、行李和行程，并指导您制定适合您目的的计划。",
     "zh-TW": "我們將確認日期和時間、人數、行李和行程，並指導您制定適合您目的的計劃。"
   },
   "日時、便名、人数、荷物、行き先、待ち合わせ場所を事前確認。人数や用途に合わせて、適切な車両と乗務員を手配します。": {
-    "en": "Confirm the date and time, flight number, number of people, luggage, destination, and meeting place in advance. We will arrange the appropriate vehicle and crew according to the number of people and purpose.",
+    "en": "We confirm the date, flight number, passenger count, luggage, destination and meeting point in advance, then assign the appropriate vehicle and driver.",
     "ko": "일시, 편명, 인원수, 짐, 목적지, 만남 장소를 사전 확인. 인원수와 용도에 따라 적절한 차량과 승무원을 준비합니다.",
     "zh-CN": "提前确认日期和时间、航班号、人数、行李、目的地、集合地点。我们将根据人数和用途安排合适的车辆和人员。",
     "zh-TW": "提前確認日期和時間、航班號碼、人數、行李、目的地、集合地點。我們將根據人數和用途安排合適的車輛和人員。"
@@ -2959,7 +2959,7 @@
   },
   "日本での車両購入が初めての方にも、必要な確認事項や流れをわかりやすくご案内します。": {
     "en": "Even if it is your first time purchasing a vehicle in Japan, we will provide easy-to-understand guidance on the necessary confirmation items and process.",
-    "ko": "일본에서의 차량 구입이 처음인 분에게도, 필요한 확인 사항이나 흐름을 알기 쉽게 안내합니다.",
+    "ko": "일본에서 처음 차량을 구매하는 분께도 필요한 확인 사항과 절차를 알기 쉽게 안내합니다.",
     "zh-CN": "即使您是第一次在日本购买车辆，我们也会为必要的确认项目和流程提供易于理解的指导。",
     "zh-TW": "即使您是第一次在日本購買車輛，我們也會為必要的確認項目和流程提供易於理解的指導。"
   },
@@ -2976,8 +2976,8 @@
     "zh-TW": "我們支持用日語、中文、英語等來日本旅行以及與海外客人打交道所需的溝通。"
   },
   "日本語・英語・中国語に対応できる乗務員体制で、訪日のお客様にも配慮します。": {
-    "en": "We have a crew that can speak Japanese, English, and Chinese, so we take care of customers visiting Japan.",
-    "ko": "일본어・영어・중국어에 대응할 수 있는 승무원 체제로, 방일의 손님에게도 배려합니다.",
+    "en": "Japanese-, English- and Chinese-speaking chauffeurs are available to support international visitors.",
+    "ko": "일본어, 영어, 중국어 응대가 가능한 운전기사 체계를 갖추어 방일 고객의 이동을 세심하게 지원합니다.",
     "zh-CN": "我们有会说日语、英语和中文的工作人员，所以我们可以照顾来日本的顾客。",
     "zh-TW": "我們有會說日文、英文和中文的工作人員，所以我們可以照顧來日本的顧客。"
   },
@@ -3000,7 +3000,7 @@
     "zh-TW": "準時服務"
   },
   "時間管理": {
-    "en": "time management",
+    "en": "Schedule control",
     "ko": "시간 관리",
     "zh-CN": "时间管理",
     "zh-TW": "時間管理"
@@ -3036,10 +3036,10 @@
     "zh-TW": "Daitora株式會社"
   },
   "株式会社大寅では、中古車販売事業として、厳選した車両の販売と購入サポートを提供しています。ハイヤー・タクシー運行の現場を知る会社だからこそ、用途、状態、維持管理、乗り出し後の使いやすさまで考えた車両選びをサポートします。": {
-    "en": "As a used car sales business, Daitora Co., Ltd. provides sales and purchasing support for carefully selected vehicles. Because we are a company that knows the field of hire taxi operation, we can support you in selecting a vehicle that takes into consideration the purpose, condition, maintenance, and ease of use after the vehicle is launched.",
-    "ko": "Daitora Co., Ltd.에서는 중고차 판매 사업으로서 엄선된 차량의 판매 및 구매 지원을 제공하고 있습니다. 하이어·택시 운행의 현장을 아는 회사이기 때문에, 용도, 상태, 유지 관리, 탈출 후의 사용의 용이함까지 생각한 차량 선택을 서포트합니다.",
-    "zh-CN": "作为一家二手车销售企业，Daitora株式会社为精心挑选的车辆提供销售和采购支持。因为我们是一家了解出租车运营领域的公司，所以我们可以在车辆推出后帮助您选择考虑用途、状况、维护和易用性的车辆。",
-    "zh-TW": "作為一家二手車銷售企業，Daitora株式會社為精心挑選的車輛提供銷售和採購支援。因為我們是一家了解計程車營運領域的公司，所以我們可以在車輛推出後幫助您選擇考慮用途、狀況、維護和易用性的車輛。"
+    "en": "Daitora Auto / Used Car Sales offers carefully selected used vehicles and practical purchase support. Drawing on our experience operating chauffeur and taxi fleets, we consider intended use, condition, maintenance and day-to-day usability after handover.",
+    "ko": "Daitora Auto / Used Car Sales는 엄선한 중고차 판매와 구매 지원을 제공합니다. 전용 차량과 택시를 직접 운영해 온 경험을 바탕으로 용도, 차량 상태, 유지관리, 출고 후의 실용성까지 고려해 차량 선택을 지원합니다.",
+    "zh-CN": "Daitora Auto / Used Car Sales 提供严选二手车与购车支持。凭借包车接送和出租车的实际运营经验，我们会综合考虑用途、车辆状况、维护管理以及交车后的日常使用便利性。",
+    "zh-TW": "Daitora Auto / Used Car Sales 提供嚴選中古車與購車支援。憑藉包車接送與計程車的實際營運經驗，我們會綜合考量用途、車況、維護管理以及交車後的日常使用便利性。"
   },
   "株式会社大寅の会社情報、許認可、拠点情報をご紹介します。": {
     "en": "Introducing Daitora Co., Ltd.'s company information, licenses, and base information.",
@@ -3073,7 +3073,7 @@
   },
   "法人・個人事業主": {
     "en": "Corporation/Individual business owner",
-    "ko": "법인·개인 사업주",
+    "ko": "법인·개인사업자",
     "zh-CN": "法人/个体工商户",
     "zh-TW": "法人/個體工商戶"
   },
@@ -3085,13 +3085,13 @@
   },
   "法人・旅行会社・ホテル様": {
     "en": "Corporations, travel agencies, hotels",
-    "ko": "법인·여행회사·호텔님",
+    "ko": "법인·여행사·호텔",
     "zh-CN": "企业、旅行社、酒店",
     "zh-TW": "企業、旅行社、飯店"
   },
   "法人・旅行会社・ホテル様の送迎相談": {
     "en": "Transportation consultation for corporations, travel agencies, and hotels",
-    "ko": "법인·여행회사·호텔님의 송영 상담",
+    "ko": "법인·여행사·호텔 송영 상담",
     "zh-CN": "企业、旅行社、酒店的交通咨询",
     "zh-TW": "企業、旅行社、飯店的交通諮詢"
   },
@@ -3103,7 +3103,7 @@
   },
   "法人相談へ": {
     "en": "Go to corporate consultation",
-    "ko": "법인 상담에",
+    "ko": "법인 상담",
     "zh-CN": "前往企业咨询",
     "zh-TW": "前往企業諮詢"
   },
@@ -3120,7 +3120,7 @@
     "zh-TW": "未經個人同意，個人資訊不會提供給第三方，除非法律要求或在交通、車輛購買、貸款諮詢等程序所需的範圍內需要合作夥伴的確認。"
   },
   "法令遵守": {
-    "en": "Legal compliance",
+    "en": "Compliance",
     "ko": "법령 준수",
     "zh-CN": "遵守法律",
     "zh-TW": "遵守法律"
@@ -3180,10 +3180,10 @@
     "zh-TW": "我們透過檢查、清潔、維護和確認車輛狀況來維護安全的車內環境。"
   },
   "状態を見る": {
-    "en": "see condition",
-    "ko": "상태 보기",
-    "zh-CN": "看情况",
-    "zh-TW": "看情況"
+    "en": "Review the vehicle condition",
+    "ko": "차량 상태를 확인합니다",
+    "zh-CN": "确认车辆状况",
+    "zh-TW": "確認車輛狀況"
   },
   "現在の状況": {
     "en": "Current situation",
@@ -3204,7 +3204,7 @@
     "zh-TW": "現場判斷"
   },
   "現場判断力": {
-    "en": "On-site judgment ability",
+    "en": "On-site judgement",
     "ko": "현장 판단력",
     "zh-CN": "现场判断能力",
     "zh-TW": "現場判斷能力"
@@ -3216,10 +3216,10 @@
     "zh-TW": "現場回應"
   },
   "現場連携": {
-    "en": "On-site collaboration",
-    "ko": "현장 제휴",
-    "zh-CN": "现场协作",
-    "zh-TW": "現場協作"
+    "en": "On-site coordination",
+    "ko": "현장 협업",
+    "zh-CN": "现场协同",
+    "zh-TW": "現場協同"
   },
   "現場連絡": {
     "en": "On-site contact",
@@ -3234,16 +3234,16 @@
     "zh-TW": "目的"
   },
   "用途と維持管理まで考えた車両選び。": {
-    "en": "Choose a vehicle that takes into account its purpose and maintenance.",
-    "ko": "용도와 유지 관리까지 생각한 차량 선택.",
-    "zh-CN": "选择一辆考虑到其用途和维护的车辆。",
-    "zh-TW": "選擇一輛考慮到其用途和維護的車輛。"
+    "en": "Choose a vehicle with its purpose and upkeep in mind.",
+    "ko": "용도와 유지관리까지 고려한 차량 선택.",
+    "zh-CN": "从实际用途到维护管理，全面考虑车辆选择。",
+    "zh-TW": "從實際用途到維護管理，全面考量車輛選擇。"
   },
   "用途に合った一台を、安心して進められるようサポートします。": {
-    "en": "We will support you so that you can proceed with peace of mind by choosing the right machine for your purpose.",
-    "ko": "용도에 맞는 한 대를 안심하고 진행할 수 있도록 지원합니다.",
-    "zh-CN": "我们将为您提供支持，以便您可以根据您的目的选择合适的机器，安心无忧。",
-    "zh-TW": "我們將為您提供支持，以便您可以根據您的目的選擇合適的機器，安心無憂。"
+    "en": "We help you choose the right vehicle and move through each step with confidence.",
+    "ko": "용도에 맞는 차량을 선택하고 안심하며 절차를 진행할 수 있도록 지원합니다.",
+    "zh-CN": "协助您选择符合实际用途的车辆，并安心推进各项手续。",
+    "zh-TW": "協助您選擇符合實際用途的車輛，安心完成各項手續。"
   },
   "用途に合わせて相談": {
     "en": "Consultation according to usage",
@@ -3258,34 +3258,34 @@
     "zh-TW": "按用途安排車輛"
   },
   "用途を見る": {
-    "en": "See usage",
-    "ko": "용도 보기",
-    "zh-CN": "查看用法",
-    "zh-TW": "查看用法"
+    "en": "Understand the intended use",
+    "ko": "용도를 확인합니다",
+    "zh-CN": "明确用车需求",
+    "zh-TW": "確認用車需求"
   },
   "用途別車両": {
-    "en": "Vehicles by purpose",
+    "en": "Vehicles for every requirement",
     "ko": "용도별 차량",
     "zh-CN": "按用途划分的车辆",
     "zh-TW": "按用途劃分的車輛"
   },
   "用途確認": {
-    "en": "Application confirmation",
+    "en": "Needs assessment",
     "ko": "용도 확인",
     "zh-CN": "申请确认",
     "zh-TW": "申請確認"
   },
   "申込前に、確認できること。": {
-    "en": "Things you can check before applying.",
-    "ko": "신청전에, 확인할 수 있는 것.",
-    "zh-CN": "申请前您可以检查的事项。",
-    "zh-TW": "申請前您可以檢查的事項。"
+    "en": "What to confirm before applying.",
+    "ko": "신청 전에 확인할 사항.",
+    "zh-CN": "申请前可先确认的事项。",
+    "zh-TW": "申請前可先確認的事項。"
   },
   "申込区分": {
-    "en": "Application category",
-    "ko": "신청 구분",
-    "zh-CN": "应用类别",
-    "zh-TW": "應用類別"
+    "en": "Applicant type",
+    "ko": "신청자 구분",
+    "zh-CN": "申请人类型",
+    "zh-TW": "申請人類型"
   },
   "目的地": {
     "en": "destination",
@@ -3300,7 +3300,7 @@
     "zh-TW": "培訓/內部活動"
   },
   "確かな運行基盤。": {
-    "en": "A solid operational base.",
+    "en": "with a dependable operating network.",
     "ko": "확실한 운행 기반.",
     "zh-CN": "坚实的运营基础。",
     "zh-TW": "堅實的營運基礎。"
@@ -3390,7 +3390,7 @@
     "zh-TW": "機場接送"
   },
   "空港送迎 / VIP接待 / 観光貸切": {
-    "en": "Airport transfer / VIP entertainment / Private sightseeing",
+    "en": "Airport Transfer / VIP Transportation / Private Tour",
     "ko": "공항 픽업 / VIP 접대 / 관광 전세",
     "zh-CN": "机场接送 / VIP娱乐 / 私人观光",
     "zh-TW": "機場接送 / VIP娛樂 / 私人觀光"
@@ -3426,7 +3426,7 @@
     "zh-TW": "我們滿足各種交通需求，包括機場接送、觀光、商務使用和入境旅行。"
   },
   "空港送迎、観光貸切、企業・VIP送迎、地域タクシー、中古車販売まで、車両・乗務員・配車・現場対応を一体で支えています。": {
-    "en": "We provide comprehensive support for vehicles, crews, vehicle dispatch, and on-site support, including airport transportation, sightseeing charters, corporate/VIP transportation, local taxis, and used car sales.",
+    "en": "From airport transfers and private tours to corporate and VIP transportation, local taxi service and used car sales, we coordinate vehicles, drivers, dispatch and on-site support as one operation.",
     "ko": "공항 송영, 관광 전세, 기업·VIP 송영, 지역 택시, 중고차 판매까지, 차량·승무원·배차·현장 대응을 일체로 지지하고 있습니다.",
     "zh-CN": "我们提供车辆、人员、车辆调度和现场支持的全面支持，包括机场交通、观光包车、企业/VIP交通、当地出租车和二手车销售。",
     "zh-TW": "我們提供車輛、人員、車輛調度和現場支援的全面支持，包括機場交通、觀光包車、企業/VIP交通、當地計程車和二手車銷售。"
@@ -3450,13 +3450,13 @@
     "zh-TW": "隆重介紹 Daitora Chauffeur & Private Transportation，提供機場接送、觀光包機和企業/VIP 接送服務。"
   },
   "空港送迎、観光貸切、企業送迎、VIP接待、大型案件に関するご相談。": {
-    "en": "Consultation regarding airport transfers, sightseeing charters, corporate transfers, VIP entertainment, and large-scale projects.",
+    "en": "Inquiries about airport transfers, private tours, corporate and VIP transportation, and large-scale assignments.",
     "ko": "공항 송영, 관광 전세, 기업 송영, VIP 접대, 대형 안건에 관한 상담.",
     "zh-CN": "机场接送、观光包机、企业接送、VIP娱乐、大型项目咨询。",
     "zh-TW": "機場接送、觀光包機、企業接送、VIP娛樂、大型專案諮詢。"
   },
   "空港送迎・企業送迎・大型案件対応": {
-    "en": "Airport transportation, corporate transportation, large-scale project support",
+    "en": "Airport Transfers ・ Corporate Transportation ・ Large-Scale Assignments",
     "ko": "공항 송영·기업 송영·대형 안건 대응",
     "zh-CN": "机场交通、企业交通、大型项目支持",
     "zh-TW": "機場交通、企業交通、大型專案支持"
@@ -3468,7 +3468,7 @@
     "zh-TW": "機場接送、觀光包機、企業/VIP 接送"
   },
   "空港送迎・観光貸切・企業送迎・VIP接待・地域タクシー・中古車販売": {
-    "en": "Airport transfers, sightseeing charters, corporate transfers, VIP entertainment, local taxis, used car sales",
+    "en": "Airport Transfers ・ Private Tours ・ Corporate Transportation ・ VIP Transportation ・ Local Taxi ・ Used Car Sales",
     "ko": "공항 픽업, 관광 전세, 기업 픽업, VIP 접대, 지역 택시, 중고차 판매",
     "zh-CN": "机场接送、观光包机、企业接送、VIP娱乐、当地出租车、二手车销售",
     "zh-TW": "機場接送、觀光包機、企業接送、VIP娛樂、當地計程車、二手車銷售"
@@ -3486,7 +3486,7 @@
     "zh-TW": "簡體中文"
   },
   "約100台": {
-    "en": "Approximately 100 units",
+    "en": "Approx. 100 vehicles",
     "ko": "약 100대",
     "zh-CN": "约100台",
     "zh-TW": "約100台"
@@ -3499,15 +3499,15 @@
   },
   "約50名規模の企業視察・遊学行程に対応。東京、大阪、鹿児島、熊本、京都、滋賀など複数都市を含む行程で、車両手配と運行管理を実施しました。": {
     "en": "Accommodates company tours and study tours for approximately 50 people. We arranged vehicles and managed the operation of the route, which included multiple cities such as Tokyo, Osaka, Kagoshima, Kumamoto, Kyoto, and Shiga.",
-    "ko": "약 50명 규모의 기업 시찰·유학 행정에 대응. 도쿄, 오사카, 가고시마, 구마모토, 교토, 시가 등 여러 도시를 포함한 행정에서 차량 수배와 운행 관리를 실시했습니다.",
+    "ko": "약 50명 규모의 기업 시찰 및 연수 일정에 대응했습니다. 도쿄, 오사카, 가고시마, 구마모토, 교토, 시가 등 여러 도시를 포함한 여정에서 차량 배정과 운행 관리를 수행했습니다.",
     "zh-CN": "可容纳约50人的公司参观和考察。我们安排车辆并管理该路线的运营，其中包括东京、大阪、鹿儿岛、熊本、京都、滋贺等多个城市。",
     "zh-TW": "可容納約50人的公司參觀和考察。我們安排車輛並管理該路線的運營，其中包括東京、大阪、鹿兒島、熊本、京都、滋賀等多個城市。"
   },
   "納車": {
-    "en": "Delivery",
-    "ko": "배달",
-    "zh-CN": "送货",
-    "zh-TW": "送貨"
+    "en": "Vehicle handover",
+    "ko": "차량 인도",
+    "zh-CN": "车辆交付",
+    "zh-TW": "車輛交付"
   },
   "維持管理": {
     "en": "Maintenance and management",
@@ -3516,10 +3516,10 @@
     "zh-TW": "維護管理"
   },
   "維持管理、乗り降り、荷物、日々の使いやすさまで含めてご提案します。": {
-    "en": "We offer suggestions that include maintenance, getting on and off, luggage, and daily usability.",
-    "ko": "유지 관리, 승하차, 수하물, 매일 사용의 용이성까지 포함하여 제안합니다.",
-    "zh-CN": "我们提供的建议包括维护、上下车、行李和日常可用性。",
-    "zh-TW": "我們提供的建議包括維護、上下車、行李和日常可用性。"
+    "en": "Our recommendations consider upkeep, access, luggage and everyday usability.",
+    "ko": "유지관리, 승하차, 적재 공간, 일상적인 사용 편의성까지 고려해 제안합니다.",
+    "zh-CN": "从维护管理、上下车、行李装载到日常使用便利性，提出综合建议。",
+    "zh-TW": "從維護管理、上下車、行李裝載到日常使用便利性，提出綜合建議。"
   },
   "緊急時・変更対応": {
     "en": "Emergency/change response",
@@ -3540,7 +3540,7 @@
     "zh-TW": "緊急聯絡系統"
   },
   "総合お問い合わせ": {
-    "en": "General inquiries",
+    "en": "General Enquiries",
     "ko": "종합 문의",
     "zh-CN": "一般查询",
     "zh-TW": "一般查詢"
@@ -3588,7 +3588,7 @@
     "zh-TW": "行李、人數、飯店/企業用途、其他確認項目"
   },
   "荷物がある日や、時間に余裕を持ちたい移動でも安心してご利用いただけるよう、関西エリアの移動を支えます。": {
-    "en": "We support your movement in the Kansai area so that you can use it with peace of mind even on days when you have luggage or when you want to save time.",
+    "en": "We support reliable travel across Kansai when you have luggage or need additional time for your journey.",
     "ko": "짐이 있는 날이나 시간에 여유를 갖고 싶은 이동에서도 안심하고 이용하실 수 있도록 간사이 지역의 이동을 지원합니다.",
     "zh-CN": "我们支持您在关西地区的移动，以便您即使在有行李的日子或想节省时间时也可以放心使用。",
     "zh-TW": "我們支持您在關西地區的移動，以便您即使在有行李的日子或想節省時間時也可以放心使用。"
@@ -3606,44 +3606,44 @@
     "zh-TW": "行李指南"
   },
   "落ち着いた移動空間と高い接遇品質が求められる、高規格なビジネス送迎やVIP接待に対応します。": {
-    "en": "We handle high-standard business transportation and VIP entertainment, which require a calm moving space and high quality hospitality.",
+    "en": "For executive and VIP transportation requiring a calm cabin and a high standard of chauffeur service.",
     "ko": "차분한 이동 공간과 높은 접대 품질이 요구되는, 고규격의 비즈니스 송영이나 VIP 접대에 대응합니다.",
     "zh-CN": "我们处理高标准的商务交通和 VIP 娱乐，这需要安静的移动空间和高品质的接待。",
     "zh-TW": "我們處理高標準的商務交通和 VIP 娛樂，這需要安靜的移動空間和高品質的接待。"
   },
   "行政団体対応": {
-    "en": "Administrative organization support",
-    "ko": "행정단체 대응",
+    "en": "Public-sector coordination",
+    "ko": "공공기관 대응",
     "zh-CN": "行政组织支持",
     "zh-TW": "行政組織支持"
   },
   "行程、人数、荷物に合わせた運行管理": {
     "en": "Operation management according to itinerary, number of people, and luggage",
-    "ko": "행정, 인원수, 수하물에 맞춘 운행 관리",
+    "ko": "일정, 인원, 수하물에 맞춘 운행 관리",
     "zh-CN": "按行程、人数、行李进行运营管理",
     "zh-TW": "依行程、人數、行李進行營運管理"
   },
   "行程、待ち合わせ場所、車両台数、配慮事項など": {
     "en": "Itinerary, meeting place, number of vehicles, considerations, etc.",
-    "ko": "행정, 만남 장소, 차량 대수, 배려 사항 등",
+    "ko": "일정, 미팅 장소, 차량 대수, 요청 사항 등",
     "zh-CN": "行程、集合地点、车辆数量、注意事项等",
     "zh-TW": "行程、集合地點、車輛數量、注意事項等"
   },
   "行程管理": {
-    "en": "Process management",
-    "ko": "행정 관리",
-    "zh-CN": "流程管理",
-    "zh-TW": "流程管理"
+    "en": "Itinerary management",
+    "ko": "일정 관리",
+    "zh-CN": "行程管理",
+    "zh-TW": "行程管理"
   },
   "行程表": {
     "en": "itinerary",
-    "ko": "행정표",
+    "ko": "일정표",
     "zh-CN": "行程",
     "zh-TW": "行程"
   },
   "行程表、資料送付、法人相談など": {
     "en": "Itinerary, document sending, corporate consultation, etc.",
-    "ko": "행정표, 자료 송부, 법인 상담 등",
+    "ko": "일정표 및 자료 송부, 법인 상담 등",
     "zh-CN": "行程安排、文件发送、企业咨询等",
     "zh-TW": "行程安排、文件發送、企業諮詢等"
   },
@@ -3654,7 +3654,7 @@
     "zh-TW": "協調多輛車的調度"
   },
   "複数台運行": {
-    "en": "Multiple vehicles operating",
+    "en": "Multi-vehicle operations",
     "ko": "여러 대 운행",
     "zh-CN": "多辆车辆运行",
     "zh-TW": "多輛車在運行"
@@ -3666,7 +3666,7 @@
     "zh-TW": "多車運轉、待機、時間調整"
   },
   "複数拠点・複数台対応": {
-    "en": "Supports multiple locations and multiple devices",
+    "en": "Multi-base, multi-vehicle coordination",
     "ko": "복수 거점·여러 대 대응",
     "zh-CN": "支持多个位置和多个设备",
     "zh-TW": "支援多個位置和多個設備"
@@ -3685,21 +3685,21 @@
   },
   "複数都市、複数日程の行程対応": {
     "en": "Multi-city, multi-day itinerary support",
-    "ko": "여러 도시, 여러 일정의 행정 대응",
+    "ko": "여러 도시와 일정에 걸친 여정 대응",
     "zh-CN": "多城市、多日行程支持",
     "zh-TW": "多城市、多日行程支持"
   },
   "複数都市、複数日程の行程確認": {
     "en": "Confirm itinerary for multiple cities and multiple dates",
-    "ko": "여러 도시, 여러 일정의 행정 확인",
+    "ko": "여러 도시와 일정에 대한 사전 확인",
     "zh-CN": "确认多个城市、多个日期的行程",
     "zh-TW": "確認多個城市、多個日期的行程"
   },
   "複数都市・複数日程にわたる団体移動に対応し、行程に合わせた送迎手配を実施しました。": {
-    "en": "We accommodate groups traveling to multiple cities and on multiple dates, and arrange transportation according to the itinerary.",
-    "ko": "복수 도시·복수 일정에 걸친 단체 이동에 대응해, 행정에 맞춘 송영 수배를 실시했습니다.",
-    "zh-CN": "我们接待前往多个城市、多个日期的团体，并根据行程安排交通。",
-    "zh-TW": "我們接待前往多個城市、多個日期的團體，並根據行程安排交通。"
+    "en": "Arranged group transportation across multiple cities and dates in line with the full itinerary.",
+    "ko": "여러 도시와 일정에 걸친 단체 이동을 위해 전체 일정에 맞춘 차량과 운행 계획을 준비했습니다.",
+    "zh-CN": "承接跨多个城市和日期的团体移动，并根据整体行程安排接送。",
+    "zh-TW": "承接跨多個城市與日期的團體移動，並依整體行程安排接送。"
   },
   "複数都市運行": {
     "en": "Multi-city service",
@@ -3714,13 +3714,13 @@
     "zh-TW": "貴賓及相關人士的交通"
   },
   "要人送迎": {
-    "en": "VIP transportation",
-    "ko": "요인 픽업",
-    "zh-CN": "贵宾交通",
-    "zh-TW": "貴賓交通"
+    "en": "Executive transportation",
+    "ko": "주요 인사 송영",
+    "zh-CN": "重要来宾接送",
+    "zh-TW": "重要來賓接送"
   },
   "見つけやすく、乗りやすい。": {
-    "en": "Easy to find and easy to ride.",
+    "en": "Easy to recognise. Easy to board.",
     "ko": "찾기 쉽고 타기 쉽습니다.",
     "zh-CN": "很容易找到，也很容易乘坐。",
     "zh-TW": "很容易找到，也很容易乘坐。"
@@ -3738,7 +3738,7 @@
     "zh-TW": "旅遊/商業用途"
   },
   "観光利用": {
-    "en": "Tourism use",
+    "en": "Sightseeing travel",
     "ko": "관광 이용",
     "zh-CN": "旅游用途",
     "zh-TW": "旅遊用途"
@@ -3768,8 +3768,8 @@
     "zh-TW": "我們重視基本的動作，例如說話的方式、上下車時的體貼、行李的保管等。"
   },
   "訪日中の移動に必要な車両手配、ホテル・会場間移動、空港送迎などに対応しました。守秘意識と時間管理を前提に、落ち着いた運行を支援しました。": {
-    "en": "We took care of the necessary transportation during your visit to Japan, such as arranging vehicles, transportation between hotels and venues, and airport transportation. We supported calm operation based on confidentiality and time management.",
-    "ko": "방일중의 이동에 필요한 차량 준비, 호텔·회장간 이동, 공항 송영 등에 대응했습니다. 수비 의식과 시간 관리를 전제로 차분한 운행을 지원했습니다.",
+    "en": "Coordinated vehicles, airport transfers and travel between hotels and venues for an overseas delegation visiting Japan, with disciplined schedule control and confidentiality.",
+    "ko": "방일 기간 중 필요한 차량 배정, 호텔과 행사장 간 이동, 공항 송영을 지원했습니다. 기밀 유지와 정확한 시간 관리를 바탕으로 안정적인 운행을 제공했습니다.",
     "zh-CN": "我们负责您访问日本期间必要的交通，例如安排车辆、酒店和场馆之间的交通以及机场交通。我们支持基于保密和时间管理的冷静运作。",
     "zh-TW": "我們負責您在日本旅遊期間必要的交通，例如安排車輛、飯店和場館之間的交通以及機場交通。我們支持基於保密和時間管理的冷靜運作。"
   },
@@ -3792,7 +3792,7 @@
     "zh-TW": "遵守許可證、車牌和操作規則。我們的決策以安全為第一，合法經營。"
   },
   "許認可に基づく合法運行体制": {
-    "en": "Legal operation system based on permits and licenses",
+    "en": "Licensed and compliant operations",
     "ko": "허가에 근거한 합법운행체제",
     "zh-CN": "以许可证、执照为基础的合法经营体系",
     "zh-TW": "以許可證、執照為基礎的合法經營體系"
@@ -3829,7 +3829,7 @@
   },
   "購入後の車両活用まで相談可能": {
     "en": "Consultation is available on how to utilize the vehicle after purchase.",
-    "ko": "구입 후 차량 활용까지 상담 가능",
+    "ko": "구매 후 차량 활용 상담",
     "zh-CN": "购买车辆后，您可以向我们咨询如何使用车辆。",
     "zh-TW": "購買車輛後，可以諮詢如何使用車輛。"
   },
@@ -3858,13 +3858,13 @@
     "zh-TW": "確認駕駛狀況、維修歷史和使用情況"
   },
   "車両、乗務員、時間の調整": {
-    "en": "Coordination of vehicles, crew, and time",
+    "en": "Coordination of vehicles, drivers and schedules",
     "ko": "차량, 승무원, 시간 조정",
     "zh-CN": "车辆、人员和时间的协调",
     "zh-TW": "車輛、人員和時間的協調"
   },
   "車両、乗務員、配車、現場対応を一体で整える。": {
-    "en": "Vehicles, crew, dispatch, and on-site response will be integrated.",
+    "en": "Vehicles, chauffeurs, dispatch and on-site coordination, managed as one operation.",
     "ko": "차량, 승무원, 배차, 현장 대응을 일체로 정돈한다.",
     "zh-CN": "车辆、人员、调度和现场响应将被整合。",
     "zh-TW": "車輛、人員、調度和現場響應將被整合。"
@@ -3888,16 +3888,16 @@
     "zh-TW": "檢查車輛運行狀態並對路況和到達時間的變化做出反應。我們在與現場溝通的同時支持穩定營運。"
   },
   "車両ネットワーク": {
-    "en": "vehicle network",
+    "en": "Group vehicle network",
     "ko": "차량 네트워크",
     "zh-CN": "车联网",
     "zh-TW": "車聯網"
   },
   "車両仕入ネットワーク": {
-    "en": "Vehicle purchasing network",
-    "ko": "차량 공급 네트워크",
-    "zh-CN": "购车网",
-    "zh-TW": "購車網"
+    "en": "Vehicle sourcing network",
+    "ko": "차량 조달 네트워크",
+    "zh-CN": "车辆采购网络",
+    "zh-TW": "車輛採購網絡"
   },
   "車両仕入体制の強化": {
     "en": "Strengthening vehicle purchasing system",
@@ -3912,10 +3912,10 @@
     "zh-TW": "車輛數量"
   },
   "車両提案": {
-    "en": "vehicle suggestion",
+    "en": "Vehicle recommendation",
     "ko": "차량 제안",
-    "zh-CN": "车辆建议",
-    "zh-TW": "車輛建議"
+    "zh-CN": "车辆方案",
+    "zh-TW": "車輛方案"
   },
   "車両活用": {
     "en": "Vehicle utilization",
@@ -3950,11 +3950,11 @@
   "車両管理の知見を活かし、用途に合った車両提案と購入支援を強化しました。": {
     "en": "Utilizing our knowledge of vehicle management, we have strengthened our vehicle proposals and purchasing support that match the application.",
     "ko": "차량 관리의 지식을 살려, 용도에 맞는 차량 제안과 구입 지원을 강화했습니다.",
-    "zh-CN": "利用我们在车辆管理方面的知识，我们加强了与应用相匹配的车辆提案和采购支持。",
-    "zh-TW": "利用我們在車輛管理方面的知識，我們加強了與應用程式相符的車輛提案和採購支援。"
+    "zh-CN": "运用车辆管理经验，强化符合实际用途的车辆建议与购车支持。",
+    "zh-TW": "運用車輛管理經驗，強化符合實際用途的車輛建議與購車支援。"
   },
   "車両美観": {
-    "en": "Vehicle aesthetics",
+    "en": "Vehicle presentation",
     "ko": "차량 미관",
     "zh-CN": "车辆美观",
     "zh-TW": "車輛美觀"
@@ -3966,16 +3966,16 @@
     "zh-TW": "購車注意事項"
   },
   "車両購入・ローン相談はこちら": {
-    "en": "Click here for vehicle purchase/loan consultation",
-    "ko": "차량 구입·대출 상담은 이쪽",
-    "zh-CN": "点击此处进行购车/贷款咨询",
-    "zh-TW": "點擊此處進行購車/貸款諮詢"
+    "en": "Vehicle Purchase and Loan Consultation",
+    "ko": "차량 구매 및 대출 상담",
+    "zh-CN": "车辆购买与贷款咨询",
+    "zh-TW": "車輛購買與貸款諮詢"
   },
   "車両選びから、申込手続き、納車まで。": {
-    "en": "From vehicle selection to application procedures and delivery.",
-    "ko": "차량 선택으로부터, 신청 수속, 납차까지.",
-    "zh-CN": "从车辆选择到申请程序和交付。",
-    "zh-TW": "從車輛選擇到申請程序和交付。"
+    "en": "From vehicle selection and application to vehicle handover.",
+    "ko": "차량 선택부터 신청 절차와 차량 인도까지.",
+    "zh-CN": "从选车、申请手续到车辆交付。",
+    "zh-TW": "從選車、申請手續到車輛交付。"
   },
   "車内清掃、外装確認、車両状態の確認を重ね、快適な移動空間を維持します。": {
     "en": "We maintain a comfortable travel space by repeatedly cleaning the interior of the vehicle, checking the exterior, and checking the condition of the vehicle.",
@@ -4026,7 +4026,7 @@
     "zh-TW": "這是一個關於交通、計程車、二手車銷售、企業諮詢、招募的查詢頁面。"
   },
   "送迎、タクシー、中古車販売、法人相談、採用まで。ご希望の内容に合わせて担当者が確認いたします。": {
-    "en": "From transportation, taxis, used car sales, corporate consultation, and recruitment. The person in charge will confirm the details according to your request.",
+    "en": "For chauffeur services, taxis, used vehicles, corporate enquiries or recruitment, the appropriate team will review your request and respond.",
     "ko": "송영, 택시, 중고차 판매, 법인 상담, 채용까지. 원하는 내용에 따라 담당자가 확인합니다.",
     "zh-CN": "从交通、出租车、二手车销售、企业咨询、招聘。负责人将根据您的要求确认详情。",
     "zh-TW": "從交通、計程車、二手車銷售、企業諮詢、招募。負責人將根據您的要求確認詳情。"
@@ -4044,7 +4044,7 @@
     "zh-TW": "交通注意事項"
   },
   "送迎・ハイヤー相談": {
-    "en": "Transportation/hire consultation",
+    "en": "Chauffeur & Private Transportation",
     "ko": "송영・하이어 상담",
     "zh-CN": "交通/租赁咨询",
     "zh-TW": "交通/租賃諮詢"
@@ -4068,10 +4068,10 @@
     "zh-TW": "用於運輸"
   },
   "通勤、家族利用、送迎、事業利用など、実際の使い方に合わせて車両を整理します。": {
-    "en": "Organize your vehicle according to how it will be used, such as commuting, family use, transportation, business use, etc.",
-    "ko": "통근, 가족 이용, 송영, 사업 이용 등, 실제의 사용법에 맞추어 차량을 정리합니다.",
-    "zh-CN": "根据用途来组织您的车辆，例如通勤、家庭使用、交通、商务使用等。",
-    "zh-TW": "根據用途來組織您的車輛，例如通勤、家庭使用、交通、商務使用等。"
+    "en": "We narrow the options around how the vehicle will actually be used, whether for commuting, family travel, passenger transfers or business.",
+    "ko": "출퇴근, 가족 이용, 송영, 사업용 등 실제 사용 방식에 맞춰 차량 후보를 정리합니다.",
+    "zh-CN": "根据通勤、家庭使用、接送或业务用途等实际用车需求，梳理车辆选择。",
+    "zh-TW": "依通勤、家庭使用、接送或事業用途等實際用車需求，整理車輛選擇。"
   },
   "連絡先": {
     "en": "contact address",
@@ -4086,10 +4086,10 @@
     "zh-TW": "聯繫時間"
   },
   "運行会社が考える、実用的な車両選び。": {
-    "en": "Practical vehicle selection as considered by the operating company.",
-    "ko": "운행 회사가 생각하는 실용적인 차량 선택.",
-    "zh-CN": "运营公司考虑的实用车辆选择。",
-    "zh-TW": "營運公司考慮的實用車輛選擇。"
+    "en": "Practical vehicle selection, informed by real operations.",
+    "ko": "운영회사의 경험으로 제안하는 실용적인 차량 선택.",
+    "zh-CN": "从实际运营出发，选择真正实用的车辆。",
+    "zh-TW": "從實際營運出發，選擇真正實用的車輛。"
   },
   "運行後の気づきと改善点の共有": {
     "en": "Sharing findings and improvements after operation",
@@ -4098,16 +4098,16 @@
     "zh-TW": "分享手術後的發現與改進"
   },
   "運行現場を知る会社として、乗車人数、荷物、維持管理まで考えた車両相談に対応します。": {
-    "en": "As a company that knows the operation site, we will respond to vehicle consultations that take into account the number of passengers, luggage, and maintenance management.",
-    "ko": "운행 현장을 아는 회사로서 승차 인원수, 짐, 유지 관리까지 생각한 차량 상담에 대응합니다.",
-    "zh-CN": "作为了解运营现场的公司，我们将考虑乘客数量、行李数量和维护管理来答复车辆咨询。",
-    "zh-TW": "作為一家了解營運現場的公司，我們將考慮乘客數量、行李數量和維護管理來回應車輛諮詢。"
+    "en": "Our operations experience allows us to advise on passenger capacity, luggage needs and ongoing maintenance.",
+    "ko": "차량 운영 현장을 아는 회사로서 승차 인원, 적재 공간, 유지관리까지 고려한 차량 상담을 제공합니다.",
+    "zh-CN": "凭借实际车辆运营经验，我们会综合乘车人数、行李需求和维护管理提供车辆咨询。",
+    "zh-TW": "憑藉實際車輛營運經驗，我們會綜合乘車人數、行李需求與維護管理提供車輛諮詢。"
   },
   "運行現場を知る車両提案": {
-    "en": "Vehicle proposal that understands the operation site",
-    "ko": "운행 현장을 아는 차량 제안",
-    "zh-CN": "了解运营现场的车辆提案",
-    "zh-TW": "了解營運現場的車輛提案"
+    "en": "Recommendations grounded in operations experience",
+    "ko": "운영 경험을 바탕으로 한 차량 제안",
+    "zh-CN": "基于实际运营经验的车辆建议",
+    "zh-TW": "基於實際營運經驗的車輛建議"
   },
   "運行管理": {
     "en": "Operation management",
@@ -4128,7 +4128,7 @@
     "zh-TW": "駕駛/客戶體驗"
   },
   "運転技術だけでなく、接遇、安全意識、時間管理を重視した乗務員教育を行っています。": {
-    "en": "We provide crew training that emphasizes not only driving skills, but also hospitality, safety awareness, and time management.",
+    "en": "Driver training covers not only driving technique, but also service standards, safety awareness and time management.",
     "ko": "운전 기술뿐만 아니라 접대, 안전 의식, 시간 관리를 중시한 승무원 교육을 실시하고 있습니다.",
     "zh-CN": "我们提供的船员培训不仅强调驾驶技能，还强调热情好客、安全意识和时间管理。",
     "zh-TW": "我們提供的船員培訓不僅強調駕駛技能，還強調熱情好客、安全意識和時間管理。"
@@ -4182,7 +4182,7 @@
     "zh-TW": "車輛調度系統"
   },
   "配車担当と乗務員間の情報共有手順の確認": {
-    "en": "Confirmation of information sharing procedures between dispatchers and crew members",
+    "en": "Reviewing information-sharing procedures between dispatchers and drivers",
     "ko": "배차 담당자와 승무원 간의 정보 공유 절차 확인",
     "zh-CN": "确认调度员和机组人员之间的信息共享程序",
     "zh-TW": "確認調度員和機組人員之間的資訊共享程序"
@@ -4212,13 +4212,13 @@
     "zh-TW": "關聯方場館間交通"
   },
   "関係者移動": {
-    "en": "Related person movement",
+    "en": "Stakeholder transportation",
     "ko": "관계자 이동",
     "zh-CN": "相关人员动向",
     "zh-TW": "相關人員動向"
   },
   "関係者移動における車両手配、時間管理、会場間移動に対応しました。移動予定の確認と当日の連絡体制を整え、関係者のスムーズな移動を支援しました。": {
-    "en": "We handled vehicle arrangements, time management, and transportation between venues for related parties. We confirmed the travel schedule and set up a communication system on the day to support the smooth movement of all involved.",
+    "en": "Coordinated vehicles, schedules and travel between venues for event stakeholders. Advance itinerary checks and a day-of-service communication plan supported smooth movement throughout the assignment.",
     "ko": "관계자 이동에 있어서의 차량 준비, 시간 관리, 회장간 이동에 대응했습니다. 이동 예정의 확인과 당일의 연락 체제를 정돈해, 관계자의 부드러운 이동을 지원했습니다.",
     "zh-CN": "我们为相关方处理车辆安排、时间管理以及场馆之间的交通。我们当天确认了行程安排，并建立了通​​讯系统，以支持所有相关人员的顺利行动。",
     "zh-TW": "我們為相關方處理車輛安排、時間管理以及場館之間的交通。我們當天確認了行程安排，並建立了通訊系統，以支援所有相關人員的順利行動。"
@@ -4230,13 +4230,13 @@
     "zh-TW": "成為深受關西地區信賴的綜合性行動集團。"
   },
   "関西で動かせる、": {
-    "en": "Can be moved in Kansai,",
+    "en": "Built to move Kansai,",
     "ko": "간사이에서 움직일 수 있는,",
     "zh-CN": "可以在关西搬家，",
     "zh-TW": "可以在關西搬家，"
   },
   "関西の移動と車両活用を支える。": {
-    "en": "Supporting transportation and vehicle utilization in Kansai.",
+    "en": "supporting mobility and vehicle use across Kansai.",
     "ko": "간사이의 이동과 차량 활용을 지원한다.",
     "zh-CN": "支持关西地区的交通和车辆利用。",
     "zh-TW": "支持關西地區的交通和車輛利用。"
@@ -4248,19 +4248,19 @@
     "zh-TW": "關西南部地區的營運及車輛協調基地"
   },
   "関西空港、伊丹空港、神戸空港の送迎から、京都・奈良・神戸方面の観光貸切、企業視察、国際会議、ブランドイベント、VIP接待まで。大寅ハイヤーは、関西での上質な移動を現場から支えます。": {
-    "en": "From transportation to and from Kansai Airport, Itami Airport, and Kobe Airport, to chartered sightseeing in the Kyoto, Nara, and Kobe areas, corporate tours, international conferences, brand events, and VIP entertainment. Daitora Chauffeur & Private Transportation supports quality transportation in Kansai from the field.",
+    "en": "From Kansai, Itami and Kobe airport transfers to private tours in Kyoto, Nara and Kobe, corporate visits, international conferences, brand events and VIP transportation, Daitora Chauffeur & Private Transportation delivers dependable service throughout Kansai.",
     "ko": "간사이 공항, 이타미 공항, 고베 공항의 송영부터, 교토·나라·고베 방면의 관광 전세, 기업 시찰, 국제 회의, 브랜드 이벤트, VIP 접대까지. Daitora Chauffeur & Private Transportation는 간사이에서의 양질의 이동을 현장에서 지원합니다.",
     "zh-CN": "从往返关西机场、伊丹机场、神户机场的交通，到京都、奈良、神户地区的包车观光、企业旅游、国际会议、品牌活动、VIP娱乐等。 Daitora Chauffeur & Private Transportation 为关西地区的高质量交通提供现场支持。",
     "zh-TW": "從往返關西機場、伊丹機場、神戶機場的交通，到京都、奈良、神戶地區的包車觀光、企業旅遊、國際會議、品牌活動、VIP娛樂等。 Daitora Chauffeur & Private Transportation 從現場為關西的優質運輸提供支援。"
   },
   "関西空港・伊丹空港・神戸空港の送迎から、京都・奈良・神戸方面の観光貸切、企業視察、VIP接待まで対応。人数・荷物・接待規格に合わせて、Alphard、Hiace、Mercedes-Benz S-Class などの車両と乗務員を手配します。": {
-    "en": "We offer everything from transportation to and from Kansai Airport, Itami Airport, and Kobe Airport, to chartered sightseeing tours to Kyoto, Nara, and Kobe, corporate tours, and VIP entertainment. We will arrange vehicles such as Alphard, Hiace, Mercedes-Benz S-Class, etc. and crew according to the number of people, luggage, and entertainment standards.",
+    "en": "We provide transfers from Kansai, Itami and Kobe airports, private tours to Kyoto, Nara and Kobe, corporate visits and VIP transportation. Alphard, Hiace and Mercedes-Benz S-Class vehicles are assigned with professional chauffeurs according to passenger count, luggage and service requirements.",
     "ko": "간사이 공항·이타미 공항·고베 공항의 송영으로부터, 교토·나라·고베 방면의 관광 전세, 기업 시찰, VIP 접대까지 대응. 인원수, 수하물, 접대 표준에 따라 Alphard, Hiace, Mercedes-Benz S-Class 등 차량과 승무원을 준비합니다.",
     "zh-CN": "从往返关西机场、伊丹机场、神户机场的交通，到前往京都、奈良、神户的包车观光旅游、企业旅游、VIP娱乐等，我们提供各种服务。我们将根据人数、行李、娱乐标准安排埃尔法、海狮、奔驰S级等车辆及乘务人员。",
     "zh-TW": "從往返關西機場、伊丹機場、神戶機場的交通，到前往京都、奈良、神戶的包車觀光旅遊、企業旅遊、VIP娛樂等，我們提供各種服務。我們將依照人數、行李、娛樂標準安排埃爾法、海獅、賓士S級等車輛及乘務人員。"
   },
   "関西複数拠点": {
-    "en": "Multiple locations in Kansai",
+    "en": "Multiple Kansai bases",
     "ko": "간사이 여러 거점",
     "zh-CN": "关西多个地点",
     "zh-TW": "關西多個地點"
@@ -4285,7 +4285,7 @@
   },
   "電話をかける": {
     "en": "make a call",
-    "ko": "전화를 걸다",
+    "ko": "전화하기",
     "zh-CN": "打电话",
     "zh-TW": "打電話"
   },
@@ -4302,7 +4302,7 @@
     "zh-TW": "這是一種計程車服務，支援前往車站、酒店、旅遊景點和商務目的地的日常交通。好找的車輛、好乘的Sienta、集團化的營運管理，讓您的日常出行安全舒適。"
   },
   "駅、ホテル、観光地、病院、ビジネス先への移動相談はこちら。": {
-    "en": "Click here for transportation consultations to stations, hotels, sightseeing spots, hospitals, and business locations.",
+    "en": "For journeys to stations, hotels, sightseeing destinations, hospitals and business appointments.",
     "ko": "역, 호텔, 관광지, 병원, 비즈니스처로의 이동 상담은 이쪽.",
     "zh-CN": "关于前往车站、酒店、观光地、医院、营业场所的交通咨询请点击此处。",
     "zh-TW": "關於前往車站、飯店、觀光地、醫院、營業場所的交通諮詢請點擊此處。"
@@ -4318,5 +4318,23 @@
     "ko": "고규격 송영 / 접대 / 중요 안건",
     "zh-CN": "高标准交通/娱乐/重要项目",
     "zh-TW": "高標準交通/娛樂/重要項目"
+  },
+  "View achievements": {
+    "en": "View Our Track Record"
+  },
+  "大阪・京都を中心に、駅、ホテル、空港周辺、観光地、ビジネス先への日常移動を支えるタクシー事業。地域を知る乗務員と安定した運行管理により、短距離移動から観光利用まで対応します。": {
+    "en": "Toramaru Taxi supports everyday journeys to stations, hotels, airports, sightseeing destinations and business appointments across Osaka and Kyoto. Local knowledge and disciplined operations support both short trips and visitor travel."
+  },
+  "車両だけではない。": {
+    "en": "More than a fleet."
+  },
+  "大寅グループの強みは、車両数だけではありません。多言語対応、乗務員教育、整えられた車両環境、複数拠点での運行管理により、安心して任せられる移動を支えています。": {
+    "en": "Our strength is not measured by fleet size alone. Multilingual support, chauffeur training, careful vehicle preparation and coordinated operations across multiple bases make each journey dependable."
+  },
+  "プロの乗務員": {
+    "en": "Professional chauffeurs"
+  },
+  "整えられた車両環境": {
+    "en": "Prepared and maintained vehicles"
   }
 }

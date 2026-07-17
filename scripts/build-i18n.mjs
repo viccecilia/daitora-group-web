@@ -277,6 +277,7 @@ function translate(html, lang){
 function adjustPaths(html, lang){
   if (lang === 'ja') return html;
   html = html.replace(/(href|src)="assets\//g, '$1="../assets/');
+  html = html.replace(/(data-poster|data-desktop-videos|data-mobile-videos)="assets\//g, '$1="../assets/');
   html = html.replace(/url\('assets\//g, "url('../assets/");
   html = html.replace(/url\("assets\//g, 'url("../assets/');
   html = html.replace(/src="assets\//g, 'src="../assets/');
