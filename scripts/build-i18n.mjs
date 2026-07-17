@@ -210,8 +210,9 @@ function seoBlock(lang, page){
   }
   const hrefs = Object.keys(langs).map((l) => `  <link rel="alternate" hreflang="${langs[l].html}" href="${pageUrl(page,l)}">`).join('\n');
   const absoluteOgImage = `${baseUrl}${ogImagePath}`;
+  const robots = page === '404.html' ? '  <meta name="robots" content="noindex,follow">\n' : '';
   return `<!-- i18n:head -->
-  <meta name="description" content="${escapeAttr(descriptions[lang])}">
+${robots}  <meta name="description" content="${escapeAttr(descriptions[lang])}">
   <link rel="canonical" href="${canonical}">
 ${hrefs}
   <link rel="alternate" hreflang="x-default" href="${pageUrl(page,'ja')}">
@@ -296,6 +297,7 @@ function setFormLanguage(html, lang){
 }
 function applyBrandLocks(html, lang){
   if (lang === 'ja') return html;
+  html = html.replace(/aria-label="Daitora GROUP \/ 大寅グループ"/g, 'aria-label="Daitora GROUP"');
   const replacements = [
     [/Daitora Group\s*\/\s*Daitora Group/g, 'Daitora Group'],
     [/Daitora Hire/g, 'Daitora Chauffeur & Private Transportation'],

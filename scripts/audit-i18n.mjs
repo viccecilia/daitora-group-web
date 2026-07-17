@@ -123,6 +123,24 @@ function auditPage(lang, page) {
     report(lang, page, 'canonical-anchor', 'Company redirect canonical must not include an anchor', canonical);
   }
 
+  const robotsTags = [...html.matchAll(/<meta\s+[^>]*name=["']robots["'][^>]*content=["']([^"']+)["'][^>]*>/gi)];
+  const expectsNoindex = page === 'company.html' || page === '404.html';
+  if (robotsTags.length > 1) {
+    stat.seoDuplicates += robotsTags.length;
+    report(lang, page, 'robots-count', `robots meta count is ${robotsTags.length}`);
+  }
+  if (expectsNoindex && (robotsTags.length !== 1 || !/\bnoindex\b/i.test(robotsTags[0]?.[1] || ''))) {
+    report(lang, page, 'robots-noindex', `${page} must have exactly one noindex robots meta tag`);
+  }
+  if (!expectsNoindex && robotsTags.some((tag) => /\bnoindex\b/i.test(tag[1]))) {
+    report(lang, page, 'robots-index', 'Indexable content page must not be marked noindex');
+  }
+
+  const h1Count = countMatches(html, /<h1\b[\s\S]*?<\/h1>/gi);
+  if (h1Count !== 1) report(lang, page, 'heading', `h1 count is ${h1Count}`);
+  const faviconCount = countMatches(html, /<link\s+[^>]*rel=["']icon["'][^>]*>/gi);
+  if (faviconCount !== 1) report(lang, page, 'favicon-count', `favicon count is ${faviconCount}`);
+
   if (page !== 'company.html') {
     for (const code of allHreflang) {
       if (!new RegExp(`hreflang=["']${code.replace('-', '\\-')}["']`, 'i').test(html)) {
@@ -137,6 +155,10 @@ function auditPage(lang, page) {
     }
 
     const socialTags = [
+      ['og:type', /<meta\s+[^>]*property=["']og:type["'][^>]*>/gi],
+      ['og:title', /<meta\s+[^>]*property=["']og:title["'][^>]*>/gi],
+      ['og:description', /<meta\s+[^>]*property=["']og:description["'][^>]*>/gi],
+      ['og:url', /<meta\s+[^>]*property=["']og:url["'][^>]*>/gi],
       ['og:image', /<meta\s+[^>]*property=["']og:image["'][^>]*>/gi],
       ['twitter:card', /<meta\s+[^>]*name=["']twitter:card["'][^>]*>/gi],
       ['twitter:title', /<meta\s+[^>]*name=["']twitter:title["'][^>]*>/gi],
@@ -177,10 +199,37 @@ function auditPage(lang, page) {
   for (const tag of html.matchAll(/<a\b[^>]*href=["']([^"']*)["'][^>]*>/gi)) {
     const fullTag = tag[0];
     const href = tag[1];
-    if (href === '#') {
+    if (!href || href === '#') {
       stat.brokenLinks += 1;
-      report(lang, page, 'empty-href', 'href="#" is not allowed');
+      report(lang, page, 'empty-href', 'Empty href and href="#" are not allowed');
       continue;
+    }
+    if (/^javascript:/i.test(href)) {
+      stat.brokenLinks += 1;
+      report(lang, page, 'unsafe-href', `javascript: link is not allowed: ${href}`);
+      continue;
+    }
+    if (/^file:/i.test(href) || /^[a-z]:[\\/]/i.test(href)) {
+      stat.brokenLinks += 1;
+      report(lang, page, 'local-href', `Local filesystem link is not allowed: ${href}`);
+      continue;
+    }
+    if (/target=["']_blank["']/i.test(fullTag) && !/rel=["'][^"']*\bnoopener\b/i.test(fullTag)) {
+      report(lang, page, 'external-rel', 'target="_blank" link must include rel="noopener"', fullTag);
+    }
+    const hash = href.includes('#') ? href.slice(href.indexOf('#') + 1) : '';
+    if (hash) {
+      const anchorFile = normalizeHref(href);
+      const targetPath = anchorFile && /\.html$/i.test(anchorFile)
+        ? path.resolve(path.dirname(file), anchorFile.replace(/\//g, path.sep))
+        : file;
+      if (fs.existsSync(targetPath)) {
+        const targetHtml = fs.readFileSync(targetPath, 'utf8');
+        if (!new RegExp(`\\sid=["']${hash.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')}["']`).test(targetHtml)) {
+          stat.brokenLinks += 1;
+          report(lang, page, 'broken-anchor', `Missing anchor target #${hash} in ${path.relative(ROOT, targetPath)}`);
+        }
+      }
     }
     if (fullTag.includes('hreflang=')) continue;
     const cleanHref = normalizeHref(href);
@@ -195,6 +244,10 @@ function auditPage(lang, page) {
         report(lang, page, 'language-link', `Internal content link leaves current language: ${href}`);
       }
     }
+  }
+
+  for (const image of html.matchAll(/<img\b[^>]*>/gi)) {
+    if (!/\salt=["'][^"']*["']/i.test(image[0])) report(lang, page, 'image-alt', 'Image is missing an alt attribute', image[0]);
   }
 
   for (const [, attr, url] of html.matchAll(/\s(src|href)=["']([^"']+)["']/gi)) {
@@ -278,9 +331,9 @@ const qa = [
   '## Responsive Check Status',
   '',
   '- Browser QA completed on 2026-07-17 at 320, 390, 768, 1024, and 1440px.',
-  '- 33 representative page/viewport combinations across all five languages passed the horizontal-overflow check.',
+  '- 325 page/viewport combinations (65 pages at five widths) across all five languages passed the horizontal-overflow check.',
   '- Navigation, language switcher, company-profile anchor, localized contact form, and mobile menu focus/ESC behavior were checked.',
-  '- Evidence: `output/playwright/final-launch-qa/` (internal only; not part of the production deployment).',
+  '- Evidence: `output/playwright/prelaunch-audit/` (internal only; not part of the production deployment).',
   '- Layout checks are manual browser QA and are not inferred from this static audit script.',
   '',
   '## Errors',

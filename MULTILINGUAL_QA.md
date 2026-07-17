@@ -1,6 +1,6 @@
 # Multilingual QA
 
-Generated: 2026-07-17T08:37:34.114Z
+Generated: 2026-07-17T09:57:12.070Z
 
 ## Automated Audit Summary
 
@@ -17,9 +17,9 @@ Audit status: PASSED
 ## Responsive Check Status
 
 - Browser QA completed on 2026-07-17 at 320, 390, 768, 1024, and 1440px.
-- 33 representative page/viewport combinations across all five languages passed the horizontal-overflow check.
+- 325 page/viewport combinations (65 pages at five widths) across all five languages passed the horizontal-overflow check.
 - Navigation, language switcher, company-profile anchor, localized contact form, and mobile menu focus/ESC behavior were checked.
-- Evidence: `output/playwright/final-launch-qa/` (internal only; not part of the production deployment).
+- Evidence: `output/playwright/prelaunch-audit/` (internal only; not part of the production deployment).
 - Layout checks are manual browser QA and are not inferred from this static audit script.
 
 ## Errors

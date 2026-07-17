@@ -30,9 +30,10 @@
     const button = switcher.querySelector('[data-language-button]');
     const menu = switcher.querySelector('[data-language-menu]');
     if (!button || !menu) return;
-    const close = () => {
+    const close = (returnFocus = false) => {
       switcher.classList.remove('is-open');
       button.setAttribute('aria-expanded', 'false');
+      if (returnFocus) button.focus({ preventScroll: true });
     };
     button.addEventListener('click', (event) => {
       event.stopPropagation();
@@ -52,7 +53,11 @@
       if (!switcher.contains(event.target)) close();
     });
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') close();
+      if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        close(true);
+      }
     });
   });
 
@@ -187,11 +192,14 @@
         submitButton.textContent = i18n.sending;
       }
       setStatus(i18n.sending, 'notice');
+      const controller = new AbortController();
+      const timeoutId = window.setTimeout(() => controller.abort(), 15000);
       try {
         const response = await fetch(serviceUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(payload),
+          signal: controller.signal
         });
         if (!response.ok) {
           setStatus(i18n.failed, 'error');
@@ -204,6 +212,7 @@
       } catch (error) {
         setStatus(i18n.network, 'error');
       } finally {
+        window.clearTimeout(timeoutId);
         if (submitButton) {
           submitButton.disabled = false;
           submitButton.textContent = i18n.send;

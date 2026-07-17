@@ -109,3 +109,14 @@ node scripts/audit-i18n.mjs
 - フォーム API 未設定時に送信ボタンが無効で、成功表示が出ないこと。
 - 会社情報、約100台、拠点、許認可、G20 / EXPO / ブランド案件、ニュース日付を事業責任者が確認すること。
 - 公開ディレクトリに内部資料、監査画像、未使用動画、秘密情報が含まれていないこと。
+
+## Production Release Gates
+
+- **BLOCKER:** `window.DAITORA_CONTACT_FORM_URL` is not configured in this repository. Do not advertise the form as available until a real HTTPS endpoint has passed end-to-end testing.
+- The frontend aborts a stalled contact request after 15 seconds and shows the localized network-failure message. The server should return within that window or provide an agreed timeout policy.
+- The production endpoint must implement server-side validation, rate limiting or equivalent anti-spam controls, safe mail rendering, audit/error logging, and language-aware confirmations.
+- Confirm the privacy-policy legal wording and the retention/deletion policy before collecting personal information.
+- Obtain business approval for vehicle count, addresses, office coverage, licences, cases, and news dates.
+- Obtain native-language approval; `MACHINE_POLISHED` and automated `PASSED` states are not human approval.
+- Set and verify HTTPS redirect, HSTS, CSP, frame protection, compression, and long-lived cache headers on the deployment host.
+- Publish a curated file set. Do not upload `scripts/`, `output/`, source-review documents, ignored video libraries, or unreferenced source images.

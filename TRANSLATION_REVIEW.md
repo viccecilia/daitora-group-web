@@ -97,8 +97,8 @@ Automated audit status uses `PASSED` for generated localized HTML and `SOURCE` f
 ## Visual QA
 
 - Viewports checked: 320, 390, 768, 1024, and 1440px.
-- Browser QA covered 33 representative page/viewport combinations across all five languages; no horizontal overflow was found.
-- Screenshot evidence: `output/playwright/final-launch-qa/` (internal QA evidence; excluded from production deployment).
+- Browser QA covered 325 page/viewport combinations (65 pages at five widths) across all five languages; no horizontal overflow was found.
+- Screenshot evidence: `output/playwright/prelaunch-audit/` (internal QA evidence; excluded from production deployment).
 - Current automated multilingual audit: PASSED with zero broken links, missing resources, SEO count errors, duplicate IDs, or unapproved Japanese kana residuals.
 
 ## Required Human Confirmation
