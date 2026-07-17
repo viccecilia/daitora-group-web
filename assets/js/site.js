@@ -67,7 +67,9 @@
     headerInner.insertBefore(menuButton, nav);
 
     const getFocusables = () => [menuButton, ...nav.querySelectorAll('button, a'), document.querySelector('.header-cta')].filter(Boolean);
+    let focusTimer = 0;
     const closeMenu = () => {
+      window.clearTimeout(focusTimer);
       header?.classList.remove('is-menu-open');
       menuButton.setAttribute('aria-expanded', 'false');
     };
@@ -75,7 +77,9 @@
       header?.classList.add('is-menu-open');
       menuButton.setAttribute('aria-expanded', 'true');
       const first = nav.querySelector('button, a');
-      first?.focus({ preventScroll: true });
+      focusTimer = window.setTimeout(() => {
+        if (menuButton.getAttribute('aria-expanded') === 'true') first?.focus({ preventScroll: true });
+      }, 220);
     };
     menuButton.addEventListener('click', () => {
       const expanded = menuButton.getAttribute('aria-expanded') === 'true';

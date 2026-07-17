@@ -6,6 +6,7 @@ desktop.ini
 # Tooling and temporary artifacts
 .playwright-cli/
 screenshots/
+output/playwright/
 daitora-group-review-sample/
 daitora-group-review-sample.zip
 

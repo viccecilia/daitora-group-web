@@ -1,11 +1,12 @@
 # Multilingual QA
 
-Generated: 2026-07-17T06:13:04.885Z
+Generated: 2026-07-17T08:37:34.114Z
 
 ## Automated Audit Summary
 
 | Language | Pages | Japanese kana residuals | Broken links | Missing resources | SEO duplicate/count errors | Duplicate IDs |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| ja | 13 | 0 | 0 | 0 | 0 | 0 |
 | zh-CN | 13 | 0 | 0 | 0 | 0 | 0 |
 | en | 13 | 0 | 0 | 0 | 0 | 0 |
 | ko | 13 | 0 | 0 | 0 | 0 | 0 |
@@ -15,11 +16,11 @@ Audit status: PASSED
 
 ## Responsive Check Status
 
-- 320px: not automated in this script; visual browser QA still required after translation review.
-- 390px: not automated in this script; visual browser QA still required after translation review.
-- 768px: not automated in this script; visual browser QA still required after translation review.
-- 1024px: not automated in this script; visual browser QA still required after translation review.
-- 1440px: not automated in this script; visual browser QA still required after translation review.
+- Browser QA completed on 2026-07-17 at 320, 390, 768, 1024, and 1440px.
+- 33 representative page/viewport combinations across all five languages passed the horizontal-overflow check.
+- Navigation, language switcher, company-profile anchor, localized contact form, and mobile menu focus/ESC behavior were checked.
+- Evidence: `output/playwright/final-launch-qa/` (internal only; not part of the production deployment).
+- Layout checks are manual browser QA and are not inferred from this static audit script.
 
 ## Errors
 

@@ -67,7 +67,7 @@
         <div class="contact-option-grid">
           <article class="contact-option-card">
             <span>Hire</span>
-            <h3>Hire/airport transfer</h3>
+            <h3>Chauffeur Service / Airport Transfer</h3>
             <p>Inquiries about airport transfers, private tours, corporate and VIP transportation, and large-scale assignments.</p>
             <a class="button" href="#contact-form" data-contact-type="hire">Request Chauffeur Service</a>
           </article>
@@ -162,7 +162,7 @@
           <article><span>01</span><h3>Content confirmation</h3><p>The person in charge will confirm the content you sent.</p></article>
           <article><span>02</span><h3>Contact us from the person in charge</h3><p>If we have any questions to confirm, we will contact you by email or phone.</p></article>
           <article><span>03</span><h3>Content organization/suggestion</h3><p>We will organize and guide you with the transportation details, vehicle, schedule, and necessary information.</p></article>
-          <article><span>04</span><h3>Go to procedures/reservations</h3><p>After confirming the details, proceed to the next procedure such as reservation, application, and screening forms.</p></article>
+          <article><span>04</span><h3>Proceed to Booking or Application</h3><p>After confirming the details, proceed to the next procedure such as reservation, application, and screening forms.</p></article>
         </div>
       </div>
     </section>
@@ -182,12 +182,12 @@
                 <span>Inquiry type</span>
                 <select name="type" required>
                   <option value="">please select</option>
-                  <option value="hire">Hire/airport transfer</option>
+                  <option value="hire">Chauffeur Service / Airport Transfer</option>
                   <option value="taxi">Request Taxi Service</option>
                   <option value="auto">Used car sales/loan consultation</option>
                   <option value="corporate">Corporations, travel agencies, hotels</option>
                   <option value="recruit">Driver Recruitment</option>
-                  <option value="general">others</option>
+                  <option value="general">Other</option>
                 </select>
               </label>
               <label>
@@ -216,7 +216,7 @@
                 </select>
               </label>
               <div class="form-wide form-dynamic-group" data-type-field="hire corporate">
-                <h3>Transfer details</h3>
+                <h3>Transportation Details</h3>
                 <div class="form-grid">
                   <label><span>Date of use</span><input type="date" name="ride_date"></label>
                   <label><span>Usage time</span><input type="time" name="ride_time"></label>
@@ -226,7 +226,7 @@
                   <label><span>Number of people</span><input type="number" name="passengers" min="1" inputmode="numeric"></label>
                   <label><span>Number of baggage</span><input type="number" name="luggage_count" min="0" inputmode="numeric"></label>
                   <label><span>Preferred vehicle</span><select name="vehicle_type"><option value="">to be decided</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>Consultation according to usage</option></select></label>
-                  <label class="form-wide"><span>Purpose</span><select name="ride_purpose"><option value="">please select</option><option>airport transfer</option><option>Private sightseeing tour</option><option>Corporate transportation</option><option>VIP Transportation</option><option>Large projects/Multiple vehicles in operation</option><option>others</option></select></label>
+                  <label class="form-wide"><span>Purpose</span><select name="ride_purpose"><option value="">please select</option><option>airport transfer</option><option>Private sightseeing tour</option><option>Corporate transportation</option><option>VIP Transportation</option><option>Large projects/Multiple vehicles in operation</option><option>Other</option></select></label>
                   <label class="form-wide"><span>Notes regarding transportation</span><textarea name="ride_notes" rows="4" placeholder="Itinerary, meeting place, number of vehicles, considerations, etc."></textarea></label>
                 </div>
               </div>
@@ -244,7 +244,7 @@
                 <h3>Used car sales/loan consultation</h3>
                 <div class="form-grid">
                   <label><span>Preferred vehicle</span><input type="text" name="auto_model" placeholder="Example: Alphard, Hiace, Sienta"></label>
-                  <label><span>Purpose of use</span><select name="auto_purpose"><option value="">please select</option><option>Personal use</option><option>Family use</option><option>Corporate use</option><option>For transportation</option><option>Taxi related</option><option>others</option></select></label>
+                  <label><span>Purpose of use</span><select name="auto_purpose"><option value="">please select</option><option>Personal use</option><option>Family use</option><option>Corporate use</option><option>For transportation</option><option>Taxi related</option><option>Other</option></select></label>
                   <label><span>Applicant type</span><select name="applicant_type"><option value="">please select</option><option>individual</option><option>Corporation</option><option>sole proprietor</option><option>Foreign customers living in Japan</option></select></label>
                   <label><span>Loan guidance</span><select name="loan_interest"><option value="">please select</option><option>hope</option><option>under consideration</option><option>do not wish</option></select></label>
                   <label class="form-wide"><span>Notes regarding vehicle purchase</span><textarea name="auto_notes" rows="4" placeholder="Confirmation of desired purchase date, current situation, required documents, etc."></textarea></label>

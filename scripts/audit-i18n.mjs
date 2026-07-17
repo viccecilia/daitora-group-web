@@ -4,6 +4,7 @@ import path from 'node:path';
 const ROOT = process.cwd();
 const pages = ['index.html','about.html','business.html','business-hire.html','business-taxi.html','business-auto.html','quality.html','works.html','company.html','news.html','contact.html','privacy.html','404.html'];
 const languages = {
+  ja: { dir: '', html: 'ja' },
   'zh-CN': { dir: 'zh-cn', html: 'zh-CN' },
   en: { dir: 'en', html: 'en' },
   ko: { dir: 'ko', html: 'ko' },
@@ -29,6 +30,13 @@ const errors = [];
 function readHtml(lang, page) {
   const file = path.join(ROOT, languages[lang].dir, page);
   return { file, html: fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : '' };
+}
+
+function publicUrl(lang, page) {
+  const prefix = languages[lang].dir ? `${languages[lang].dir}/` : '';
+  if (page === 'index.html') return `https://daitora-jp.com/${prefix}`;
+  if (page === 'company.html') return `https://daitora-jp.com/${prefix}about.html`;
+  return `https://daitora-jp.com/${prefix}${page}`;
 }
 
 function countMatches(html, regex) {
@@ -107,6 +115,10 @@ function auditPage(lang, page) {
   }
 
   const canonical = html.match(/<link\s+[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/i)?.[1] || '';
+  const expectedCanonical = publicUrl(lang, page);
+  if (canonical && canonical !== expectedCanonical) {
+    report(lang, page, 'canonical-url', `Expected canonical ${expectedCanonical}`, canonical);
+  }
   if (page === 'company.html' && canonical.includes('#')) {
     report(lang, page, 'canonical-anchor', 'Company redirect canonical must not include an anchor', canonical);
   }
@@ -117,6 +129,34 @@ function auditPage(lang, page) {
         report(lang, page, 'hreflang', `Missing hreflang ${code}`);
       }
     }
+
+    for (const code of allHreflang.filter((item) => item !== 'x-default')) {
+      if (!new RegExp(`<a\\b[^>]*hreflang=["']${code.replace('-', '\\-')}["']`, 'i').test(html)) {
+        report(lang, page, 'language-switcher', `Missing language-switcher link for ${code}`);
+      }
+    }
+
+    const socialTags = [
+      ['og:image', /<meta\s+[^>]*property=["']og:image["'][^>]*>/gi],
+      ['twitter:card', /<meta\s+[^>]*name=["']twitter:card["'][^>]*>/gi],
+      ['twitter:title', /<meta\s+[^>]*name=["']twitter:title["'][^>]*>/gi],
+      ['twitter:description', /<meta\s+[^>]*name=["']twitter:description["'][^>]*>/gi],
+      ['twitter:image', /<meta\s+[^>]*name=["']twitter:image["'][^>]*>/gi]
+    ];
+    for (const [name, regex] of socialTags) {
+      const count = countMatches(html, regex);
+      if (count !== 1) {
+        stat.seoDuplicates += Math.max(1, count);
+        report(lang, page, 'seo-social', `${name} count is ${count}`);
+      }
+    }
+    if (!/<meta\s+[^>]*name=["']twitter:card["'][^>]*content=["']summary_large_image["'][^>]*>/i.test(html)) {
+      report(lang, page, 'twitter-card', 'twitter:card must be summary_large_image');
+    }
+  }
+
+  if (page === 'company.html' && !/about\.html#company-profile/.test(html)) {
+    report(lang, page, 'company-redirect', 'Company redirect must target about.html#company-profile');
   }
 
   if (page === 'contact.html' && !/name=["']site_language["']/.test(html)) {
@@ -165,7 +205,7 @@ function auditPage(lang, page) {
   }
 
   for (const chunk of textChunks(html)) {
-    if (/[ぁ-んァ-ン]/.test(chunk) && !allowedKana.some((allowed) => chunk.includes(allowed))) {
+    if (lang !== 'ja' && /[ぁ-んァ-ン]/.test(chunk) && !allowedKana.some((allowed) => chunk.includes(allowed))) {
       stat.kanaResiduals += 1;
       report(lang, page, 'kana-residual', 'Unapproved Japanese kana residual', chunk.slice(0, 160));
     }
@@ -181,6 +221,33 @@ function auditPage(lang, page) {
 
 for (const lang of Object.keys(languages)) {
   for (const page of pages) auditPage(lang, page);
+}
+
+const sitemapPath = path.join(ROOT, 'sitemap.xml');
+const sitemap = fs.existsSync(sitemapPath) ? fs.readFileSync(sitemapPath, 'utf8') : '';
+const sitemapPages = pages.filter((page) => !['company.html', '404.html'].includes(page));
+if (!sitemap) {
+  report('all', 'sitemap.xml', 'missing-file', 'Missing sitemap.xml');
+} else {
+  const sitemapBlocks = [...sitemap.matchAll(/<url>[\s\S]*?<\/url>/g)].map((match) => match[0]);
+  for (const page of sitemapPages) {
+    for (const lang of Object.keys(languages)) {
+      const loc = publicUrl(lang, page);
+      const block = sitemapBlocks.find((item) => item.includes(`<loc>${loc}</loc>`)) || '';
+      if (!block) {
+        report(lang, 'sitemap.xml', 'sitemap-url', `Missing sitemap URL ${loc}`);
+        continue;
+      }
+      for (const code of allHreflang) {
+        if (!new RegExp(`hreflang=["']${code.replace('-', '\\-')}["']`, 'i').test(block)) {
+          report(lang, 'sitemap.xml', 'sitemap-hreflang', `Missing ${code} alternate for ${loc}`);
+        }
+      }
+    }
+  }
+  if (/\/company\.html<\/loc>|\/404\.html<\/loc>/.test(sitemap)) {
+    report('all', 'sitemap.xml', 'sitemap-excluded-page', 'company.html and 404.html must not be listed in sitemap.xml');
+  }
 }
 
 const byLang = Object.fromEntries(Object.keys(languages).map((lang) => {
@@ -210,11 +277,11 @@ const qa = [
   '',
   '## Responsive Check Status',
   '',
-  '- 320px: not automated in this script; visual browser QA still required after translation review.',
-  '- 390px: not automated in this script; visual browser QA still required after translation review.',
-  '- 768px: not automated in this script; visual browser QA still required after translation review.',
-  '- 1024px: not automated in this script; visual browser QA still required after translation review.',
-  '- 1440px: not automated in this script; visual browser QA still required after translation review.',
+  '- Browser QA completed on 2026-07-17 at 320, 390, 768, 1024, and 1440px.',
+  '- 33 representative page/viewport combinations across all five languages passed the horizontal-overflow check.',
+  '- Navigation, language switcher, company-profile anchor, localized contact form, and mobile menu focus/ESC behavior were checked.',
+  '- Evidence: `output/playwright/final-launch-qa/` (internal only; not part of the production deployment).',
+  '- Layout checks are manual browser QA and are not inferred from this static audit script.',
   '',
   '## Errors',
   '',

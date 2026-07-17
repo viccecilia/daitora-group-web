@@ -195,7 +195,7 @@ function seoBlock(lang, page){
     ja: descBase,
     'zh-CN': `Daitora Group 官方网站：${name}。面向关西地区提供机场接送、包车、出租车、二手车销售和车辆购买咨询。`,
     en: `Official Daitora Group website: ${name}. Chauffeur transportation, taxi service, used car sales and mobility support in Kansai.`,
-    ko: `Daitora Group 공식 웹사이트: ${name}. 간사이 지역의 공항 송영, 하이어, 택시, 중고차 판매 및 차량 상담을 안내합니다.`,
+    ko: `Daitora Group 공식 웹사이트: ${name}. 간사이 지역의 공항 송영, 전용 차량 서비스, 택시, 중고차 판매 및 차량 상담을 안내합니다.`,
     'zh-TW': `Daitora Group 官方網站：${name}。提供關西地區機場接送、包車、計程車、中古車銷售與車輛購買諮詢。`
   };
   const title = lang === 'ja' ? meta[page]?.[0] : `${name} | Daitora Group`;

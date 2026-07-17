@@ -67,9 +67,9 @@
         <div class="contact-option-grid">
           <article class="contact-option-card">
             <span>Hire</span>
-            <h3>租借/機場接送</h3>
-            <p>機場接送、觀光包機、企業接送、VIP娛樂、大型專案諮詢。</p>
-            <a class="button" href="#contact-form" data-contact-type="hire">出租諮詢</a>
+            <h3>包車接送 / 機場接送</h3>
+            <p>有關機場接送、觀光包車、企業與VIP接送以及大型專案的洽詢。</p>
+            <a class="button" href="#contact-form" data-contact-type="hire">前往包車接送洽詢</a>
           </article>
           <article class="contact-option-card">
             <span>Taxi</span>
@@ -91,8 +91,8 @@
           </article>
           <article class="contact-option-card">
             <span>Recruit</span>
-            <h3>招募/船員申請</h3>
-            <p>有關司機招聘、船員申請和工作條件的詢問。</p>
+            <h3>司機招聘與應徵</h3>
+            <p>有關司機招聘、應徵及工作條件的洽詢。</p>
             <a class="button" href="#contact-form" data-contact-type="recruit">前往招募諮詢</a>
           </article>
           <article class="contact-option-card">
@@ -114,7 +114,7 @@
         <div class="prepare-grid">
           <article>
             <span>01</span>
-            <h3>交通/租賃諮詢</h3>
+            <h3>包車接送洽詢</h3>
             <ul>
               <li>使用日期</li>
               <li>出發/目的地</li>
@@ -162,7 +162,7 @@
           <article><span>01</span><h3>內容確認</h3><p>負責人會對您發送的內容進行確認。</p></article>
           <article><span>02</span><h3>負責人聯絡我們</h3><p>如果我們有任何問題需要確認，我們將透過電子郵件或電話與您聯繫。</p></article>
           <article><span>03</span><h3>內容組織/建議</h3><p>我們將為您組織和指導交通細節、車輛、時間表和必要的資訊。</p></article>
-          <article><span>04</span><h3>前往流程/預訂</h3><p>確認詳細資料後，進行預約、申請、審查表格等下一程序。</p></article>
+          <article><span>04</span><h3>進入預約或申請流程</h3><p>確認詳細資料後，進行預約、申請、審查表格等下一程序。</p></article>
         </div>
       </div>
     </section>
@@ -182,12 +182,12 @@
                 <span>詢價類型</span>
                 <select name="type" required>
                   <option value="">請選擇</option>
-                  <option value="hire">租借/機場接送</option>
+                  <option value="hire">包車接送 / 機場接送</option>
                   <option value="taxi">使用計程車</option>
                   <option value="auto">二手車銷售/貸款諮詢</option>
                   <option value="corporate">企業、旅行社、飯店</option>
-                  <option value="recruit">招募/船員申請</option>
-                  <option value="general">其他的</option>
+                  <option value="recruit">司機招聘與應徵</option>
+                  <option value="general">其他</option>
                 </select>
               </label>
               <label>
@@ -209,14 +209,14 @@
               <label>
                 <span>所需語言</span>
                 <select name="language">
-                  <option value="日本人">日本人</option>
-                  <option value="中國人">中國人</option>
+                  <option value="日語">日語</option>
+                  <option value="中文">中文</option>
                   <option value="English">English</option>
                   <option value="한국어">한국어</option>
                 </select>
               </label>
               <div class="form-wide form-dynamic-group" data-type-field="hire corporate">
-                <h3>轉帳詳情</h3>
+                <h3>接送詳情</h3>
                 <div class="form-grid">
                   <label><span>使用日期</span><input type="date" name="ride_date"></label>
                   <label><span>使用時間</span><input type="time" name="ride_time"></label>
@@ -226,7 +226,7 @@
                   <label><span>人數</span><input type="number" name="passengers" min="1" inputmode="numeric"></label>
                   <label><span>行李件數</span><input type="number" name="luggage_count" min="0" inputmode="numeric"></label>
                   <label><span>想要的車型</span><select name="vehicle_type"><option value="">待決定</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>根據用途諮詢</option></select></label>
-                  <label class="form-wide"><span>目的</span><select name="ride_purpose"><option value="">請選擇</option><option>機場接送</option><option>私人觀光旅遊</option><option>企業交通</option><option>貴賓娛樂</option><option>大型專案/多輛車輛投入運行</option><option>其他的</option></select></label>
+                  <label class="form-wide"><span>目的</span><select name="ride_purpose"><option value="">請選擇</option><option>機場接送</option><option>私人觀光旅遊</option><option>企業交通</option><option>VIP接送</option><option>大型專案/多輛車輛投入運行</option><option>其他</option></select></label>
                   <label class="form-wide"><span>交通注意事項</span><textarea name="ride_notes" rows="4" placeholder="行程、集合地點、車輛數量、注意事項等"></textarea></label>
                 </div>
               </div>
@@ -244,14 +244,14 @@
                 <h3>二手車銷售/貸款諮詢</h3>
                 <div class="form-grid">
                   <label><span>想要的車型</span><input type="text" name="auto_model" placeholder="例：Alphard、Hiace、Sienta"></label>
-                  <label><span>使用目的</span><select name="auto_purpose"><option value="">請選擇</option><option>個人使用</option><option>家庭使用</option><option>企業用途</option><option>用於運輸</option><option>計程車相關</option><option>其他的</option></select></label>
+                  <label><span>使用目的</span><select name="auto_purpose"><option value="">請選擇</option><option>個人使用</option><option>家庭使用</option><option>企業用途</option><option>用於運輸</option><option>計程車相關</option><option>其他</option></select></label>
                   <label><span>申請人類型</span><select name="applicant_type"><option value="">請選擇</option><option>個人</option><option>公司</option><option>獨資經營者</option><option>居住在日本的外國顧客</option></select></label>
                   <label><span>貸款諮詢</span><select name="loan_interest"><option value="">請選擇</option><option>希望</option><option>正在考慮中</option><option>不希望</option></select></label>
                   <label class="form-wide"><span>購車注意事項</span><textarea name="auto_notes" rows="4" placeholder="確認購買日期、現況、所需文件等"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="recruit">
-                <h3>招募/船員申請</h3>
+                <h3>司機招聘與應徵</h3>
                 <div class="form-grid">
                   <label><span>期望的工作類型</span><input type="text" name="recruit_role" placeholder="司機、營運管理等"></label>
                   <label><span>所需的工作區域</span><input type="text" name="work_area" placeholder="大阪、京都等"></label>
@@ -344,7 +344,7 @@
         <h2 class="section-title">首先，請告訴我們您想要什麼。</h2>
         <p class="section-copy">從機場交通、企業交通、團體交通、購車諮詢。負責人將根據內容向您提供資訊。</p>
         <div class="news-contact-links">
-          <a class="primary" href="#contact-form" data-contact-type="hire">租務諮詢</a>
+          <a class="primary" href="#contact-form" data-contact-type="hire">包車接送洽詢</a>
           <a href="#contact-form" data-contact-type="taxi">使用計程車</a>
           <a href="#contact-form" data-contact-type="auto">二手車/貸款諮詢</a>
           <a href="#contact-form" data-contact-type="corporate">企業、旅行社、飯店</a>

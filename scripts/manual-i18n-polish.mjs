@@ -976,8 +976,543 @@ Object.assign(overrides, {
   }
 });
 
+// Final launch review: human-edited news copy and shared operations terms.
+Object.assign(overrides, {
+  '大阪・京都間の送迎案件への対応': {
+    en: 'Transportation services between Osaka and Kyoto',
+    ko: '오사카와 교토 간 송영 서비스',
+    'zh-CN': '承接大阪与京都之间的交通服务项目',
+    'zh-TW': '承接大阪與京都之間的交通服務項目'
+  },
+  '対応内容': {
+    en: 'Scope of Service',
+    ko: '운행 내용',
+    'zh-CN': '服务内容',
+    'zh-TW': '服務內容'
+  },
+  '複数台運行': {
+    en: 'Multi-Vehicle Operations',
+    ko: '복수 차량 운행',
+    'zh-CN': '多车协同',
+    'zh-TW': '多車協同'
+  },
+  '接遇': {
+    en: 'Service Standards',
+    ko: '고객 응대',
+    'zh-CN': '接待服务',
+    'zh-TW': '接待服務'
+  },
+  '接遇品質': {
+    en: 'Service Quality',
+    ko: '고객 응대 품질',
+    'zh-CN': '接待品质',
+    'zh-TW': '接待品質'
+  },
+  '乗務員教育': {
+    en: 'Driver Training',
+    ko: '운전기사 교육',
+    'zh-CN': '司机培训',
+    'zh-TW': '司機培訓'
+  },
+  '乗務員への事前共有': {
+    en: 'Advance driver briefing',
+    ko: '운전기사 사전 브리핑',
+    'zh-CN': '提前向司机说明运营安排',
+    'zh-TW': '提前向司機說明營運安排'
+  },
+  'フランス大手ブランドメーカーの日本イベント送迎業務を担当しました': {
+    en: 'Provided Transportation for a Major French Brand Event in Japan',
+    ko: '프랑스 대형 브랜드의 일본 행사 송영을 담당했습니다',
+    'zh-CN': '承接法国大型品牌日本活动接送服务',
+    'zh-TW': '承接法國大型品牌日本活動接送服務'
+  },
+  'イベント関係者・VIPゲストの移動に対応し、複数日程・複数台運行を含む送迎業務を実施しました。': {
+    en: 'Provided transportation for event personnel and VIP guests across multiple schedules with coordinated multi-vehicle operations.',
+    ko: '행사 관계자와 VIP 게스트를 위해 여러 일정에 걸쳐 복수 차량 송영을 운영했습니다.',
+    'zh-CN': '为活动相关人员及 VIP 来宾提供多日程、多车辆协同接送服务。',
+    'zh-TW': '為活動相關人員及 VIP 來賓提供多日程、多車輛協同接送服務。'
+  },
+  'フランス大手ブランドメーカーによる日本国内イベントにおいて、関係者送迎業務を担当しました。来日ゲスト、イベント関係者、VIP顧客などの移動に対応し、会場・宿泊先・主要訪問先を結ぶ送迎手配を行いました。': {
+    en: 'Daitora Group provided transportation for a major French brand event in Japan. We coordinated travel for international guests, event personnel and VIP clients between venues, accommodation and key destinations.',
+    ko: 'Daitora Group은 프랑스 대형 브랜드의 일본 행사에서 관계자 송영을 담당했습니다. 해외 게스트, 행사 관계자, VIP 고객이 행사장, 숙박지, 주요 방문지를 원활히 이동할 수 있도록 차량을 배정했습니다.',
+    'zh-CN': 'Daitora Group 承接法国大型品牌在日本举办活动期间的相关人员接送，为访日嘉宾、活动人员及 VIP 客户安排会场、住宿地与主要访问地点之间的交通。',
+    'zh-TW': 'Daitora Group 承接法國大型品牌在日本舉辦活動期間的相關人員接送，為訪日嘉賓、活動人員及 VIP 客戶安排會場、住宿地與主要訪問地點之間的交通。'
+  },
+  '乗務員への接遇方針と運行情報の共有': {
+    en: 'Briefing drivers on service standards and operating information',
+    ko: '운전기사에게 고객 응대 기준과 운행 정보 공유',
+    'zh-CN': '向司机说明接待标准与运营信息',
+    'zh-TW': '向司機說明接待標準與營運資訊'
+  },
+  '京都エリアでの対応力強化を目的に営業所を開設し、空港送迎・観光送迎・法人利用への体制を拡充しました。': {
+    en: 'Opened a Kyoto office to strengthen airport transfers, private sightseeing transportation and corporate service in the area.',
+    ko: '교토 지역의 공항 송영, 관광 전세, 법인 이용 대응을 강화하기 위해 영업소를 개설했습니다.',
+    'zh-CN': '为加强京都地区的服务能力，开设京都营业所，进一步完善机场接送、观光包车及企业用车服务体系。',
+    'zh-TW': '為加強京都地區的服務能力，開設京都營業所，進一步完善機場接送、觀光包車及企業用車服務體系。'
+  },
+  '繁忙期や大型案件における待機調整': {
+    en: 'Standby coordination during peak periods and large-scale assignments',
+    ko: '성수기 및 대형 프로젝트의 대기 차량 조정',
+    'zh-CN': '旺季及大型项目的车辆待命协调',
+    'zh-TW': '旺季及大型專案的車輛待命協調'
+  },
+  '中古車販売事業の体制を強化しました': {
+    en: 'Strengthened Our Used Car Sales Operations',
+    ko: '중고차 판매 운영 체제를 강화했습니다',
+    'zh-CN': '进一步完善二手车销售业务体系',
+    'zh-TW': '進一步完善中古車銷售業務體系'
+  },
+  '中古車販売・仕入体制を強化し、業務用車両から一般向け車両まで、より幅広いご提案が可能になりました。': {
+    en: 'Expanded our sales and sourcing capabilities to support a broader range of business and personal vehicle requirements.',
+    ko: '판매 및 차량 조달 체제를 강화해 사업용 차량부터 개인용 차량까지 폭넓게 제안할 수 있게 되었습니다.',
+    'zh-CN': '强化二手车销售与车辆采购体系，可为业务用车及个人用车提供更广泛的车辆建议。',
+    'zh-TW': '強化中古車銷售與車輛採購體系，可為事業用車及個人用車提供更廣泛的車輛建議。'
+  },
+  '業務用車両、一般向け車両の提案': {
+    en: 'Vehicle recommendations for business and personal use',
+    ko: '사업용 및 개인용 차량 제안',
+    'zh-CN': '业务用车与个人用车建议',
+    'zh-TW': '事業用車與個人用車建議'
+  },
+  '乗務員向け接遇・安全研修を実施しました': {
+    en: 'Conducted Service and Safety Training for Drivers',
+    ko: '운전기사 대상 고객 응대 및 안전 교육을 실시했습니다',
+    'zh-CN': '开展司机接待服务与安全培训',
+    'zh-TW': '舉辦司機接待服務與安全培訓'
+  },
+  '接遇、安全意識、時間管理、情報共有をテーマに、乗務員向け研修を実施しました。': {
+    en: 'Conducted driver training focused on service, safety awareness, time management and information sharing.',
+    ko: '고객 응대, 안전 의식, 시간 관리, 정보 공유를 주제로 운전기사 교육을 실시했습니다.',
+    'zh-CN': '围绕接待服务、安全意识、时间管理与信息共享开展司机培训。',
+    'zh-TW': '圍繞接待服務、安全意識、時間管理與資訊共享舉辦司機培訓。'
+  },
+  '大寅グループでは、乗務員向けに接遇・安全研修を実施しました。空港送迎、企業送迎、VIP接待、地域交通など、利用シーンに応じた言葉遣い、乗降時の配慮、時間管理、情報共有をテーマに確認を行いました。': {
+    en: 'Daitora Group conducted service and safety training for drivers. The program covered professional communication, boarding assistance, time management and information sharing across airport, corporate, VIP and local transportation scenarios.',
+    ko: 'Daitora Group은 운전기사를 대상으로 고객 응대 및 안전 교육을 실시했습니다. 공항 송영, 기업 송영, VIP 이동, 지역 교통 등 이용 상황에 맞는 말투와 승하차 배려, 시간 관리, 정보 공유 절차를 점검했습니다.',
+    'zh-CN': 'Daitora Group 面向司机开展接待服务与安全培训，围绕机场接送、企业接送、VIP 接待和地区交通等场景，确认服务用语、乘客上下车时的协助、时间管理及信息共享流程。',
+    'zh-TW': 'Daitora Group 面向司機舉辦接待服務與安全培訓，圍繞機場接送、企業接送、VIP 接待及地區交通等情境，確認服務用語、乘客上下車時的協助、時間管理及資訊共享流程。'
+  },
+  '接遇姿勢、言葉遣い、乗降時対応の確認': {
+    en: 'Reviewing service conduct, professional language and boarding assistance',
+    ko: '고객 응대 태도, 서비스 언어, 승하차 지원 점검',
+    'zh-CN': '确认接待态度、服务用语及上下车协助',
+    'zh-TW': '確認接待態度、服務用語及上下車協助'
+  },
+  '配車担当と乗務員間の情報共有手順の確認': {
+    en: 'Reviewing information-sharing procedures between dispatchers and drivers',
+    ko: '배차 담당자와 운전기사 간 정보 공유 절차 점검',
+    'zh-CN': '确认调度人员与司机之间的信息共享流程',
+    'zh-TW': '確認調度人員與司機之間的資訊共享流程'
+  },
+  '企業団体・視察送迎に対応しました': {
+    en: 'Provided Transportation for a Corporate Delegation and Inspection Tour',
+    ko: '기업 단체 및 시찰단 송영을 수행했습니다',
+    'zh-CN': '承接企业团体及视察接送服务',
+    'zh-TW': '承接企業團體及視察接送服務'
+  },
+  '複数都市・複数日程にわたる団体移動に対応し、行程に合わせた送迎手配を実施しました。': {
+    en: 'Arranged group transportation across multiple cities and dates in line with the full itinerary.',
+    ko: '여러 도시와 일정에 걸친 단체 이동을 위해 전체 일정에 맞춰 차량을 배정했습니다.',
+    'zh-CN': '为跨多个城市及日期的团体行程安排相应接送服务。',
+    'zh-TW': '為跨多個城市及日期的團體行程安排相應接送服務。'
+  },
+  '運行後の気づきと改善点の共有': {
+    en: 'Sharing observations and improvement points after each operation',
+    ko: '운행 후 확인 사항과 개선점 공유',
+    'zh-CN': '共享运营后的发现与改进事项',
+    'zh-TW': '共享營運後的發現與改善事項'
+  },
+  '乗務員と車両管理担当の確認項目共有': {
+    en: 'Sharing inspection points between drivers and vehicle management staff',
+    ko: '운전기사와 차량 관리 담당자 간 점검 항목 공유',
+    'zh-CN': '司机与车辆管理人员共享检查项目',
+    'zh-TW': '司機與車輛管理人員共享檢查項目'
+  },
+  '関西複数拠点の運行体制を強化しました': {
+    en: 'Strengthened Our Multi-Base Operations Across Kansai',
+    ko: '간사이 복수 거점의 운행 체제를 강화했습니다',
+    'zh-CN': '进一步强化关西多据点运营体系',
+    'zh-TW': '進一步強化關西多據點營運體系'
+  },
+  '空港、ホテル、観光地、会場間の車両配置': {
+    en: 'Vehicle allocation between airports, hotels, sightseeing destinations and venues',
+    ko: '공항, 호텔, 관광지, 행사장 간 차량 배치',
+    'zh-CN': '协调机场、酒店、观光地及会场之间的车辆安排',
+    'zh-TW': '協調機場、飯店、觀光地及會場之間的車輛安排'
+  }
+});
+
+Object.assign(overrides, {
+  'ハイヤー・空港送迎': {
+    en: 'Chauffeur Service / Airport Transfer',
+    ko: '전용 차량・공항 송영',
+    'zh-CN': '包车接送 / 机场接送',
+    'zh-TW': '包車接送 / 機場接送'
+  },
+  '採用・乗務員応募': {
+    en: 'Driver Recruitment',
+    ko: '운전기사 채용・지원',
+    'zh-CN': '司机招聘与应聘',
+    'zh-TW': '司機招聘與應徵'
+  },
+  'ドライバー採用、乗務員応募、勤務条件に関するお問い合わせ。': {
+    en: 'Inquiries about driver recruitment, applications and working conditions.',
+    ko: '운전기사 채용, 지원 및 근무 조건에 관한 문의입니다.',
+    'zh-CN': '有关司机招聘、应聘及工作条件的咨询。',
+    'zh-TW': '有關司機招聘、應徵及工作條件的洽詢。'
+  },
+  '送迎・ハイヤー相談': {
+    en: 'Chauffeur & Private Transportation',
+    ko: '전용 차량・송영 상담',
+    'zh-CN': '包车接送咨询',
+    'zh-TW': '包車接送洽詢'
+  },
+  'ハイヤー相談': {
+    en: 'Request Chauffeur Service',
+    ko: '전용 차량 서비스 상담',
+    'zh-CN': '包车接送咨询',
+    'zh-TW': '包車接送洽詢'
+  },
+  'ハイヤー相談へ': {
+    en: 'Request Chauffeur Service',
+    ko: '전용 차량 서비스 상담',
+    'zh-CN': '前往包车接送咨询',
+    'zh-TW': '前往包車接送洽詢'
+  },
+  'その他': {
+    en: 'Other',
+    ko: '기타',
+    'zh-CN': '其他',
+    'zh-TW': '其他'
+  }
+});
+
+Object.assign(overrides, {
+  '空港送迎・観光貸切・企業送迎・VIP接待・地域タクシー・中古車販売': {
+    en: 'Airport Transfers / Private Tours / Corporate Transportation / VIP Transportation / Local Taxi / Used Car Sales',
+    ko: '공항 송영・관광 전세・기업 송영・VIP 송영・지역 택시・중고차 판매',
+    'zh-CN': '机场接送・观光包车・企业接送・VIP接送・区域出租车・二手车销售',
+    'zh-TW': '機場接送・觀光包車・企業接送・VIP接送・區域計程車・中古車銷售'
+  },
+  '空港送迎、観光貸切、企業・VIP送迎、地域タクシー、中古車販売まで、車両・乗務員・配車・現場対応を一体で支えています。': {
+    en: 'We support airport transfers, private tours, corporate and VIP transportation, local taxi services and used car sales through coordinated vehicles, drivers, dispatch and on-site operations.',
+    ko: '공항 송영, 관광 전세, 기업・VIP 송영, 지역 택시, 중고차 판매까지 차량・운전기사・배차・현장 대응을 통합적으로 지원합니다.',
+    'zh-CN': '从机场接送、观光包车、企业与VIP接送、区域出租车到二手车销售，由车辆、司机、调度与现场团队协同提供支持。',
+    'zh-TW': '從機場接送、觀光包車、企業與VIP接送、區域計程車到中古車銷售，由車輛、司機、調度與現場團隊協同提供支援。'
+  },
+  '関西空港・伊丹空港・神戸空港の送迎から、京都・奈良・神戸方面の観光貸切、企業視察、VIP接待まで対応。人数・荷物・接待規格に合わせて、Alphard、Hiace、Mercedes-Benz S-Class などの車両と乗務員を手配します。': {
+    en: 'We handle transfers from Kansai, Itami and Kobe airports, private tours in Kyoto, Nara and Kobe, corporate visits and VIP transportation. Vehicles such as the Alphard, Hiace and Mercedes-Benz S-Class are assigned with professional drivers according to passenger count, luggage and service requirements.',
+    ko: '간사이・이타미・고베 공항 송영부터 교토・나라・고베 관광 전세, 기업 시찰, VIP 송영까지 대응합니다. 인원수, 수하물, 서비스 요건에 맞춰 Alphard, Hiace, Mercedes-Benz S-Class와 전문 운전기사를 배정합니다.',
+    'zh-CN': '承接关西、伊丹及神户机场接送，以及京都、奈良、神户方向的观光包车、企业考察和VIP接送。根据人数、行李与服务要求，安排Alphard、Hiace、Mercedes-Benz S-Class等车辆及专业司机。',
+    'zh-TW': '承接關西、伊丹及神戶機場接送，以及京都、奈良、神戶方向的觀光包車、企業考察與VIP接送。依人數、行李與服務需求，安排Alphard、Hiace、Mercedes-Benz S-Class等車輛及專業司機。'
+  },
+  '運転技術だけでなく、接遇、安全意識、時間管理を重視した乗務員教育を行っています。': {
+    en: 'Driver training covers not only driving skills, but also professional service, safety awareness and time management.',
+    ko: '운전 기술뿐 아니라 고객 응대, 안전 의식, 시간 관리를 중시한 운전기사 교육을 실시합니다.',
+    'zh-CN': '司机培训不仅重视驾驶技术，也重视服务礼仪、安全意识与时间管理。',
+    'zh-TW': '司機培訓不僅重視駕駛技術，也重視服務禮儀、安全意識與時間管理。'
+  },
+  '乗務員共有': {
+    en: 'Driver Briefing',
+    ko: '운전기사 공유',
+    'zh-CN': '司机信息共享',
+    'zh-TW': '司機資訊共享'
+  },
+  '日々の基本動作': {
+    en: 'Daily Operating Routine',
+    ko: '매일의 기본 운행 절차',
+    'zh-CN': '每日基本运营流程',
+    'zh-TW': '每日基本營運流程'
+  },
+  '当日運行': {
+    en: 'Day-of-Service Operations',
+    ko: '당일 운행',
+    'zh-CN': '当日运营',
+    'zh-TW': '當日營運'
+  },
+  '完了後共有': {
+    en: 'Post-Service Review',
+    ko: '운행 완료 후 공유',
+    'zh-CN': '完成后复盘共享',
+    'zh-TW': '完成後複盤共享'
+  },
+  '人数・荷物・用途に合わせて、車両と乗務員を手配。': {
+    en: 'Assign the appropriate vehicle and driver for the passenger count, luggage and purpose.',
+    ko: '인원수, 수하물, 용도에 맞춰 차량과 운전기사를 배정합니다.',
+    'zh-CN': '根据人数、行李与用途安排车辆及司机。',
+    'zh-TW': '依人數、行李與用途安排車輛及司機。'
+  },
+  'お客様のご利用相談、ホテル・法人様からの配車相談、乗務員採用のお問い合わせを、それぞれ確認しやすい形で受け付けています。': {
+    en: 'We provide clear inquiry routes for passengers, hotel and corporate dispatch requests, and driver recruitment.',
+    ko: '택시 이용, 호텔・법인 배차, 운전기사 채용 문의를 목적별로 알기 쉽게 접수합니다.',
+    'zh-CN': '我们按用途清晰受理乘客用车、酒店与企业配车以及司机招聘咨询。',
+    'zh-TW': '我們依用途清楚受理乘客用車、飯店與企業派車以及司機招聘洽詢。'
+  },
+  '乗務員採用': {
+    en: 'Driver Recruitment',
+    ko: '운전기사 채용',
+    'zh-CN': '司机招聘',
+    'zh-TW': '司機招聘'
+  },
+  '寅丸タクシーでは、乗務員一人ひとりの安全意識と接遇姿勢を大切にしています。言葉遣い、乗降時の配慮、車内の清潔さ、時間への意識。小さな基本を積み重ねることが、地域で選ばれるタクシーにつながると考えています。': {
+    en: 'Toramaru Taxi values every driver’s safety awareness and service standards. Professional communication, considerate boarding assistance, a clean cabin and punctuality are the everyday basics behind a taxi service trusted by the community.',
+    ko: 'Toramaru Taxi는 운전기사 한 사람 한 사람의 안전 의식과 고객 응대 자세를 중요하게 생각합니다. 정중한 말투, 승하차 배려, 청결한 차내, 시간 준수라는 기본을 꾸준히 지켜 지역에서 신뢰받는 택시를 지향합니다.',
+    'zh-CN': 'Toramaru Taxi重视每位司机的安全意识与服务态度。礼貌用语、上下车照顾、车内清洁与时间观念，这些日常基本动作共同构成值得当地乘客信赖的出租车服务。',
+    'zh-TW': 'Toramaru Taxi重視每位司機的安全意識與服務態度。禮貌用語、上下車照顧、車內清潔與時間觀念，這些日常基本動作共同構成值得在地乘客信賴的計程車服務。'
+  },
+  '車両、乗務員、配車、現場対応を一体で整える。': {
+    en: 'Vehicles, drivers, dispatch and on-site coordination, managed as one operation.',
+    ko: '차량, 운전기사, 배차, 현장 대응을 하나의 운행 체계로 관리합니다.',
+    'zh-CN': '统筹车辆、司机、调度与现场应对。',
+    'zh-TW': '統籌車輛、司機、調度與現場應對。'
+  },
+  '関西空港、伊丹空港、神戸空港の送迎から、京都・奈良・神戸方面の観光貸切、企業視察、国際会議、ブランドイベント、VIP接待まで。大寅ハイヤーは、関西での上質な移動を現場から支えます。': {
+    en: 'From Kansai, Itami and Kobe airport transfers to private tours in Kyoto, Nara and Kobe, corporate visits, international conferences, brand events and VIP transportation, Daitora Chauffeur & Private Transportation delivers dependable service throughout Kansai.',
+    ko: '간사이・이타미・고베 공항 송영부터 교토・나라・고베 관광 전세, 기업 시찰, 국제회의, 브랜드 행사, VIP 송영까지 Daitora Chauffeur & Private Transportation이 간사이 현장에서 안정적인 이동을 지원합니다.',
+    'zh-CN': '从关西、伊丹、神户机场接送，到京都、奈良、神户方向的观光包车、企业考察、国际会议、品牌活动与VIP接送，Daitora Chauffeur & Private Transportation以现场运营能力保障关西地区的高品质出行。',
+    'zh-TW': '從關西、伊丹、神戶機場接送，到京都、奈良、神戶方向的觀光包車、企業考察、國際會議、品牌活動與VIP接送，Daitora Chauffeur & Private Transportation以現場營運能力支援關西地區的高品質移動。'
+  },
+  'お客様5名まで。空港送迎、VIP接待、家族旅行、企業送迎など、快適な車内空間が求められる場面に適しています。': {
+    en: 'For up to five passengers. Well suited to airport transfers, VIP transportation, family travel and corporate use where a comfortable cabin matters.',
+    ko: '최대 5명까지 탑승할 수 있으며 공항 송영, VIP 송영, 가족 여행, 기업 송영 등 쾌적한 실내 공간이 필요한 상황에 적합합니다.',
+    'zh-CN': '最多可乘坐5位乘客，适合机场接送、VIP接送、家庭出行及企业接送等重视舒适乘坐空间的场景。',
+    'zh-TW': '最多可乘坐5位乘客，適合機場接送、VIP接送、家庭出行及企業接送等重視舒適乘坐空間的場景。'
+  },
+  'VIP・役員・要人接待に。': {
+    en: 'For VIPs, executives and distinguished guests.',
+    ko: 'VIP・임원・주요 인사 송영에.',
+    'zh-CN': '适用于VIP、高管及重要来宾接送。',
+    'zh-TW': '適用於VIP、高階主管及重要來賓接送。'
+  },
+  '落ち着いた移動空間と高い接遇品質が求められる、高規格なビジネス送迎やVIP接待に対応します。': {
+    en: 'Designed for executive and VIP transportation that calls for a calm cabin and a high standard of chauffeur service.',
+    ko: '차분한 실내와 높은 수준의 서비스가 필요한 임원 및 VIP 송영에 대응합니다.',
+    'zh-CN': '适用于重视安静乘坐空间与高标准服务礼仪的商务及VIP接送。',
+    'zh-TW': '適用於重視安靜乘坐空間與高標準服務禮儀的商務及VIP接送。'
+  },
+  'VIP / 役員 / 要人': {
+    en: 'VIP / Executive / Distinguished Guest',
+    ko: 'VIP / 임원 / 주요 인사',
+    'zh-CN': 'VIP / 高管 / 重要来宾',
+    'zh-TW': 'VIP / 高階主管 / 重要來賓'
+  },
+  '高規格送迎 / 接待 / 重要案件': {
+    en: 'Executive Transportation / VIP Service / Priority Assignments',
+    ko: '고급 송영 / VIP 서비스 / 주요 업무',
+    'zh-CN': '高标准接送 / VIP服务 / 重要项目',
+    'zh-TW': '高標準接送 / VIP服務 / 重要專案'
+  },
+  '空港送迎、観光貸切、企業送迎、VIP接待、大型案件に関するご相談。': {
+    en: 'Inquiries about airport transfers, private tours, corporate and VIP transportation, and large-scale assignments.',
+    ko: '공항 송영, 관광 전세, 기업・VIP 송영, 대형 업무에 관한 상담입니다.',
+    'zh-CN': '有关机场接送、观光包车、企业与VIP接送以及大型项目的咨询。',
+    'zh-TW': '有關機場接送、觀光包車、企業與VIP接送以及大型專案的洽詢。'
+  },
+  '乗務員教育、車両管理、配車確認、GPS運行管理、法令遵守、緊急時対応まで。大寅グループの安全と品質を支える運行体制を紹介します。': {
+    en: 'Learn how driver training, vehicle management, dispatch checks, GPS monitoring, legal compliance and emergency response support Daitora Group’s safety and service quality.',
+    ko: '운전기사 교육, 차량 관리, 배차 확인, GPS 운행 관리, 법령 준수, 긴급 대응으로 Daitora Group의 안전과 품질을 지키는 운행 체계를 소개합니다.',
+    'zh-CN': '介绍Daitora Group通过司机培训、车辆管理、配车确认、GPS运营管理、依法合规及紧急应对保障安全与品质的运营体系。',
+    'zh-TW': '介紹Daitora Group透過司機培訓、車輛管理、派車確認、GPS營運管理、依法合規及緊急應對保障安全與品質的營運體系。'
+  },
+  '大寅グループでは、乗務員教育、車両管理、配車確認、GPS運行管理、法令遵守、緊急時対応を一体で運用し、一件一件の送迎を安全かつ安定して実行できる体制を整えています。': {
+    en: 'Daitora Group integrates driver training, vehicle management, dispatch verification, GPS monitoring, legal compliance and contingency response to deliver every journey safely and consistently.',
+    ko: 'Daitora Group은 운전기사 교육, 차량 관리, 배차 확인, GPS 운행 관리, 법령 준수, 긴급 대응을 통합해 모든 송영을 안전하고 안정적으로 수행할 수 있는 체계를 갖추고 있습니다.',
+    'zh-CN': 'Daitora Group将司机培训、车辆管理、配车确认、GPS运营管理、依法合规与紧急应对整合运行，确保每一次接送安全稳定地完成。',
+    'zh-TW': 'Daitora Group將司機培訓、車輛管理、派車確認、GPS營運管理、依法合規與緊急應對整合運行，確保每一次接送安全穩定地完成。'
+  },
+  '乗務員教育': {
+    en: 'Driver Training',
+    ko: '운전기사 교육',
+    'zh-CN': '司机培训',
+    'zh-TW': '司機培訓'
+  },
+  '日時、便名、人数、荷物、行き先、待ち合わせ場所を事前確認。人数や用途に合わせて、適切な車両と乗務員を手配します。': {
+    en: 'We confirm the date, flight, passenger count, luggage, destination and meeting point in advance, then assign the appropriate vehicle and driver.',
+    ko: '일시, 항공편명, 인원수, 수하물, 목적지, 미팅 장소를 사전에 확인한 뒤 용도에 맞는 차량과 운전기사를 배정합니다.',
+    'zh-CN': '事先确认日期、航班、人数、行李、目的地与会合地点，并根据用途安排合适的车辆及司机。',
+    'zh-TW': '事先確認日期、航班、人數、行李、目的地與會合地點，並依用途安排合適的車輛及司機。'
+  },
+  'フライト変更、道路状況、現場要望に応じて、配車担当と乗務員が連携します。': {
+    en: 'Dispatchers and drivers coordinate in response to flight changes, road conditions and on-site requests.',
+    ko: '항공편 변경, 도로 상황, 현장 요청에 따라 배차 담당자와 운전기사가 연계합니다.',
+    'zh-CN': '根据航班变更、道路状况与现场需求，由调度人员和司机协同应对。',
+    'zh-TW': '依航班變更、道路狀況與現場需求，由調度人員和司機協同應對。'
+  },
+  '大寅の品質は、一度の特別な対応ではなく、毎日の確認と共有によって支えられています。乗務員、配車担当、車両管理担当が連携し、一件一件の送迎を安定して運行できる体制を整えています。': {
+    en: 'Daitora’s quality is built through daily checks and communication. Drivers, dispatchers and vehicle management staff work together to support consistent operation for every journey.',
+    ko: 'Daitora의 품질은 일회성 특별 대응이 아니라 매일의 확인과 공유로 유지됩니다. 운전기사, 배차 담당자, 차량 관리 담당자가 연계해 모든 송영을 안정적으로 운행합니다.',
+    'zh-CN': 'Daitora的服务品质来自每日确认与信息共享，而不是一次性的特殊应对。司机、调度人员与车辆管理人员协同工作，确保每一次接送稳定运行。',
+    'zh-TW': 'Daitora的服務品質來自每日確認與資訊共享，而不是一次性的特殊應對。司機、調度人員與車輛管理人員協同工作，確保每一次接送穩定運行。'
+  },
+  '車両、乗務員、時間の調整': {
+    en: 'Coordination of vehicles, drivers and schedules',
+    ko: '차량, 운전기사, 일정 조정',
+    'zh-CN': '车辆、司机与时间协调',
+    'zh-TW': '車輛、司機與時間協調'
+  },
+  '空港送迎 / VIP接待 / 観光貸切': {
+    en: 'Airport Transfer / VIP Transportation / Private Tour',
+    ko: '공항 송영 / VIP 송영 / 관광 전세',
+    'zh-CN': '机场接送 / VIP接送 / 观光包车',
+    'zh-TW': '機場接送 / VIP接送 / 觀光包車'
+  },
+  '接遇と気配り': {
+    en: 'Professional Service and Consideration',
+    ko: '고객 응대와 세심한 배려',
+    'zh-CN': '服务礼仪与细致关怀',
+    'zh-TW': '服務禮儀與細緻關懷'
+  },
+  '安全意識、接遇、乗降時の配慮、時間意識を基本として教育します。': {
+    en: 'Training covers safety awareness, professional service, considerate boarding assistance and punctuality.',
+    ko: '안전 의식, 고객 응대, 승하차 배려, 시간 준수를 기본으로 교육합니다.',
+    'zh-CN': '以安全意识、服务礼仪、上下车照顾与时间观念为基础开展培训。',
+    'zh-TW': '以安全意識、服務禮儀、上下車照顧與時間觀念為基礎進行培訓。'
+  },
+  'ハイヤーを相談する': {
+    en: 'Request Chauffeur Service',
+    ko: '전용 차량 서비스 상담',
+    'zh-CN': '咨询包车接送服务',
+    'zh-TW': '洽詢包車接送服務'
+  },
+  '大寅グループは、ハイヤー、タクシー、中古車販売を軸に、空港送迎、観光貸切、企業送迎、地域交通、車両活用までを一体で支えています。': {
+    en: 'Through chauffeur services, taxis and used car sales, Daitora Group supports airport transfers, private tours, corporate transportation, local mobility and practical vehicle use across Kansai.',
+    ko: 'Daitora Group은 전용 차량 서비스, 택시, 중고차 판매를 중심으로 공항 송영, 관광 전세, 기업 송영, 지역 교통과 차량 활용을 통합적으로 지원합니다.',
+    'zh-CN': 'Daitora Group以包车接送、出租车与二手车销售为核心，综合支持机场接送、观光包车、企业接送、区域交通及车辆使用。',
+    'zh-TW': 'Daitora Group以包車接送、計程車與中古車銷售為核心，綜合支援機場接送、觀光包車、企業接送、區域交通及車輛使用。'
+  },
+  '私たちは、社訓である「安全・謙遜・迅敏」を大切にしています。安全をすべての判断基準とし、謙虚な姿勢でお客様と向き合い、迅敏な対応力で期待を超えるサービスを提供すること。この姿勢を、日々の運行、接遇、車両管理、現場対応の一つひとつに反映しています。': {
+    en: 'We value our company principles of Safety, Humility and Agility. Safety guides every decision, humility shapes how we serve each customer, and prompt, accurate action helps us respond beyond expectations. These principles are reflected in daily operations, professional service, vehicle management and on-site coordination.',
+    ko: 'Daitora Group은 사훈인 안전・겸손・신속을 중요하게 생각합니다. 안전을 모든 판단의 기준으로 삼고, 겸손한 자세로 고객을 대하며, 신속하고 정확한 대응으로 기대에 부응합니다. 이러한 자세를 매일의 운행, 고객 응대, 차량 관리와 현장 대응에 반영합니다.',
+    'zh-CN': '我们重视“安全、谦逊、迅敏”的企业准则。以安全作为所有判断的基础，以谦逊态度面对客户，并通过迅速准确的应对超越期待。这一准则落实在每日运营、服务礼仪、车辆管理与现场应对的每个环节。',
+    'zh-TW': '我們重視「安全、謙遜、迅敏」的企業準則。以安全作為所有判斷的基礎，以謙遜態度面對客戶，並透過迅速準確的應對超越期待。這項準則落實在每日營運、服務禮儀、車輛管理與現場應對的每個環節。'
+  },
+  'VIPゲストとイベント関係者の移動に対応し、接遇品質と運行管理を重視しました。': {
+    en: 'We coordinated transportation for VIP guests and event personnel with close attention to chauffeur service and operational control.',
+    ko: 'VIP 게스트와 행사 관계자의 이동을 지원하며 고객 응대 품질과 운행 관리를 중시했습니다.',
+    'zh-CN': '承接VIP嘉宾与活动相关人员的接送，并重视服务礼仪与运营管理。',
+    'zh-TW': '承接VIP嘉賓與活動相關人員的接送，並重視服務禮儀與營運管理。'
+  },
+  '接遇品質': {
+    en: 'Service Quality',
+    ko: '고객 응대 품질',
+    'zh-CN': '服务礼仪品质',
+    'zh-TW': '服務禮儀品質'
+  },
+  '安全管理は、社内だけの仕組みではありません。時間に正確な運行、清潔な車内、丁寧な接遇、落ち着いた運転。お客様が実際に感じる一つひとつの品質を大切にしています。': {
+    en: 'Safety management is reflected in the customer experience: punctual operation, a clean cabin, professional service and calm driving. We value each detail customers can see and feel.',
+    ko: '안전 관리는 사내 절차에만 머물지 않습니다. 정확한 시간 관리, 청결한 차내, 정중한 고객 응대, 안정적인 운전 등 고객이 직접 느끼는 모든 품질을 중요하게 생각합니다.',
+    'zh-CN': '安全管理不仅是内部制度，也体现在准时运营、整洁车厢、礼貌服务与平稳驾驶中。我们重视客户能够切身感受到的每一项品质。',
+    'zh-TW': '安全管理不僅是內部制度，也體現在準時營運、整潔車廂、禮貌服務與平穩駕駛中。我們重視客戶能夠切身感受到的每一項品質。'
+  },
+  '丁寧な接遇': {
+    en: 'Professional Service',
+    ko: '정중한 고객 응대',
+    'zh-CN': '礼貌周到的服务',
+    'zh-TW': '禮貌周到的服務'
+  },
+  '接遇確認': {
+    en: 'Service Standards Check',
+    ko: '고객 응대 확인',
+    'zh-CN': '服务礼仪确认',
+    'zh-TW': '服務禮儀確認'
+  },
+  'VIP接待': {
+    en: 'VIP Transportation',
+    ko: 'VIP 송영',
+    'zh-CN': 'VIP接送',
+    'zh-TW': 'VIP接送'
+  },
+  '国際会議、ブランドイベント、万博関連送迎など、複数台運行や高い接遇品質が求められる案件にも対応します。': {
+    en: 'We also support international conferences, brand events and Expo-related transportation requiring coordinated multi-vehicle operations and high service standards.',
+    ko: '국제회의, 브랜드 행사, 엑스포 관련 송영 등 여러 대의 차량 운행과 높은 수준의 고객 응대가 필요한 업무에도 대응합니다.',
+    'zh-CN': '亦可承接国际会议、品牌活动及世博会相关接送等需要多车协同与高标准服务礼仪的项目。',
+    'zh-TW': '亦可承接國際會議、品牌活動及世博會相關接送等需要多車協同與高標準服務禮儀的專案。'
+  },
+  '公開できる範囲の主なハイヤー実績。': {
+    en: 'Selected chauffeur service experience we can share publicly.',
+    ko: '공개 가능한 주요 전용 차량 서비스 실적.',
+    'zh-CN': '可公开的主要包车接送服务案例。',
+    'zh-TW': '可公開的主要包車接送服務案例。'
+  },
+  '利用シーンに合わせたハイヤーサービス。': {
+    en: 'Chauffeur service tailored to each journey.',
+    ko: '이용 목적에 맞춘 전용 차량 서비스.',
+    'zh-CN': '根据不同场景提供包车接送服务。',
+    'zh-TW': '依不同場景提供包車接送服務。'
+  },
+  '国際会議関連の関係者送迎に対応し、時間管理、守秘意識、複数車両の運行調整を経験しました。': {
+    en: 'We supported stakeholder transportation for an international conference, gaining experience in schedule control, confidentiality and multi-vehicle coordination.',
+    ko: '국제회의 관계자 송영을 수행하며 시간 관리, 기밀 유지, 여러 차량의 운행 조정 경험을 쌓았습니다.',
+    'zh-CN': '承接国际会议相关人员接送，积累了时间管理、保密意识与多车运营协调经验。',
+    'zh-TW': '承接國際會議相關人員接送，累積了時間管理、保密意識與多車營運協調經驗。'
+  },
+  '駅、ホテル、観光地、ビジネス先への日常移動を支えるタクシーサービスです。見つけやすい車両、乗りやすいシエンタ、グループの運行管理を通じて、毎日の移動を安心できる快適な時間に整えます。': {
+    en: 'A taxi service supporting everyday journeys to stations, hotels, sightseeing destinations and business appointments. Recognisable vehicles, easy-access Toyota Sienta models and group-wide operating standards help make each trip comfortable and dependable.',
+    ko: '역, 호텔, 관광지, 비즈니스 목적지로의 일상 이동을 지원하는 택시 서비스입니다. 알아보기 쉬운 차량, 승하차가 편리한 Toyota Sienta, 그룹 운행 관리를 통해 편안하고 안심할 수 있는 이동을 제공합니다.',
+    'zh-CN': '为前往车站、酒店、观光景点及商务目的地的日常出行提供出租车服务。清晰易识别的车辆、便于上下车的Toyota Sienta以及集团运营管理，共同保障安心舒适的乘车体验。',
+    'zh-TW': '為前往車站、飯店、觀光景點及商務目的地的日常移動提供計程車服務。清楚易辨識的車輛、便於上下車的Toyota Sienta以及集團營運管理，共同保障安心舒適的乘車體驗。'
+  },
+  '商談先、オフィス、会食会場などへの移動にも対応。時間を意識した運行と落ち着いた車内空間で支えます。': {
+    en: 'We also support travel to business meetings, offices and dining venues with punctual operation and a calm cabin environment.',
+    ko: '상담처, 사무실, 회식 장소 등으로의 이동도 지원하며 시간 관리와 차분한 차내 환경을 중요하게 생각합니다.',
+    'zh-CN': '亦可前往洽谈地点、办公室及会餐场所，并通过准时运营与安静舒适的车内环境保障商务出行。',
+    'zh-TW': '亦可前往洽談地點、辦公室及會餐場所，並透過準時營運與安靜舒適的車內環境保障商務移動。'
+  },
+  '緑ナンバー、許認可、運行ルールを遵守し、地域交通を担う事業として運行します。': {
+    en: 'We operate as a licensed local transport provider in compliance with commercial registration, permits and operating rules.',
+    ko: '영업용 등록, 허가 및 운행 규정을 준수하며 지역 교통을 책임지는 사업자로서 운행합니다.',
+    'zh-CN': '遵守营运车辆登记、许可资质与运营规则，以依法合规的方式承担区域交通服务。',
+    'zh-TW': '遵守營運車輛登記、許可資質與營運規則，以依法合規的方式承擔區域交通服務。'
+  },
+  '購入後の車両活用まで相談可能': {
+    en: 'Advice on practical vehicle use after purchase',
+    ko: '구매 후 차량 활용까지 상담 가능',
+    'zh-CN': '购车后车辆使用也可咨询',
+    'zh-TW': '購車後車輛使用亦可洽詢'
+  },
+  '納車後の使いやすさ、維持管理、事業活用まで、運行現場の視点から相談できます。': {
+    en: 'We can advise on day-to-day usability, maintenance and business use after vehicle handover from an operator’s perspective.',
+    ko: '차량 인도 후의 사용 편의성, 유지관리, 사업 활용까지 실제 운영 관점에서 상담해 드립니다.',
+    'zh-CN': '从实际车辆运营角度，就交车后的使用便利性、维护管理及业务用途提供咨询。',
+    'zh-TW': '從實際車輛營運角度，就交車後的使用便利性、維護管理及事業用途提供洽詢。'
+  },
+  '手続き・予約へ': {
+    en: 'Proceed to Booking or Application',
+    ko: '예약・신청 절차로 진행',
+    'zh-CN': '进入预约或申请流程',
+    'zh-TW': '進入預約或申請流程'
+  }
+});
+
 for (const [source, translations] of Object.entries(overrides)) {
   content[source] = { ...(content[source] || {}), ...translations };
+}
+
+// The extracted source key for this option can vary with legacy encoding, so
+// identify it by its stable English meaning and correct the language names.
+for (const translations of Object.values(content)) {
+  if (translations?.en === 'Japanese') {
+    Object.assign(translations, {
+      ko: '일본어',
+      'zh-CN': '日语',
+      'zh-TW': '日語'
+    });
+  }
+  if (translations?.en === 'Chinese') {
+    Object.assign(translations, {
+      ko: '중국어',
+      'zh-CN': '中文',
+      'zh-TW': '中文'
+    });
+  }
+  if (translations?.en === 'Transfer details') {
+    Object.assign(translations, {
+      en: 'Transportation Details',
+      ko: '송영 내용',
+      'zh-CN': '接送详情',
+      'zh-TW': '接送詳情'
+    });
+  }
 }
 
 fs.writeFileSync(contentPath, `${JSON.stringify(content, null, 2)}\n`, 'utf8');
