@@ -328,6 +328,17 @@ export function runAudit({ writeReport = true } = {}) {
         const clean = cleanPath(url);
         if (clean && !isSpecial(clean) && /\.(?:css|js|png|jpe?g|webp|gif|svg|ico|mp4|webm|json)$/i.test(clean) && !relativeTargetExists(file, url)) report(lang, page, 'missing-resource', 'Missing relative resource', url);
       }
+      for (const match of html.matchAll(/\sdata-poster=["']([^"']+)["']/gi)) {
+        const url = match[1];
+        const clean = cleanPath(url);
+        if (clean && !isSpecial(clean) && !relativeTargetExists(file, url)) report(lang, page, 'missing-resource', 'Missing hero poster resource', url);
+      }
+      for (const match of html.matchAll(/\sdata-(?:desktop|mobile)-videos=["']([^"']+)["']/gi)) {
+        for (const url of match[1].split(',').map((item) => item.trim()).filter(Boolean)) {
+          const clean = cleanPath(url);
+          if (clean && !isSpecial(clean) && !relativeTargetExists(file, url)) report(lang, page, 'missing-resource', 'Missing hero video resource', url);
+        }
+      }
 
       const chunks = textChunks(html);
       if (lang !== 'ja') {

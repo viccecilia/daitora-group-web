@@ -358,8 +358,15 @@ function translate(html, lang, page){
 }
 function adjustPaths(html, lang){
   if (lang === 'ja') return html;
+  html = html.replace(/(data-desktop-videos|data-mobile-videos)="([^"]*)"/g, (match, attrName, value) => {
+    const localized = value.split(',').map((item) => {
+      const source = item.trim();
+      return source.startsWith('assets/') ? `../${source}` : source;
+    }).join(',');
+    return `${attrName}="${localized}"`;
+  });
   html = html.replace(/(href|src)="assets\//g, '$1="../assets/');
-  html = html.replace(/(data-poster|data-desktop-videos|data-mobile-videos)="assets\//g, '$1="../assets/');
+  html = html.replace(/data-poster="assets\//g, 'data-poster="../assets/');
   html = html.replace(/url\('assets\//g, "url('../assets/");
   html = html.replace(/url\("assets\//g, 'url("../assets/');
   html = html.replace(/src="assets\//g, 'src="../assets/');
