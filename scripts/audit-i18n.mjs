@@ -25,10 +25,18 @@ const LANGUAGE_CODES = Object.keys(LANGUAGES);
 const HREFLANG_CODES = [...LANGUAGE_CODES, 'x-default'];
 
 const BLOCKED_TERMS = {
-  'zh-CN': [/大虎/g, /虎丸/g, /车联网/g, /兼容各大机场/g, /可以在关西搬家/g, /我们都能搞定/g, /多个设备/g, /规划使用面积/g, /登机地点/g, /集体运动/g, /质量点/g, /听力/g, /脱出/g],
-  'zh-TW': [/大虎/g, /虎丸/g, /車聯網/g, /相容各大機場/g, /可以在關西搬家/g, /我們都能搞定/g, /多個設備/g, /規劃使用面積/g, /登機地點/g, /集體運動/g, /品質點/g, /聽力/g, /脫出/g],
-  en: [/To taxi consultation/gi, /Go to corporate consultation/gi, /For other consultations/gi, /Contact us from the person in charge/gi, /right machine/gi, /VIP entertainment/gi, /Consult a hire car/gi],
-  ko: [/오토(?!론)/g, /히이야/g, /大寅ハイヤ/g, /탈출 후/g, /청각/g, /배달/g, /납차/g, /계속 사용하는 생각/g, /Daitora네 그룹/g]
+  'zh-CN': [/大虎/g, /虎丸/g, /车联网/g, /兼容各大机场/g, /交通兼容/g, /我体验到了/g, /多人搬家/g, /想要的车型/g, /多辆车辆投入运行/g, /可以在关西搬家/g, /我们都能搞定/g, /多个设备/g, /规划使用面积/g, /登机地点/g, /集体运动/g, /质量点/g, /听力/g, /脱出/g],
+  'zh-TW': [/大虎/g, /虎丸/g, /車聯網/g, /相容各大機場/g, /交通相容/g, /我體驗到了/g, /多人搬家/g, /想要的車型/g, /多輛車輛投入運行/g, /可以在關西搬家/g, /我們都能搞定/g, /多個設備/g, /規劃使用面積/g, /登機地點/g, /集體運動/g, /品質點/g, /聽力/g, /脫出/g],
+  en: [
+    /To taxi consultation/gi, /Go to corporate consultation/gi, /For other consultations/gi,
+    /Contact us from the person in charge/gi, /right machine/gi, /VIP entertainment/gi,
+    /Consult a hire car/gi, /Privacy policyand/gi,
+    /^please select$/g, /^destination$/g, /^to be decided$/g, /^hope$/g,
+    /^under consideration$/g, /^do not wish$/g, /^individual$/g,
+    /^sole proprietor$/g, /^send by email$/g, /^quick quote$/g,
+    /^flexible arrangements$/g, /^professional driver$/g, /^punctual service$/g
+  ],
+  ko: [/오토(?!론)/g, /히이야/g, /大寅ハイヤ/g, /탈출 후/g, /청각/g, /배달/g, /납차/g, /계속 사용하는 생각/g, /Daitora네 그룹/g, /^원하는$/g]
 };
 
 const BAD_FACT_FRAGMENTS = [/武田/g, /小矢之内/g, /八手之内/g];
@@ -111,6 +119,20 @@ function textChunks(html) {
     }
   }
   return chunks;
+}
+
+export function findBlockedWording(lang, chunks) {
+  const findings = [];
+  for (const pattern of BLOCKED_TERMS[lang] || []) {
+    for (const chunk of chunks) {
+      pattern.lastIndex = 0;
+      if (pattern.test(chunk)) {
+        findings.push({ pattern: String(pattern), chunk });
+        break;
+      }
+    }
+  }
+  return findings;
 }
 
 function isSpecial(url) {
@@ -317,10 +339,8 @@ export function runAudit({ writeReport = true } = {}) {
           if (/[ぁ-ゖァ-ヺ]/.test(chunk) && chunk !== '日本語' && !allowedOfficialText) report(lang, page, 'kana-residual', 'Unapproved Japanese kana remains', chunk.slice(0, 180));
         }
       }
-      for (const pattern of BLOCKED_TERMS[lang] || []) {
-        pattern.lastIndex = 0;
-        const found = chunks.find((chunk) => { pattern.lastIndex = 0; return pattern.test(chunk); });
-        if (found) report(lang, page, 'wording-lock', `Blocked wording ${pattern}`, found.slice(0, 180));
+      for (const finding of findBlockedWording(lang, chunks)) {
+        report(lang, page, 'wording-lock', `Blocked wording ${finding.pattern}`, finding.chunk.slice(0, 180));
       }
       for (const [source, locked] of Object.entries(BRAND_LOCKS)) {
         if (lang !== 'ja' && chunks.some((chunk) => chunk.includes(source))) report(lang, page, 'brand-lock', 'Untranslated Japanese brand source remains', source);

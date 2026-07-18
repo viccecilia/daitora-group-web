@@ -47,7 +47,7 @@ export const UI_LOCKS = {
   '中古車販売': SEMANTIC_LOCKS['business.auto'],
   '車両ネットワーク': t('車両ネットワーク', '车辆网络', 'Vehicle Network', '차량 네트워크', '車輛網絡'),
   '主要空港対応': t('主要空港対応', '支持主要机场', 'Major Airport Coverage', '주요 공항 대응', '支援主要機場'),
-  '利用予定エリア': t('利用予定エリア', '预计使用区域', 'Planned Service Area', '이용 예정 지역', '預計使用區域'),
+  '利用予定エリア': t('利用予定エリア', '预计使用区域', 'Service Area', '이용 예정 지역', '預計使用區域'),
   '乗車地': t('乗車地', '上车地点', 'Pickup Location', '승차 장소', '上車地點'),
   '実績紹介': SEMANTIC_LOCKS['nav.works'],
   '品質ポイント': t('品質ポイント', '服务重点', 'Service Quality Focus', '품질 관리 항목', '服務重點'),

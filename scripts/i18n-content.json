@@ -303,7 +303,7 @@
     "zh-TW": "為 VIP 客戶及相關人員提供多車、多日接送服務，並重視車輛形象、司機禮儀與待命期間的現場配合。"
   },
   "お名前": {
-    "en": "name",
+    "en": "Name",
     "ko": "이름",
     "zh-CN": "姓名",
     "zh-TW": "姓名"
@@ -333,16 +333,16 @@
     "zh-TW": "我們將告知您在查詢和諮詢時收集的資訊的處理方式。"
   },
   "お問い合わせ件名": {
-    "en": "Inquiry subject",
+    "en": "Enquiry Subject",
     "ko": "문의 주제",
-    "zh-CN": "询问主题",
-    "zh-TW": "詢問主題"
+    "zh-CN": "咨询主题",
+    "zh-TW": "諮詢主旨"
   },
   "お問い合わせ内容": {
-    "en": "Inquiry details",
+    "en": "Enquiry Details",
     "ko": "문의 내용",
-    "zh-CN": "查询详情",
-    "zh-TW": "查詢詳情"
+    "zh-CN": "咨询详情",
+    "zh-TW": "諮詢內容"
   },
   "お問い合わせ内容に応じて、行程、車両、料金、当日の連絡体制を確認し、移動に不安が残らないよう手配します。": {
     "en": "We confirm the itinerary, vehicle requirements and day-of-service contact plan, then prepare each detail so your journey can proceed with confidence.",
@@ -456,13 +456,13 @@
     "zh-TW": "如果您輸入的資訊有問題，我們可能會與您聯絡確認。"
   },
   "ご利用日": {
-    "en": "Date of use",
+    "en": "Service Date",
     "ko": "이용일",
     "zh-CN": "使用日期",
     "zh-TW": "使用日期"
   },
   "ご利用時間": {
-    "en": "Usage time",
+    "en": "Pickup Time",
     "ko": "이용시간",
     "zh-CN": "使用时间",
     "zh-TW": "使用時間"
@@ -534,10 +534,10 @@
     "zh-TW": "其他"
   },
   "その他のお問い合わせ": {
-    "en": "Other inquiries",
+    "en": "Other Enquiries",
     "ko": "기타 문의",
-    "zh-CN": "其他查询",
-    "zh-TW": "其他查詢"
+    "zh-CN": "其他咨询",
+    "zh-TW": "其他諮詢"
   },
   "その他の相談へ": {
     "en": "Other Inquiries",
@@ -697,10 +697,10 @@
     "zh-TW": "我們將單獨提供出租車使用和招聘諮詢資訊。"
   },
   "タクシー利用に関する備考": {
-    "en": "Notes on using a taxi",
+    "en": "Taxi Service Notes",
     "ko": "택시 이용에 관한 비고",
-    "zh-CN": "使用出租车的注意事项",
-    "zh-TW": "使用計程車的注意事項"
+    "zh-CN": "出租车使用备注",
+    "zh-TW": "計程車使用備註"
   },
   "タクシー利用を相談する": {
     "en": "Request Taxi Service",
@@ -715,7 +715,7 @@
     "zh-TW": "洽詢計程車服務"
   },
   "タクシー関連": {
-    "en": "Taxi related",
+    "en": "Taxi Operations",
     "ko": "택시 관련",
     "zh-CN": "出租车相关",
     "zh-TW": "計程車相關"
@@ -946,10 +946,10 @@
     "zh-TW": "透過電子郵件諮詢"
   },
   "メールで送る": {
-    "en": "send by email",
+    "en": "Send by Email",
     "ko": "이메일로 보내기",
-    "zh-CN": "通过电子邮件发送",
-    "zh-TW": "透過電子郵件發送"
+    "zh-CN": "发送邮件",
+    "zh-TW": "寄送電子郵件"
   },
   "メールを送る": {
     "en": "Send an Email",
@@ -990,7 +990,7 @@
     "zh-TW": "如果我想使用貸款該怎麼辦？"
   },
   "ローン相談": {
-    "en": "Loan guidance",
+    "en": "Loan Consultation",
     "ko": "대출 상담",
     "zh-CN": "贷款咨询",
     "zh-TW": "貸款諮詢"
@@ -1123,7 +1123,7 @@
     "zh-TW": "諮詢中古車購買"
   },
   "中古車販売・ローン相談": {
-    "en": "Used car sales/loan consultation",
+    "en": "Used Car Sales / Loan Consultation",
     "ko": "중고차 판매·대출 상담",
     "zh-CN": "二手车销售/贷款咨询",
     "zh-TW": "二手車銷售/貸款諮詢"
@@ -1380,7 +1380,7 @@
     "zh-TW": "珍惜人。"
   },
   "人数": {
-    "en": "Number of people",
+    "en": "Number of Passengers",
     "ko": "인원수",
     "zh-CN": "人数",
     "zh-TW": "人數"
@@ -1513,10 +1513,10 @@
     "zh-TW": "公司考察組、培訓組交通"
   },
   "企業送迎": {
-    "en": "Corporate transportation",
-    "ko": "기업 픽업",
-    "zh-CN": "企业交通",
-    "zh-TW": "企業交通"
+    "en": "Corporate Transportation",
+    "ko": "기업 송영",
+    "zh-CN": "企业接送",
+    "zh-TW": "企業接送"
   },
   "会合対応": {
     "en": "Meeting support",
@@ -1537,7 +1537,7 @@
     "zh-TW": "公司名稱"
   },
   "会社名・団体名": {
-    "en": "Company name/organization name",
+    "en": "Company / Organisation",
     "ko": "회사명·단체명",
     "zh-CN": "公司名称/组织名称",
     "zh-TW": "公司名稱/組織名稱"
@@ -1549,7 +1549,7 @@
     "zh-TW": "公司資訊、訪談、合作夥伴招募等查詢。"
   },
   "会社情報、取材、パートナー相談など": {
-    "en": "Company information, interviews, partner consultation, etc.",
+    "en": "Company information, media enquiries, partnership enquiries, etc.",
     "ko": "회사 정보, 취재, 파트너 상담 등",
     "zh-CN": "公司信息、采访、合作伙伴咨询等",
     "zh-TW": "公司資訊、採訪、合作夥伴諮詢等"
@@ -1615,7 +1615,7 @@
     "zh-TW": "航班號碼/到達時間"
   },
   "個人": {
-    "en": "individual",
+    "en": "Individual",
     "ko": "개인",
     "zh-CN": "个人",
     "zh-TW": "個人"
@@ -1639,13 +1639,13 @@
     "zh-TW": "個人客戶"
   },
   "個人事業主": {
-    "en": "sole proprietor",
-    "ko": "개인 사업주",
-    "zh-CN": "独资经营者",
-    "zh-TW": "獨資經營者"
+    "en": "Sole Proprietor",
+    "ko": "개인사업자",
+    "zh-CN": "个体经营者",
+    "zh-TW": "個人事業主"
   },
   "個人利用": {
-    "en": "Personal use",
+    "en": "Personal Use",
     "ko": "개인 이용",
     "zh-CN": "个人使用",
     "zh-TW": "個人使用"
@@ -1748,7 +1748,7 @@
     "zh-TW": "我們透過出庫前徹底檢查車輛、清潔車輛內部、檢查車輛狀況，營造舒適的運輸空間。"
   },
   "出発地": {
-    "en": "Place of departure",
+    "en": "Pickup Location",
     "ko": "출발지",
     "zh-CN": "出发地",
     "zh-TW": "出發地"
@@ -1772,32 +1772,32 @@
     "zh-TW": "根據使用場景量身訂做租賃服務。"
   },
   "利用予定エリア": {
-    "en": "Planned Service Area",
+    "en": "Service Area",
     "ko": "이용 예정 지역",
     "zh-CN": "预计使用区域",
     "zh-TW": "預計使用區域",
     "ja": "利用予定エリア"
   },
   "利用予定日時": {
-    "en": "Scheduled date and time of use",
+    "en": "Preferred Date and Time",
     "ko": "이용 예정 일시",
-    "zh-CN": "预定的使用日期和时间",
-    "zh-TW": "預定的使用日期和時間"
+    "zh-CN": "预计使用日期与时间",
+    "zh-TW": "預計使用日期與時間"
   },
   "利用目的": {
-    "en": "Purpose of use",
+    "en": "Intended Use",
     "ko": "이용 목적",
     "zh-CN": "使用目的",
     "zh-TW": "使用目的"
   },
   "勤務希望エリア": {
-    "en": "Desired work area",
+    "en": "Preferred Work Area",
     "ko": "근무 희망 지역",
-    "zh-CN": "所需的工作区域",
-    "zh-TW": "所需的工作區域"
+    "zh-CN": "希望工作地区",
+    "zh-TW": "希望工作地區"
   },
   "単発送迎、時間貸切、複数日運行、複数台運行など、行程に合わせて調整します。": {
-    "en": "We will adjust it to suit your itinerary, such as single pick-up, hourly charter, multi-day service, and multiple-vehicle service.",
+    "en": "We adapt arrangements to the itinerary, including point-to-point transfers, hourly charters, multi-day services and multi-vehicle operations.",
     "ko": "편도 송영, 시간제 전세, 여러 날짜 또는 여러 대의 차량 운행 등 일정에 맞춰 조정합니다.",
     "zh-CN": "我们会根据您的行程进行调整，例如单次接送、按小时包车、多日服务、多辆车服务。",
     "zh-TW": "我們會根據您的行程進行調整，例如單次接送、按小時包車、多日服務、多輛車服務。"
@@ -1908,10 +1908,10 @@
     "ja": "団体移動"
   },
   "団体送迎 / 企業視察 / 複数名移動": {
-    "en": "Group transportation/Company inspection/Moving multiple people",
-    "ko": "단체 송영 / 기업 시찰 / 복수명 이동",
-    "zh-CN": "团体运输/公司考察/多人搬家",
-    "zh-TW": "團體運輸/公司考察/多人搬家"
+    "en": "Group Transportation / Corporate Visits / Multi-Passenger Travel",
+    "ko": "단체 송영 / 기업 시찰 / 다인 이동",
+    "zh-CN": "团体接送 / 企业考察 / 多人出行",
+    "zh-TW": "團體接送 / 企業考察 / 多人移動"
   },
   "団体送迎、複数台運行、訪日ゲスト対応、提携相談に関するお問い合わせ。": {
     "en": "Inquiries regarding group transportation, multiple vehicle operations, support for guests visiting Japan, and partnership consultation.",
@@ -1962,7 +1962,7 @@
     "zh-TW": "在日外國人也可以諮詢嗎？"
   },
   "在日外国人のお客様": {
-    "en": "Foreign customers living in Japan",
+    "en": "Foreign Residents in Japan",
     "ko": "일본 거주 외국인 고객",
     "zh-CN": "居住在日本的外国顾客",
     "zh-TW": "居住在日本的外國顧客"
@@ -2070,10 +2070,10 @@
     "zh-TW": "有關大型專案和企業運輸的諮詢請點擊此處。"
   },
   "大型案件・複数台運行": {
-    "en": "Large projects/Multiple vehicles in operation",
-    "ko": "대형 안건·복수대 운행",
-    "zh-CN": "大型项目/多辆车辆投入运行",
-    "zh-TW": "大型專案/多輛車輛投入運行"
+    "en": "Large-Scale / Multi-Vehicle Transportation",
+    "ko": "대형 프로젝트·복수 차량 운행",
+    "zh-CN": "大型项目 / 多车协同",
+    "zh-TW": "大型專案 / 多車協同"
   },
   "大寅が大切にしているのは、運転技術だけではありません。接遇、安全意識、時間管理、地理知識、守秘意識まで含めて、安心して任せられるドライバーを育成しています。": {
     "en": "Driving skills are not the only things Daitora values. We train drivers who can be entrusted with peace of mind, including hospitality, safety awareness, time management, geographical knowledge, and confidentiality awareness.",
@@ -2283,10 +2283,10 @@
     "zh-TW": "大阪、京都等"
   },
   "大阪で開催された国際会議関連送迎に対応。要人・関係者の移動に求められる時間管理、守秘意識、現場判断を経験しました。": {
-    "en": "Supported transportation for an international conference in Osaka, applying the schedule control, confidentiality and on-site judgement required for executive and stakeholder movement.",
-    "ko": "오사카에서 열린 국제회의 관련 송영을 수행했습니다. 주요 인사와 관계자 이동에 필요한 시간 관리, 기밀 유지, 현장 판단 역량을 축적했습니다.",
-    "zh-CN": "与在大阪举办的国际会议相关的交通兼容。我体验到了VIP及相关人员流动所需的时间管理、保密和现场判断。",
-    "zh-TW": "與在大阪舉辦的國際會議相關的交通相容。我體驗到了VIP及相關人員流動所需的時間管理、保密和現場判斷。"
+    "en": "We provided transportation for an international conference held in Osaka, gaining experience in the schedule control, confidentiality and on-site judgement required for VIP and delegate travel.",
+    "ko": "오사카에서 열린 국제회의 관련 송영을 수행하며 주요 인사와 관계자 이동에 필요한 시간 관리, 보안 유지 및 현장 대응 경험을 축적했습니다.",
+    "zh-CN": "我们曾为在大阪举办的国际会议提供接送服务，并积累了 VIP 及相关人员出行所需的时间管理、保密管理与现场应变经验。",
+    "zh-TW": "我們曾為在大阪舉辦的國際會議提供接送服務，並累積了 VIP 及相關人員移動所需的時間管理、保密管理與現場應變經驗。"
   },
   "大阪・京都を拠点に、ハイヤー、タクシー、中古車販売を展開するDaitora Groupの公式サイトです。": {
     "en": "This is the official website of Daitora Group, which sells hire cars, taxis, and used cars based in Osaka and Kyoto.",
@@ -2587,7 +2587,7 @@
     "zh-TW": "查看成就"
   },
   "家族利用": {
-    "en": "Family use",
+    "en": "Family Use",
     "ko": "가족 이용",
     "zh-CN": "家庭使用",
     "zh-TW": "家庭使用"
@@ -2660,7 +2660,7 @@
     "zh-TW": "主題"
   },
   "専門ドライバー": {
-    "en": "professional driver",
+    "en": "Professional Driver",
     "ko": "전문 드라이버",
     "zh-CN": "专业司机",
     "zh-TW": "專業司機"
@@ -2672,34 +2672,34 @@
     "zh-TW": "為小團體提供優質交通。"
   },
   "希望しない": {
-    "en": "do not wish",
-    "ko": "원하지 않음",
-    "zh-CN": "不希望",
-    "zh-TW": "不希望"
+    "en": "Not required",
+    "ko": "필요 없음",
+    "zh-CN": "暂不需要",
+    "zh-TW": "暫不需要"
   },
   "希望する": {
-    "en": "hope",
-    "ko": "원하는",
-    "zh-CN": "希望",
-    "zh-TW": "希望"
+    "en": "Interested",
+    "ko": "상담 희망",
+    "zh-CN": "需要咨询",
+    "zh-TW": "需要諮詢"
   },
   "希望職種": {
-    "en": "Desired job type",
+    "en": "Preferred Position",
     "ko": "희망 직종",
     "zh-CN": "期望的工作类型",
     "zh-TW": "期望的工作類型"
   },
   "希望言語": {
-    "en": "Desired language",
+    "en": "Preferred Language",
     "ko": "희망언어",
     "zh-CN": "所需语言",
     "zh-TW": "所需語言"
   },
   "希望車種": {
-    "en": "Preferred vehicle",
+    "en": "Preferred Vehicle",
     "ko": "희망 차종",
-    "zh-CN": "想要的车型",
-    "zh-TW": "想要的車型"
+    "zh-CN": "希望车型",
+    "zh-TW": "希望車型"
   },
   "年商": {
     "en": "annual sales",
@@ -2792,7 +2792,7 @@
     "zh-TW": "進入預約或申請流程"
   },
   "手荷物数": {
-    "en": "Number of baggage",
+    "en": "Number of Luggage Items",
     "ko": "수하물 수",
     "zh-CN": "行李件数",
     "zh-TW": "行李件數"
@@ -2828,14 +2828,14 @@
     "zh-TW": "詢問招聘事宜"
   },
   "採用に関する備考": {
-    "en": "Notes regarding recruitment",
+    "en": "Application Notes",
     "ko": "채용에 관한 비고",
-    "zh-CN": "招聘注意事项",
-    "zh-TW": "招募注意事項"
+    "zh-CN": "应聘备注",
+    "zh-TW": "應徵備註"
   },
   "採用・乗務員応募": {
     "en": "Driver Recruitment",
-    "ko": "운전기사 채용・지원",
+    "ko": "운전기사 채용·지원",
     "zh-CN": "司机招聘与应聘",
     "zh-TW": "司機招聘與應徵"
   },
@@ -2906,10 +2906,10 @@
     "zh-TW": "改進分享"
   },
   "教育システム": {
-    "en": "education system",
-    "ko": "교육 시스템",
-    "zh-CN": "教育系统",
-    "zh-TW": "教育系統"
+    "en": "Training Programme",
+    "ko": "교육 체계",
+    "zh-CN": "培训体系",
+    "zh-TW": "培訓體系"
   },
   "数字で見る大寅グループ": {
     "en": "Daitora Group in numbers",
@@ -2972,7 +2972,7 @@
     "zh-TW": "您可以諮詢我們，選擇適合您生活方式的車輛，例如日常使用、家庭使用、通勤等。"
   },
   "日時、人数、荷物、行程を確認し、利用目的に合ったプランをご案内します。": {
-    "en": "We will confirm the date and time, number of people, luggage, and itinerary, and guide you to a plan that suits your purpose.",
+    "en": "We confirm the date, time, passenger count, luggage and itinerary before recommending a plan suited to your requirements.",
     "ko": "일시, 인원, 수하물, 전체 일정을 확인한 뒤 이용 목적에 맞는 운행 계획을 안내합니다.",
     "zh-CN": "我们将确认日期和时间、人数、行李和行程，并指导您制定适合您目的的计划。",
     "zh-TW": "我們將確認日期和時間、人數、行李和行程，並指導您制定適合您目的的計劃。"
@@ -3026,7 +3026,7 @@
     "zh-TW": "擁有充裕時間的營運決策"
   },
   "時間に正確な運行": {
-    "en": "punctual service",
+    "en": "Punctual Service",
     "ko": "시간에 정확한 운행",
     "zh-CN": "准时服务",
     "zh-TW": "準時服務"
@@ -3038,10 +3038,10 @@
     "zh-TW": "時間管理"
   },
   "未定": {
-    "en": "to be decided",
+    "en": "To be discussed",
     "ko": "미정",
-    "zh-CN": "待决定",
-    "zh-TW": "待決定"
+    "zh-CN": "待沟通",
+    "zh-TW": "待討論"
   },
   "本人確認書類、在留カード、勤務先情報、法人情報など、申込内容に応じて確認します。": {
     "en": "We will check your identity verification documents, residence card, workplace information, corporate information, etc. according to the application details.",
@@ -3056,7 +3056,7 @@
     "zh-TW": "客人及相關人員的交通"
   },
   "柔軟な手配": {
-    "en": "flexible arrangements",
+    "en": "Flexible Arrangements",
     "ko": "유연한 준비",
     "zh-CN": "灵活安排",
     "zh-TW": "彈性安排"
@@ -3087,10 +3087,10 @@
     "zh-TW": "Daitora株式會社在關西地區經營與交通和車輛利用相關的業務，包括計程車業務、二手車銷售和旅遊相關服務，重點是出租/私人交通服務。"
   },
   "検討中": {
-    "en": "under consideration",
+    "en": "Considering",
     "ko": "검토 중",
-    "zh-CN": "正在考虑中",
-    "zh-TW": "正在考慮中"
+    "zh-CN": "考虑中",
+    "zh-TW": "考慮中"
   },
   "業務用車両、一般向け車両の提案": {
     "en": "Vehicle recommendations for business and personal use",
@@ -3117,7 +3117,7 @@
     "zh-TW": "企業/團體諮詢"
   },
   "法人・旅行会社・ホテル様": {
-    "en": "Corporations, travel agencies, hotels",
+    "en": "Corporate / Travel Agency / Hotel Enquiries",
     "ko": "법인·여행사·호텔",
     "zh-CN": "企业、旅行社、酒店",
     "zh-TW": "企業、旅行社、飯店"
@@ -3129,7 +3129,7 @@
     "zh-TW": "企業、旅行社、飯店的交通諮詢"
   },
   "法人利用": {
-    "en": "Corporate use",
+    "en": "Corporate Use",
     "ko": "법인 이용",
     "zh-CN": "企业用途",
     "zh-TW": "企業用途"
@@ -3261,10 +3261,10 @@
     "zh-TW": "現場聯繫"
   },
   "用途": {
-    "en": "Purpose",
+    "en": "Service Type",
     "ko": "용도",
-    "zh-CN": "目的",
-    "zh-TW": "目的"
+    "zh-CN": "服务用途",
+    "zh-TW": "服務用途"
   },
   "用途と維持管理まで考えた車両選び。": {
     "en": "Choose a vehicle with its purpose and upkeep in mind.",
@@ -3279,10 +3279,10 @@
     "zh-TW": "協助您選擇符合實際用途的車輛，安心完成各項手續。"
   },
   "用途に合わせて相談": {
-    "en": "Consultation according to usage",
-    "ko": "용도에 맞게 상담",
-    "zh-CN": "根据用途咨询",
-    "zh-TW": "根據用途諮詢"
+    "en": "Discuss Based on Requirements",
+    "ko": "용도에 맞춰 상담",
+    "zh-CN": "根据用途沟通",
+    "zh-TW": "依用途討論"
   },
   "用途に応じた車両手配": {
     "en": "Vehicle arrangement according to purpose",
@@ -3315,13 +3315,13 @@
     "zh-TW": "申請前可先確認的事項。"
   },
   "申込区分": {
-    "en": "Applicant type",
+    "en": "Applicant Type",
     "ko": "신청자 구분",
     "zh-CN": "申请人类型",
     "zh-TW": "申請人類型"
   },
   "目的地": {
-    "en": "destination",
+    "en": "Destination",
     "ko": "목적지",
     "zh-CN": "目的地",
     "zh-TW": "目的地"
@@ -3418,8 +3418,8 @@
     "zh-TW": "機場交通"
   },
   "空港送迎": {
-    "en": "airport transfer",
-    "ko": "공항 교통편",
+    "en": "Airport Transfer",
+    "ko": "공항 송영",
     "zh-CN": "机场接送",
     "zh-TW": "機場接送"
   },
@@ -3605,10 +3605,10 @@
     "zh-TW": "如果您沒有自動重定向，請點擊下面的按鈕查看公司簡介。"
   },
   "航空便名": {
-    "en": "flight number",
+    "en": "Flight Number",
     "ko": "항공편명",
-    "zh-CN": "航班",
-    "zh-TW": "航班"
+    "zh-CN": "航班号",
+    "zh-TW": "航班號碼"
   },
   "英文社名": {
     "en": "English company name",
@@ -3617,7 +3617,7 @@
     "zh-TW": "公司英文名稱"
   },
   "荷物、人数、ホテル・法人利用、その他確認事項": {
-    "en": "Luggage, number of people, hotel/corporate usage, and other confirmation items",
+    "en": "Luggage, passenger count, hotel or corporate use, and other requirements",
     "ko": "짐, 인원수, 호텔·법인 이용, 그 외 확인 사항",
     "zh-CN": "行李、人数、酒店/企业用途、其他确认项目",
     "zh-TW": "行李、人數、飯店/企業用途、其他確認項目"
@@ -3659,7 +3659,7 @@
     "zh-TW": "依行程、人數、行李進行營運管理"
   },
   "行程、待ち合わせ場所、車両台数、配慮事項など": {
-    "en": "Itinerary, meeting place, number of vehicles, considerations, etc.",
+    "en": "Itinerary, meeting point, number of vehicles and any special requirements",
     "ko": "일정, 미팅 장소, 차량 대수, 요청 사항 등",
     "zh-CN": "行程、集合地点、车辆数量、注意事项等",
     "zh-TW": "行程、集合地點、車輛數量、注意事項等"
@@ -3785,10 +3785,10 @@
     "zh-TW": "前往觀光景點或在城鎮內散步時非常方便。即使在炎熱或下雨天，您也可以舒適地前往下一個目的地。"
   },
   "観光貸切": {
-    "en": "Private sightseeing tour",
+    "en": "Private Sightseeing Charter",
     "ko": "관광 전세",
-    "zh-CN": "私人观光旅游",
-    "zh-TW": "私人觀光旅遊"
+    "zh-CN": "观光包车",
+    "zh-TW": "觀光包車"
   },
   "観光貸切、企業送迎、団体移動": {
     "en": "Private sightseeing, corporate transportation, group transportation",
@@ -3857,7 +3857,7 @@
     "zh-TW": "期望購買時間"
   },
   "購入希望時期、現在の状況、必要書類の確認など": {
-    "en": "Confirmation of desired purchase date, current situation, required documents, etc.",
+    "en": "Preferred purchase timing, current situation, and questions about required documents",
     "ko": "구매 희망 시기, 현재 상황, 필요 서류 확인 등",
     "zh-CN": "确认购买日期、现状、所需文件等",
     "zh-TW": "確認購買日期、現況、所需文件等"
@@ -3996,10 +3996,10 @@
     "zh-TW": "車輛美觀"
   },
   "車両購入に関する備考": {
-    "en": "Notes regarding vehicle purchase",
+    "en": "Vehicle Purchase Notes",
     "ko": "차량 구매에 관한 비고",
-    "zh-CN": "购车注意事项",
-    "zh-TW": "購車注意事項"
+    "zh-CN": "购车备注",
+    "zh-TW": "購車備註"
   },
   "車両購入・ローン相談はこちら": {
     "en": "Vehicle Purchase and Loan Consultation",
@@ -4032,7 +4032,7 @@
     "zh-TW": "迅敏 / Agility"
   },
   "迅速な見積もり": {
-    "en": "quick quote",
+    "en": "Quick Quote",
     "ko": "빠른 견적",
     "zh-CN": "快速报价",
     "zh-TW": "快速報價"
@@ -4076,10 +4076,10 @@
     "zh-TW": "請根據您的需求聯絡我們提供交通、計程車、二手車銷售、企業諮詢等服務。"
   },
   "送迎に関する備考": {
-    "en": "Notes regarding transportation",
-    "ko": "교통에 관한 비고",
-    "zh-CN": "交通注意事项",
-    "zh-TW": "交通注意事項"
+    "en": "Transportation Notes",
+    "ko": "송영 관련 요청사항",
+    "zh-CN": "接送备注",
+    "zh-TW": "接送備註"
   },
   "送迎・ハイヤー相談": {
     "en": "Chauffeur & Private Transportation",
@@ -4100,10 +4100,10 @@
     "zh-TW": "我們將為您組織和指導交通細節、車輛、時間表和必要的資訊。"
   },
   "送迎用": {
-    "en": "For transportation",
-    "ko": "교통용",
-    "zh-CN": "用于运输",
-    "zh-TW": "用於運輸"
+    "en": "Passenger Transportation",
+    "ko": "송영용",
+    "zh-CN": "接送用车",
+    "zh-TW": "接送用車"
   },
   "通勤、家族利用、送迎、事業利用など、実際の使い方に合わせて車両を整理します。": {
     "en": "We narrow the options around how the vehicle will actually be used, whether for commuting, family travel, passenger transfers or business.",
@@ -4119,7 +4119,7 @@
     "ja": "連絡先"
   },
   "連絡可能時間": {
-    "en": "Contact hours",
+    "en": "Preferred Contact Time",
     "ko": "연락 가능한 시간",
     "zh-CN": "联系时间",
     "zh-TW": "聯繫時間"
@@ -4161,10 +4161,10 @@
     "zh-TW": "分享公司內部的營運成果、注意事項以及下次需要改進的地方。"
   },
   "運転・接客経験": {
-    "en": "Driving/customer experience",
+    "en": "Driving / Customer Service Experience",
     "ko": "운전・접객 경험",
-    "zh-CN": "驾驶/客户体验",
-    "zh-TW": "駕駛/客戶體驗"
+    "zh-CN": "驾驶 / 接待经验",
+    "zh-TW": "駕駛 / 接待經驗"
   },
   "運転技術だけでなく、接遇、安全意識、時間管理を重視した乗務員教育を行っています。": {
     "en": "Driver training covers not only driving skills, but also professional service, safety awareness and time management.",
@@ -4185,7 +4185,7 @@
     "zh-TW": "我們在現場靈活應對，同時檢查路況和到達時間的變化。"
   },
   "選択してください": {
-    "en": "please select",
+    "en": "Please select",
     "ko": "선택해 주세요",
     "zh-CN": "请选择",
     "zh-TW": "請選擇"
@@ -4454,5 +4454,11 @@
     "ko": "현재 온라인 문의 양식을 이용할 수 없습니다. 전화 또는 이메일로 문의해 주세요.",
     "zh-CN": "在线表单目前不可用，请通过电话或电子邮件联系我们。",
     "zh-TW": "線上表單目前無法使用，請以電話或電子郵件聯絡我們。"
+  },
+  "プライバシーポリシーを確認し、担当者から連絡を受けることに同意します。": {
+    "en": "I have read the Privacy Policy and agree to be contacted by a representative.",
+    "ko": "개인정보 처리방침을 확인했으며, 담당자의 연락에 동의합니다.",
+    "zh-CN": "我已阅读《隐私政策》，并同意由负责人联系我。",
+    "zh-TW": "我已閱讀《隱私權政策》，並同意由負責人與我聯絡。"
   }
 }

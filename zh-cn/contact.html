@@ -98,7 +98,7 @@
           </article>
           <article class="contact-option-card">
             <span>General</span>
-            <h3>其他查询</h3>
+            <h3>其他咨询</h3>
             <p>公司信息、访谈、合作伙伴招募等查询。</p>
             <a class="button" href="#contact-form" data-contact-type="general">其他咨询</a>
           </article>
@@ -120,7 +120,7 @@
               <li>使用日期</li>
               <li>出发/目的地</li>
               <li>人数/行李数</li>
-              <li>想要的车型</li>
+              <li>希望车型</li>
               <li>航班号/到达时间</li>
               <li>使用目的</li>
             </ul>
@@ -141,7 +141,7 @@
             <span>03</span>
             <h3>二手车/贷款咨询</h3>
             <ul>
-              <li>想要的车型</li>
+              <li>希望车型</li>
               <li>使用目的</li>
               <li>期望购买时间</li>
               <li>个人/企业分类</li>
@@ -225,60 +225,60 @@
                   <label><span>使用时间</span><input type="time" name="ride_time"></label>
                   <label><span>出发地</span><input type="text" name="pickup" placeholder="机场、酒店、地址等"></label>
                   <label><span>目的地</span><input type="text" name="destination" placeholder="酒店、会场、观光景点等"></label>
-                  <label><span>航班</span><input type="text" name="flight_no" placeholder="示例：JL000/MM000"></label>
+                  <label><span>航班号</span><input type="text" name="flight_no" placeholder="示例：JL000/MM000"></label>
                   <label><span>人数</span><input type="number" name="passengers" min="1" inputmode="numeric"></label>
                   <label><span>行李件数</span><input type="number" name="luggage_count" min="0" inputmode="numeric"></label>
-                  <label><span>想要的车型</span><select name="vehicle_type"><option value="">待决定</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>根据用途咨询</option></select></label>
-                  <label class="form-wide"><span>目的</span><select name="ride_purpose"><option value="">请选择</option><option>机场接送</option><option>私人观光旅游</option><option>企业交通</option><option>VIP接送</option><option>大型项目/多辆车辆投入运行</option><option>其他</option></select></label>
-                  <label class="form-wide"><span>交通注意事项</span><textarea name="ride_notes" rows="4" placeholder="行程、集合地点、车辆数量、注意事项等"></textarea></label>
+                  <label><span>希望车型</span><select name="vehicle_type"><option value="">待沟通</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>根据用途沟通</option></select></label>
+                  <label class="form-wide"><span>服务用途</span><select name="ride_purpose"><option value="">请选择</option><option>机场接送</option><option>观光包车</option><option>企业接送</option><option>VIP接送</option><option>大型项目 / 多车协同</option><option>其他</option></select></label>
+                  <label class="form-wide"><span>接送备注</span><textarea name="ride_notes" rows="4" placeholder="行程、集合地点、车辆数量、注意事项等"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="taxi">
                 <h3>使用出租车</h3>
                 <div class="form-grid">
                   <label><span>预计使用区域</span><input type="text" name="taxi_area" placeholder="大阪市、京都市、车站/酒店区域等"></label>
-                  <label><span>预定的使用日期和时间</span><input type="text" name="taxi_time" placeholder="示例：7 月 20 日 15:00 左右"></label>
+                  <label><span>预计使用日期与时间</span><input type="text" name="taxi_time" placeholder="示例：7 月 20 日 15:00 左右"></label>
                   <label><span>上车地点</span><input type="text" name="taxi_pickup"></label>
                   <label><span>目的地</span><input type="text" name="taxi_destination"></label>
-                  <label class="form-wide"><span>使用出租车的注意事项</span><textarea name="taxi_notes" rows="4" placeholder="行李、人数、酒店/企业用途、其他确认项目"></textarea></label>
+                  <label class="form-wide"><span>出租车使用备注</span><textarea name="taxi_notes" rows="4" placeholder="行李、人数、酒店/企业用途、其他确认项目"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="auto">
                 <h3>二手车销售/贷款咨询</h3>
                 <div class="form-grid">
-                  <label><span>想要的车型</span><input type="text" name="auto_model" placeholder="示例：Alphard、Hiace、Sienta"></label>
-                  <label><span>使用目的</span><select name="auto_purpose"><option value="">请选择</option><option>个人使用</option><option>家庭使用</option><option>企业用途</option><option>用于运输</option><option>出租车相关</option><option>其他</option></select></label>
-                  <label><span>申请人类型</span><select name="applicant_type"><option value="">请选择</option><option>个人</option><option>公司</option><option>独资经营者</option><option>居住在日本的外国顾客</option></select></label>
-                  <label><span>贷款咨询</span><select name="loan_interest"><option value="">请选择</option><option>希望</option><option>正在考虑中</option><option>不希望</option></select></label>
-                  <label class="form-wide"><span>购车注意事项</span><textarea name="auto_notes" rows="4" placeholder="确认购买日期、现状、所需文件等"></textarea></label>
+                  <label><span>希望车型</span><input type="text" name="auto_model" placeholder="示例：Alphard、Hiace、Sienta"></label>
+                  <label><span>使用目的</span><select name="auto_purpose"><option value="">请选择</option><option>个人使用</option><option>家庭使用</option><option>企业用途</option><option>接送用车</option><option>出租车相关</option><option>其他</option></select></label>
+                  <label><span>申请人类型</span><select name="applicant_type"><option value="">请选择</option><option>个人</option><option>公司</option><option>个体经营者</option><option>居住在日本的外国顾客</option></select></label>
+                  <label><span>贷款咨询</span><select name="loan_interest"><option value="">请选择</option><option>需要咨询</option><option>考虑中</option><option>暂不需要</option></select></label>
+                  <label class="form-wide"><span>购车备注</span><textarea name="auto_notes" rows="4" placeholder="确认购买日期、现状、所需文件等"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="recruit">
                 <h3>司机招聘与应聘</h3>
                 <div class="form-grid">
                   <label><span>期望的工作类型</span><input type="text" name="recruit_role" placeholder="司机、运营管理等"></label>
-                  <label><span>所需的工作区域</span><input type="text" name="work_area" placeholder="大阪、京都等"></label>
-                  <label><span>驾驶/客户体验</span><input type="text" name="experience"></label>
+                  <label><span>希望工作地区</span><input type="text" name="work_area" placeholder="大阪、京都等"></label>
+                  <label><span>驾驶 / 接待经验</span><input type="text" name="experience"></label>
                   <label><span>联系时间</span><input type="text" name="contact_time"></label>
-                  <label class="form-wide"><span>招聘注意事项</span><textarea name="recruit_notes" rows="4"></textarea></label>
+                  <label class="form-wide"><span>应聘备注</span><textarea name="recruit_notes" rows="4"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="general">
-                <h3>其他查询</h3>
-                <label><span>询问主题</span><input type="text" name="general_subject" placeholder="公司信息、采访、合作伙伴咨询等"></label>
+                <h3>其他咨询</h3>
+                <label><span>咨询主题</span><input type="text" name="general_subject" placeholder="公司信息、采访、合作伙伴咨询等"></label>
               </div>
               <label class="form-wide">
-                <span>查询详情</span>
+                <span>咨询详情</span>
                 <textarea name="message" rows="6" required></textarea>
               </label>
             </div>
             <label class="privacy-check">
               <input type="checkbox" name="privacy" required>
-              <span><a href="privacy.html" target="_blank" rel="noopener">隐私政策</a>并同意由代表联系。</span>
+              <span><a href="privacy.html" target="_blank" rel="noopener">我已阅读《隐私政策》，并同意由负责人联系我。</a></span>
             </label>
             <div class="form-actions">
               <button class="button primary" type="submit" data-submit-button disabled aria-disabled="true">发送咨询内容</button>
-              <a class="button" href="mailto:info@daitora-jp.com">通过电子邮件发送</a>
+              <a class="button" href="mailto:info@daitora-jp.com">发送邮件</a>
             </div>
             </fieldset>
             <p class="form-status" data-form-status role="status" aria-live="polite"></p>

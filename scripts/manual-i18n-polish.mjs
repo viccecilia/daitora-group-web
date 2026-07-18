@@ -1650,6 +1650,276 @@ Object.assign(overrides, {
     ko: '현재 온라인 문의 양식을 이용할 수 없습니다. 전화 또는 이메일로 문의해 주세요.',
     'zh-CN': '在线表单目前不可用，请通过电话或电子邮件联系我们。',
     'zh-TW': '線上表單目前無法使用，請以電話或電子郵件聯絡我們。'
+  },
+  '大阪で開催された国際会議関連送迎に対応。要人・関係者の移動に求められる時間管理、守秘意識、現場判断を経験しました。': {
+    en: 'We provided transportation for an international conference held in Osaka, gaining experience in the schedule control, confidentiality and on-site judgement required for VIP and delegate travel.',
+    ko: '오사카에서 열린 국제회의 관련 송영을 수행하며 주요 인사와 관계자 이동에 필요한 시간 관리, 보안 유지 및 현장 대응 경험을 축적했습니다.',
+    'zh-CN': '我们曾为在大阪举办的国际会议提供接送服务，并积累了 VIP 及相关人员出行所需的时间管理、保密管理与现场应变经验。',
+    'zh-TW': '我們曾為在大阪舉辦的國際會議提供接送服務，並累積了 VIP 及相關人員移動所需的時間管理、保密管理與現場應變經驗。'
+  },
+  '団体送迎 / 企業視察 / 複数名移動': {
+    en: 'Group Transportation / Corporate Visits / Multi-Passenger Travel',
+    ko: '단체 송영 / 기업 시찰 / 다인 이동',
+    'zh-CN': '团体接送 / 企业考察 / 多人出行',
+    'zh-TW': '團體接送 / 企業考察 / 多人移動'
+  },
+  '教育システム': {
+    en: 'Training Programme',
+    ko: '교육 체계',
+    'zh-CN': '培训体系',
+    'zh-TW': '培訓體系'
+  },
+  'お名前': {
+    en: 'Name'
+  },
+  '会社名・団体名': {
+    en: 'Company / Organisation'
+  },
+  '中古車販売・ローン相談': {
+    en: 'Used Car Sales / Loan Consultation'
+  },
+  '法人・旅行会社・ホテル様': {
+    en: 'Corporate / Travel Agency / Hotel Enquiries'
+  },
+  '希望言語': {
+    en: 'Preferred Language'
+  },
+  'ご利用日': {
+    en: 'Service Date'
+  },
+  'ご利用時間': {
+    en: 'Pickup Time'
+  },
+  '出発地': {
+    en: 'Pickup Location'
+  },
+  '目的地': {
+    en: 'Destination'
+  },
+  '航空便名': {
+    en: 'Flight Number',
+    'zh-CN': '航班号',
+    'zh-TW': '航班號碼'
+  },
+  '人数': {
+    en: 'Number of Passengers'
+  },
+  '手荷物数': {
+    en: 'Number of Luggage Items'
+  },
+  '希望車種': {
+    en: 'Preferred Vehicle',
+    'zh-CN': '希望车型',
+    'zh-TW': '希望車型'
+  },
+  '未定': {
+    en: 'To be discussed',
+    'zh-CN': '待沟通',
+    'zh-TW': '待討論'
+  },
+  '用途に合わせて相談': {
+    en: 'Discuss Based on Requirements',
+    ko: '용도에 맞춰 상담',
+    'zh-CN': '根据用途沟通',
+    'zh-TW': '依用途討論'
+  },
+  '用途': {
+    en: 'Service Type',
+    'zh-CN': '服务用途',
+    'zh-TW': '服務用途'
+  },
+  '空港送迎': {
+    en: 'Airport Transfer',
+    ko: '공항 송영'
+  },
+  '観光貸切': {
+    en: 'Private Sightseeing Charter',
+    'zh-CN': '观光包车',
+    'zh-TW': '觀光包車'
+  },
+  '企業送迎': {
+    en: 'Corporate Transportation',
+    ko: '기업 송영',
+    'zh-CN': '企业接送',
+    'zh-TW': '企業接送'
+  },
+  'VIP接待': {
+    en: 'VIP Transportation'
+  },
+  '大型案件・複数台運行': {
+    en: 'Large-Scale / Multi-Vehicle Transportation',
+    ko: '대형 프로젝트·복수 차량 운행',
+    'zh-CN': '大型项目 / 多车协同',
+    'zh-TW': '大型專案 / 多車協同'
+  },
+  '送迎に関する備考': {
+    en: 'Transportation Notes',
+    ko: '송영 관련 요청사항',
+    'zh-CN': '接送备注',
+    'zh-TW': '接送備註'
+  },
+  '行程、待ち合わせ場所、車両台数、配慮事項など': {
+    en: 'Itinerary, meeting point, number of vehicles and any special requirements'
+  },
+  '利用予定エリア': {
+    en: 'Service Area'
+  },
+  '利用予定日時': {
+    en: 'Preferred Date and Time',
+    'zh-CN': '预计使用日期与时间',
+    'zh-TW': '預計使用日期與時間'
+  },
+  '乗車地': {
+    en: 'Pickup Location'
+  },
+  'タクシー利用に関する備考': {
+    en: 'Taxi Service Notes',
+    'zh-CN': '出租车使用备注',
+    'zh-TW': '計程車使用備註'
+  },
+  '荷物、人数、ホテル・法人利用、その他確認事項': {
+    en: 'Luggage, passenger count, hotel or corporate use, and other requirements'
+  },
+  '利用目的': {
+    en: 'Intended Use'
+  },
+  '個人利用': {
+    en: 'Personal Use'
+  },
+  '家族利用': {
+    en: 'Family Use'
+  },
+  '法人利用': {
+    en: 'Corporate Use'
+  },
+  '送迎用': {
+    en: 'Passenger Transportation',
+    ko: '송영용',
+    'zh-CN': '接送用车',
+    'zh-TW': '接送用車'
+  },
+  'タクシー関連': {
+    en: 'Taxi Operations'
+  },
+  '申込区分': {
+    en: 'Applicant Type'
+  },
+  '個人': {
+    en: 'Individual'
+  },
+  '法人': {
+    en: 'Corporation'
+  },
+  '個人事業主': {
+    en: 'Sole Proprietor',
+    ko: '개인사업자',
+    'zh-CN': '个体经营者',
+    'zh-TW': '個人事業主'
+  },
+  '在日外国人のお客様': {
+    en: 'Foreign Residents in Japan'
+  },
+  'ローン相談': {
+    en: 'Loan Consultation'
+  },
+  '希望する': {
+    en: 'Interested',
+    ko: '상담 희망',
+    'zh-CN': '需要咨询',
+    'zh-TW': '需要諮詢'
+  },
+  '検討中': {
+    en: 'Considering',
+    'zh-CN': '考虑中',
+    'zh-TW': '考慮中'
+  },
+  '希望しない': {
+    en: 'Not required',
+    ko: '필요 없음',
+    'zh-CN': '暂不需要',
+    'zh-TW': '暫不需要'
+  },
+  '車両購入に関する備考': {
+    en: 'Vehicle Purchase Notes',
+    'zh-CN': '购车备注',
+    'zh-TW': '購車備註'
+  },
+  '購入希望時期、現在の状況、必要書類の確認など': {
+    en: 'Preferred purchase timing, current situation, and questions about required documents'
+  },
+  '希望職種': {
+    en: 'Preferred Position'
+  },
+  '勤務希望エリア': {
+    en: 'Preferred Work Area',
+    'zh-CN': '希望工作地区',
+    'zh-TW': '希望工作地區'
+  },
+  '運転・接客経験': {
+    en: 'Driving / Customer Service Experience',
+    'zh-CN': '驾驶 / 接待经验',
+    'zh-TW': '駕駛 / 接待經驗'
+  },
+  '連絡可能時間': {
+    en: 'Preferred Contact Time'
+  },
+  '採用に関する備考': {
+    en: 'Application Notes',
+    'zh-CN': '应聘备注',
+    'zh-TW': '應徵備註'
+  },
+  'その他のお問い合わせ': {
+    en: 'Other Enquiries',
+    'zh-CN': '其他咨询',
+    'zh-TW': '其他諮詢'
+  },
+  'お問い合わせ件名': {
+    en: 'Enquiry Subject',
+    'zh-CN': '咨询主题',
+    'zh-TW': '諮詢主旨'
+  },
+  '会社情報、取材、パートナー相談など': {
+    en: 'Company information, media enquiries, partnership enquiries, etc.'
+  },
+  'お問い合わせ内容': {
+    en: 'Enquiry Details',
+    'zh-CN': '咨询详情',
+    'zh-TW': '諮詢內容'
+  },
+  '選択してください': {
+    en: 'Please select'
+  },
+  '採用・乗務員応募': {
+    ko: '운전기사 채용·지원'
+  },
+  '迅速な見積もり': {
+    en: 'Quick Quote'
+  },
+  '柔軟な手配': {
+    en: 'Flexible Arrangements'
+  },
+  '専門ドライバー': {
+    en: 'Professional Driver'
+  },
+  '時間に正確な運行': {
+    en: 'Punctual Service'
+  },
+  '日時、人数、荷物、行程を確認し、利用目的に合ったプランをご案内します。': {
+    en: 'We confirm the date, time, passenger count, luggage and itinerary before recommending a plan suited to your requirements.'
+  },
+  '単発送迎、時間貸切、複数日運行、複数台運行など、行程に合わせて調整します。': {
+    en: 'We adapt arrangements to the itinerary, including point-to-point transfers, hourly charters, multi-day services and multi-vehicle operations.'
+  },
+  'メールで送る': {
+    en: 'Send by Email',
+    'zh-CN': '发送邮件',
+    'zh-TW': '寄送電子郵件'
+  },
+  'プライバシーポリシーを確認し、担当者から連絡を受けることに同意します。': {
+    en: 'I have read the Privacy Policy and agree to be contacted by a representative.',
+    ko: '개인정보 처리방침을 확인했으며, 담당자의 연락에 동의합니다.',
+    'zh-CN': '我已阅读《隐私政策》，并同意由负责人联系我。',
+    'zh-TW': '我已閱讀《隱私權政策》，並同意由負責人與我聯絡。'
   }
 });
 

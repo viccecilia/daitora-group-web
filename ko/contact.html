@@ -92,7 +92,7 @@
           </article>
           <article class="contact-option-card">
             <span>Recruit</span>
-            <h3>운전기사 채용・지원</h3>
+            <h3>운전기사 채용·지원</h3>
             <p>운전기사 채용, 지원 및 근무 조건에 관한 문의입니다.</p>
             <a class="button" href="#contact-form" data-contact-type="recruit">채용 상담</a>
           </article>
@@ -189,7 +189,7 @@
                   <option value="taxi">택시 이용</option>
                   <option value="auto">중고차 판매·대출 상담</option>
                   <option value="corporate">법인·여행사·호텔</option>
-                  <option value="recruit">운전기사 채용・지원</option>
+                  <option value="recruit">운전기사 채용·지원</option>
                   <option value="general">기타</option>
                 </select>
               </label>
@@ -228,9 +228,9 @@
                   <label><span>항공편명</span><input type="text" name="flight_no" placeholder="예: JL000/MM000"></label>
                   <label><span>인원수</span><input type="number" name="passengers" min="1" inputmode="numeric"></label>
                   <label><span>수하물 수</span><input type="number" name="luggage_count" min="0" inputmode="numeric"></label>
-                  <label><span>희망 차종</span><select name="vehicle_type"><option value="">미정</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>용도에 맞게 상담</option></select></label>
-                  <label class="form-wide"><span>용도</span><select name="ride_purpose"><option value="">선택해 주세요</option><option>공항 교통편</option><option>관광 전세</option><option>기업 픽업</option><option>VIP 송영</option><option>대형 안건·복수대 운행</option><option>기타</option></select></label>
-                  <label class="form-wide"><span>교통에 관한 비고</span><textarea name="ride_notes" rows="4" placeholder="일정, 미팅 장소, 차량 대수, 요청 사항 등"></textarea></label>
+                  <label><span>희망 차종</span><select name="vehicle_type"><option value="">미정</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>용도에 맞춰 상담</option></select></label>
+                  <label class="form-wide"><span>용도</span><select name="ride_purpose"><option value="">선택해 주세요</option><option>공항 송영</option><option>관광 전세</option><option>기업 송영</option><option>VIP 송영</option><option>대형 프로젝트·복수 차량 운행</option><option>기타</option></select></label>
+                  <label class="form-wide"><span>송영 관련 요청사항</span><textarea name="ride_notes" rows="4" placeholder="일정, 미팅 장소, 차량 대수, 요청 사항 등"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="taxi">
@@ -247,14 +247,14 @@
                 <h3>중고차 판매·대출 상담</h3>
                 <div class="form-grid">
                   <label><span>희망 차종</span><input type="text" name="auto_model" placeholder="예: 알파드, 하이에이스, 시엔타"></label>
-                  <label><span>이용 목적</span><select name="auto_purpose"><option value="">선택해 주세요</option><option>개인 이용</option><option>가족 이용</option><option>법인 이용</option><option>교통용</option><option>택시 관련</option><option>기타</option></select></label>
-                  <label><span>신청자 구분</span><select name="applicant_type"><option value="">선택해 주세요</option><option>개인</option><option>법인</option><option>개인 사업주</option><option>일본 거주 외국인 고객</option></select></label>
-                  <label><span>대출 상담</span><select name="loan_interest"><option value="">선택해 주세요</option><option>원하는</option><option>검토 중</option><option>원하지 않음</option></select></label>
+                  <label><span>이용 목적</span><select name="auto_purpose"><option value="">선택해 주세요</option><option>개인 이용</option><option>가족 이용</option><option>법인 이용</option><option>송영용</option><option>택시 관련</option><option>기타</option></select></label>
+                  <label><span>신청자 구분</span><select name="applicant_type"><option value="">선택해 주세요</option><option>개인</option><option>법인</option><option>개인사업자</option><option>일본 거주 외국인 고객</option></select></label>
+                  <label><span>대출 상담</span><select name="loan_interest"><option value="">선택해 주세요</option><option>상담 희망</option><option>검토 중</option><option>필요 없음</option></select></label>
                   <label class="form-wide"><span>차량 구매에 관한 비고</span><textarea name="auto_notes" rows="4" placeholder="구매 희망 시기, 현재 상황, 필요 서류 확인 등"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="recruit">
-                <h3>운전기사 채용・지원</h3>
+                <h3>운전기사 채용·지원</h3>
                 <div class="form-grid">
                   <label><span>희망 직종</span><input type="text" name="recruit_role" placeholder="운전자, 운행 관리, 기타"></label>
                   <label><span>근무 희망 지역</span><input type="text" name="work_area" placeholder="오사카, 교토 등"></label>
@@ -274,7 +274,7 @@
             </div>
             <label class="privacy-check">
               <input type="checkbox" name="privacy" required>
-              <span><a href="privacy.html" target="_blank" rel="noopener">개인 정보 보호 정책</a>을 확인하고 담당자로부터 연락을 받는 데 동의합니다.</span>
+              <span><a href="privacy.html" target="_blank" rel="noopener">개인정보 처리방침을 확인했으며, 담당자의 연락에 동의합니다.</a></span>
             </label>
             <div class="form-actions">
               <button class="button primary" type="submit" data-submit-button disabled aria-disabled="true">문의 내용 보내기</button>

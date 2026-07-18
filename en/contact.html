@@ -80,13 +80,13 @@
           </article>
           <article class="contact-option-card">
             <span>Auto</span>
-            <h3>Used car sales/loan consultation</h3>
+            <h3>Used Car Sales / Loan Consultation</h3>
             <p>Consultation regarding used car purchases, commercial vehicles, loan consultation, and auto loan pre-screening.</p>
             <a class="button" href="#contact-form" data-contact-type="auto">Used car consultation</a>
           </article>
           <article class="contact-option-card">
             <span>Corporate</span>
-            <h3>Corporations, travel agencies, hotels</h3>
+            <h3>Corporate / Travel Agency / Hotel Enquiries</h3>
             <p>Inquiries regarding group transportation, multiple vehicle operations, support for guests visiting Japan, and partnership consultation.</p>
             <a class="button" href="#contact-form" data-contact-type="corporate">Corporate Transportation Inquiry</a>
           </article>
@@ -98,7 +98,7 @@
           </article>
           <article class="contact-option-card">
             <span>General</span>
-            <h3>Other inquiries</h3>
+            <h3>Other Enquiries</h3>
             <p>Company information, interviews, partner recruitment, and other inquiries.</p>
             <a class="button" href="#contact-form" data-contact-type="general">Other Inquiries</a>
           </article>
@@ -117,10 +117,10 @@
             <span>01</span>
             <h3>Chauffeur & Private Transportation</h3>
             <ul>
-              <li>Date of use</li>
+              <li>Service Date</li>
               <li>Departure/Destination</li>
               <li>Number of people/baggage</li>
-              <li>Preferred vehicle</li>
+              <li>Preferred Vehicle</li>
               <li>Flight number/arrival time</li>
               <li>Purpose of use</li>
             </ul>
@@ -129,7 +129,7 @@
             <span>02</span>
             <h3>Corporation/group consultation</h3>
             <ul>
-              <li>Company name/organization name</li>
+              <li>Company / Organisation</li>
               <li>schedule</li>
               <li>Number of vehicles</li>
               <li>Number of participants</li>
@@ -141,8 +141,8 @@
             <span>03</span>
             <h3>Used car/loan consultation</h3>
             <ul>
-              <li>Preferred vehicle</li>
-              <li>Purpose of use</li>
+              <li>Preferred Vehicle</li>
+              <li>Intended Use</li>
               <li>Desired purchase time</li>
               <li>Individual/corporate classification</li>
               <li>Availability of loan consultation</li>
@@ -184,21 +184,21 @@
               <label>
                 <span>Inquiry Type</span>
                 <select name="type" required>
-                  <option value="">please select</option>
+                  <option value="">Please select</option>
                   <option value="hire">Chauffeur Service / Airport Transfer</option>
                   <option value="taxi">Request Taxi Service</option>
-                  <option value="auto">Used car sales/loan consultation</option>
-                  <option value="corporate">Corporations, travel agencies, hotels</option>
+                  <option value="auto">Used Car Sales / Loan Consultation</option>
+                  <option value="corporate">Corporate / Travel Agency / Hotel Enquiries</option>
                   <option value="recruit">Driver Recruitment</option>
                   <option value="general">Other</option>
                 </select>
               </label>
               <label>
-                <span>name</span>
+                <span>Name</span>
                 <input type="text" name="name" autocomplete="name" required>
               </label>
               <label>
-                <span>Company name/organization name</span>
+                <span>Company / Organisation</span>
                 <input type="text" name="company" autocomplete="organization">
               </label>
               <label>
@@ -210,7 +210,7 @@
                 <input type="tel" name="phone" autocomplete="tel">
               </label>
               <label>
-                <span>Desired language</span>
+                <span>Preferred Language</span>
                 <select name="language">
                   <option value="Japanese">Japanese</option>
                   <option value="Chinese">Chinese</option>
@@ -221,64 +221,64 @@
               <div class="form-wide form-dynamic-group" data-type-field="hire corporate">
                 <h3>Transportation Details</h3>
                 <div class="form-grid">
-                  <label><span>Date of use</span><input type="date" name="ride_date"></label>
-                  <label><span>Usage time</span><input type="time" name="ride_time"></label>
-                  <label><span>Place of departure</span><input type="text" name="pickup" placeholder="Airport, hotel, address etc."></label>
-                  <label><span>destination</span><input type="text" name="destination" placeholder="Hotel, venue or sightseeing destination"></label>
-                  <label><span>flight number</span><input type="text" name="flight_no" placeholder="Example: JL000/MM000"></label>
-                  <label><span>Number of people</span><input type="number" name="passengers" min="1" inputmode="numeric"></label>
-                  <label><span>Number of baggage</span><input type="number" name="luggage_count" min="0" inputmode="numeric"></label>
-                  <label><span>Preferred vehicle</span><select name="vehicle_type"><option value="">to be decided</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>Consultation according to usage</option></select></label>
-                  <label class="form-wide"><span>Purpose</span><select name="ride_purpose"><option value="">please select</option><option>airport transfer</option><option>Private sightseeing tour</option><option>Corporate transportation</option><option>VIP Transportation</option><option>Large projects/Multiple vehicles in operation</option><option>Other</option></select></label>
-                  <label class="form-wide"><span>Notes regarding transportation</span><textarea name="ride_notes" rows="4" placeholder="Itinerary, meeting place, number of vehicles, considerations, etc."></textarea></label>
+                  <label><span>Service Date</span><input type="date" name="ride_date"></label>
+                  <label><span>Pickup Time</span><input type="time" name="ride_time"></label>
+                  <label><span>Pickup Location</span><input type="text" name="pickup" placeholder="Airport, hotel, address etc."></label>
+                  <label><span>Destination</span><input type="text" name="destination" placeholder="Hotel, venue or sightseeing destination"></label>
+                  <label><span>Flight Number</span><input type="text" name="flight_no" placeholder="Example: JL000/MM000"></label>
+                  <label><span>Number of Passengers</span><input type="number" name="passengers" min="1" inputmode="numeric"></label>
+                  <label><span>Number of Luggage Items</span><input type="number" name="luggage_count" min="0" inputmode="numeric"></label>
+                  <label><span>Preferred Vehicle</span><select name="vehicle_type"><option value="">To be discussed</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>Discuss Based on Requirements</option></select></label>
+                  <label class="form-wide"><span>Service Type</span><select name="ride_purpose"><option value="">Please select</option><option>Airport Transfer</option><option>Private Sightseeing Charter</option><option>Corporate Transportation</option><option>VIP Transportation</option><option>Large-Scale / Multi-Vehicle Transportation</option><option>Other</option></select></label>
+                  <label class="form-wide"><span>Transportation Notes</span><textarea name="ride_notes" rows="4" placeholder="Itinerary, meeting point, number of vehicles and any special requirements"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="taxi">
                 <h3>Request Taxi Service</h3>
                 <div class="form-grid">
-                  <label><span>Planned Service Area</span><input type="text" name="taxi_area" placeholder="Osaka city, Kyoto city, station/hotel area, etc."></label>
-                  <label><span>Scheduled date and time of use</span><input type="text" name="taxi_time" placeholder="Example: July 20th around 15:00"></label>
+                  <label><span>Service Area</span><input type="text" name="taxi_area" placeholder="Osaka city, Kyoto city, station/hotel area, etc."></label>
+                  <label><span>Preferred Date and Time</span><input type="text" name="taxi_time" placeholder="Example: July 20th around 15:00"></label>
                   <label><span>Pickup Location</span><input type="text" name="taxi_pickup"></label>
-                  <label><span>destination</span><input type="text" name="taxi_destination"></label>
-                  <label class="form-wide"><span>Notes on using a taxi</span><textarea name="taxi_notes" rows="4" placeholder="Luggage, number of people, hotel/corporate usage, and other confirmation items"></textarea></label>
+                  <label><span>Destination</span><input type="text" name="taxi_destination"></label>
+                  <label class="form-wide"><span>Taxi Service Notes</span><textarea name="taxi_notes" rows="4" placeholder="Luggage, passenger count, hotel or corporate use, and other requirements"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="auto">
-                <h3>Used car sales/loan consultation</h3>
+                <h3>Used Car Sales / Loan Consultation</h3>
                 <div class="form-grid">
-                  <label><span>Preferred vehicle</span><input type="text" name="auto_model" placeholder="Example: Alphard, Hiace, Sienta"></label>
-                  <label><span>Purpose of use</span><select name="auto_purpose"><option value="">please select</option><option>Personal use</option><option>Family use</option><option>Corporate use</option><option>For transportation</option><option>Taxi related</option><option>Other</option></select></label>
-                  <label><span>Applicant type</span><select name="applicant_type"><option value="">please select</option><option>individual</option><option>Corporation</option><option>sole proprietor</option><option>Foreign customers living in Japan</option></select></label>
-                  <label><span>Loan guidance</span><select name="loan_interest"><option value="">please select</option><option>hope</option><option>under consideration</option><option>do not wish</option></select></label>
-                  <label class="form-wide"><span>Notes regarding vehicle purchase</span><textarea name="auto_notes" rows="4" placeholder="Confirmation of desired purchase date, current situation, required documents, etc."></textarea></label>
+                  <label><span>Preferred Vehicle</span><input type="text" name="auto_model" placeholder="Example: Alphard, Hiace, Sienta"></label>
+                  <label><span>Intended Use</span><select name="auto_purpose"><option value="">Please select</option><option>Personal Use</option><option>Family Use</option><option>Corporate Use</option><option>Passenger Transportation</option><option>Taxi Operations</option><option>Other</option></select></label>
+                  <label><span>Applicant Type</span><select name="applicant_type"><option value="">Please select</option><option>Individual</option><option>Corporation</option><option>Sole Proprietor</option><option>Foreign Residents in Japan</option></select></label>
+                  <label><span>Loan Consultation</span><select name="loan_interest"><option value="">Please select</option><option>Interested</option><option>Considering</option><option>Not required</option></select></label>
+                  <label class="form-wide"><span>Vehicle Purchase Notes</span><textarea name="auto_notes" rows="4" placeholder="Preferred purchase timing, current situation, and questions about required documents"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="recruit">
                 <h3>Driver Recruitment</h3>
                 <div class="form-grid">
-                  <label><span>Desired job type</span><input type="text" name="recruit_role" placeholder="Driver, operation management, etc."></label>
-                  <label><span>Desired work area</span><input type="text" name="work_area" placeholder="Osaka, Kyoto etc."></label>
-                  <label><span>Driving/customer experience</span><input type="text" name="experience"></label>
-                  <label><span>Contact hours</span><input type="text" name="contact_time"></label>
-                  <label class="form-wide"><span>Notes regarding recruitment</span><textarea name="recruit_notes" rows="4"></textarea></label>
+                  <label><span>Preferred Position</span><input type="text" name="recruit_role" placeholder="Driver, operation management, etc."></label>
+                  <label><span>Preferred Work Area</span><input type="text" name="work_area" placeholder="Osaka, Kyoto etc."></label>
+                  <label><span>Driving / Customer Service Experience</span><input type="text" name="experience"></label>
+                  <label><span>Preferred Contact Time</span><input type="text" name="contact_time"></label>
+                  <label class="form-wide"><span>Application Notes</span><textarea name="recruit_notes" rows="4"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="general">
-                <h3>Other inquiries</h3>
-                <label><span>Inquiry subject</span><input type="text" name="general_subject" placeholder="Company information, interviews, partner consultation, etc."></label>
+                <h3>Other Enquiries</h3>
+                <label><span>Enquiry Subject</span><input type="text" name="general_subject" placeholder="Company information, media enquiries, partnership enquiries, etc."></label>
               </div>
               <label class="form-wide">
-                <span>Inquiry details</span>
+                <span>Enquiry Details</span>
                 <textarea name="message" rows="6" required></textarea>
               </label>
             </div>
             <label class="privacy-check">
               <input type="checkbox" name="privacy" required>
-              <span><a href="privacy.html" target="_blank" rel="noopener">Privacy policy</a>and agree to be contacted by a representative.</span>
+              <span><a href="privacy.html" target="_blank" rel="noopener">I have read the Privacy Policy and agree to be contacted by a representative.</a></span>
             </label>
             <div class="form-actions">
               <button class="button primary" type="submit" data-submit-button disabled aria-disabled="true">Send Inquiry</button>
-              <a class="button" href="mailto:info@daitora-jp.com">send by email</a>
+              <a class="button" href="mailto:info@daitora-jp.com">Send by Email</a>
             </div>
             </fieldset>
             <p class="form-status" data-form-status role="status" aria-live="polite"></p>
@@ -351,7 +351,7 @@
           <a class="primary" href="#contact-form" data-contact-type="hire">Request Chauffeur Service</a>
           <a href="#contact-form" data-contact-type="taxi">Request Taxi Service</a>
           <a href="#contact-form" data-contact-type="auto">Used car/loan consultation</a>
-          <a href="#contact-form" data-contact-type="corporate">Corporations, travel agencies, hotels</a>
+          <a href="#contact-form" data-contact-type="corporate">Corporate / Travel Agency / Hotel Enquiries</a>
           <a href="#contact-form" data-contact-type="recruit">Driver Recruitment</a>
         </div>
       </div>
