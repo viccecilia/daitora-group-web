@@ -23,6 +23,13 @@ const LANGUAGES = {
 };
 const LANGUAGE_CODES = Object.keys(LANGUAGES);
 const HREFLANG_CODES = [...LANGUAGE_CODES, 'x-default'];
+const JAPAN_TRAVEL_URLS = {
+  ja: 'https://japan-travel.info/index-ja.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  'zh-CN': 'https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  en: 'https://japan-travel.info/index-en.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  ko: 'https://japan-travel.info/index-ko.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  'zh-TW': 'https://japan-travel.info/index-zhHant.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home'
+};
 
 const BLOCKED_TERMS = {
   'zh-CN': [/大虎/g, /虎丸/g, /车联网/g, /兼容各大机场/g, /交通兼容/g, /我体验到了/g, /多人搬家/g, /想要的车型/g, /多辆车辆投入运行/g, /可以在关西搬家/g, /我们都能搞定/g, /多个设备/g, /规划使用面积/g, /登机地点/g, /集体运动/g, /质量点/g, /听力/g, /脱出/g],
@@ -93,6 +100,22 @@ export function validateExactAlternates(entries, expected) {
   }
   for (const entry of entries) {
     if (!HREFLANG_CODES.includes(entry.code)) failures.push(`unexpected hreflang ${entry.code}`);
+  }
+  return failures;
+}
+
+export function validateJapanTravelEntry(html, lang) {
+  const failures = [];
+  const sections = [...html.matchAll(/<section\b[^>]*data-japan-travel-entry[^>]*>/gi)];
+  const links = [...html.matchAll(/<a\b[^>]*data-japan-travel-link[^>]*>/gi)].map((match) => match[0]);
+  if (sections.length !== 1) failures.push(`section count is ${sections.length}`);
+  if (links.length !== 1) failures.push(`link count is ${links.length}`);
+  if (links[0]) {
+    if (attr(links[0], 'href') !== JAPAN_TRAVEL_URLS[lang]) failures.push(`unexpected href ${attr(links[0], 'href')}`);
+    if (attr(links[0], 'target') !== '_blank') failures.push('link must use target=_blank');
+    const rel = attr(links[0], 'rel').split(/\s+/);
+    if (!rel.includes('noopener')) failures.push('link must use rel=noopener');
+    if (rel.includes('nofollow')) failures.push('link must not use rel=nofollow');
   }
   return failures;
 }
@@ -278,8 +301,19 @@ export function runAudit({ writeReport = true } = {}) {
         if (/\bnovalidate\b/i.test(html)) report(lang, page, 'form-validation', 'novalidate is not allowed');
         if (!/<noscript>[\s\S]*?<\/noscript>/i.test(html)) report(lang, page, 'form-noscript', 'Missing no-JavaScript fallback');
         if (!/assets\/js\/contact-form-core\.js/.test(html)) report(lang, page, 'form-failsafe', 'Missing fail-safe contact form core');
-        if (/data-submit-endpoint|DAITORA_CONTACT_FORM_URL\s*=/.test(html)) report(lang, page, 'form-endpoint', 'Production endpoint must not be embedded in page HTML');
+        const formTag = html.match(/<form\b[^>]*data-contact-form[^>]*>/i)?.[0] || '';
+        if (attr(formTag, 'data-submit-endpoint') !== '/api/send-contact.php') report(lang, page, 'form-endpoint', 'Contact form must use the bundled same-origin /api/send-contact.php endpoint');
+        if (/DAITORA_CONTACT_FORM_URL\s*=/.test(html)) report(lang, page, 'form-endpoint', 'Runtime endpoint configuration must not be embedded in page HTML');
+        if (!/<input\b[^>]*name=["']website["'][^>]*tabindex=["']-1["'][^>]*>/i.test(html)) report(lang, page, 'form-honeypot', 'Missing disabled-tab-order honeypot field');
+        for (const type of ['hire','taxi','auto','corporate','recruit','general']) {
+          if (!new RegExp(`<option\\b[^>]*value=["']${type}["']`, 'i').test(html)) report(lang, page, 'form-type', `Missing contact type ${type}`);
+        }
       }
+
+      if (page === 'index.html') {
+        for (const failure of validateJapanTravelEntry(html, lang)) report(lang, page, 'japan-travel-entry', failure);
+      }
+      if (page === 'business-auto.html' && !/href=["'](?:\.\.\/|\/)?autoloan\//i.test(html)) report(lang, page, 'autoloan-link', 'Missing /autoloan/ application link');
 
       if (html.includes('site-footer')) {
         for (const fact of [OFFICIAL_FACTS.osakaAddress, OFFICIAL_FACTS.kyotoAddress]) {
@@ -354,7 +388,11 @@ export function runAudit({ writeReport = true } = {}) {
         report(lang, page, 'wording-lock', `Blocked wording ${finding.pattern}`, finding.chunk.slice(0, 180));
       }
       for (const [source, locked] of Object.entries(BRAND_LOCKS)) {
-        if (lang !== 'ja' && chunks.some((chunk) => chunk.includes(source))) report(lang, page, 'brand-lock', 'Untranslated Japanese brand source remains', source);
+        const officialNameAllowedInTravelCopy = source === '株式会社大寅'
+          && page === 'index.html'
+          && ['zh-CN', 'zh-TW'].includes(lang)
+          && chunks.some((chunk) => chunk.includes('Japan Travel') && chunk.includes('Daitora Group') && chunk.includes('株式会社大寅'));
+        if (lang !== 'ja' && !officialNameAllowedInTravelCopy && chunks.some((chunk) => chunk.includes(source))) report(lang, page, 'brand-lock', 'Untranslated Japanese brand source remains', source);
       }
 
       const navLabels = [
@@ -414,7 +452,7 @@ export function runAudit({ writeReport = true } = {}) {
     '',
     '- Native-language review remains required for non-Japanese copy. Static checks do not constitute native approval.',
     '- The approximately 100-vehicle claim, Kyoto office details, branch coverage, G20/EXPO/brand-event claims and news dates require business-owner confirmation.',
-    '- The official contact form API remains a deployment blocker until a real HTTPS endpoint and server-side validation are supplied.',
+    '- The bundled PHP contact endpoint requires real-server mail delivery testing before launch. Automated source checks do not prove that the hosting mail transport can deliver messages.',
     '- Official Osaka company facts are locked against the current public company profile; any future change must be updated deliberately in the structured fact source.'
   ].join('\n');
   if (writeReport) fs.writeFileSync(path.join(ROOT, 'MULTILINGUAL_QA.md'), `${qa}\n`, 'utf8');

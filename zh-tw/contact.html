@@ -174,12 +174,16 @@
           <div>
             <p class="section-kicker">Inquiry Form</p>
             <h2 class="section-title">發送您的諮詢詳情</h2>
-            <p class="section-copy">線上洽詢表單目前尚未啟用。請透過電話或電子郵件聯絡我們，負責人將確認您的洽詢內容。</p>
+            <p class="section-copy">填寫必要資訊後，負責人將確認內容並透過電子郵件或電話與您聯絡。如無法送出，請直接以電話或電子郵件聯絡我們。</p>
           </div>
-          <form class="contact-form" data-contact-form method="post">
+          <form class="contact-form" data-contact-form data-submit-endpoint="/api/send-contact.php" method="post">
             <noscript><p class="form-status is-notice">線上表單目前無法使用，請以電話或電子郵件聯絡我們。</p></noscript>
             <fieldset class="contact-form-fieldset" data-contact-fieldset disabled>
             <input type="hidden" name="site_language" value="zh-TW">
+            <label class="form-honeypot" aria-hidden="true">
+              <span>網站</span>
+              <input type="text" name="website" tabindex="-1" autocomplete="off">
+            </label>
             <div class="form-grid">
               <label>
                 <span>洽詢類型</span>
@@ -221,10 +225,10 @@
               <div class="form-wide form-dynamic-group" data-type-field="hire corporate">
                 <h3>接送詳情</h3>
                 <div class="form-grid">
-                  <label><span>使用日期</span><input type="date" name="ride_date"></label>
-                  <label><span>使用時間</span><input type="time" name="ride_time"></label>
-                  <label><span>出發地</span><input type="text" name="pickup" placeholder="機場、飯店、地址等"></label>
-                  <label><span>目的地</span><input type="text" name="destination" placeholder="飯店、會場、觀光景點等"></label>
+                  <label><span>使用日期</span><input type="date" name="ride_date" required></label>
+                  <label><span>使用時間</span><input type="time" name="ride_time" required></label>
+                  <label><span>出發地</span><input type="text" name="pickup" placeholder="機場、飯店、地址等" required></label>
+                  <label><span>目的地</span><input type="text" name="destination" placeholder="飯店、會場、觀光景點等" required></label>
                   <label><span>航班號碼</span><input type="text" name="flight_no" placeholder="範例：JL000/MM000"></label>
                   <label><span>人數</span><input type="number" name="passengers" min="1" inputmode="numeric"></label>
                   <label><span>行李件數</span><input type="number" name="luggage_count" min="0" inputmode="numeric"></label>
@@ -236,19 +240,19 @@
               <div class="form-wide form-dynamic-group" data-type-field="taxi">
                 <h3>使用計程車</h3>
                 <div class="form-grid">
-                  <label><span>預計使用區域</span><input type="text" name="taxi_area" placeholder="大阪市、京都市、車站/飯店區域等"></label>
-                  <label><span>預計使用日期與時間</span><input type="text" name="taxi_time" placeholder="範例：7 月 20 日 15:00 左右"></label>
-                  <label><span>上車地點</span><input type="text" name="taxi_pickup"></label>
-                  <label><span>目的地</span><input type="text" name="taxi_destination"></label>
+                  <label><span>預計使用區域</span><input type="text" name="taxi_area" placeholder="大阪市、京都市、車站/飯店區域等" required></label>
+                  <label><span>預計使用日期與時間</span><input type="text" name="taxi_time" placeholder="範例：7 月 20 日 15:00 左右" required></label>
+                  <label><span>上車地點</span><input type="text" name="taxi_pickup" required></label>
+                  <label><span>目的地</span><input type="text" name="taxi_destination" required></label>
                   <label class="form-wide"><span>計程車使用備註</span><textarea name="taxi_notes" rows="4" placeholder="行李、人數、飯店/企業用途、其他確認項目"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="auto">
                 <h3>二手車銷售/貸款諮詢</h3>
                 <div class="form-grid">
-                  <label><span>希望車型</span><input type="text" name="auto_model" placeholder="例：Alphard、Hiace、Sienta"></label>
-                  <label><span>使用目的</span><select name="auto_purpose"><option value="">請選擇</option><option>個人使用</option><option>家庭使用</option><option>企業用途</option><option>接送用車</option><option>計程車相關</option><option>其他</option></select></label>
-                  <label><span>申請人類型</span><select name="applicant_type"><option value="">請選擇</option><option>個人</option><option>公司</option><option>個人事業主</option><option>居住在日本的外國顧客</option></select></label>
+                  <label><span>希望車型</span><input type="text" name="auto_model" placeholder="例：Alphard、Hiace、Sienta" required></label>
+                  <label><span>使用目的</span><select name="auto_purpose" required><option value="">請選擇</option><option>個人使用</option><option>家庭使用</option><option>企業用途</option><option>接送用車</option><option>計程車相關</option><option>其他</option></select></label>
+                  <label><span>申請人類型</span><select name="applicant_type" required><option value="">請選擇</option><option>個人</option><option>公司</option><option>個人事業主</option><option>居住在日本的外國顧客</option></select></label>
                   <label><span>貸款諮詢</span><select name="loan_interest"><option value="">請選擇</option><option>需要諮詢</option><option>考慮中</option><option>暫不需要</option></select></label>
                   <label class="form-wide"><span>購車備註</span><textarea name="auto_notes" rows="4" placeholder="確認購買日期、現況、所需文件等"></textarea></label>
                 </div>
@@ -256,16 +260,16 @@
               <div class="form-wide form-dynamic-group" data-type-field="recruit">
                 <h3>司機招聘與應徵</h3>
                 <div class="form-grid">
-                  <label><span>期望的工作類型</span><input type="text" name="recruit_role" placeholder="司機、營運管理等"></label>
-                  <label><span>希望工作地區</span><input type="text" name="work_area" placeholder="大阪、京都等"></label>
-                  <label><span>駕駛 / 接待經驗</span><input type="text" name="experience"></label>
-                  <label><span>聯繫時間</span><input type="text" name="contact_time"></label>
+                  <label><span>期望的工作類型</span><input type="text" name="recruit_role" placeholder="司機、營運管理等" required></label>
+                  <label><span>希望工作地區</span><input type="text" name="work_area" placeholder="大阪、京都等" required></label>
+                  <label><span>駕駛 / 接待經驗</span><input type="text" name="experience" required></label>
+                  <label><span>聯繫時間</span><input type="text" name="contact_time" required></label>
                   <label class="form-wide"><span>應徵備註</span><textarea name="recruit_notes" rows="4"></textarea></label>
                 </div>
               </div>
               <div class="form-wide form-dynamic-group" data-type-field="general">
                 <h3>其他諮詢</h3>
-                <label><span>諮詢主旨</span><input type="text" name="general_subject" placeholder="公司資訊、採訪、合作夥伴諮詢等"></label>
+                <label><span>諮詢主旨</span><input type="text" name="general_subject" placeholder="公司資訊、採訪、合作夥伴諮詢等" required></label>
               </div>
               <label class="form-wide">
                 <span>諮詢內容</span>

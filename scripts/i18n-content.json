@@ -4460,5 +4460,41 @@
     "ko": "개인정보 처리방침을 확인했으며, 담당자의 연락에 동의합니다.",
     "zh-CN": "我已阅读《隐私政策》，并同意由负责人联系我。",
     "zh-TW": "我已閱讀《隱私權政策》，並同意由負責人與我聯絡。"
+  },
+  "関西の旅を、もっと分かりやすく。": {
+    "zh-CN": "更轻松地了解关西旅行。",
+    "en": "Discover Kansai with local insight.",
+    "ko": "간사이 여행을 더 알기 쉽게.",
+    "zh-TW": "更輕鬆地認識關西旅行。"
+  },
+  "Japan Travelは、株式会社大寅／Daitora Groupが運営する訪日旅行情報サイトです。大阪・京都を中心に、観光情報、多言語音声ガイド、移動や旅行サービスの入口をご案内しています。": {
+    "zh-CN": "Japan Travel 是由株式会社大寅／Daitora Group 运营的访日旅行信息平台，提供以大阪、京都为中心的景点介绍、多语言语音导览以及旅行服务入口。",
+    "en": "Japan Travel is a multilingual visitor information platform operated by Daitora Group, featuring destination guides, audio content and travel service access across Osaka, Kyoto and the wider Kansai region.",
+    "ko": "Japan Travel은 주식회사 Daitora／Daitora Group이 운영하는 방일 여행 정보 플랫폼입니다. 오사카와 교토를 중심으로 관광 정보, 다국어 음성 안내와 여행 서비스 정보를 제공합니다.",
+    "zh-TW": "Japan Travel 是由株式會社大寅／Daitora Group 營運的訪日旅行資訊平台，提供以大阪、京都為中心的景點介紹、多語言語音導覽及旅行服務入口。"
+  },
+  "Japan Travelを見る": {
+    "zh-CN": "访问 Japan Travel",
+    "en": "Visit Japan Travel",
+    "ko": "Japan Travel 둘러보기",
+    "zh-TW": "前往 Japan Travel"
+  },
+  "奈良・春日大社の釣燈籠": {
+    "zh-CN": "奈良春日大社的吊灯笼",
+    "en": "Hanging lanterns at Kasuga Taisha in Nara",
+    "ko": "나라 가스가타이샤의 등롱",
+    "zh-TW": "奈良春日大社的吊燈籠"
+  },
+  "必要事項を入力いただくと、担当者が内容を確認し、メールまたはお電話でご連絡します。送信できない場合は、電話またはメールでお問い合わせください。": {
+    "zh-CN": "填写必要信息后，负责人将确认内容并通过邮件或电话与您联系。如无法发送，请直接通过电话或邮件联系我们。",
+    "en": "Complete the required fields and our team will review your enquiry and respond by email or phone. If the form cannot be sent, please contact us directly by phone or email.",
+    "ko": "필수 정보를 입력하면 담당자가 내용을 확인한 후 이메일 또는 전화로 연락드립니다. 전송할 수 없는 경우 전화 또는 이메일로 문의해 주세요.",
+    "zh-TW": "填寫必要資訊後，負責人將確認內容並透過電子郵件或電話與您聯絡。如無法送出，請直接以電話或電子郵件聯絡我們。"
+  },
+  "ウェブサイト": {
+    "zh-CN": "网站",
+    "en": "Website",
+    "ko": "웹사이트",
+    "zh-TW": "網站"
   }
 }

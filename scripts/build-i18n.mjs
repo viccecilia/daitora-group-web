@@ -19,6 +19,13 @@ const langs = {
 };
 const baseUrl = 'https://daitora-jp.com';
 const ogImagePath = '/assets/images/og/daitora-group-og.jpg';
+const japanTravelUrls = {
+  ja: 'https://japan-travel.info/index-ja.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  'zh-CN': 'https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  en: 'https://japan-travel.info/index-en.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  ko: 'https://japan-travel.info/index-ko.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  'zh-TW': 'https://japan-travel.info/index-zhHant.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home'
+};
 
 const meta = {
   'index.html': ['大寅グループ | 大阪・京都のハイヤー・タクシー・中古車販売','大阪・京都を拠点に、ハイヤー、タクシー、中古車販売を展開するDaitora Groupの公式サイトです。'],
@@ -383,6 +390,10 @@ function setFormLanguage(html, lang){
   }
   return html;
 }
+function setJapanTravelLink(html, lang){
+  if (!html.includes('data-japan-travel-link')) return html;
+  return html.replace(/(<a\b[^>]*data-japan-travel-link[^>]*\bhref=")[^"]*(")/i, `$1${japanTravelUrls[lang]}$2`);
+}
 function localizedPath(page, lang){
   if (lang === 'ja') return page;
   return page;
@@ -419,6 +430,7 @@ function writePage(lang, page){
   html = injectHead(html, lang, page);
   html = setFormLanguage(html, lang);
   html = translate(html, lang, page);
+  html = setJapanTravelLink(html, lang);
   html = injectSwitchers(html, lang, page);
   html = langSpecificCss(html, lang);
   html = adjustPaths(html, lang);

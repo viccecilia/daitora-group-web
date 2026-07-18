@@ -21,6 +21,12 @@ assert.doesNotMatch(contactHtml, /<form\b[^>]*data-contact-form[^>]*novalidate/i
 assert.match(contactHtml, /<fieldset\b[^>]*data-contact-fieldset[^>]*disabled/i);
 assert.match(contactHtml, /<button\b[^>]*type="submit"[^>]*disabled[^>]*aria-disabled="true"/i);
 assert.match(contactHtml, /<noscript>[\s\S]*オンラインフォームは現在ご利用いただけません/);
+assert.match(contactHtml, /<form\b[^>]*data-submit-endpoint="\/api\/send-contact\.php"/i);
+assert.match(contactHtml, /<input\b[^>]*name="website"[^>]*tabindex="-1"/i);
+
+const siteJs = fs.readFileSync(path.join(ROOT, 'assets/js/site.js'), 'utf8');
+assert.match(siteJs, /contactForm\.dataset\.submitEndpoint\s*\|\|\s*window\.DAITORA_CONTACT_FORM_URL/);
+assert.match(siteJs, /payload\.source_page\s*=\s*location\.href/);
 
 for (const unsafe of ['', 'http://example.com/contact', 'javascript:alert(1)', 'data:text/plain,x', 'file:///tmp/contact', 'https://user:pass@example.com/contact']) {
   assert.equal(core.resolveEndpoint(unsafe, 'https://daitora-jp.com/contact.html'), '');
@@ -29,6 +35,12 @@ assert.equal(
   core.resolveEndpoint('https://api.example.com/contact', 'https://daitora-jp.com/contact.html'),
   'https://api.example.com/contact'
 );
+assert.equal(
+  core.resolveEndpoint('/api/send-contact.php', 'https://daitora-jp.com/contact.html'),
+  'https://daitora-jp.com/api/send-contact.php'
+);
+assert.equal(core.resolveEndpoint('/api/send-contact.php', 'http://127.0.0.1:8788/contact.html'), '');
+assert.equal(core.resolveEndpoint('/api/send-contact.php', 'file:///C:/site/contact.html'), '');
 
 let fetchCalls = 0;
 const unavailableSubmit = core.createSubmitter(async () => {
@@ -45,7 +57,7 @@ const cases = [
   [response(200, 'application/json', { success: false }), false],
   [response(200, 'application/json', { success: true }), true],
   [response(201, 'application/problem+json', { success: true }), true],
-  [response(204, '', null), true]
+  [response(204, '', null), false]
 ];
 
 for (const [fakeResponse, expected] of cases) {
@@ -79,7 +91,7 @@ assert.deepEqual(
   await duplicateSubmit({ endpoint: 'https://api.example.com/contact', baseUrl: 'https://daitora-jp.com/', payload: {} }),
   { ok: false, reason: 'duplicate' }
 );
-releaseFetch(response(204, '', null));
+releaseFetch(response(200, 'application/json', { success: true }));
 assert.deepEqual(await first, { ok: true, reason: 'success' });
 
 console.log('Contact form fail-safe tests passed');

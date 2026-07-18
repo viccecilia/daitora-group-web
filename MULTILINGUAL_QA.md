@@ -24,5 +24,5 @@ Browser QA detail: No browser QA result file is present.
 
 - Native-language review remains required for non-Japanese copy. Static checks do not constitute native approval.
 - The approximately 100-vehicle claim, Kyoto office details, branch coverage, G20/EXPO/brand-event claims and news dates require business-owner confirmation.
-- The official contact form API remains a deployment blocker until a real HTTPS endpoint and server-side validation are supplied.
+- The bundled PHP contact endpoint requires real-server mail delivery testing before launch. Automated source checks do not prove that the hosting mail transport can deliver messages.
 - Official Osaka company facts are locked against the current public company profile; any future change must be updated deliberately in the structured fact source.

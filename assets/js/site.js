@@ -123,7 +123,7 @@
     const fieldset = contactForm.querySelector('[data-contact-fieldset]');
     const status = contactForm.querySelector('[data-form-status]');
     const formCore = window.DaitoraContactFormCore;
-    const configuredEndpoint = window.DAITORA_CONTACT_FORM_URL || '';
+    const configuredEndpoint = contactForm.dataset.submitEndpoint || window.DAITORA_CONTACT_FORM_URL || '';
     const serviceUrl = formCore?.resolveEndpoint(configuredEndpoint, location.href) || '';
     const submitRequest = formCore?.createSubmitter(window.fetch.bind(window));
 
@@ -195,6 +195,7 @@
       formData.forEach((value, key) => {
         payload[key] = value;
       });
+      payload.source_page = location.href;
       if (submitButton) {
         submitButton.disabled = true;
         submitButton.setAttribute('aria-disabled', 'true');

@@ -18,7 +18,6 @@
 
   async function responseIsSuccess(response) {
     if (!response || typeof response.status !== 'number') return false;
-    if (response.status === 204) return true;
     if (response.status < 200 || response.status >= 300) return false;
     const contentType = response.headers?.get?.('content-type') || '';
     if (!/application\/(?:[\w.+-]*\+)?json/i.test(contentType)) return false;

@@ -23,6 +23,13 @@ jobs:
         with:
           node-version: 22
 
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring
+          coverage: none
+
       - name: Check JavaScript syntax
         run: |
           node --check scripts/build-i18n.mjs
@@ -38,6 +45,11 @@ jobs:
         run: |
           node scripts/test-contact-form.mjs
           node scripts/test-audit-negative.mjs
+
+      - name: Validate contact endpoint
+        run: |
+          php -l api/send-contact.php
+          php scripts/test-contact-endpoint.php
 
       - name: Build and audit localized pages
         run: |
