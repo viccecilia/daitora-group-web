@@ -18,11 +18,17 @@ GEO_项目进度表.md
 crop_logo.py
 daitora_ppt_extract_script.py
 
-# Large video libraries: keep only the production Hero video used by index.html
+# Large video libraries: keep only the lightweight production Hero rotation.
 assets/videos/**
 !assets/videos/
 !assets/videos/selected/
 !assets/videos/selected/846e659263_pexels_nara_warm-family-nature_japanese-deer_31387243_1920x1080.mp4
+!assets/videos/selected/3d58659ace_pexels_kyoto_traditional-japan_kyoto-lantern_3177520_1920x1080.mp4
+!assets/videos/selected/0441c35b6b_pexels_osaka_modern-city_japan-city-night_18662635_1920x1080.mp4
+!assets/videos/selected/d0469a188e_pexels_hyogo_kobe-himeji-side-trip_himeji-castle_7418360_1920x1080.mp4
+!assets/videos/curated/
+!assets/videos/curated/wakayama-coast-nature.mp4
+!assets/videos/curated/shiga-shirahige-shrine.mp4
 
 # Archives and generated packages
 *.zip
