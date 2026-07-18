@@ -1,6 +1,6 @@
 # Translation Review Ledger
 
-Updated: 2026-07-17
+Updated: 2026-07-18
 
 Automated audit status uses `PASSED` for generated localized HTML and `SOURCE` for the Japanese source pages. Copy-review status uses `DRAFT`, `MACHINE_POLISHED`, `NATIVE_REVIEW_REQUIRED`, or `APPROVED`; business facts use `BUSINESS_REVIEW_REQUIRED` until confirmed. No translation is marked `APPROVED` until a native reviewer and the business owner have both confirmed it.
 
@@ -97,16 +97,16 @@ Automated audit status uses `PASSED` for generated localized HTML and `SOURCE` f
 ## Visual QA
 
 - Viewports checked: 320, 390, 768, 1024, and 1440px.
-- Browser QA covered 325 page/viewport combinations (65 pages at five widths) across all five languages; no horizontal overflow was found.
-- Screenshot evidence: `output/playwright/prelaunch-audit/` (internal QA evidence; excluded from production deployment).
-- Current automated multilingual audit: PASSED with zero broken links, missing resources, SEO count errors, duplicate IDs, or unapproved Japanese kana residuals.
+- Current static multilingual audit: PASSED with zero broken links, missing resources, SEO errors, duplicate IDs, fact-lock errors, wording-lock errors, or unapproved Japanese-kana residuals.
+- Responsive browser QA is not inferred from the static audit. Only evidence matching the current Git commit and all required viewports may be reported as passed in `MULTILINGUAL_QA.md`.
+- Any browser screenshots or result files under `output/playwright/` remain internal QA evidence and are excluded from production deployment.
 
 ## Required Human Confirmation
 
 - Native review remains required for every localized page, including pages marked `MACHINE_POLISHED`.
 - The vehicle count and the wording `約100台規模` require business-owner confirmation.
-- Office addresses and the stated Osaka / Kyoto / Sakai / Minato operating range require business-owner confirmation.
-- All licence and permit numbers require business-owner confirmation.
+- The Osaka head-office address, establishment date, representative, annual sales, capital and published licence numbers are locked to the currently published official company profile; the business owner must still confirm that the public source is current before release.
+- The Kyoto office address/telephone and the stated Osaka / Kyoto / Sakai / Minato operating range require business-owner confirmation.
 - G20, EXPO, overseas brand-event and other case descriptions require business-owner confirmation.
 - Published news dates require business-owner confirmation.
 - The contact-form production backend endpoint and server-side validation remain unconfigured and require the responsible technical owner.

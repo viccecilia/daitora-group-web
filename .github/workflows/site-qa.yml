@@ -1,0 +1,63 @@
+name: Site QA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-site-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check scripts/build-i18n.mjs
+          node --check scripts/audit-i18n.mjs
+          node --check scripts/i18n-config.mjs
+          node --check scripts/manual-i18n-polish.mjs
+          node --check scripts/test-contact-form.mjs
+          node --check scripts/test-audit-negative.mjs
+          node --check assets/js/site.js
+          node --check assets/js/contact-form-core.js
+
+      - name: Run fail-safe and negative-control tests
+        run: |
+          node scripts/test-contact-form.mjs
+          node scripts/test-audit-negative.mjs
+
+      - name: Build and audit localized pages
+        run: |
+          node scripts/build-i18n.mjs
+          node scripts/audit-i18n.mjs
+          git diff --exit-code
+
+      - name: Verify deterministic output
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            find en zh-cn ko zh-tw -maxdepth 1 -type f -name '*.html' -print
+            find . -maxdepth 1 -type f \( -name '*.html' -o -name 'sitemap.xml' -o -name 'MULTILINGUAL_QA.md' \) -print
+          } | LC_ALL=C sort | xargs sha256sum > /tmp/daitora-before.sha256
+          node scripts/build-i18n.mjs
+          node scripts/audit-i18n.mjs
+          {
+            find en zh-cn ko zh-tw -maxdepth 1 -type f -name '*.html' -print
+            find . -maxdepth 1 -type f \( -name '*.html' -o -name 'sitemap.xml' -o -name 'MULTILINGUAL_QA.md' \) -print
+          } | LC_ALL=C sort | xargs sha256sum > /tmp/daitora-after.sha256
+          diff -u /tmp/daitora-before.sha256 /tmp/daitora-after.sha256
+          git diff --exit-code

@@ -1,10 +1,10 @@
 ﻿(() => {
   const LANGS = {
-    ja: { label: '日本語', menu: 'メニュー', send: '内容を送信する', preparing: 'フォーム送信準備中', unavailable: '現在フォーム送信の準備中です。お急ぎの場合は電話またはメールでご連絡ください。', required: '必須項目をご確認ください。', sending: '送信しています。しばらくお待ちください。', success: '送信しました。担当者より確認のうえご連絡いたします。', failed: '送信できませんでした。入力内容をご確認のうえ、時間をおいて再度お試しください。', network: '通信状況により送信できませんでした。電話またはメールでご連絡ください。' },
-    'zh-CN': { label: '简体中文', menu: '菜单', send: '发送内容', preparing: '表单准备中', unavailable: '表单发送功能正在准备中。如有急事，请通过电话或邮件联系我们。', required: '请确认必填项目。', sending: '正在发送，请稍候。', success: '已发送。负责人确认后会与您联系。', failed: '发送失败。请确认填写内容后稍后再试。', network: '因网络状态未能发送。请通过电话或邮件联系我们。' },
-    en: { label: 'English', menu: 'Menu', send: 'Send request', preparing: 'Form unavailable', unavailable: 'Online form submission is being prepared. Please contact us by phone or email for urgent inquiries.', required: 'Please check the required fields.', sending: 'Sending. Please wait.', success: 'Your request has been sent. Our team will review it and contact you.', failed: 'Unable to send. Please check your input and try again later.', network: 'Unable to send due to a network issue. Please contact us by phone or email.' },
-    ko: { label: '한국어', menu: '메뉴', send: '내용 보내기', preparing: '폼 준비 중', unavailable: '현재 온라인 문의 발송 기능을 준비 중입니다. 급한 경우 전화 또는 이메일로 문의해 주세요.', required: '필수 항목을 확인해 주세요.', sending: '전송 중입니다. 잠시만 기다려 주세요.', success: '전송되었습니다. 담당자가 확인 후 연락드리겠습니다.', failed: '전송하지 못했습니다. 입력 내용을 확인한 뒤 다시 시도해 주세요.', network: '네트워크 문제로 전송하지 못했습니다. 전화 또는 이메일로 문의해 주세요.' },
-    'zh-TW': { label: '繁體中文', menu: '選單', send: '送出內容', preparing: '表單準備中', unavailable: '目前表單送出功能正在準備中。如有急件，請以電話或電子郵件聯絡。', required: '請確認必填項目。', sending: '正在送出，請稍候。', success: '已送出。負責人確認後會與您聯絡。', failed: '無法送出。請確認填寫內容後稍後再試。', network: '因網路狀況無法送出。請以電話或電子郵件聯絡。' }
+    ja: { label: '日本語', menu: 'メニュー', send: '内容を送信する', preparing: 'フォーム送信準備中', unavailable: '現在フォーム送信の準備中です。お急ぎの場合は電話またはメールでご連絡ください。', required: '必須項目をご確認ください。', sending: '送信しています。しばらくお待ちください。', success: '送信しました。担当者より確認のうえご連絡いたします。', failed: '送信できませんでした。入力内容をご確認のうえ、時間をおいて再度お試しください。', network: '通信状況により送信できませんでした。電話またはメールでご連絡ください。', timeout: '送信がタイムアウトしました。時間をおいて再度お試しいただくか、電話またはメールでご連絡ください。' },
+    'zh-CN': { label: '简体中文', menu: '菜单', send: '发送内容', preparing: '表单准备中', unavailable: '表单发送功能正在准备中。如有急事，请通过电话或邮件联系我们。', required: '请确认必填项目。', sending: '正在发送，请稍候。', success: '已发送。负责人确认后会与您联系。', failed: '发送失败。请确认填写内容后稍后再试。', network: '因网络状态未能发送。请通过电话或邮件联系我们。', timeout: '发送超时。请稍后重试，或通过电话、邮件联系我们。' },
+    en: { label: 'English', menu: 'Menu', send: 'Send request', preparing: 'Form unavailable', unavailable: 'Online form submission is being prepared. Please contact us by phone or email for urgent inquiries.', required: 'Please check the required fields.', sending: 'Sending. Please wait.', success: 'Your request has been sent. Our team will review it and contact you.', failed: 'Unable to send. Please check your input and try again later.', network: 'Unable to send due to a network issue. Please contact us by phone or email.', timeout: 'The request timed out. Please try again later or contact us by phone or email.' },
+    ko: { label: '한국어', menu: '메뉴', send: '내용 보내기', preparing: '폼 준비 중', unavailable: '현재 온라인 문의 발송 기능을 준비 중입니다. 급한 경우 전화 또는 이메일로 문의해 주세요.', required: '필수 항목을 확인해 주세요.', sending: '전송 중입니다. 잠시만 기다려 주세요.', success: '전송되었습니다. 담당자가 확인 후 연락드리겠습니다.', failed: '전송하지 못했습니다. 입력 내용을 확인한 뒤 다시 시도해 주세요.', network: '네트워크 문제로 전송하지 못했습니다. 전화 또는 이메일로 문의해 주세요.', timeout: '전송 시간이 초과되었습니다. 잠시 후 다시 시도하거나 전화 또는 이메일로 문의해 주세요.' },
+    'zh-TW': { label: '繁體中文', menu: '選單', send: '送出內容', preparing: '表單準備中', unavailable: '目前表單送出功能正在準備中。如有急件，請以電話或電子郵件聯絡。', required: '請確認必填項目。', sending: '正在送出，請稍候。', success: '已送出。負責人確認後會與您聯絡。', failed: '無法送出。請確認填寫內容後稍後再試。', network: '因網路狀況無法送出。請以電話或電子郵件聯絡。', timeout: '送出逾時。請稍後再試，或以電話、電子郵件聯絡。' }
   };
 
   const normalizeLang = (value) => {
@@ -120,8 +120,12 @@
     const typeSelect = contactForm.querySelector('select[name="type"]');
     const groups = [...contactForm.querySelectorAll('[data-type-field]')];
     const submitButton = contactForm.querySelector('button[type="submit"]');
+    const fieldset = contactForm.querySelector('[data-contact-fieldset]');
     const status = contactForm.querySelector('[data-form-status]');
-    const serviceUrl = window.DAITORA_CONTACT_FORM_URL || '';
+    const formCore = window.DaitoraContactFormCore;
+    const configuredEndpoint = window.DAITORA_CONTACT_FORM_URL || '';
+    const serviceUrl = formCore?.resolveEndpoint(configuredEndpoint, location.href) || '';
+    const submitRequest = formCore?.createSubmitter(window.fetch.bind(window));
 
     const setStatus = (message, state = '') => {
       if (!status) return;
@@ -130,12 +134,16 @@
     };
     const setSubmitReady = () => {
       if (!submitButton) return;
-      if (serviceUrl) {
+      if (serviceUrl && submitRequest) {
+        if (fieldset) fieldset.disabled = false;
         submitButton.disabled = false;
+        submitButton.setAttribute('aria-disabled', 'false');
         submitButton.textContent = i18n.send;
         setStatus('');
       } else {
+        if (fieldset) fieldset.disabled = true;
         submitButton.disabled = true;
+        submitButton.setAttribute('aria-disabled', 'true');
         submitButton.textContent = i18n.preparing;
         setStatus(i18n.unavailable, 'notice');
       }
@@ -189,34 +197,33 @@
       });
       if (submitButton) {
         submitButton.disabled = true;
+        submitButton.setAttribute('aria-disabled', 'true');
         submitButton.textContent = i18n.sending;
       }
       setStatus(i18n.sending, 'notice');
-      const controller = new AbortController();
-      const timeoutId = window.setTimeout(() => controller.abort(), 15000);
-      try {
-        const response = await fetch(serviceUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-          signal: controller.signal
-        });
-        if (!response.ok) {
-          setStatus(i18n.failed, 'error');
-          return;
-        }
+      const result = await submitRequest({
+        endpoint: serviceUrl,
+        baseUrl: location.href,
+        payload,
+        timeoutMs: 15000
+      });
+      if (result.reason === 'duplicate') return;
+      if (result.ok) {
         setStatus(i18n.success, 'success');
         contactForm.reset();
         if (langField) langField.value = currentLang;
         updateFields();
-      } catch (error) {
+      } else if (result.reason === 'timeout') {
+        setStatus(i18n.timeout, 'error');
+      } else if (result.reason === 'network') {
         setStatus(i18n.network, 'error');
-      } finally {
-        window.clearTimeout(timeoutId);
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.textContent = i18n.send;
-        }
+      } else {
+        setStatus(i18n.failed, 'error');
+      }
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.setAttribute('aria-disabled', 'false');
+        submitButton.textContent = i18n.send;
       }
     });
   }

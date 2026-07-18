@@ -29,6 +29,7 @@
 
 - `.git/`, `node_modules/`
 - `scripts/`
+- `GEO_*.html`、`GEO_*.md` などの内部進捗資料
 - `output/` と `output/playwright/`
 - `daitora-group-review-sample/`
 - `media_audit/`, `daitora_ppt_extract/`
@@ -45,14 +46,15 @@
 
 ```html
 <script>
-  window.DAITORA_CONTACT_FORM_URL = "https://daitora-jp.com/api/contact";
+  window.DAITORA_CONTACT_FORM_URL = "https://YOUR-API-HOST/CONTACT-PATH";
 </script>
+<script src="assets/js/contact-form-core.js"></script>
 <script src="assets/js/site.js"></script>
 ```
 
-上記 URL はインターフェース例です。正式な API が確定するまで、そのまま使用しないでください。
+上記 URL は動作しない明示的なプレースホルダーです。正式な API が確定するまで、そのまま使用しないでください。フロントエンドは、認証情報を URL に含まない有効な HTTPS endpoint だけを受け付けます。
 
-フロントエンドは `Content-Type: application/json` の `POST` を送信し、HTTP 2xx のときだけ成功表示を行います。主な項目は次のとおりです。
+フロントエンドは `Content-Type: application/json` の `POST` を送信します。成功表示の条件は、HTTP `204`、または JSON content type の HTTP 2xx と `{ "success": true }` の組み合わせだけです。HTML、壊れた JSON、`success:false`、非 2xx、タイムアウト、ネットワーク異常は成功扱いにしません。主な項目は次のとおりです。
 
 - 共通: `type`, `name`, `company`, `email`, `phone`, `site_language`, `privacy`
 - Hire / Corporate: `ride_date`, `ride_time`, `pickup`, `destination`, `flight_no`, `passengers`, `luggage_count`, `vehicle_type`, `ride_purpose`, `message`
@@ -70,7 +72,7 @@
 5. HTML とスクリプトを無害化し、通知メールへ未処理の入力を挿入しないこと。
 6. HTTPS、Origin / CORS、CSRF、レート制限、スパム対策を実装すること。
 7. 個人情報の保存期間、閲覧権限、削除手順、障害時ログを定めること。
-8. 成功時は 2xx、入力エラーは 4xx、サーバー障害は 5xx を返すこと。
+8. 成功時は `204`、または JSON content type の 2xx と `{ "success": true }` を返すこと。入力エラーは 4xx、サーバー障害は 5xx を返すこと。
 9. 多言語の受付確認メールは、受信した `site_language` に基づいて送信すること。
 
 ## Multilingual Preflight
@@ -78,7 +80,11 @@
 ```powershell
 node --check scripts/build-i18n.mjs
 node --check scripts/audit-i18n.mjs
+node --check scripts/i18n-config.mjs
 node --check assets/js/site.js
+node --check assets/js/contact-form-core.js
+node scripts/test-contact-form.mjs
+node scripts/test-audit-negative.mjs
 node scripts/build-i18n.mjs
 node scripts/audit-i18n.mjs
 ```

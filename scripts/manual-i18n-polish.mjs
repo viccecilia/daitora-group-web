@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { finalLockEntries } from './i18n-config.mjs';
 
 const root = process.cwd();
 const contentPath = path.join(root, 'scripts', 'i18n-content.json');
@@ -1481,10 +1482,184 @@ Object.assign(overrides, {
     ko: '예약・신청 절차로 진행',
     'zh-CN': '进入预约或申请流程',
     'zh-TW': '進入預約或申請流程'
+  },
+  '関西で動かせる、': {
+    en: 'A dependable operating network',
+    ko: '간사이 전역을 움직이는,',
+    'zh-CN': '关西地区可灵活调度，',
+    'zh-TW': '關西地區可靈活調度，'
+  },
+  '大阪・京都・堺・港区など関西エリアを中心に、駅、ホテル、空港周辺、観光地、ビジネス先への日常移動を支えるタクシー事業。見つけやすい車両と安定した運行管理で、短距離移動から観光利用まで対応します。': {
+    en: 'Toramaru Taxi supports everyday travel to stations, hotels, airport areas, sightseeing destinations and business appointments across Osaka, Kyoto, Sakai, Minato and the wider Kansai region. Recognisable vehicles and consistent operating standards support both short local trips and sightseeing use.',
+    ko: 'Toramaru Taxi는 오사카, 교토, 사카이, 미나토구 등 간사이 지역에서 역, 호텔, 공항 주변, 관광지, 비즈니스 목적지로의 일상 이동을 지원합니다. 알아보기 쉬운 차량과 안정적인 운행 관리로 단거리 이동부터 관광 이용까지 대응합니다.',
+    'zh-CN': 'Toramaru Taxi以大阪、京都、堺、港区等关西地区为中心，为前往车站、酒店、机场周边、观光景点及商务地点的日常出行提供服务。易于识别的车辆与稳定的运营管理，可满足短途出行及观光用车需求。',
+    'zh-TW': 'Toramaru Taxi以大阪、京都、堺、港區等關西地區為中心，為前往車站、飯店、機場周邊、觀光景點及商務地點的日常移動提供服務。易於辨識的車輛與穩定的營運管理，可滿足短程移動及觀光用車需求。'
+  },
+  '複数拠点・複数台対応': {
+    en: 'Multi-location, Multi-vehicle Coordination',
+    ko: '복수 거점・복수 차량 대응',
+    'zh-CN': '多据点・多车辆协同',
+    'zh-TW': '多據點・多車輛協同'
+  },
+  '一件の送迎を、確実に運行するために。': {
+    en: 'For dependable operation on every journey.',
+    ko: '한 건의 송영도 정확하게 운행하기 위해.',
+    'zh-CN': '确保每一次接送稳定运行。',
+    'zh-TW': '確保每一次接送穩定運行。'
+  },
+  '予約確認、配車設計、当日運行、完了後の共有まで。送迎の前後にある確認作業を重ねることで、一件ずつ確実な運行につなげています。': {
+    en: 'From reservation checks and dispatch planning to day-of operation and post-service reporting, repeated checks before and after each journey help us deliver dependable transportation.',
+    ko: '예약 확인과 배차 설계부터 당일 운행, 완료 후 공유까지 송영 전후의 확인 절차를 반복해 한 건 한 건 안정적인 운행으로 이어갑니다.',
+    'zh-CN': '从预约确认、调度规划、当日运行到完成后的信息共享，我们通过接送前后的逐项确认，确保每一次服务稳定执行。',
+    'zh-TW': '從預約確認、派車規劃、當日運行到完成後的資訊共享，我們透過接送前後的逐項確認，確保每一次服務穩定執行。'
+  },
+  '国際会議関連の関係者送迎に対応。時間管理、待機場所確認、複数車両の運行調整を経験しました。': {
+    en: 'We supported transportation for international conference stakeholders, gaining experience in schedule control, waiting-area verification and multi-vehicle coordination.',
+    ko: '국제회의 관계자 송영을 수행하며 시간 관리, 대기 장소 확인, 복수 차량 운행 조정 경험을 쌓았습니다.',
+    'zh-CN': '承接国际会议相关人员接送，积累了时间管理、等候地点确认及多车辆运营协调经验。',
+    'zh-TW': '承接國際會議相關人員接送，累積了時間管理、等候地點確認及多車輛營運協調經驗。'
+  },
+  'ご相談前にご用意いただくとスムーズな情報': {
+    en: 'Information to Prepare Before Contacting Us',
+    ko: '상담 전에 준비하시면 좋은 정보',
+    'zh-CN': '咨询前建议准备的信息',
+    'zh-TW': '洽詢前建議準備的資訊'
+  },
+  'タクシー相談へ': {
+    en: 'Request Taxi Service',
+    ko: '택시 이용 상담',
+    'zh-CN': '咨询出租车服务',
+    'zh-TW': '洽詢計程車服務'
+  },
+  '法人相談へ': {
+    en: 'Corporate Transportation Inquiry',
+    ko: '법인 운송 상담',
+    'zh-CN': '企业用车咨询',
+    'zh-TW': '企業用車洽詢'
+  },
+  'その他の相談へ': {
+    en: 'Other Inquiries',
+    ko: '기타 문의',
+    'zh-CN': '其他咨询',
+    'zh-TW': '其他洽詢'
+  },
+  '担当者よりご連絡': {
+    en: 'A Member of Our Team Will Contact You',
+    ko: '담당자 연락',
+    'zh-CN': '负责人联系',
+    'zh-TW': '負責人聯絡'
+  },
+  '必要事項を入力いただくと、担当者が内容を確認し、メールまたはお電話でご連絡します。現在フォーム送信の準備中です。お急ぎの場合は電話またはメールでご連絡ください。': {
+    en: 'Our online form is currently unavailable. Please contact us by phone or email, and a member of our team will review your inquiry.',
+    ko: '현재 온라인 문의 양식을 준비 중입니다. 전화 또는 이메일로 문의해 주시면 담당자가 내용을 확인합니다.',
+    'zh-CN': '在线咨询表单目前尚未启用。请通过电话或邮件联系我们，负责人将确认您的咨询内容。',
+    'zh-TW': '線上洽詢表單目前尚未啟用。請透過電話或電子郵件聯絡我們，負責人將確認您的洽詢內容。'
+  },
+  'まずはご希望の内容をお聞かせください。': {
+    en: 'Tell Us About Your Requirements',
+    ko: '필요하신 내용을 알려 주세요',
+    'zh-CN': '请告诉我们您的具体需求',
+    'zh-TW': '請告訴我們您的具體需求'
+  },
+  '空港送迎、企業送迎、団体移動、車両相談まで。まずはご希望の内容をお聞かせください。': {
+    en: 'Tell us about your requirements for airport transfers, corporate transportation, group travel or vehicle consultation.',
+    ko: '공항 송영, 기업 송영, 단체 이동, 차량 상담 등 필요하신 내용을 알려 주세요.',
+    'zh-CN': '无论机场接送、企业接送、团体出行或车辆咨询，请告诉我们您的具体需求。',
+    'zh-TW': '無論機場接送、企業接送、團體移動或車輛洽詢，請告訴我們您的具體需求。'
+  },
+  '大寅グループからのお知らせ、事業情報、公開できる範囲での主な対応実績をご紹介します。': {
+    en: 'News, business updates and selected operating experience that Daitora Group can share publicly.',
+    ko: 'Daitora Group의 공지, 사업 정보와 공개 가능한 주요 운행 실적을 소개합니다.',
+    'zh-CN': '介绍Daitora Group的通知、业务信息及可公开的主要服务实绩。',
+    'zh-TW': '介紹Daitora Group的公告、事業資訊及可公開的主要服務實績。'
+  },
+  'ホテル、会場、空港間の移動': {
+    en: 'Transportation between hotels, venues and airports',
+    ko: '호텔, 행사장, 공항 간 이동',
+    'zh-CN': '酒店、会场与机场之间的接送',
+    'zh-TW': '飯店、會場與機場之間的接送'
+  },
+  'ホテル、会場、観光地など': {
+    en: 'Hotel, venue or sightseeing destination',
+    ko: '호텔, 행사장, 관광지 등',
+    'zh-CN': '酒店、会场、观光景点等',
+    'zh-TW': '飯店、會場、觀光景點等'
+  },
+  '会場、宿泊先、主要訪問先間の移動': {
+    en: 'Transportation between the venue, accommodation and key destinations',
+    ko: '행사장, 숙소, 주요 방문지 간 이동',
+    'zh-CN': '会场、住宿地与主要访问地点之间的接送',
+    'zh-TW': '會場、住宿地與主要拜訪地點之間的接送'
+  },
+  '関係者の会場間移動': {
+    en: 'Stakeholder transportation between venues',
+    ko: '관계자의 행사장 간 이동',
+    'zh-CN': '相关人员的会场间接送',
+    'zh-TW': '相關人員的會場間接送'
+  },
+  '関係者移動における車両手配、時間管理、会場間移動に対応しました。移動予定の確認と当日の連絡体制を整え、関係者のスムーズな移動を支援しました。': {
+    en: 'We coordinated vehicles, schedules and travel between venues for event stakeholders. Advance itinerary checks and a day-of communication plan supported smooth transportation.',
+    ko: '관계자 이동을 위한 차량 배정, 시간 관리, 행사장 간 이동에 대응했습니다. 이동 일정을 사전에 확인하고 당일 연락 체계를 갖춰 원활한 이동을 지원했습니다.',
+    'zh-CN': '我们为相关人员安排车辆、管理时间并承接会场间接送，通过事先确认行程及建立当日联络机制，保障人员顺畅移动。',
+    'zh-TW': '我們為相關人員安排車輛、管理時間並承接會場間接送，透過事先確認行程及建立當日聯絡機制，保障人員順暢移動。'
+  },
+  '整備された車両環境': {
+    en: 'Well-maintained Vehicles',
+    ko: '정비・관리된 차량 환경',
+    'zh-CN': '规范维护的车辆环境',
+    'zh-TW': '妥善維護的車輛環境'
+  },
+  '安全・謙遜・迅敏': {
+    en: 'Safety, Humility and Agility',
+    ko: '안전・겸손・신속',
+    'zh-CN': '安全・谦逊・迅敏',
+    'zh-TW': '安全・謙遜・迅敏'
+  },
+  '安全・謙遜・迅敏。': {
+    en: 'Safety, Humility and Agility.',
+    ko: '안전・겸손・신속.',
+    'zh-CN': '安全・谦逊・迅敏。',
+    'zh-TW': '安全・謙遜・迅敏。'
+  },
+  '迅敏 / Agility': {
+    en: 'Agility',
+    ko: '신속 / Agility',
+    'zh-CN': '迅敏 / Agility',
+    'zh-TW': '迅敏 / Agility'
+  },
+  '私たちは、社訓である「安全・謙遜・迅敏」を大切にしております。': {
+    en: 'We value our company principles of Safety, Humility and Agility.',
+    ko: '저희는 사훈인 「안전・겸손・신속」을 소중히 합니다.',
+    'zh-CN': '我们重视“安全・谦逊・迅敏”的企业准则。',
+    'zh-TW': '我們重視「安全・謙遜・迅敏」的企業準則。'
+  },
+  '安全をすべての判断基準とし、謙虚な姿勢でお客様と向き合い、迅敏な対応力で期待を超えるサービスを提供すること。': {
+    en: 'Safety guides every decision, humility shapes how we serve customers, and prompt, accurate action helps us exceed expectations.',
+    ko: '안전을 모든 판단 기준으로 삼고 겸손한 자세로 고객을 대하며 신속한 대응으로 기대를 뛰어넘는 서비스를 제공합니다.',
+    'zh-CN': '以安全作为所有判断标准，以谦逊态度面对客户，并以迅速准确的应对提供超越期待的服务。',
+    'zh-TW': '以安全作為所有判斷標準，以謙遜態度面對客戶，並以迅速準確的應對提供超越期待的服務。'
+  },
+  '安全を判断基準に、謙虚にお客様と向き合い、迅敏な対応力で期待を超えるサービスを提供します。': {
+    en: 'We place safety at the centre of every decision, serve customers with humility and respond promptly and accurately.',
+    ko: '안전을 판단 기준으로 삼고 겸손하게 고객을 대하며 신속한 대응으로 기대에 부응합니다.',
+    'zh-CN': '以安全作为判断标准，以谦逊态度面对客户，并通过迅速准确的应对超越期待。',
+    'zh-TW': '以安全作為判斷標準，以謙遜態度面對客戶，並透過迅速準確的應對超越期待。'
+  },
+  'オンラインフォームは現在ご利用いただけません。お電話またはメールでお問い合わせください。': {
+    en: 'The online form is currently unavailable. Please contact us by phone or email.',
+    ko: '현재 온라인 문의 양식을 이용할 수 없습니다. 전화 또는 이메일로 문의해 주세요.',
+    'zh-CN': '在线表单目前不可用，请通过电话或电子邮件联系我们。',
+    'zh-TW': '線上表單目前無法使用，請以電話或電子郵件聯絡我們。'
   }
 });
 
 for (const [source, translations] of Object.entries(overrides)) {
+  content[source] = { ...(content[source] || {}), ...translations };
+}
+
+// Keep the structured catalogue aligned with final UI, brand and fact locks.
+// The build itself fails if a lower-priority value later drifts from a lock.
+for (const { source, translations } of finalLockEntries()) {
   content[source] = { ...(content[source] || {}), ...translations };
 }
 

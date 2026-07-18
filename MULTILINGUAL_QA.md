@@ -1,33 +1,28 @@
 # Multilingual QA
 
-Generated: 2026-07-17T09:57:12.070Z
+This report is generated from the current working tree by `node scripts/audit-i18n.mjs`.
 
 ## Automated Audit Summary
 
-| Language | Pages | Japanese kana residuals | Broken links | Missing resources | SEO duplicate/count errors | Duplicate IDs |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| ja | 13 | 0 | 0 | 0 | 0 | 0 |
-| zh-CN | 13 | 0 | 0 | 0 | 0 | 0 |
-| en | 13 | 0 | 0 | 0 | 0 | 0 |
-| ko | 13 | 0 | 0 | 0 | 0 | 0 |
-| zh-TW | 13 | 0 | 0 | 0 | 0 | 0 |
+| Language | Pages | Kana residuals | Broken links | Missing resources | SEO errors | Duplicate IDs | Fact errors | Wording errors |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| ja | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| zh-CN | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| en | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| ko | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| zh-TW | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-Audit status: PASSED
-
-## Responsive Check Status
-
-- Browser QA completed on 2026-07-17 at 320, 390, 768, 1024, and 1440px.
-- 325 page/viewport combinations (65 pages at five widths) across all five languages passed the horizontal-overflow check.
-- Navigation, language switcher, company-profile anchor, localized contact form, and mobile menu focus/ESC behavior were checked.
-- Evidence: `output/playwright/prelaunch-audit/` (internal only; not part of the production deployment).
-- Layout checks are manual browser QA and are not inferred from this static audit script.
+Static audit status: PASSED
+Responsive browser QA: NOT PART OF THIS STATIC AUDIT
+Browser QA detail: No browser QA result file is present.
 
 ## Errors
 
 - None
 
-## Notes For Human Review
+## Manual Review Still Required
 
-- Brand names are locked to Daitora Group, Daitora Chauffeur & Private Transportation, Toramaru Taxi, and Daitora Auto / Used Car Sales.
-- Official addresses, license numbers, public case claims, dates, and business figures still require business-side confirmation.
-- Server-side 301 redirect recommendation: map /company.html and localized /company.html paths to their corresponding /about.html#company-profile user-facing destinations while keeping canonical URLs without anchors.
+- Native-language review remains required for non-Japanese copy. Static checks do not constitute native approval.
+- The approximately 100-vehicle claim, Kyoto office details, branch coverage, G20/EXPO/brand-event claims and news dates require business-owner confirmation.
+- The official contact form API remains a deployment blocker until a real HTTPS endpoint and server-side validation are supplied.
+- Official Osaka company facts are locked against the current public company profile; any future change must be updated deliberately in the structured fact source.

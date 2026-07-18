@@ -2,9 +2,9 @@
 
 ## Audit Record
 
-- Audit date: 2026-07-17 (Asia/Tokyo)
+- Audit date: 2026-07-18 (Asia/Tokyo)
 - Baseline branch: `main`
-- Baseline commit: `c6711cac471322271c4d5f30c5471eabff722f3a`
+- Baseline commit: `9323b8f3a435157bde558c80cefa72ea0aa00298`
 - Baseline remote: `origin/main` matched the baseline commit before work began
 - Final commit: the commit containing this report; the exact SHA is recorded in the release handoff after Git creates it
 - Languages: Japanese, English, Simplified Chinese, Korean, Traditional Chinese
@@ -31,10 +31,10 @@ The audit covered the multilingual build and audit scripts, all generated HTML, 
 - No empty links, `href="#"`, `javascript:` links, `file://` links, Windows absolute paths, insecure HTTP subresources, or unsafe `target="_blank"` links were found.
 - The only tracked video is the Hero clip actually referenced by all five home pages. The larger local video library remains ignored by Git.
 - The Hero has a poster, uses one production clip, does not start a redundant rotation timer, pauses while the page is hidden, and falls back to the poster for reduced-motion users.
-- Responsive automation covered 325 page/viewport combinations: all 65 pages at 320, 390, 768, 1024, and 1440px. No horizontal overflow, failed resources, or blocking runtime errors were found.
+- The static multilingual audit now records only checks it actually executes. Responsive browser evidence is accepted only when its result file matches the current commit, required viewports, and zero-failure criteria; otherwise it is reported as stale or outside the static audit.
 - Mobile navigation and the language menu support `aria-expanded`, Escape close, focus return, and keyboard-visible focus.
 - Form type preselection and dynamic field enable/disable behavior pass for all six inquiry types and all five languages.
-- In a local mocked-endpoint test, required-field, HTTP failure, network failure, in-flight disabled state, duplicate-submit prevention, and success handling behaved correctly. The mock was used only for QA and is not present in production source.
+- Automated fail-safe tests verify that missing/non-HTTPS endpoints do not call `fetch`, HTML or malformed responses do not produce success, only explicit JSON success or HTTP 204 succeeds, requests time out, and duplicate in-flight submissions are rejected. The mocks are test-only and are not production endpoints.
 - No API key, token, password, private key, production secret, internal endpoint, or exposed source map was found in tracked production source.
 - Final representative Lighthouse accessibility retests scored 100 for the home page, Contact page, and Daitora Auto page after the contrast and accessible-name fixes.
 
@@ -72,7 +72,8 @@ The audit covered the multilingual build and audit scripts, all generated HTML, 
 - Added clear global keyboard focus styling.
 - Fixed language-menu Escape handling so focus returns to the language button without closing the parent mobile drawer.
 - Added a 15-second form request timeout while preserving localized network-failure handling.
-- Updated automated QA documentation to record the actual 325 responsive checks.
+- Replaced hard-coded browser-QA claims with evidence-bound reporting and deterministic static-audit totals.
+- Added exact reciprocal hreflang checks, sitemap alternate validation, fact locks, wording locks, negative-control tests, deterministic-build checks, and GitHub Actions enforcement.
 
 ## Not Automatically Fixed
 
@@ -92,7 +93,11 @@ git rev-parse HEAD
 git rev-parse origin/main
 node --check scripts/build-i18n.mjs
 node --check scripts/audit-i18n.mjs
+node --check scripts/i18n-config.mjs
+node --check assets/js/contact-form-core.js
 node --check assets/js/site.js
+node scripts/test-contact-form.mjs
+node scripts/test-audit-negative.mjs
 node scripts/build-i18n.mjs
 node scripts/audit-i18n.mjs
 git ls-files
@@ -105,7 +110,7 @@ Browser automation used the repository-ignored `output/playwright/prelaunch-audi
 
 - Multilingual static audit: PASS, zero reported errors.
 - Page count: PASS, 65 total and 13 per language.
-- Responsive overflow/resource/runtime matrix: PASS, 325 checks.
+- Responsive overflow/resource/runtime matrix: see the current `MULTILINGUAL_QA.md`; browser QA is not inferred from static analysis and is only marked passed when current-commit evidence is available.
 - Dynamic form fields and localized safe-unavailable state: PASS.
 - Mocked form error/network/duplicate-submit behavior: PASS.
 - Mobile menu, language menu, and company-profile anchor: PASS.
@@ -119,7 +124,7 @@ Automated checks pass for metadata counts, canonical language routing, six hrefl
 
 ## Contact Form State
 
-The frontend is ready to send JSON by HTTPS `POST` after a production endpoint is supplied. It sends `site_language`, disables hidden type-specific fields, prevents repeated submission while a request is active, treats only HTTP 2xx as success, and provides localized required/failure/network/success states. It currently remains deliberately disabled because there is no real endpoint.
+The frontend is ready to send JSON by HTTPS `POST` after a production endpoint is supplied. It sends `site_language`, disables hidden type-specific fields, prevents repeated submission while a request is active, and provides localized required/failure/network/timeout/success states. Success requires HTTP 204 or a JSON 2xx response containing `{ "success": true }`; HTML and ambiguous 2xx responses fail closed. It currently remains deliberately disabled because there is no real endpoint.
 
 ## Performance And Assets
 

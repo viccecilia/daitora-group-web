@@ -18,12 +18,20 @@ To enable real submission, define the endpoint before `assets/js/site.js` is loa
 
 ```html
 <script>
-  window.DAITORA_CONTACT_FORM_URL = "https://example.com/api/contact";
+  window.DAITORA_CONTACT_FORM_URL = "https://YOUR-API-HOST/CONTACT-PATH";
 </script>
+<script src="assets/js/contact-form-core.js"></script>
 <script src="assets/js/site.js"></script>
 ```
 
-The frontend sends JSON using `POST` with `Content-Type: application/json`.
+The placeholder above is not a working service and must never be deployed as-is. The frontend accepts only a valid HTTPS endpoint without embedded credentials. It sends JSON using `POST` with `Content-Type: application/json`.
+
+A submission is shown as successful only when the API returns either:
+
+- HTTP `204` with no response body; or
+- another HTTP `2xx` response with JSON content type and `{ "success": true }`.
+
+An HTML error page, malformed JSON, `{ "success": false }`, non-2xx status, timeout, or network error is never shown as successful. Requests time out after 15 seconds and duplicate in-flight submissions are rejected.
 
 Example payload:
 
@@ -65,7 +73,7 @@ Do not trust frontend validation alone. The server must verify:
 
 ## Current Sample Mode
 
-When `window.DAITORA_CONTACT_FORM_URL` is not set, the submit button is disabled and the page shows a normal customer-facing notice asking users to contact by phone or email.
+When `window.DAITORA_CONTACT_FORM_URL` is not set or is not a valid HTTPS URL, the form controls and submit button remain disabled and the page shows a normal customer-facing notice asking users to contact by phone or email. No request is made and no success state is shown.
 
 ## Multilingual Static Build
 
@@ -93,3 +101,17 @@ The build also updates:
 Language switching is static-page based. It does not use query parameters and does not force automatic redirects.
 
 Before publishing, review `MULTILINGUAL_QA.md` and confirm all translated copy with native speakers and the business owner.
+
+## Local Quality Checks
+
+```bash
+node --check scripts/build-i18n.mjs
+node --check scripts/audit-i18n.mjs
+node --check assets/js/site.js
+node scripts/test-contact-form.mjs
+node scripts/test-audit-negative.mjs
+node scripts/build-i18n.mjs
+node scripts/audit-i18n.mjs
+```
+
+The same checks run in `.github/workflows/site-qa.yml`. Automated language and markup checks do not replace native-language, legal, or business-fact approval.

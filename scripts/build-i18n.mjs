@@ -1,5 +1,12 @@
 ﻿import fs from 'node:fs';
 import path from 'node:path';
+import {
+  OFFICIAL_FACTS,
+  PAGE_OVERRIDES,
+  SEMANTIC_LOCKS,
+  SEO_DESCRIPTIONS,
+  finalLockEntries
+} from './i18n-config.mjs';
 
 const ROOT = process.cwd();
 const pages = ['index.html','about.html','business.html','business-hire.html','business-taxi.html','business-auto.html','quality.html','works.html','company.html','news.html','contact.html','privacy.html','404.html'];
@@ -129,21 +136,52 @@ const rows = [
 ['迅敏 / Agility','迅敏','Agility','신속','迅敏']
 ];
 
+const contentPath = path.join(ROOT, 'scripts', 'i18n-content.json');
+const content = fs.existsSync(contentPath) ? JSON.parse(fs.readFileSync(contentPath, 'utf8')) : {};
+const translatedLanguages = ['zh-CN', 'en', 'ko', 'zh-TW'];
 const dict = Object.fromEntries(Object.keys(langs).map((l) => [l, new Map()]));
-for (const row of rows) {
-  dict['zh-CN'].set(row[0], row[1]);
-  dict.en.set(row[0], row[2]);
-  dict.ko.set(row[0], row[3]);
-  dict['zh-TW'].set(row[0], row[4]);
+const finalLockDict = Object.fromEntries(translatedLanguages.map((lang) => [lang, new Map()]));
+
+// General full-sentence translations are the lowest layer.
+for (const [source, translations] of Object.entries(content)) {
+  for (const lang of translatedLanguages) {
+    if (translations?.[lang]) dict[lang].set(source, translations[lang]);
+  }
 }
 
-const contentPath = path.join(ROOT, 'scripts', 'i18n-content.json');
-if (fs.existsSync(contentPath)) {
-  const content = JSON.parse(fs.readFileSync(contentPath, 'utf8'));
-  for (const [source, translations] of Object.entries(content)) {
-    for (const lang of ['zh-CN', 'en', 'ko', 'zh-TW']) {
-      if (translations?.[lang]) dict[lang].set(source, translations[lang]);
+// Legacy rows are fallback-only. They can no longer overwrite structured
+// translations from i18n-content.json.
+for (const row of rows) {
+  for (const [lang, index] of [['zh-CN', 1], ['en', 2], ['ko', 3], ['zh-TW', 4]]) {
+    if (!dict[lang].has(row[0]) && row[index]) dict[lang].set(row[0], row[index]);
+  }
+}
+
+const pageDict = Object.fromEntries(Object.entries(PAGE_OVERRIDES).map(([page, entries]) => {
+  const byLang = Object.fromEntries(translatedLanguages.map((lang) => [lang, new Map()]));
+  for (const [source, translations] of Object.entries(entries)) {
+    for (const lang of translatedLanguages) if (translations?.[lang]) byLang[lang].set(source, translations[lang]);
+  }
+  return [page, byLang];
+}));
+
+// A conflicting lower layer is a build error. Final UI, brand and official
+// fact locks are checked against both the general catalogue/fallbacks and
+// page-specific overrides, then kept in a separate highest-priority map.
+for (const { group, source, translations } of finalLockEntries()) {
+  for (const lang of translatedLanguages) {
+    const lower = dict[lang].get(source);
+    if (lower && lower !== translations[lang]) {
+      throw new Error(`${group} conflict for ${lang}: ${JSON.stringify(source)}\nExpected: ${translations[lang]}\nFound: ${lower}`);
     }
+    for (const [page, overrides] of Object.entries(pageDict)) {
+      const pageValue = overrides[lang].get(source);
+      if (pageValue && pageValue !== translations[lang]) {
+        throw new Error(`${group} conflict in ${page} for ${lang}: ${JSON.stringify(source)}\nExpected: ${translations[lang]}\nFound: ${pageValue}`);
+      }
+    }
+    finalLockDict[lang].set(source, translations[lang]);
+    dict[lang].set(source, translations[lang]);
   }
 }
 
@@ -184,26 +222,19 @@ function injectSwitchers(html, lang, page){
   html = html.replace(/<!-- i18n:mobile-switcher -->[\s\S]*?<!-- \/i18n:mobile-switcher -->\s*/g, '');
   html = html.replace(/<!-- i18n:desktop-switcher -->[\s\S]*?<!-- \/i18n:desktop-switcher -->\s*/g, '');
   html = html.replace(/(<nav class="nav"[^>]*>)/, `$1\n        <!-- i18n:mobile-switcher -->${languageSwitcher(lang,page,true)}<!-- /i18n:mobile-switcher -->`);
-  html = html.replace(/(\s*)<a class="header-cta"/, `$1<!-- i18n:desktop-switcher -->${languageSwitcher(lang,page,false)}<!-- /i18n:desktop-switcher -->$1<a class="header-cta"`);
+  html = html.replace(/(\s*)<a class="([^"]*\bheader-cta\b[^"]*)"/, `$1<!-- i18n:desktop-switcher -->${languageSwitcher(lang,page,false)}<!-- /i18n:desktop-switcher -->$1<a class="$2"`);
   return html;
 }
 function seoBlock(lang, page){
   const i = langIndex(lang);
   const name = pageNames[page]?.[i] || pageNames[page]?.[0] || 'Daitora Group';
-  const descBase = meta[page]?.[1] || meta['index.html'][1];
-  const descriptions = {
-    ja: descBase,
-    'zh-CN': `Daitora Group 官方网站：${name}。面向关西地区提供机场接送、包车、出租车、二手车销售和车辆购买咨询。`,
-    en: `Official Daitora Group website: ${name}. Chauffeur transportation, taxi service, used car sales and mobility support in Kansai.`,
-    ko: `Daitora Group 공식 웹사이트: ${name}. 간사이 지역의 공항 송영, 전용 차량 서비스, 택시, 중고차 판매 및 차량 상담을 안내합니다.`,
-    'zh-TW': `Daitora Group 官方網站：${name}。提供關西地區機場接送、包車、計程車、中古車銷售與車輛購買諮詢。`
-  };
+  const description = SEO_DESCRIPTIONS[page]?.[lang] || meta[page]?.[1] || meta['index.html'][1];
   const title = lang === 'ja' ? meta[page]?.[0] : `${name} | Daitora Group`;
   const canonical = page === 'company.html' ? pageUrl('about.html', lang) : pageUrl(page, lang);
   if (page === 'company.html') {
     return `<!-- i18n:head -->
   <meta name="robots" content="noindex,follow">
-  <meta name="description" content="${escapeAttr(descriptions[lang])}">
+  <meta name="description" content="${escapeAttr(description)}">
   <link rel="canonical" href="${canonical}">
   <link rel="icon" href="${lang === 'ja' ? 'favicon.ico' : '../favicon.ico'}">
   <!-- /i18n:head -->`;
@@ -212,23 +243,23 @@ function seoBlock(lang, page){
   const absoluteOgImage = `${baseUrl}${ogImagePath}`;
   const robots = page === '404.html' ? '  <meta name="robots" content="noindex,follow">\n' : '';
   return `<!-- i18n:head -->
-${robots}  <meta name="description" content="${escapeAttr(descriptions[lang])}">
+${robots}  <meta name="description" content="${escapeAttr(description)}">
   <link rel="canonical" href="${canonical}">
 ${hrefs}
   <link rel="alternate" hreflang="x-default" href="${pageUrl(page,'ja')}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Daitora Group">
   <meta property="og:title" content="${escapeAttr(title)}">
-  <meta property="og:description" content="${escapeAttr(descriptions[lang])}">
+  <meta property="og:description" content="${escapeAttr(description)}">
   <meta property="og:url" content="${canonical}">
   <meta property="og:locale" content="${lang === 'ja' ? 'ja_JP' : lang === 'en' ? 'en_US' : lang === 'ko' ? 'ko_KR' : lang === 'zh-TW' ? 'zh_TW' : 'zh_CN'}">
   <meta property="og:image" content="${absoluteOgImage}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeAttr(title)}">
-  <meta name="twitter:description" content="${escapeAttr(descriptions[lang])}">
+  <meta name="twitter:description" content="${escapeAttr(description)}">
   <meta name="twitter:image" content="${absoluteOgImage}">
   <link rel="icon" href="${lang === 'ja' ? 'favicon.ico' : '../favicon.ico'}">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Daitora Group","url":"${baseUrl}/","telephone":"+81-6-6710-9861","address":{"@type":"PostalAddress","addressCountry":"JP","addressRegion":"Osaka","addressLocality":"Osaka"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Daitora Group","url":"${baseUrl}/","telephone":"+81-6-6710-9861","email":"${OFFICIAL_FACTS.email}","address":{"@type":"PostalAddress","postalCode":"551-0013","addressCountry":"JP","addressRegion":"大阪府","addressLocality":"大阪市大正区","streetAddress":"小林西2丁目10-3"}}</script>
   <!-- /i18n:head -->`;
 }
 function escapeAttr(s){ return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
@@ -245,22 +276,57 @@ function preserveWhitespace(original, translated){
   const trailing = original.match(/\s*$/)?.[0] || '';
   return `${leading}${translated}${trailing}`;
 }
-function translateTextNode(text, lang){
+function semanticKeyForText(text, stack, page) {
+  const trimmed = text.trim();
+  const parent = stack.at(-1);
+  const explicit = parent?.attrs?.['data-i18n-key'];
+  if (explicit && SEMANTIC_LOCKS[explicit]) return explicit;
+
+  const inPrimaryNav = stack.some((item) => item.name === 'nav' && /(?:^|\s)nav(?:\s|$)/.test(item.attrs.class || ''));
+  if (inPrimaryNav && parent?.name === 'a') {
+    const href = (parent.attrs.href || '').split('#')[0].split('/').pop();
+    const keyByHref = {
+      'index.html': 'nav.home',
+      'about.html': trimmed === '会社概要' ? 'nav.company' : 'nav.about',
+      'business.html': 'nav.business',
+      'quality.html': 'nav.quality',
+      'works.html': 'nav.works',
+      'news.html': 'nav.news',
+      'contact.html': 'nav.contact'
+    };
+    if (keyByHref[href]) return keyByHref[href];
+  }
+  if (parent?.name === 'a' && /(?:^|\s)header-cta(?:\s|$)/.test(parent.attrs.class || '')) return 'nav.contact';
+  if (page === 'contact.html' && trimmed === 'お問い合わせ') return 'contact.inquiry';
+  return '';
+}
+
+function translateTextNode(text, lang, page, stack){
   if (lang === 'ja') return text;
   const trimmed = text.trim();
   if (!trimmed) return text;
-  const translated = dict[lang].get(trimmed);
+  const semanticKey = semanticKeyForText(text, stack, page);
+  const translated = (semanticKey && SEMANTIC_LOCKS[semanticKey]?.[lang])
+    || finalLockDict[lang].get(trimmed)
+    || pageDict[page]?.[lang]?.get(trimmed)
+    || dict[lang].get(trimmed);
   if (translated) return preserveWhitespace(text, translated);
   return text;
 }
-function translateSafeAttributes(tag, lang){
+function translateSafeAttributes(tag, lang, page){
   if (lang === 'ja') return tag;
   return tag.replace(/\s(placeholder|aria-label|title|alt|value)="([^"]*)"/g, (match, attr, value) => {
-    const translated = dict[lang].get(value.trim());
+    const translated = finalLockDict[lang].get(value.trim()) || pageDict[page]?.[lang]?.get(value.trim()) || dict[lang].get(value.trim());
     return translated ? ` ${attr}="${escapeAttr(translated)}"` : match;
   });
 }
-function translate(html, lang){
+function parseTag(tag) {
+  const name = tag.match(/^<\s*([\w-]+)/)?.[1]?.toLowerCase() || '';
+  const attrs = {};
+  for (const [, key, value] of tag.matchAll(/\s([\w:-]+)="([^"]*)"/g)) attrs[key.toLowerCase()] = value;
+  return { name, attrs };
+}
+function translate(html, lang, page){
   if (lang === 'ja') return html;
   const protectedBlocks = [];
   html = html.replace(/<(script|style|svg)\b[\s\S]*?<\/\1>/gi, (block) => {
@@ -269,7 +335,22 @@ function translate(html, lang){
     return token;
   });
   const parts = html.split(/(<[^>]+>)/g);
-  html = parts.map((part) => part.startsWith('<') ? translateSafeAttributes(part, lang) : translateTextNode(part, lang)).join('');
+  const stack = [];
+  const voidTags = new Set(['area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr']);
+  html = parts.map((part) => {
+    if (!part.startsWith('<')) return translateTextNode(part, lang, page, stack);
+    if (/^<\//.test(part)) {
+      const closing = part.match(/^<\/\s*([\w-]+)/)?.[1]?.toLowerCase();
+      while (stack.length) if (stack.pop().name === closing) break;
+      return part;
+    }
+    const translatedTag = translateSafeAttributes(part, lang, page);
+    if (!/^<!|^<\?/.test(part)) {
+      const parsed = parseTag(part);
+      if (parsed.name && !voidTags.has(parsed.name) && !/\/\s*>$/.test(part)) stack.push(parsed);
+    }
+    return translatedTag;
+  }).join('');
   protectedBlocks.forEach((block, index) => {
     html = html.replace(`@@DAITORA_PROTECTED_${index}@@`, block);
   });
@@ -293,59 +374,6 @@ function setFormLanguage(html, lang){
   } else {
     html = html.replace(/(<form[^>]*data-contact-form[^>]*>)/, `$1\n          <input type="hidden" name="site_language" value="${langs[lang].html}">`);
   }
-  return html;
-}
-function applyBrandLocks(html, lang){
-  if (lang === 'ja') return html;
-  html = html.replace(/aria-label="Daitora GROUP \/ 大寅グループ"/g, 'aria-label="Daitora GROUP"');
-  const replacements = [
-    [/Daitora Group\s*\/\s*Daitora Group/g, 'Daitora Group'],
-    [/Daitora Hire/g, 'Daitora Chauffeur & Private Transportation'],
-    [/Daitora used car sales/gi, 'Daitora Auto / Used Car Sales'],
-    [/Daitora Used Car Sales/g, 'Daitora Auto / Used Car Sales'],
-    [/Daitora Auto\s*\/\s*Used Car Sales\s*\/\s*Used Car Sales/g, 'Daitora Auto / Used Car Sales']
-  ];
-  if (lang === 'zh-CN' || lang === 'zh-TW') {
-    replacements.push(
-      [/大虎集团/g, 'Daitora Group'],
-      [/大虎集團/g, 'Daitora Group'],
-      [/大虎/g, 'Daitora'],
-      [/虎丸出租车/g, 'Toramaru Taxi'],
-      [/虎丸出租車/g, 'Toramaru Taxi'],
-      [/虎丸/g, 'Toramaru'],
-      [/大寅租用/g, 'Daitora Chauffeur & Private Transportation'],
-      [/大寅包车接送/g, 'Daitora Chauffeur & Private Transportation'],
-      [/大寅包車接送/g, 'Daitora Chauffeur & Private Transportation'],
-      [/大寅二手车销售/g, 'Daitora Auto / Used Car Sales'],
-      [/大寅二手車銷售/g, 'Daitora Auto / Used Car Sales'],
-      [/大寅中古车销售/g, 'Daitora Auto / Used Car Sales'],
-      [/大寅中古車銷售/g, 'Daitora Auto / Used Car Sales'],
-      [/Daitora租用/g, 'Daitora Chauffeur & Private Transportation']
-    );
-  }
-  if (lang === 'ko') {
-    replacements.push(
-      [/오토기 그룹/g, 'Daitora Group'],
-      [/오토 그룹/g, 'Daitora Group'],
-      [/대인 그룹/g, 'Daitora Group'],
-      [/주식회사 오토/g, 'Daitora Co., Ltd.'],
-      [/오토시/g, 'Daitora'],
-      [/오토에 대해/g, 'Daitora 소개'],
-      [/오토 중고차 판매/g, 'Daitora Auto / Used Car Sales'],
-      [/오토네 하이어/g, 'Daitora Chauffeur & Private Transportation'],
-      [/오토 히이야/g, 'Daitora Chauffeur & Private Transportation'],
-      [/히이야/g, '하이어'],
-      [/오토론/g, '자동차 론'],
-      [/오토/g, 'Daitora'],
-      [/대도라 하이어/g, 'Daitora Chauffeur & Private Transportation'],
-      [/대도라 중고차 판매/g, 'Daitora Auto / Used Car Sales'],
-      [/대도라/g, 'Daitora'],
-      [/토라마루 택시/g, 'Toramaru Taxi'],
-      [/대인/g, 'Daitora'],
-      [/大寅ハイヤ/g, 'Daitora Chauffeur & Private Transportation']
-    );
-  }
-  for (const [from, to] of replacements) html = html.replace(from, to);
   return html;
 }
 function localizedPath(page, lang){
@@ -383,8 +411,7 @@ function writePage(lang, page){
   let html = fs.readFileSync(path.join(ROOT,page),'utf8');
   html = injectHead(html, lang, page);
   html = setFormLanguage(html, lang);
-  html = translate(html, lang);
-  html = applyBrandLocks(html, lang);
+  html = translate(html, lang, page);
   html = injectSwitchers(html, lang, page);
   html = langSpecificCss(html, lang);
   html = adjustPaths(html, lang);
@@ -405,6 +432,3 @@ for (const page of pages.filter(p=>p!=='404.html' && p!=='company.html')) {
 }
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${sitemapUrls.join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(ROOT,'sitemap.xml'), sitemap, 'utf8');
-
-const qa = `# Multilingual QA\n\nGenerated: ${new Date().toISOString()}\n\n## Languages\n- ja: root URL, default source language\n- zh-CN: /zh-cn/\n- en: /en/\n- ko: /ko/\n- zh-TW: /zh-tw/\n\n## Pages\n${pages.map(p=>`- ${p}`).join('\n')}\n\n## Checks Performed\n- Static language directories generated without query-parameter routing.\n- Header language switcher links to the equivalent page in each language.\n- Contact forms include hidden site_language.\n- Japanese contact labels corrected: 航空便名 / 手荷物数.\n- sitemap.xml regenerated with hreflang alternates.\n- Shared assets remain under assets/.\n\n## Pending Human Review\n- Translations are implementation draft and should be reviewed by native speakers before publication.\n- Public claims such as 約100台, licenses, G20, EXPO2025, brand event history and contact details still require business confirmation.\n- Final production domain should be confirmed before launch if different from ${baseUrl}.\n\n## Responsive QA To Complete\n- 320px / 390px / 768px / 1024px / 1440px visual check for each language.\n- Verify no horizontal overflow after final native-language copy review.\n`;
-fs.writeFileSync(path.join(ROOT,'MULTILINGUAL_QA.md'), qa, 'utf8');
