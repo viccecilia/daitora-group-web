@@ -24,12 +24,13 @@ const LANGUAGES = {
 const LANGUAGE_CODES = Object.keys(LANGUAGES);
 const HREFLANG_CODES = [...LANGUAGE_CODES, 'x-default'];
 const JAPAN_TRAVEL_URLS = {
-  ja: 'https://japan-travel.info/index-ja.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  'zh-CN': 'https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  en: 'https://japan-travel.info/index-en.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  ko: 'https://japan-travel.info/index-ko.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  'zh-TW': 'https://japan-travel.info/index-zhHant.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home'
+  ja: 'https://japan-travel.info/ja/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  'zh-CN': 'https://japan-travel.info/zh-cn/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  en: 'https://japan-travel.info/en/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  ko: 'https://japan-travel.info/ko/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  'zh-TW': 'https://japan-travel.info/zh-tw/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home'
 };
+const AUTOLOAN_URL = 'https://www.daitora-jp.com/autoloan/';
 
 const BLOCKED_TERMS = {
   'zh-CN': [/大虎/g, /虎丸/g, /车联网/g, /兼容各大机场/g, /交通兼容/g, /我体验到了/g, /多人搬家/g, /想要的车型/g, /多辆车辆投入运行/g, /可以在关西搬家/g, /我们都能搞定/g, /多个设备/g, /规划使用面积/g, /登机地点/g, /集体运动/g, /质量点/g, /听力/g, /脱出/g],
@@ -313,7 +314,13 @@ export function runAudit({ writeReport = true } = {}) {
       if (page === 'index.html') {
         for (const failure of validateJapanTravelEntry(html, lang)) report(lang, page, 'japan-travel-entry', failure);
       }
-      if (page === 'business-auto.html' && !/href=["'](?:\.\.\/|\/)?autoloan\//i.test(html)) report(lang, page, 'autoloan-link', 'Missing /autoloan/ application link');
+      if (page === 'business-auto.html') {
+        const links = [...html.matchAll(/<a\b[^>]*href=["']([^"']*autoloan[^"']*)["'][^>]*>/gi)].map((match) => decodeEntities(match[1]));
+        if (links.length === 0) report(lang, page, 'autoloan-link', 'Missing Auto Loan application link');
+        for (const href of links) {
+          if (href !== AUTOLOAN_URL) report(lang, page, 'autoloan-link', `Auto Loan URL must be ${AUTOLOAN_URL}`, href);
+        }
+      }
 
       if (html.includes('site-footer')) {
         for (const fact of [OFFICIAL_FACTS.osakaAddress, OFFICIAL_FACTS.kyotoAddress]) {

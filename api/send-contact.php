@@ -51,10 +51,37 @@ function daitora_parse_payload(string $contentType, string $rawBody, array $post
     return ['ok' => false, 'status' => 415, 'error' => 'unsupported_media_type'];
 }
 
-function daitora_origin_is_allowed(string $origin): bool
+function daitora_request_site(string $host): string
+{
+    $host = strtolower(rtrim(trim($host), '.'));
+    if ($host === '') {
+        return '';
+    }
+
+    $parsedHost = parse_url('http://' . $host, PHP_URL_HOST);
+    if (!is_string($parsedHost) || $parsedHost === '') {
+        return '';
+    }
+
+    if (in_array($parsedHost, ['daitora-jp.com', 'www.daitora-jp.com'], true)) {
+        return 'production';
+    }
+    if (in_array($parsedHost, ['taxi-airport.jp', 'www.taxi-airport.jp'], true)) {
+        return 'staging';
+    }
+
+    return '';
+}
+
+function daitora_origin_is_allowed(string $origin, string $requestHost, bool $allowMissingOrigin = false): bool
 {
     if ($origin === '') {
-        return true;
+        return $allowMissingOrigin;
+    }
+
+    $requestSite = daitora_request_site($requestHost);
+    if ($requestSite === '') {
+        return false;
     }
 
     $parts = parse_url($origin);
@@ -62,8 +89,18 @@ function daitora_origin_is_allowed(string $origin): bool
         return false;
     }
 
+    if (isset($parts['user']) || isset($parts['pass']) || isset($parts['query']) || isset($parts['fragment'])) {
+        return false;
+    }
+    if (isset($parts['port']) && (int)$parts['port'] !== 443) {
+        return false;
+    }
+    if (isset($parts['path']) && $parts['path'] !== '' && $parts['path'] !== '/') {
+        return false;
+    }
+
     $host = strtolower((string)($parts['host'] ?? ''));
-    return in_array($host, ['daitora-jp.com', 'www.daitora-jp.com'], true);
+    return daitora_request_site($host) === $requestSite;
 }
 
 function daitora_privacy_is_accepted($value): bool
@@ -238,7 +275,7 @@ function daitora_subject_piece(string $value): string
     return daitora_string_slice($value, 70);
 }
 
-function daitora_mail_content(array $data, int $submittedAt): array
+function daitora_mail_content(array $data, int $submittedAt, bool $staging): array
 {
     $typeLabels = [
         'hire' => 'Chauffeur Service',
@@ -287,6 +324,9 @@ function daitora_mail_content(array $data, int $submittedAt): array
         $languageLabels[$siteLanguage],
         daitora_subject_piece(daitora_field($data, 'name'))
     ]);
+    if ($staging) {
+        $subject = '[STAGING] ' . $subject;
+    }
     $lines = [
         'Daitora Group Website Inquiry',
         '',
@@ -341,7 +381,9 @@ function daitora_process_contact(
         return daitora_json_result(405, ['success' => false, 'error' => 'method_not_allowed'], ['Allow' => 'POST']);
     }
 
-    if (!daitora_origin_is_allowed(trim((string)($server['HTTP_ORIGIN'] ?? '')))) {
+    $requestHost = trim((string)($server['HTTP_HOST'] ?? ''));
+    $allowMissingOrigin = defined('DAITORA_CONTACT_TEST') && DAITORA_CONTACT_TEST === true;
+    if (!daitora_origin_is_allowed(trim((string)($server['HTTP_ORIGIN'] ?? '')), $requestHost, $allowMissingOrigin)) {
         return daitora_json_result(403, ['success' => false, 'error' => 'invalid_origin']);
     }
 
@@ -370,7 +412,7 @@ function daitora_process_contact(
         return daitora_json_result(500, ['success' => false, 'error' => 'service_unavailable']);
     }
 
-    $mail = daitora_mail_content($data, $timestamp);
+    $mail = daitora_mail_content($data, $timestamp, daitora_request_site($requestHost) === 'staging');
     $sender = $mailSender ?? 'daitora_real_mail_sender';
     $sent = (bool)$sender(DAITORA_CONTACT_TO, $mail['subject'], $mail['body'], daitora_field($data, 'email'));
     if (!$sent) {

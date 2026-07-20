@@ -39,6 +39,10 @@ assert.equal(
   core.resolveEndpoint('/api/send-contact.php', 'https://daitora-jp.com/contact.html'),
   'https://daitora-jp.com/api/send-contact.php'
 );
+assert.equal(
+  core.resolveEndpoint('/api/send-contact.php', 'https://www.taxi-airport.jp/daitora-preview/contact.html'),
+  'https://www.taxi-airport.jp/api/send-contact.php'
+);
 assert.equal(core.resolveEndpoint('/api/send-contact.php', 'http://127.0.0.1:8788/contact.html'), '');
 assert.equal(core.resolveEndpoint('/api/send-contact.php', 'file:///C:/site/contact.html'), '');
 

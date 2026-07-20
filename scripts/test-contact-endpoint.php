@@ -43,14 +43,24 @@ function allow_rate(string $ip, string $fingerprint, int $now): string
     return 'ok';
 }
 
-function process_payload(array $payload, ?callable $mailSender = null, ?callable $rateChecker = null): array
+function process_payload(
+    array $payload,
+    ?callable $mailSender = null,
+    ?callable $rateChecker = null,
+    string $host = 'daitora-jp.com',
+    ?string $origin = 'https://daitora-jp.com'
+): array
 {
+    $server = ['REMOTE_ADDR' => '192.0.2.20', 'HTTP_HOST' => $host];
+    if ($origin !== null) {
+        $server['HTTP_ORIGIN'] = $origin;
+    }
     return daitora_process_contact(
         'POST',
         'application/json; charset=UTF-8',
         (string)json_encode($payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
         [],
-        ['REMOTE_ADDR' => '192.0.2.20', 'HTTP_ORIGIN' => 'https://daitora-jp.com'],
+        $server,
         $mailSender,
         $rateChecker ?? 'allow_rate',
         1784500000
@@ -69,6 +79,19 @@ test_assert($captured['to'] === 'info@daitora-jp.com', 'recipient must be fixed'
 test_assert(DAITORA_CONTACT_FROM === 'no-reply@daitora-jp.com', 'From address must be fixed');
 test_assert($captured['replyTo'] === 'customer@example.com', 'validated customer email must be Reply-To');
 test_assert(strpos($captured['body'], 'Kansai International Airport') !== false, 'mail body must contain validated transport details');
+test_assert(strpos($captured['subject'], '[STAGING]') === false, 'production subject must not contain the staging prefix');
+
+foreach ([
+    ['daitora-jp.com', 'https://daitora-jp.com', false],
+    ['www.daitora-jp.com', 'https://www.daitora-jp.com', false],
+    ['taxi-airport.jp', 'https://taxi-airport.jp', true],
+    ['www.taxi-airport.jp', 'https://www.taxi-airport.jp', true],
+] as [$host, $origin, $staging]) {
+    $captured = [];
+    $siteResult = process_payload(valid_payload(), $mailSender, null, $host, $origin);
+    test_assert($siteResult['status'] === 200, "allowed Host/Origin pair must succeed: {$host}");
+    test_assert((strpos($captured['subject'], '[STAGING]') === 0) === $staging, "subject environment prefix must match Host: {$host}");
+}
 
 $formPayload = valid_payload();
 $result = daitora_process_contact(
@@ -76,7 +99,7 @@ $result = daitora_process_contact(
     'application/x-www-form-urlencoded',
     '',
     $formPayload,
-    ['REMOTE_ADDR' => '192.0.2.21'],
+    ['REMOTE_ADDR' => '192.0.2.21', 'HTTP_HOST' => 'daitora-jp.com'],
     $mailSender,
     'allow_rate',
     1784500000
@@ -127,16 +150,26 @@ $failedSender = static function (string $to, string $subject, string $body, stri
 $result = process_payload(valid_payload(), $failedSender);
 test_assert($result['status'] === 500 && $result['payload']['success'] === false, 'mail transport failure must not report success');
 
-$badOrigin = daitora_process_contact(
-    'POST',
-    'application/json',
-    (string)json_encode(valid_payload()),
-    [],
-    ['REMOTE_ADDR' => '192.0.2.22', 'HTTP_ORIGIN' => 'https://attacker.example'],
-    $mailSender,
-    'allow_rate',
-    1784500000
-);
-test_assert($badOrigin['status'] === 403, 'cross-site Origin must be rejected');
+$originFailures = [
+    ['daitora-jp.com', 'https://www.taxi-airport.jp', 'production Host with staging Origin'],
+    ['taxi-airport.jp', 'https://www.daitora-jp.com', 'staging Host with production Origin'],
+    ['daitora-jp.com', 'http://daitora-jp.com', 'HTTP Origin'],
+    ['daitora-jp.com', 'https://attacker.example', 'unknown Origin'],
+    ['unknown.example', 'https://daitora-jp.com', 'unknown Host'],
+];
+foreach ($originFailures as [$host, $origin, $label]) {
+    $failed = process_payload(valid_payload(), $mailSender, null, $host, $origin);
+    test_assert($failed['status'] === 403, "{$label} must be rejected");
+}
+
+$missingOrigin = process_payload(valid_payload(), $mailSender, null, 'daitora-jp.com', null);
+test_assert($missingOrigin['status'] === 200, 'missing Origin is allowed only by the explicit non-browser test mode');
+
+test_assert(daitora_origin_is_allowed('', 'daitora-jp.com', false) === false, 'production logic must reject a missing Origin');
+test_assert(daitora_origin_is_allowed('', 'daitora-jp.com', true) === true, 'explicit non-browser test logic may allow a missing Origin');
+test_assert(daitora_origin_is_allowed('https://www.daitora-jp.com', 'daitora-jp.com') === true, 'www and apex hosts in the same production site may match');
+test_assert(daitora_origin_is_allowed('https://www.taxi-airport.jp', 'taxi-airport.jp') === true, 'www and apex hosts in the same staging site may match');
+test_assert(daitora_origin_is_allowed('https://daitora-jp.com/path', 'daitora-jp.com') === false, 'Origin paths must be rejected');
+test_assert(daitora_origin_is_allowed('https://daitora-jp.com:8443', 'daitora-jp.com') === false, 'non-HTTPS-default Origin ports must be rejected');
 
 echo "Contact endpoint tests passed\n";

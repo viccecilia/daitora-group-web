@@ -6,7 +6,7 @@
 - 日本語はルート、英語は `/en/`、簡体字中国語は `/zh-cn/`、韓国語は `/ko/`、繁体字中国語は `/zh-tw/` です。
 - お問い合わせフォームは、同一オリジンの `/api/send-contact.php` を使用します。
 - `file://`、ローカル HTTP、または endpoint が利用できない環境では送信ボタンを無効化し、電話またはメールでの連絡案内を表示します。成功表示は行いません。
-- `/autoloan/` は別の正式申込フローです。このサイトの公開作業では変更しません。
+- `https://www.daitora-jp.com/autoloan/` は別の正式申込フローです。このサイトの公開作業では変更・複製しません。
 
 ## Publish Scope
 
@@ -41,7 +41,7 @@
 
 ## Contact Form API
 
-公開フォームは `<form data-submit-endpoint="/api/send-contact.php">` を第一候補として使用します。例外的に別 endpoint が必要な場合だけ、`window.DAITORA_CONTACT_FORM_URL` をフォールバックとして利用できます。秘密鍵、SMTP パスワード、API Token はブラウザーへ出力しないでください。
+公開フォームは `<form data-submit-endpoint="/api/send-contact.php">` を使用します。正式サイトでは `https://www.daitora-jp.com/api/send-contact.php`、プレビューでは `https://www.taxi-airport.jp/api/send-contact.php` に同一オリジンで解決されます。例外的に別 endpoint が必要な場合だけ、`window.DAITORA_CONTACT_FORM_URL` をフォールバックとして利用できます。秘密鍵、SMTP パスワード、API Token はブラウザーへ出力しないでください。
 
 フロントエンドは `Content-Type: application/json` の `POST` を送信します。成功表示の条件は、JSON content type の HTTP 2xx と `{ "success": true }` の組み合わせだけです。HTTP `204`、HTML、壊れた JSON、`success:false`、非 2xx、タイムアウト、ネットワーク異常は成功扱いにしません。主な項目は次のとおりです。
 
@@ -64,6 +64,10 @@
 8. 成功時は JSON content type の 2xx と `{ "success": true }` を返すこと。入力エラーは 4xx、サーバー障害は 5xx を返すこと。
 9. 現在の PHP endpoint は社内通知メールだけを送信します。顧客向け自動返信を追加する場合は、受信した `site_language` に基づく五言語テンプレートを法務・事業確認後に実装すること。
 
+Origin はリクエスト Host ごとの同一サイトに限定します。`daitora-jp.com` / `www.daitora-jp.com` では Daitora の HTTPS Origin だけを、`taxi-airport.jp` / `www.taxi-airport.jp` では Taxi Airport の HTTPS Origin だけを許可します。異なるサイトの組み合わせ、HTTP Origin、未知の Host / Origin、非標準ポートは拒否します。Origin 欠落はテスト定数を有効にした非ブラウザー自動試験だけで許可し、本番リクエストでは拒否します。CORS ワイルドカードは使用しません。
+
+Taxi Airport Host から受け付けた通知件名には `[STAGING]` を付けます。Daitora Host の正式通知件名には付けません。公開前に両環境で件名、Reply-To、実受信を確認してください。
+
 ### Hosting Requirements
 
 - PHP 7.4 以上または互換性のある PHP 8.x。
@@ -75,7 +79,7 @@
 
 ### Server Verification
 
-1. `php scripts/test-contact-endpoint.php` を実行し、入力検証、Origin、honeypot、レート制限、メール失敗時の 500 を確認します。
+1. `php scripts/test-contact-endpoint.php` を実行し、入力検証、Host-aware Origin、ステージング件名、honeypot、レート制限、メール失敗時の 500 を確認します。
 2. ステージングの HTTPS URL から各問い合わせ種別を送信し、`info@daitora-jp.com` で実メールを受信します。
 3. Reply-To が検証済みの顧客メールになり、From が必ず `no-reply@daitora-jp.com` であることを確認します。
 4. 同一内容の連続送信、上限超過、無効メール、必須項目欠落が成功表示にならないことを確認します。

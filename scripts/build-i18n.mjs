@@ -20,11 +20,11 @@ const langs = {
 const baseUrl = 'https://daitora-jp.com';
 const ogImagePath = '/assets/images/og/daitora-group-og.jpg';
 const japanTravelUrls = {
-  ja: 'https://japan-travel.info/index-ja.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  'zh-CN': 'https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  en: 'https://japan-travel.info/index-en.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  ko: 'https://japan-travel.info/index-ko.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  'zh-TW': 'https://japan-travel.info/index-zhHant.html?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home'
+  ja: 'https://japan-travel.info/ja/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  'zh-CN': 'https://japan-travel.info/zh-cn/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  en: 'https://japan-travel.info/en/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  ko: 'https://japan-travel.info/ko/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  'zh-TW': 'https://japan-travel.info/zh-tw/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home'
 };
 
 const meta = {
