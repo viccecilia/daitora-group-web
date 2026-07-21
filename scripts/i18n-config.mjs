@@ -3,6 +3,7 @@ import {
   EXPANSION_PAGE_OVERRIDES,
   EXPANSION_SEO_DESCRIPTIONS
 } from './i18n-business-expansion.mjs';
+import { HOME_PRESIDENT_OVERRIDES } from './i18n-home-president.mjs';
 
 export const LANGUAGE_CODES = ['ja', 'zh-CN', 'en', 'ko', 'zh-TW'];
 
@@ -127,7 +128,8 @@ export const PAGE_OVERRIDES = {
   'contact.html': {
     'お問い合わせ': SEMANTIC_LOCKS['contact.inquiry']
   },
-  ...EXPANSION_PAGE_OVERRIDES
+  ...EXPANSION_PAGE_OVERRIDES,
+  'index.html': HOME_PRESIDENT_OVERRIDES
 };
 
 export const SEO_DESCRIPTIONS = {

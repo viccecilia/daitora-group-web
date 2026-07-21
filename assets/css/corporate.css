@@ -123,3 +123,134 @@ html[lang="en"], .lang-en { font-family: -apple-system, BlinkMacSystemFont, "Seg
 .contact-option-card>span,.prepare-grid article>span,.contact-flow article>span,.contact-primary-card>span,.contact-detail-grid article>span{color:#8a6418}
 .contact-primary-card-dark>span{color:#d7a23d}
 .contact-form-fieldset{min-width:0;margin:0;padding:0;border:0}
+/* Homepage president message */
+.president-message-section {
+  background: #fff;
+  color: var(--ink);
+  padding: clamp(80px, 8vw, 118px) 0;
+}
+
+.president-message-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(48px, 7vw, 96px);
+  align-items: start;
+}
+
+.president-message-portrait {
+  margin: 0;
+  border-top: 3px solid var(--gold);
+}
+
+.president-message-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 66% center;
+}
+
+.president-message-portrait figcaption {
+  padding: 16px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 600;
+  text-align: right;
+}
+
+.president-message-content {
+  max-width: 680px;
+}
+
+.president-message-content .section-kicker {
+  margin-bottom: 18px;
+}
+
+.president-message-title {
+  margin: 0 0 34px;
+  color: var(--navy);
+  font-size: clamp(36px, 3.5vw, 52px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.president-message-copy {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.95;
+  font-weight: 500;
+}
+
+.president-message-copy p {
+  margin: 0 0 22px;
+}
+
+.president-message-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.president-message-copy .president-message-quote {
+  margin: 36px 0;
+  padding: 8px 0 8px 28px;
+  border-left: 3px solid var(--gold);
+  color: var(--navy);
+  font-size: clamp(25px, 2.5vw, 36px);
+  line-height: 1.45;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+@media (max-width: 960px) {
+  .president-message-inner {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .president-message-portrait img {
+    aspect-ratio: 16 / 10;
+    object-position: 62% 44%;
+  }
+
+  .president-message-content {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .president-message-section {
+    padding: 64px 0 72px;
+  }
+
+  .president-message-inner {
+    gap: 34px;
+  }
+
+  .president-message-portrait img {
+    aspect-ratio: 4 / 3;
+    object-position: 62% center;
+  }
+
+  .president-message-title {
+    margin-bottom: 26px;
+    font-size: 32px;
+  }
+
+  .president-message-copy {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .president-message-copy p {
+    margin-bottom: 19px;
+  }
+
+  .president-message-copy .president-message-quote {
+    margin: 30px 0;
+    padding-left: 20px;
+    font-size: 25px;
+  }
+}
