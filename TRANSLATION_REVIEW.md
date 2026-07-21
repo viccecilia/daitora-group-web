@@ -1,6 +1,6 @@
 # Translation Review Ledger
 
-Updated: 2026-07-18
+Updated: 2026-07-21
 
 Automated audit status uses `PASSED` for generated localized HTML and `SOURCE` for the Japanese source pages. Copy-review status uses `DRAFT`, `MACHINE_POLISHED`, `NATIVE_REVIEW_REQUIRED`, or `APPROVED`; business facts use `BUSINESS_REVIEW_REQUIRED` until confirmed. No translation is marked `APPROVED` until a native reviewer and the business owner have both confirmed it.
 
@@ -14,6 +14,8 @@ Automated audit status uses `PASSED` for generated localized HTML and `SOURCE` f
 | ja | business-hire.html | SOURCE | NATIVE_REVIEW_REQUIRED | NATIVE_REVIEW_REQUIRED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | ja | business-taxi.html | SOURCE | NATIVE_REVIEW_REQUIRED | NATIVE_REVIEW_REQUIRED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | ja | business-auto.html | SOURCE | NATIVE_REVIEW_REQUIRED | NATIVE_REVIEW_REQUIRED | BUSINESS_REVIEW_REQUIRED | Unassigned |
+| ja | business-medical.html | SOURCE | NATIVE_REVIEW_REQUIRED | NATIVE_REVIEW_REQUIRED | BUSINESS_REVIEW_REQUIRED | Unassigned |
+| ja | business-digital.html | SOURCE | NATIVE_REVIEW_REQUIRED | NATIVE_REVIEW_REQUIRED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | ja | quality.html | SOURCE | NATIVE_REVIEW_REQUIRED | NATIVE_REVIEW_REQUIRED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | ja | works.html | SOURCE | NATIVE_REVIEW_REQUIRED | NATIVE_REVIEW_REQUIRED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | ja | company.html | SOURCE | NATIVE_REVIEW_REQUIRED | NATIVE_REVIEW_REQUIRED | BUSINESS_REVIEW_REQUIRED | Unassigned |
@@ -32,6 +34,8 @@ Automated audit status uses `PASSED` for generated localized HTML and `SOURCE` f
 | zh-CN | business-hire.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | zh-CN | business-taxi.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | zh-CN | business-auto.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
+| zh-CN | business-medical.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
+| zh-CN | business-digital.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | zh-CN | quality.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | zh-CN | works.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | zh-CN | company.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
@@ -50,6 +54,8 @@ Automated audit status uses `PASSED` for generated localized HTML and `SOURCE` f
 | en | business-hire.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | en | business-taxi.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | en | business-auto.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
+| en | business-medical.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
+| en | business-digital.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | en | quality.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | en | works.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | en | company.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
@@ -68,6 +74,8 @@ Automated audit status uses `PASSED` for generated localized HTML and `SOURCE` f
 | ko | business-hire.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | ko | business-taxi.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | ko | business-auto.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
+| ko | business-medical.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
+| ko | business-digital.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | ko | quality.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | ko | works.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | ko | company.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
@@ -86,6 +94,8 @@ Automated audit status uses `PASSED` for generated localized HTML and `SOURCE` f
 | zh-TW | business-hire.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | zh-TW | business-taxi.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | zh-TW | business-auto.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
+| zh-TW | business-medical.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
+| zh-TW | business-digital.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | zh-TW | quality.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | zh-TW | works.html | PASSED | MACHINE_POLISHED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
 | zh-TW | company.html | PASSED | NATIVE_REVIEW_REQUIRED | MACHINE_POLISHED | BUSINESS_REVIEW_REQUIRED | Unassigned |
@@ -106,7 +116,9 @@ Automated audit status uses `PASSED` for generated localized HTML and `SOURCE` f
 - Native review remains required for every localized page, including pages marked `MACHINE_POLISHED`.
 - The vehicle count and the wording `約100台規模` require business-owner confirmation.
 - The Osaka head-office address, establishment date, representative, annual sales, capital and published licence numbers are locked to the currently published official company profile; the business owner must still confirm that the public source is current before release.
-- The Kyoto office address/telephone and the stated Osaka / Kyoto / Sakai / Minato operating range require business-owner confirmation.
+- The Kyoto office address/telephone and the stated Osaka / Kyoto / Sakai operating range require business-owner confirmation.
+- The reporting year for the published annual-sales figure requires business-owner confirmation.
+- Medical-tourism and digital-marketing service scope requires business-owner and compliance review; no medical institution partnership is claimed in the current copy.
 - G20, EXPO, overseas brand-event and other case descriptions require business-owner confirmation.
 - Published news dates require business-owner confirmation.
 - The contact-form production backend endpoint and server-side validation remain unconfigured and require the responsible technical owner.

@@ -61,6 +61,34 @@
     });
   });
 
+  document.querySelectorAll('[data-business-menu]').forEach((menu) => {
+    const button = menu.querySelector('[data-business-menu-button]');
+    const panel = menu.querySelector('[data-business-menu-panel]');
+    if (!button || !panel) return;
+    const close = (returnFocus = false) => {
+      menu.classList.remove('is-open');
+      button.setAttribute('aria-expanded', 'false');
+      if (returnFocus) button.focus({ preventScroll: true });
+    };
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const open = button.getAttribute('aria-expanded') === 'true';
+      menu.classList.toggle('is-open', !open);
+      button.setAttribute('aria-expanded', String(!open));
+      if (!open) panel.querySelector('a')?.focus({ preventScroll: true });
+    });
+    document.addEventListener('click', (event) => {
+      if (!menu.contains(event.target)) close();
+    });
+    menu.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        close(true);
+      }
+    });
+  });
+
   if (nav && headerInner) {
     const menuButton = document.createElement('button');
     menuButton.className = 'menu-toggle';

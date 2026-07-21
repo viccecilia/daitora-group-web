@@ -9,7 +9,7 @@ import {
 } from './i18n-config.mjs';
 
 const ROOT = process.cwd();
-const pages = ['index.html','about.html','business.html','business-hire.html','business-taxi.html','business-auto.html','quality.html','works.html','company.html','news.html','contact.html','privacy.html','404.html'];
+const pages = ['index.html','about.html','business.html','business-hire.html','business-taxi.html','business-auto.html','business-medical.html','business-digital.html','quality.html','works.html','company.html','news.html','contact.html','privacy.html','404.html'];
 const langs = {
   ja: { dir: '', html: 'ja', label: '日本語', name: '日本語' },
   'zh-CN': { dir: 'zh-cn', html: 'zh-CN', label: '简体中文', name: '简体中文' },
@@ -20,20 +20,22 @@ const langs = {
 const baseUrl = 'https://daitora-jp.com';
 const ogImagePath = '/assets/images/og/daitora-group-og.jpg';
 const japanTravelUrls = {
-  ja: 'https://japan-travel.info/ja/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  'zh-CN': 'https://japan-travel.info/zh-cn/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  en: 'https://japan-travel.info/en/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  ko: 'https://japan-travel.info/ko/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
-  'zh-TW': 'https://japan-travel.info/zh-tw/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home'
+  ja: 'https://japan-travel.info/ja/',
+  'zh-CN': 'https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  en: 'https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  ko: 'https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home',
+  'zh-TW': 'https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home'
 };
 
 const meta = {
   'index.html': ['大寅グループ | 大阪・京都のハイヤー・タクシー・中古車販売','大阪・京都を拠点に、ハイヤー、タクシー、中古車販売を展開するDaitora Groupの公式サイトです。'],
-  'about.html': ['大寅について | 大寅グループ','大寅グループの企業理念、Mission / Vision / Value、社訓をご紹介します。'],
-  'business.html': ['事業紹介 | 大寅グループ','大寅ハイヤー、寅丸タクシー、大寅中古車販売の三つの事業をご紹介します。'],
+  'about.html': ['大寅について | 大寅グループ','大寅グループの企業理念、社訓、会社概要、許認可、拠点情報をご紹介します。'],
+  'business.html': ['事業紹介 | 大寅グループ','ハイヤー、タクシー、中古車販売を中心に、医療ツーリズムとデジタルマーケティング支援を展開する大寅グループの事業をご紹介します。'],
   'business-hire.html': ['大寅ハイヤー | 大寅グループ','空港送迎、観光貸切、企業・VIP送迎に対応する大寅ハイヤーをご紹介します。'],
   'business-taxi.html': ['寅丸タクシー | 大寅グループ','大阪・京都・堺・港区など関西エリアの地域移動を支える寅丸タクシーをご紹介します。'],
   'business-auto.html': ['大寅中古車販売 | 大寅グループ','中古車販売、ローン相談、車両購入サポートを行う大寅中古車販売をご紹介します。'],
+  'business-medical.html': ['医療ツーリズム事業 | 大寅グループ','人間ドックや先進医療に関する情報提供、受診調整、多言語対応、移動・滞在を支える医療ツーリズム事業をご紹介します。'],
+  'business-digital.html': ['デジタルマーケティング・プロモーション支援事業 | 大寅グループ','SNS運用企画、写真・ショート動画、Web、多言語コンテンツ、インバウンド向け発信を支えるデジタルマーケティング事業をご紹介します。'],
   'quality.html': ['安全・品質 | 大寅グループ','乗務員教育、車両管理、配車確認、GPS運行管理、法令遵守など安全品質体制をご紹介します。'],
   'works.html': ['実績紹介 | 大寅グループ','公開できる範囲で、大寅グループの大型案件、企業送迎、VIP送迎の対応実績をご紹介します。'],
   'company.html': ['会社概要 | 大寅グループ','株式会社大寅の会社情報、許認可、拠点情報をご紹介します。'],
@@ -140,7 +142,19 @@ const rows = [
 ['大阪・京都・堺・港区など関西複数拠点と約100台規模の車両ネットワークを活用します。','活用大阪、京都、堺、港区等关西多据点与约100台规模车辆网络。','We use multiple Kansai bases, including Osaka, Kyoto, Sakai and Minato, together with an approximately 100-vehicle network.','오사카・교토・사카이・미나토구 등 간사이 복수 거점과 약 100대 규모 차량 네트워크를 활용합니다.','活用大阪、京都、堺、港區等關西多據點與約100台規模車輛網絡。'],
 ['安全 / Safety','安全','Safety','안전','安全'],
 ['謙遜 / Humility','谦逊','Humility','겸손','謙遜'],
-['迅敏 / Agility','迅敏','Agility','신속','迅敏']
+['迅敏 / Agility','迅敏','Agility','신속','迅敏'],
+['DAITORA 社訓','DAITORA 社训','DAITORA PRINCIPLES','DAITORA 사훈','DAITORA 社訓'],
+['Safety（安全）','Safety（安全）','Safety','Safety（안전）','Safety（安全）'],
+['安全とは、命を預かる責任を忘れないことである。','安全，意味着始终铭记肩负生命安全的责任。','Safety means never forgetting our responsibility for the lives entrusted to us.','안전이란 생명을 맡는 책임을 잊지 않는 것입니다.','安全，意味著始終銘記肩負生命安全的責任。'],
+['Humility（謙遜）','Humility（谦逊）','Humility','Humility（겸손）','Humility（謙遜）'],
+['謙遜とは、すべての人に敬意を持って接する姿勢である。','谦逊，意味着以尊重之心对待每一个人。','Humility means treating every person with respect.','겸손이란 모든 사람을 존중하는 자세입니다.','謙遜，意味著以尊重之心對待每一個人。'],
+['Agility（迅敏）','Agility（迅敏）','Agility','Agility（신속）','Agility（迅敏）'],
+['迅敏とは、状況を見て、自分の頭で考え、最も適切な行動を選ぶ力である。','迅敏，意味着观察现场、独立思考，并选择最恰当行动的能力。','Agility is the ability to assess the situation, think independently and choose the most appropriate action.','신속이란 상황을 살피고 스스로 판단하여 가장 적절한 행동을 선택하는 힘입니다.','迅敏，意味著觀察現場、獨立思考，並選擇最恰當行動的能力。'],
+['2018年','2018年','2018','2018년','2018年'],
+['約100台規模','约100台规模','Approx. 100 vehicles','약 100대 규모','約100台規模'],
+['大阪・京都・堺','大阪・京都・堺','Osaka / Kyoto / Sakai','오사카・교토・사카이','大阪・京都・堺'],
+['KIX / ITM','KIX / ITM','KIX / ITM','KIX / ITM','KIX / ITM'],
+['グループ全体で約100台規模','集团整体约100台规模','Approximately 100 vehicles across the group','그룹 전체 약 100대 규모','集團整體約100台規模']
 ];
 
 const contentPath = path.join(ROOT, 'scripts', 'i18n-content.json');
@@ -199,6 +213,8 @@ const pageNames = {
   'business-hire.html': ['大寅ハイヤー','大寅包车接送','Daitora Chauffeur & Private Transportation','대도라 하이어','大寅包車接送'],
   'business-taxi.html': ['寅丸タクシー','寅丸出租车','Toramaru Taxi','토라마루 택시','寅丸計程車'],
   'business-auto.html': ['大寅中古車販売','大寅二手车销售','Daitora Auto','대도라 중고차 판매','大寅中古車銷售'],
+  'business-medical.html': ['医療ツーリズム事業','医疗旅游服务','Medical Tourism Support','의료 관광 지원','醫療旅遊服務'],
+  'business-digital.html': ['デジタルマーケティング・プロモーション支援事業','数字营销与推广支持','Digital Marketing & Promotion Support','디지털 마케팅·프로모션 지원','數位行銷與推廣支援'],
   'quality.html': ['安全・品質','安全・品质','Safety & Quality','안전・품질','安全・品質'],
   'works.html': ['実績紹介','案例介绍','Track Record','실적 소개','實績介紹'],
   'company.html': ['会社概要','公司概要','Company','회사 개요','公司概要'],
@@ -231,6 +247,50 @@ function injectSwitchers(html, lang, page){
   html = html.replace(/(<nav class="nav"[^>]*>)/, `$1\n        <!-- i18n:mobile-switcher -->${languageSwitcher(lang,page,true)}<!-- /i18n:mobile-switcher -->`);
   html = html.replace(/(\s*)<a class="([^"]*\bheader-cta\b[^"]*)"/, `$1<!-- i18n:desktop-switcher -->${languageSwitcher(lang,page,false)}<!-- /i18n:desktop-switcher -->$1<a class="$2"`);
   return html;
+}
+const businessNavigationLabels = {
+  ja: ['事業紹介','大寅ハイヤー','寅丸タクシー','大寅中古車販売','医療ツーリズム事業','デジタルマーケティング・プロモーション支援事業'],
+  'zh-CN': ['业务介绍','Daitora Chauffeur & Private Transportation','Toramaru Taxi','Daitora Auto / Used Car Sales','医疗旅游服务','数字营销与推广支持'],
+  en: ['Business','Daitora Chauffeur & Private Transportation','Toramaru Taxi','Daitora Auto / Used Car Sales','Medical Tourism Support','Digital Marketing & Promotion Support'],
+  ko: ['사업 소개','Daitora Chauffeur & Private Transportation','Toramaru Taxi','Daitora Auto / Used Car Sales','의료 관광 지원','디지털 마케팅·프로모션 지원'],
+  'zh-TW': ['事業介紹','Daitora Chauffeur & Private Transportation','Toramaru Taxi','Daitora Auto / Used Car Sales','醫療旅遊服務','數位行銷與推廣支援']
+};
+function injectBusinessNavigation(html, lang, page){
+  const labels = businessNavigationLabels[lang] || businessNavigationLabels.ja;
+  html = html.replace(/<!-- i18n:business-nav -->[\s\S]*?<!-- \/i18n:business-nav -->/g, `<a href="business.html">${labels[0]}</a>`);
+  html = html.replace(/<!-- i18n:footer-business -->[\s\S]*?<!-- \/i18n:footer-business -->\s*/g, '');
+  const active = page.startsWith('business') ? ' active' : '';
+  const menuId = `business-menu-${page.replace(/\W/g, '-')}`;
+  const entries = [
+    ['business-hire.html', labels[1]],
+    ['business-taxi.html', labels[2]],
+    ['business-auto.html', labels[3]],
+    ['business-medical.html', labels[4]],
+    ['business-digital.html', labels[5]]
+  ];
+  const panel = entries.map(([href,label]) => `<a href="${href}">${label}</a>`).join('');
+  const nav = `<!-- i18n:business-nav --><div class="nav-business-menu" data-business-menu><span class="nav-business-top"><a${active ? ` class="${active.trim()}"` : ''} href="business.html">${labels[0]}</a><button class="nav-business-toggle" type="button" data-business-menu-button aria-label="${escapeAttr(labels[0])}" aria-expanded="false" aria-controls="${menuId}"></button></span><div class="nav-business-panel" id="${menuId}" data-business-menu-panel>${panel}</div></div><!-- /i18n:business-nav -->`;
+  html = html.replace(/<nav class="nav"[^>]*>[\s\S]*?<\/nav>/, (navHtml) => {
+    const businessLink = /<a\b(?![^>]*\bhreflang=)([^>]*?)href="business\.html"([^>]*)>[\s\S]*?<\/a>/;
+    if (businessLink.test(navHtml)) return navHtml.replace(businessLink, nav);
+    return navHtml.replace(/(<a\b[^>]*href="about\.html"[^>]*>[\s\S]*?<\/a>)/, `$1${nav}`);
+  });
+  const footer = `<!-- i18n:footer-business --><nav class="footer-business-nav" aria-label="${escapeAttr(labels[0])}"><strong>${labels[0]}</strong>${entries.map(([href,label]) => `<a href="${href}">${label}</a>`).join('')}</nav><!-- /i18n:footer-business -->`;
+  html = html.replace(/(<footer class="site-footer">)/, `$1${footer}`);
+  return html;
+}
+const servicePages = new Set(['business-hire.html','business-taxi.html','business-auto.html','business-medical.html','business-digital.html']);
+function serviceSchema(lang, page, name, description){
+  if (!servicePages.has(page)) return '';
+  return `\n  <script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    provider: { '@type': 'Organization', name: 'Daitora Group', url: `${baseUrl}/` },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Kansai, Japan' },
+    url: pageUrl(page, lang)
+  })}</script>`;
 }
 function seoBlock(lang, page){
   const i = langIndex(lang);
@@ -266,7 +326,7 @@ ${hrefs}
   <meta name="twitter:description" content="${escapeAttr(description)}">
   <meta name="twitter:image" content="${absoluteOgImage}">
   <link rel="icon" href="${lang === 'ja' ? 'favicon.ico' : '../favicon.ico'}">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Daitora Group","url":"${baseUrl}/","telephone":"+81-6-6710-9861","email":"${OFFICIAL_FACTS.email}","address":{"@type":"PostalAddress","postalCode":"551-0013","addressCountry":"JP","addressRegion":"大阪府","addressLocality":"大阪市大正区","streetAddress":"小林西2丁目10-3"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Daitora Group","url":"${baseUrl}/","telephone":"+81-6-6710-9861","email":"${OFFICIAL_FACTS.email}","address":{"@type":"PostalAddress","postalCode":"551-0013","addressCountry":"JP","addressRegion":"大阪府","addressLocality":"大阪市大正区","streetAddress":"小林西2丁目10-3"}}</script>${serviceSchema(lang,page,name,description)}
   <!-- /i18n:head -->`;
 }
 function escapeAttr(s){ return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
@@ -431,6 +491,7 @@ function writePage(lang, page){
   html = setFormLanguage(html, lang);
   html = translate(html, lang, page);
   html = setJapanTravelLink(html, lang);
+  html = injectBusinessNavigation(html, lang, page);
   html = injectSwitchers(html, lang, page);
   html = langSpecificCss(html, lang);
   html = adjustPaths(html, lang);

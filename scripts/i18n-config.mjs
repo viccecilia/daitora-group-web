@@ -1,3 +1,9 @@
+import {
+  EXPANSION_BRAND_LOCKS,
+  EXPANSION_PAGE_OVERRIDES,
+  EXPANSION_SEO_DESCRIPTIONS
+} from './i18n-business-expansion.mjs';
+
 export const LANGUAGE_CODES = ['ja', 'zh-CN', 'en', 'ko', 'zh-TW'];
 
 const t = (ja, zhCN, en, ko, zhTW) => ({ ja, 'zh-CN': zhCN, en, ko, 'zh-TW': zhTW });
@@ -62,7 +68,8 @@ export const BRAND_LOCKS = {
   '株式会社大寅': t('株式会社大寅', 'Daitora Co., Ltd.', 'Daitora Co., Ltd.', 'Daitora Co., Ltd.', 'Daitora Co., Ltd.'),
   '大寅ハイヤー': t('大寅ハイヤー', 'Daitora Chauffeur & Private Transportation', 'Daitora Chauffeur & Private Transportation', 'Daitora Chauffeur & Private Transportation', 'Daitora Chauffeur & Private Transportation'),
   '寅丸タクシー': t('寅丸タクシー', 'Toramaru Taxi', 'Toramaru Taxi', 'Toramaru Taxi', 'Toramaru Taxi'),
-  '大寅中古車販売': t('大寅中古車販売', 'Daitora Auto / Used Car Sales', 'Daitora Auto / Used Car Sales', 'Daitora Auto / Used Car Sales', 'Daitora Auto / Used Car Sales')
+  '大寅中古車販売': t('大寅中古車販売', 'Daitora Auto / Used Car Sales', 'Daitora Auto / Used Car Sales', 'Daitora Auto / Used Car Sales', 'Daitora Auto / Used Car Sales'),
+  ...EXPANSION_BRAND_LOCKS
 };
 
 export const OFFICIAL_FACTS = {
@@ -122,7 +129,8 @@ export const FACT_LOCKS = {
 export const PAGE_OVERRIDES = {
   'contact.html': {
     'お問い合わせ': SEMANTIC_LOCKS['contact.inquiry']
-  }
+  },
+  ...EXPANSION_PAGE_OVERRIDES
 };
 
 export const SEO_DESCRIPTIONS = {
@@ -216,7 +224,8 @@ export const SEO_DESCRIPTIONS = {
     'The page you requested could not be found or may have moved.',
     '요청하신 페이지를 찾을 수 없거나 이동되었습니다.',
     '您瀏覽的頁面不存在或已移動。'
-  )
+  ),
+  ...EXPANSION_SEO_DESCRIPTIONS
 };
 
 export function finalLockEntries() {

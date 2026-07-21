@@ -25,13 +25,13 @@ assert.equal(findBlockedWording('zh-TW', ['我們曾為在大阪舉辦的國際�
 assert.equal(findBlockedWording('en', ['I have read the Privacy Policy and agree to be contacted by a representative.']).length, 0);
 assert.equal(findBlockedWording('en', ['Please select']).length, 0);
 
-const travelEntry = '<section data-japan-travel-entry><a data-japan-travel-link href="https://japan-travel.info/en/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home" target="_blank" rel="noopener">Visit Japan Travel</a></section>';
+const travelEntry = '<section data-japan-travel-entry><a data-japan-travel-link href="https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home" target="_blank" rel="noopener">Visit Japan Travel</a></section>';
 assert.deepEqual(validateJapanTravelEntry(travelEntry, 'en'), []);
 for (const legacy of ['index-ja.html', 'index-en.html', 'index-ko.html', 'index-zhHant.html']) {
-  const legacyEntry = travelEntry.replace('/en/', `/${legacy}`);
+  const legacyEntry = travelEntry.replace('https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home', `https://japan-travel.info/${legacy}`);
   assert.ok(validateJapanTravelEntry(legacyEntry, 'en').some((failure) => failure.includes('unexpected href')));
 }
-assert.ok(validateJapanTravelEntry(travelEntry.replace('/en/', '/ko/'), 'en').some((failure) => failure.includes('unexpected href')));
+assert.ok(validateJapanTravelEntry(travelEntry.replace('https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home', 'https://japan-travel.info/ko/'), 'en').some((failure) => failure.includes('unexpected href')));
 assert.ok(validateJapanTravelEntry(travelEntry.replace('noopener', 'nofollow'), 'en').length >= 2);
 assert.ok(validateJapanTravelEntry('', 'en').some((failure) => failure.includes('section count')));
 
