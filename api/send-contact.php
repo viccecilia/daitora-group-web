@@ -289,7 +289,7 @@ function daitora_rate_limit(string $ip, string $fingerprint, int $now, int $max 
     if (!is_array($entries)) {
         $entries = [];
     }
-    $entries = array_values(array_filter($entries, static function ($entry) use ($now): bool {
+    $entries = array_values(array_filter($entries, static function ($entry) use ($now, $window): bool {
         return is_array($entry) && isset($entry['time']) && (int)$entry['time'] > $now - $window;
     }));
 
