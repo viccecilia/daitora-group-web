@@ -6,6 +6,13 @@ const DAITORA_CONTACT_FROM = 'no-reply@daitora-jp.com';
 const DAITORA_CONTACT_RATE_WINDOW = 600;
 const DAITORA_CONTACT_RATE_MAX = 5;
 const DAITORA_CONTACT_DUPLICATE_WINDOW = 30;
+const DAITORA_CONTACT_SIGNATURE_WINDOW = 300;
+
+function daitora_env(string $key, string $default = ''): string
+{
+    $value = getenv($key);
+    return $value === false ? $default : trim((string)$value);
+}
 
 function daitora_json_result(int $status, array $payload, array $headers = []): array
 {
@@ -103,6 +110,22 @@ function daitora_origin_is_allowed(string $origin, string $requestHost, bool $al
     return daitora_request_site($host) === $requestSite;
 }
 
+function daitora_service_signature_is_valid(array $server, string $rawBody, int $now): bool
+{
+    $secret = daitora_env('DAITORA_CONTACT_SHARED_SECRET');
+    $clientId = trim((string)($server['HTTP_X_DAITORA_CLIENT_ID'] ?? ''));
+    $timestamp = trim((string)($server['HTTP_X_DAITORA_CONTACT_TIMESTAMP'] ?? ''));
+    $signature = strtolower(trim((string)($server['HTTP_X_DAITORA_CONTACT_SIGNATURE'] ?? '')));
+    if ($secret === '' || $clientId !== 'japan-travel' || !ctype_digit($timestamp) || !preg_match('/^[a-f0-9]{64}$/', $signature)) {
+        return false;
+    }
+    if (abs($now - (int)$timestamp) > DAITORA_CONTACT_SIGNATURE_WINDOW) {
+        return false;
+    }
+    $expected = hash_hmac('sha256', $timestamp . "\n" . $rawBody, $secret);
+    return hash_equals($expected, $signature);
+}
+
 function daitora_privacy_is_accepted($value): bool
 {
     if ($value === true || $value === 1) {
@@ -123,8 +146,8 @@ function daitora_valid_date(string $value): bool
 
 function daitora_validate_payload(array $data): array
 {
-    $allowedTypes = ['hire', 'taxi', 'auto', 'corporate', 'recruit', 'general'];
-    $allowedLanguages = ['ja', 'en', 'zh-CN', 'ko', 'zh-TW'];
+    $allowedTypes = ['hire', 'taxi', 'auto', 'corporate', 'recruit', 'general', 'japan_travel'];
+    $allowedLanguages = ['ja', 'en', 'zh-CN', 'ko', 'zh-TW', 'zh-cn', 'zh-tw'];
     $requiredCommon = ['type', 'name', 'email', 'message', 'site_language'];
     $requiredByType = [
         'hire' => ['ride_date', 'ride_time', 'pickup', 'destination'],
@@ -132,7 +155,8 @@ function daitora_validate_payload(array $data): array
         'taxi' => ['taxi_area', 'taxi_time', 'taxi_pickup', 'taxi_destination'],
         'auto' => ['auto_model', 'auto_purpose', 'applicant_type'],
         'recruit' => ['recruit_role', 'work_area', 'experience', 'contact_time'],
-        'general' => ['general_subject']
+        'general' => ['general_subject'],
+        'japan_travel' => ['service_type', 'pickup_location', 'dropoff_location', 'itinerary']
     ];
     $limits = [
         'type' => 20, 'name' => 100, 'company' => 160, 'email' => 254, 'phone' => 40,
@@ -144,7 +168,12 @@ function daitora_validate_payload(array $data): array
         'auto_model' => 160, 'auto_purpose' => 120, 'applicant_type' => 120,
         'loan_interest' => 80, 'auto_notes' => 2000, 'recruit_role' => 160,
         'work_area' => 160, 'experience' => 500, 'contact_time' => 160,
-        'recruit_notes' => 2000, 'general_subject' => 200
+        'recruit_notes' => 2000, 'general_subject' => 200,
+        'service_type' => 120, 'travel_date' => 10, 'travel_time' => 5,
+        'flight_number' => 40, 'pickup_location' => 300, 'dropoff_location' => 300,
+        'passenger_count' => 3, 'vehicle_preference' => 120, 'itinerary' => 4000,
+        'contact_method' => 80, 'page_language' => 10, 'request_id' => 80,
+        'source_site' => 80
     ];
 
     foreach ($requiredCommon as $name) {
@@ -214,6 +243,23 @@ function daitora_validate_payload(array $data): array
         }
     }
 
+    if ($type === 'japan_travel') {
+        $travelDate = daitora_field($data, 'travel_date');
+        $travelTime = daitora_field($data, 'travel_time');
+        if ($travelDate !== '' && !daitora_valid_date($travelDate)) {
+            return ['ok' => false, 'error' => 'invalid_schedule'];
+        }
+        if ($travelTime !== '' && !preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/', $travelTime)) {
+            return ['ok' => false, 'error' => 'invalid_schedule'];
+        }
+        foreach ([['passenger_count', 1, 100], ['luggage_count', 0, 100]] as $numeric) {
+            $value = daitora_field($data, $numeric[0]);
+            if ($value !== '' && (!ctype_digit($value) || (int)$value < $numeric[1] || (int)$value > $numeric[2])) {
+                return ['ok' => false, 'error' => 'invalid_number'];
+            }
+        }
+    }
+
     $sourcePage = daitora_field($data, 'source_page');
     if ($sourcePage !== '' && (!filter_var($sourcePage, FILTER_VALIDATE_URL) || !preg_match('/^https:\/\//i', $sourcePage))) {
         return ['ok' => false, 'error' => 'invalid_source'];
@@ -222,7 +268,7 @@ function daitora_validate_payload(array $data): array
     return ['ok' => true];
 }
 
-function daitora_rate_limit(string $ip, string $fingerprint, int $now): string
+function daitora_rate_limit(string $ip, string $fingerprint, int $now, int $max = DAITORA_CONTACT_RATE_MAX, int $window = DAITORA_CONTACT_RATE_WINDOW): string
 {
     $directory = rtrim(sys_get_temp_dir(), DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . 'daitora-contact-rate';
     if (!is_dir($directory) && !mkdir($directory, 0700, true) && !is_dir($directory)) {
@@ -244,10 +290,10 @@ function daitora_rate_limit(string $ip, string $fingerprint, int $now): string
         $entries = [];
     }
     $entries = array_values(array_filter($entries, static function ($entry) use ($now): bool {
-        return is_array($entry) && isset($entry['time']) && (int)$entry['time'] > $now - DAITORA_CONTACT_RATE_WINDOW;
+        return is_array($entry) && isset($entry['time']) && (int)$entry['time'] > $now - $window;
     }));
 
-    $limited = count($entries) >= DAITORA_CONTACT_RATE_MAX;
+    $limited = count($entries) >= $max;
     foreach ($entries as $entry) {
         if (($entry['fingerprint'] ?? '') === $fingerprint && (int)$entry['time'] > $now - DAITORA_CONTACT_DUPLICATE_WINDOW) {
             $limited = true;
@@ -350,6 +396,53 @@ function daitora_mail_content(array $data, int $submittedAt, bool $staging): arr
     return ['subject' => $subject, 'body' => implode("\n", $lines)];
 }
 
+function daitora_group_mail_content(array $data, int $submittedAt, bool $staging): array
+{
+    if (daitora_field($data, 'type') !== 'japan_travel') {
+        return daitora_mail_content($data, $submittedAt, $staging);
+    }
+
+    $languageLabels = [
+        'ja' => 'Japanese', 'en' => 'English', 'zh-CN' => 'Simplified Chinese',
+        'zh-cn' => 'Simplified Chinese', 'ko' => 'Korean', 'zh-TW' => 'Traditional Chinese',
+        'zh-tw' => 'Traditional Chinese'
+    ];
+    $fieldLabels = [
+        'source_site' => 'Source site', 'site_language' => 'Page language',
+        'source_page' => 'Submission page URL', 'request_id' => 'Request ID',
+        'name' => 'Name / お名前', 'email' => 'Email', 'phone' => 'Phone / 電話番号',
+        'contact_method' => 'Preferred contact method', 'service_type' => 'Service type',
+        'travel_date' => 'Travel date', 'travel_time' => 'Travel time',
+        'flight_number' => 'Flight number', 'pickup_location' => 'Pickup location',
+        'dropoff_location' => 'Drop-off location', 'passenger_count' => 'Passengers',
+        'luggage_count' => 'Luggage', 'vehicle_preference' => 'Vehicle preference',
+        'itinerary' => 'Requested itinerary', 'message' => 'Inquiry details'
+    ];
+    $date = daitora_field($data, 'travel_date') ?: '日付未定';
+    $subject = '[Japan Travel 予約相談] ' . $date . '｜' . daitora_subject_piece(daitora_field($data, 'name'));
+    if ($staging) {
+        $subject = '[STAGING] ' . $subject;
+    }
+    $lines = [
+        'Japan Travel reservation inquiry',
+        '',
+        'This message records an inquiry only. It does not confirm a booking, vehicle or payment.',
+        ''
+    ];
+    foreach ($fieldLabels as $name => $label) {
+        $value = $name === 'site_language'
+            ? ($languageLabels[daitora_field($data, $name)] ?? daitora_field($data, $name))
+            : daitora_field($data, $name);
+        if ($value !== '') {
+            $lines[] = $label . ':';
+            $lines[] = $value;
+            $lines[] = '';
+        }
+    }
+    $lines[] = 'Submitted at: ' . date('Y-m-d H:i:s O', $submittedAt);
+    return ['subject' => $subject, 'body' => implode("\n", $lines)];
+}
+
 function daitora_real_mail_sender(string $to, string $subject, string $body, string $replyTo): bool
 {
     if (!function_exists('mb_send_mail')) {
@@ -381,9 +474,11 @@ function daitora_process_contact(
         return daitora_json_result(405, ['success' => false, 'error' => 'method_not_allowed'], ['Allow' => 'POST']);
     }
 
+    $timestamp = $now ?? time();
     $requestHost = trim((string)($server['HTTP_HOST'] ?? ''));
+    $signedServiceRequest = daitora_service_signature_is_valid($server, $rawBody, $timestamp);
     $allowMissingOrigin = defined('DAITORA_CONTACT_TEST') && DAITORA_CONTACT_TEST === true;
-    if (!daitora_origin_is_allowed(trim((string)($server['HTTP_ORIGIN'] ?? '')), $requestHost, $allowMissingOrigin)) {
+    if (!$signedServiceRequest && !daitora_origin_is_allowed(trim((string)($server['HTTP_ORIGIN'] ?? '')), $requestHost, $allowMissingOrigin)) {
         return daitora_json_result(403, ['success' => false, 'error' => 'invalid_origin']);
     }
 
@@ -393,18 +488,25 @@ function daitora_process_contact(
     }
 
     $data = $parsed['data'];
+    if (daitora_field($data, 'type') === 'japan_travel' && !$signedServiceRequest) {
+        return daitora_json_result(403, ['success' => false, 'error' => 'service_auth_required']);
+    }
     $validation = daitora_validate_payload($data);
     if (!$validation['ok']) {
         return daitora_json_result(422, ['success' => false, 'error' => $validation['error']]);
     }
 
-    $timestamp = $now ?? time();
     $fingerprint = hash('sha256', implode('|', [
         daitora_field($data, 'type'), daitora_field($data, 'email'), daitora_field($data, 'message')
     ]));
     $rateResult = $rateChecker
         ? (string)$rateChecker((string)($server['REMOTE_ADDR'] ?? ''), $fingerprint, $timestamp)
-        : daitora_rate_limit((string)($server['REMOTE_ADDR'] ?? ''), $fingerprint, $timestamp);
+        : daitora_rate_limit(
+            $signedServiceRequest ? 'service:japan-travel' : (string)($server['REMOTE_ADDR'] ?? ''),
+            $fingerprint,
+            $timestamp,
+            $signedServiceRequest ? 30 : DAITORA_CONTACT_RATE_MAX
+        );
     if ($rateResult === 'limited') {
         return daitora_json_result(429, ['success' => false, 'error' => 'rate_limited'], ['Retry-After' => '60']);
     }
@@ -412,7 +514,7 @@ function daitora_process_contact(
         return daitora_json_result(500, ['success' => false, 'error' => 'service_unavailable']);
     }
 
-    $mail = daitora_mail_content($data, $timestamp, daitora_request_site($requestHost) === 'staging');
+    $mail = daitora_group_mail_content($data, $timestamp, daitora_request_site($requestHost) === 'staging');
     $sender = $mailSender ?? 'daitora_real_mail_sender';
     $sent = (bool)$sender(DAITORA_CONTACT_TO, $mail['subject'], $mail['body'], daitora_field($data, 'email'));
     if (!$sent) {

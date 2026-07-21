@@ -12,19 +12,9 @@ Open `http://localhost:8080/`.
 
 ## Contact Form Integration
 
-The contact form in `contact.html` is frontend-ready but intentionally has no backend endpoint configured yet.
+The Daitora Group forms submit to the same-origin endpoint at `/api/send-contact.php`. The endpoint sends all validated inquiries to the fixed recipient `info@daitora-jp.com` with the validated visitor email as `Reply-To`.
 
-To enable real submission, define the endpoint before `assets/js/site.js` is loaded:
-
-```html
-<script>
-  window.DAITORA_CONTACT_FORM_URL = "https://YOUR-API-HOST/CONTACT-PATH";
-</script>
-<script src="assets/js/contact-form-core.js"></script>
-<script src="assets/js/site.js"></script>
-```
-
-The placeholder above is not a working service and must never be deployed as-is. The frontend accepts only a valid HTTPS endpoint without embedded credentials. It sends JSON using `POST` with `Content-Type: application/json`.
+Japan Travel uses the same group mail channel through a server-to-server request. Configure the same strong `DAITORA_CONTACT_SHARED_SECRET` value on both servers. The signature is an HMAC-SHA256 of the Unix timestamp, a newline, and the exact JSON body. The secret must never be exposed to browser JavaScript or committed to Git.
 
 A submission is shown as successful only when the API returns either:
 
@@ -71,9 +61,9 @@ Do not trust frontend validation alone. The server must verify:
 - Notification emails must not expose raw unescaped user input.
 - Personal data must be stored only for the necessary period.
 
-## Current Sample Mode
+## Production Mail Gate
 
-When `window.DAITORA_CONTACT_FORM_URL` is not set or is not a valid HTTPS URL, the form controls and submit button remain disabled and the page shows a normal customer-facing notice asking users to contact by phone or email. No request is made and no success state is shown.
+Code and automated endpoint tests do not prove real delivery. Before public release, submit one approved staging inquiry, confirm receipt at `info@daitora-jp.com`, verify `Reply-To`, and then repeat on the production host.
 
 ## Multilingual Static Build
 

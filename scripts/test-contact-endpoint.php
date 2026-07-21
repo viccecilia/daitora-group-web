@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 define('DAITORA_CONTACT_TEST', true);
+putenv('DAITORA_CONTACT_SHARED_SECRET=test-shared-secret-for-contact-channel');
 require dirname(__DIR__) . '/api/send-contact.php';
 
 function test_assert(bool $condition, string $message): void
@@ -36,6 +37,49 @@ function valid_payload(): array
         'ride_purpose' => 'Corporate travel',
         'source_page' => 'https://daitora-jp.com/en/contact.html?type=hire'
     ];
+}
+
+function japan_travel_payload(): array
+{
+    return [
+        'type' => 'japan_travel',
+        'source_site' => 'Japan Travel',
+        'request_id' => 'inq_test_001',
+        'name' => 'Test Traveler',
+        'email' => 'traveler@example.com',
+        'phone' => '+81 90 0000 0000',
+        'contact_method' => 'Email',
+        'language' => 'Japanese',
+        'site_language' => 'ja',
+        'privacy' => 'on',
+        'website' => '',
+        'service_type' => 'Airport transfer',
+        'travel_date' => '2026-08-20',
+        'travel_time' => '14:30',
+        'flight_number' => 'DA123',
+        'pickup_location' => 'Kansai International Airport',
+        'dropoff_location' => 'Kyoto Station',
+        'passenger_count' => '3',
+        'luggage_count' => '4',
+        'vehicle_preference' => 'Alphard',
+        'itinerary' => 'Please arrange a quiet transfer.',
+        'message' => 'Please arrange a quiet transfer.',
+        'source_page' => 'https://japan-travel.info/ja/contact/'
+    ];
+}
+
+function signed_japan_travel_request(array $payload, callable $mailSender, int $now = 1784500000): array
+{
+    $raw = (string)json_encode($payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    $timestamp = (string)$now;
+    $server = [
+        'REMOTE_ADDR' => '192.0.2.30',
+        'HTTP_HOST' => 'daitora-jp.com',
+        'HTTP_X_DAITORA_CLIENT_ID' => 'japan-travel',
+        'HTTP_X_DAITORA_CONTACT_TIMESTAMP' => $timestamp,
+        'HTTP_X_DAITORA_CONTACT_SIGNATURE' => hash_hmac('sha256', $timestamp . "\n" . $raw, 'test-shared-secret-for-contact-channel')
+    ];
+    return daitora_process_contact('POST', 'application/json', $raw, [], $server, $mailSender, 'allow_rate', $now);
 }
 
 function allow_rate(string $ip, string $fingerprint, int $now): string
@@ -80,6 +124,29 @@ test_assert(DAITORA_CONTACT_FROM === 'no-reply@daitora-jp.com', 'From address mu
 test_assert($captured['replyTo'] === 'customer@example.com', 'validated customer email must be Reply-To');
 test_assert(strpos($captured['body'], 'Kansai International Airport') !== false, 'mail body must contain validated transport details');
 test_assert(strpos($captured['subject'], '[STAGING]') === false, 'production subject must not contain the staging prefix');
+
+$captured = [];
+$japanResult = signed_japan_travel_request(japan_travel_payload(), $mailSender);
+test_assert($japanResult['status'] === 200, 'signed Japan Travel server request must succeed without Origin');
+test_assert($captured['to'] === 'info@daitora-jp.com', 'Japan Travel inquiry recipient must remain fixed');
+test_assert($captured['replyTo'] === 'traveler@example.com', 'Japan Travel customer email must be Reply-To');
+test_assert(strpos($captured['subject'], '[Japan Travel 予約相談] 2026-08-20｜Test Traveler') !== false, 'Japan Travel subject must use the agreed format');
+test_assert(strpos($captured['body'], 'This message records an inquiry only') !== false, 'Japan Travel mail must state that no booking is confirmed');
+test_assert(strpos($captured['body'], 'Kyoto Station') !== false, 'Japan Travel mail must include consultation details');
+
+$unsignedJapan = process_payload(japan_travel_payload(), $mailSender);
+test_assert($unsignedJapan['status'] === 403, 'unsigned Japan Travel request must be rejected');
+
+$oldJapan = japan_travel_payload();
+$rawOld = (string)json_encode($oldJapan, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+$oldServer = [
+    'HTTP_HOST' => 'daitora-jp.com',
+    'HTTP_X_DAITORA_CLIENT_ID' => 'japan-travel',
+    'HTTP_X_DAITORA_CONTACT_TIMESTAMP' => '1784499000',
+    'HTTP_X_DAITORA_CONTACT_SIGNATURE' => hash_hmac('sha256', "1784499000\n" . $rawOld, 'test-shared-secret-for-contact-channel')
+];
+$expiredSignature = daitora_process_contact('POST', 'application/json', $rawOld, [], $oldServer, $mailSender, 'allow_rate', 1784500000);
+test_assert($expiredSignature['status'] === 403, 'expired Japan Travel signature must be rejected');
 
 foreach ([
     ['daitora-jp.com', 'https://daitora-jp.com', false],

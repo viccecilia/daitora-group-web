@@ -41,6 +41,8 @@
 
 ## Contact Form API
 
+Japan Travel sends inquiries to this same endpoint from its own PHP backend. Set `DAITORA_CONTACT_SHARED_SECRET` to the same strong secret on both hosts. Requests use `X-Daitora-Client-Id: japan-travel`, a short-lived timestamp, and an HMAC-SHA256 signature. This is server-to-server authentication; do not enable wildcard CORS or expose the secret in HTML/JavaScript.
+
 公開フォームは `<form data-submit-endpoint="/api/send-contact.php">` を使用します。正式サイトでは `https://www.daitora-jp.com/api/send-contact.php`、プレビューでは `https://www.taxi-airport.jp/api/send-contact.php` に同一オリジンで解決されます。例外的に別 endpoint が必要な場合だけ、`window.DAITORA_CONTACT_FORM_URL` をフォールバックとして利用できます。秘密鍵、SMTP パスワード、API Token はブラウザーへ出力しないでください。
 
 フロントエンドは `Content-Type: application/json` の `POST` を送信します。成功表示の条件は、JSON content type の HTTP 2xx と `{ "success": true }` の組み合わせだけです。HTTP `204`、HTML、壊れた JSON、`success:false`、非 2xx、タイムアウト、ネットワーク異常は成功扱いにしません。主な項目は次のとおりです。

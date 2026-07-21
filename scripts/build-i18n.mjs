@@ -137,8 +137,6 @@ const rows = [
 ['企業視察、研修旅行、工場見学など、複数名・複数台での移動を伴う案件に対応しています。','对应企业视察、研修旅行、工厂参观等涉及多人和多车辆移动的案件。','We support corporate inspections, training trips, factory visits and other projects involving multiple passengers and vehicles.','기업 시찰, 연수 여행, 공장 견학 등 복수 인원・복수 차량 이동이 수반되는 안건에 대응합니다.','對應企業視察、研修旅行、工廠參觀等涉及多人與多車輛移動的案件。'],
 ['京都エリアを中心に、VIP顧客・関係者の送迎を担当。車両美観、乗務員の所作、待機中の対応まで重視しています。','以京都区域为中心，负责VIP客户和相关人员接送，重视车辆美观、司机举止和待机期间的对应。','Centered on the Kyoto area, we handle transfers for VIP customers and stakeholders, emphasizing vehicle appearance, driver conduct and waiting-time response.','교토 지역을 중심으로 VIP 고객・관계자 송영을 담당하며 차량 미관, 승무원의 동작, 대기 중 대응까지 중시합니다.','以京都區域為中心，負責VIP客戶與相關人員接送，重視車輛美觀、乘務員舉止與待機期間的對應。'],
 ['大阪・関西万博に関連する来賓・関係者・企業団体の送迎案件に対応。混雑時の運行管理や複数台調整を支援しています。','对应大阪・关西万博相关来宾、相关人员和企业团体接送，支援拥堵时的运行管理和多车辆调整。','We support transfers for guests, stakeholders and corporate groups related to the Osaka-Kansai Expo, including operation control during congestion and multi-vehicle coordination.','오사카・간사이 엑스포 관련 내빈, 관계자, 기업 단체 송영에 대응하며 혼잡 시 운행 관리와 복수 차량 조정을 지원합니다.','對應大阪・關西萬博相關來賓、相關人員與企業團體接送，支援壅塞時的運行管理與多車輛調整。'],
-['大阪本社：大阪府大阪市大正区小林西2丁目10-3 / 京都営業所：京都府京都市伏見区竹田東小屋ノ内町95 /','大阪总部：大阪府大阪市大正区小林西2丁目10-3 / 京都营业所：京都府京都市伏见区竹田东小屋ノ内町95 /','Osaka head office: 2-10-3 Kobayashi-nishi, Taisho-ku, Osaka / Kyoto office: 95 Takeda Higashikoyanouchi-cho, Fushimi-ku, Kyoto /','오사카 본사: 오사카부 오사카시 다이쇼구 고바야시니시 2-10-3 / 교토 영업소: 교토부 교토시 후시미구 다케다 히가시코야노우치초 95 /','大阪總部：大阪府大阪市大正區小林西2丁目10-3 / 京都營業所：京都府京都市伏見區竹田東小屋ノ内町95 /']
-,
 ['大阪・京都・堺・港区など関西複数拠点と約100台規模の車両ネットワークを活用します。','活用大阪、京都、堺、港区等关西多据点与约100台规模车辆网络。','We use multiple Kansai bases, including Osaka, Kyoto, Sakai and Minato, together with an approximately 100-vehicle network.','오사카・교토・사카이・미나토구 등 간사이 복수 거점과 약 100대 규모 차량 네트워크를 활용합니다.','活用大阪、京都、堺、港區等關西多據點與約100台規模車輛網絡。'],
 ['安全 / Safety','安全','Safety','안전','安全'],
 ['謙遜 / Humility','谦逊','Humility','겸손','謙遜'],
@@ -278,6 +276,43 @@ function injectBusinessNavigation(html, lang, page){
   const footer = `<!-- i18n:footer-business --><nav class="footer-business-nav" aria-label="${escapeAttr(labels[0])}"><strong>${labels[0]}</strong>${entries.map(([href,label]) => `<a href="${href}">${label}</a>`).join('')}</nav><!-- /i18n:footer-business -->`;
   html = html.replace(/(<footer class="site-footer">)/, `$1${footer}`);
   return html;
+}
+const footerLabels = {
+  ja: { locations: '営業拠点', privacy: 'プライバシーポリシー' },
+  'zh-CN': { locations: '营业据点', privacy: '隐私政策' },
+  en: { locations: 'OUR LOCATIONS', privacy: 'Privacy Policy' },
+  ko: { locations: '영업 거점', privacy: '개인정보 처리방침' },
+  'zh-TW': { locations: '營業據點', privacy: '隱私權政策' }
+};
+const footerLocations = [
+  { region: 'OSAKA / TAISHO', name: '大阪・大正区', address: OFFICIAL_FACTS.osakaAddress },
+  { region: 'OSAKA / MINATO', name: '大阪・港区', address: OFFICIAL_FACTS.minatoAddress },
+  { region: 'KYOTO / FUSHIMI', name: '京都・伏見区', address: OFFICIAL_FACTS.kyotoFooterAddress },
+  { region: 'SAKAI / NISHI', name: '堺市・西区', address: OFFICIAL_FACTS.sakaiAddress }
+];
+function injectLocationsFooter(html, lang){
+  const labels = footerLabels[lang] || footerLabels.ja;
+  const locations = footerLocations.map(({region,name,address}) => `
+      <article class="footer-location">
+        <span class="footer-location-region">${region}</span>
+        <strong>${name}</strong>
+        <address>${address}</address>
+      </article>`).join('');
+  const footer = `<footer class="site-footer">
+    <section class="footer-locations" aria-labelledby="footer-locations-title">
+      <p class="footer-locations-title" id="footer-locations-title">${labels.locations}</p>
+      <div class="footer-location-grid">${locations}
+      </div>
+    </section>
+    <div class="footer-inner footer-legal">
+      <span>&copy; Daitora Co., Ltd. All Rights Reserved.</span>
+      <a href="privacy.html">${labels.privacy}</a>
+    </div>
+  </footer>`;
+  if (/<footer class="site-footer">[\s\S]*?<\/footer>/.test(html)) {
+    return html.replace(/<footer class="site-footer">[\s\S]*?<\/footer>/, footer);
+  }
+  return html.replace(/<\/body>/, `${footer}\n</body>`);
 }
 const servicePages = new Set(['business-hire.html','business-taxi.html','business-auto.html','business-medical.html','business-digital.html']);
 function serviceSchema(lang, page, name, description){
@@ -491,6 +526,7 @@ function writePage(lang, page){
   html = setFormLanguage(html, lang);
   html = translate(html, lang, page);
   html = setJapanTravelLink(html, lang);
+  html = injectLocationsFooter(html, lang);
   html = injectBusinessNavigation(html, lang, page);
   html = injectSwitchers(html, lang, page);
   html = langSpecificCss(html, lang);

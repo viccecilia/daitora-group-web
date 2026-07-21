@@ -34,6 +34,19 @@ const JAPAN_TRAVEL_URLS = {
   'zh-TW': 'https://japan-travel.info/?utm_source=daitora-jp.com&amp;utm_medium=referral&amp;utm_campaign=group_home'
 };
 const AUTOLOAN_URL = 'https://www.daitora-jp.com/autoloan/';
+const FOOTER_LABELS = {
+  ja: '営業拠点',
+  'zh-CN': '营业据点',
+  en: 'OUR LOCATIONS',
+  ko: '영업 거점',
+  'zh-TW': '營業據點'
+};
+const FOOTER_LOCATIONS = [
+  ['OSAKA / TAISHO', '大阪・大正区', OFFICIAL_FACTS.osakaAddress],
+  ['OSAKA / MINATO', '大阪・港区', OFFICIAL_FACTS.minatoAddress],
+  ['KYOTO / FUSHIMI', '京都・伏見区', OFFICIAL_FACTS.kyotoFooterAddress],
+  ['SAKAI / NISHI', '堺市・西区', OFFICIAL_FACTS.sakaiAddress]
+];
 
 const BLOCKED_TERMS = {
   'zh-CN': [/大虎/g, /虎丸/g, /车联网/g, /兼容各大机场/g, /交通兼容/g, /我体验到了/g, /多人搬家/g, /想要的车型/g, /多辆车辆投入运行/g, /可以在关西搬家/g, /我们都能搞定/g, /多个设备/g, /规划使用面积/g, /登机地点/g, /集体运动/g, /质量点/g, /听力/g, /脱出/g],
@@ -359,9 +372,17 @@ export function runAudit({ writeReport = true } = {}) {
       }
 
       if (html.includes('site-footer')) {
-        for (const fact of [OFFICIAL_FACTS.osakaAddress, OFFICIAL_FACTS.kyotoAddress]) {
-          if (!html.includes(fact)) report(lang, page, 'fact-lock', 'Footer is missing an exact locked company fact', fact);
+        const footer = html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)?.[0] || '';
+        for (const [region, name, address] of FOOTER_LOCATIONS) {
+          for (const value of [region, name, address]) {
+            if (!footer.includes(value)) report(lang, page, 'footer-location', 'Footer is missing an exact location value', value);
+          }
         }
+        if (!footer.includes(`id="footer-locations-title">${FOOTER_LABELS[lang]}`)) report(lang, page, 'footer-label', 'Footer location heading is missing or not localized', FOOTER_LABELS[lang]);
+        if ((footer.match(/class="footer-location"/g) || []).length !== 4) report(lang, page, 'footer-location', 'Footer must contain exactly four location units');
+        if (!footer.includes('&copy; Daitora Co., Ltd. All Rights Reserved.')) report(lang, page, 'footer-legal', 'Footer copyright is missing');
+        if (!/<a href="privacy\.html">[^<]+<\/a>/.test(footer)) report(lang, page, 'footer-legal', 'Footer privacy link is missing');
+        if (/大阪本社：|京都営業所：|Osaka Head Office:|Kyoto Office:|大阪总部：|大阪總部：|오사카 본사:/.test(footer)) report(lang, page, 'footer-legacy', 'Legacy one-line footer address remains');
       }
       for (const bad of BAD_FACT_FRAGMENTS) {
         bad.lastIndex = 0;
@@ -421,7 +442,8 @@ export function runAudit({ writeReport = true } = {}) {
       if (lang !== 'ja') {
         for (const chunk of chunks) {
           const allowedOfficialText = [
-            OFFICIAL_FACTS.osakaAddress, OFFICIAL_FACTS.kyotoAddress, OFFICIAL_FACTS.passengerLicense,
+            OFFICIAL_FACTS.osakaAddress, OFFICIAL_FACTS.minatoAddress, OFFICIAL_FACTS.kyotoAddress,
+            OFFICIAL_FACTS.kyotoFooterAddress, OFFICIAL_FACTS.sakaiAddress, OFFICIAL_FACTS.passengerLicense,
             OFFICIAL_FACTS.charterLicense, OFFICIAL_FACTS.usedCarPermit, OFFICIAL_FACTS.representative
           ].some((value) => chunk.includes(value));
           if (/[ぁ-ゖァ-ヺ]/.test(chunk) && chunk !== '日本語' && !allowedOfficialText) report(lang, page, 'kana-residual', 'Unapproved Japanese kana remains', chunk.slice(0, 180));

@@ -74,7 +74,10 @@ export const BRAND_LOCKS = {
 
 export const OFFICIAL_FACTS = {
   osakaAddress: '大阪府大阪市大正区小林西2丁目10-3',
+  minatoAddress: '〒552-0021 大阪府大阪市港区築港4丁目10-30 大寅ビル2階',
   kyotoAddress: '京都府京都市伏見区竹田東小屋ノ内町95',
+  kyotoFooterAddress: '〒612-8448 京都府京都市伏見区竹田東小屋ノ内町95',
+  sakaiAddress: '〒593-8312 大阪府堺市西区草部206-10',
   postalCode: '〒551-0013',
   mainPhone: '06-6710-9861',
   fax: '06-6710-9862',
@@ -90,18 +93,12 @@ export const OFFICIAL_FACTS = {
   capital: '1,000万円'
 };
 
-const footerFacts = {
-  ja: `大阪本社：${OFFICIAL_FACTS.osakaAddress} / 京都営業所：${OFFICIAL_FACTS.kyotoAddress} /`,
-  'zh-CN': `大阪总部：${OFFICIAL_FACTS.osakaAddress} / 京都营业所：${OFFICIAL_FACTS.kyotoAddress} /`,
-  en: `Osaka Head Office: ${OFFICIAL_FACTS.osakaAddress} / Kyoto Office: ${OFFICIAL_FACTS.kyotoAddress} /`,
-  ko: `오사카 본사: ${OFFICIAL_FACTS.osakaAddress} / 교토 영업소: ${OFFICIAL_FACTS.kyotoAddress} /`,
-  'zh-TW': `大阪總部：${OFFICIAL_FACTS.osakaAddress} / 京都營業所：${OFFICIAL_FACTS.kyotoAddress} /`
-};
-
 export const FACT_LOCKS = {
   [OFFICIAL_FACTS.osakaAddress]: t(OFFICIAL_FACTS.osakaAddress, OFFICIAL_FACTS.osakaAddress, OFFICIAL_FACTS.osakaAddress, OFFICIAL_FACTS.osakaAddress, OFFICIAL_FACTS.osakaAddress),
+  [OFFICIAL_FACTS.minatoAddress]: t(OFFICIAL_FACTS.minatoAddress, OFFICIAL_FACTS.minatoAddress, OFFICIAL_FACTS.minatoAddress, OFFICIAL_FACTS.minatoAddress, OFFICIAL_FACTS.minatoAddress),
   [OFFICIAL_FACTS.kyotoAddress]: t(OFFICIAL_FACTS.kyotoAddress, OFFICIAL_FACTS.kyotoAddress, OFFICIAL_FACTS.kyotoAddress, OFFICIAL_FACTS.kyotoAddress, OFFICIAL_FACTS.kyotoAddress),
-  [`大阪本社：${OFFICIAL_FACTS.osakaAddress} / 京都営業所：${OFFICIAL_FACTS.kyotoAddress} /`]: footerFacts,
+  [OFFICIAL_FACTS.kyotoFooterAddress]: t(OFFICIAL_FACTS.kyotoFooterAddress, OFFICIAL_FACTS.kyotoFooterAddress, OFFICIAL_FACTS.kyotoFooterAddress, OFFICIAL_FACTS.kyotoFooterAddress, OFFICIAL_FACTS.kyotoFooterAddress),
+  [OFFICIAL_FACTS.sakaiAddress]: t(OFFICIAL_FACTS.sakaiAddress, OFFICIAL_FACTS.sakaiAddress, OFFICIAL_FACTS.sakaiAddress, OFFICIAL_FACTS.sakaiAddress, OFFICIAL_FACTS.sakaiAddress),
   [`京都営業所：${OFFICIAL_FACTS.kyotoAddress}`]: t(
     `京都営業所：${OFFICIAL_FACTS.kyotoAddress}`,
     `京都营业所：${OFFICIAL_FACTS.kyotoAddress}`,
