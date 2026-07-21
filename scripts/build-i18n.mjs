@@ -273,8 +273,6 @@ function injectBusinessNavigation(html, lang, page){
     if (businessLink.test(navHtml)) return navHtml.replace(businessLink, nav);
     return navHtml.replace(/(<a\b[^>]*href="about\.html"[^>]*>[\s\S]*?<\/a>)/, `$1${nav}`);
   });
-  const footer = `<!-- i18n:footer-business --><nav class="footer-business-nav" aria-label="${escapeAttr(labels[0])}"><strong>${labels[0]}</strong>${entries.map(([href,label]) => `<a href="${href}">${label}</a>`).join('')}</nav><!-- /i18n:footer-business -->`;
-  html = html.replace(/(<footer class="site-footer">)/, `$1${footer}`);
   return html;
 }
 const footerLabels = {

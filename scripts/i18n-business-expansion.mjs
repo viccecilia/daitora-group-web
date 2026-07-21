@@ -8,28 +8,28 @@ export const EXPANSION_BRAND_LOCKS = {
 const about = {
   '企業理念、社訓、会社概要、許認可、拠点情報を通じて、': t('企業理念、社訓、会社概要、許認可、拠点情報を通じて、', '通过企业理念、运营准则、公司概要、许可资质及营业据点，', 'Through our philosophy, operating principles, company profile, licences and office network,', '기업 이념, 운영 원칙, 회사 개요, 인허가 및 거점 정보를 통해', '透過企業理念、營運準則、公司概要、許可資質及營業據點，'),
   '大寅グループの考え方と事業基盤をご紹介します。': t('大寅グループの考え方と事業基盤をご紹介します。', '了解Daitora Group的理念与业务基础。', 'learn about Daitora Group’s values and business foundation.', 'Daitora Group의 가치와 사업 기반을 소개합니다.', '了解Daitora Group的理念與事業基礎。'),
-  '安心を基盤に、': t('安心を基盤に、', '以安心为基础，', 'Building new possibilities', '안심을 기반으로', '以安心為基礎，'),
-  '事業の可能性を広げる。': t('事業の可能性を広げる。', '拓展业务的可能性。', 'on a foundation of assurance.', '사업의 가능성을 넓힙니다.', '拓展事業的可能性。'),
-  '株式会社大寅は、2018年3月の設立以来、大阪を拠点に「安全・謙遜・迅敏」を社訓として掲げ、お客様一人ひとりに寄り添う、安心・安全なサービスの提供に努めてまいりました。': t(
-    '株式会社大寅は、2018年3月の設立以来、大阪を拠点に「安全・謙遜・迅敏」を社訓として掲げ、お客様一人ひとりに寄り添う、安心・安全なサービスの提供に努めてまいりました。',
-    'Daitora Co., Ltd.自2018年3月成立以来，以大阪为据点，将“安全、谦逊、迅敏”作为企业准则，始终致力于为每一位客户提供安心、安全的服务。',
-    'Since its establishment in Osaka in March 2018, Daitora Co., Ltd. has upheld “Safety, Humility and Agility” as its guiding principles and has worked to provide safe, reassuring service tailored to each customer.',
-    'Daitora Co., Ltd.는 2018년 3월 오사카에서 설립된 이래 ‘안전·겸손·민첩’을 운영 원칙으로 삼고, 고객 한 분 한 분에게 세심하게 다가가는 안심할 수 있는 안전한 서비스를 제공해 왔습니다.',
-    'Daitora Co., Ltd.自2018年3月在大阪成立以來，秉持「安全、謙遜、迅敏」的企業準則，致力為每一位顧客提供安心且安全的服務。'
+  '移動を提供するのではなく、': t('移動を提供するのではなく、', '我们提供的不只是交通服务，', 'More than transportation,', '이동 수단을 제공하는 데 그치지 않고,', '我們提供的不只是交通服務，'),
+  '安心を届ける。': t('安心を届ける。', '更是安心。', 'we deliver peace of mind.', '안심을 전합니다.', '更是安心。'),
+  '株式会社大寅は2018年3月に設立し、本年で創業9年を迎えました。大阪を拠点として「安全・謙遜・迅敏」を社訓に掲げ、お客様一人ひとりに寄り添った安心・安全なサービスを提供しております。': t(
+    '株式会社大寅は2018年3月に設立し、本年で創業9年を迎えました。大阪を拠点として「安全・謙遜・迅敏」を社訓に掲げ、お客様一人ひとりに寄り添った安心・安全なサービスを提供しております。',
+    'Daitora Co., Ltd.成立于2018年3月，今年迈入创业第9年。公司以大阪为据点，将“安全、谦逊、迅敏”作为企业准则，致力于为每一位客户提供安心、安全的服务。',
+    'Daitora Co., Ltd. was established in March 2018 and is now in its ninth year of operation. Based in Osaka, we uphold Safety, Humility and Agility as our guiding principles and provide attentive, safe and reassuring service to every customer.',
+    'Daitora Co., Ltd.는 2018년 3월에 설립되어 올해 창업 9년 차를 맞았습니다. 오사카를 거점으로 ‘안전·겸손·민첩’을 운영 원칙으로 삼아 고객 한 분 한 분에게 세심하게 다가가는 안심할 수 있는 안전한 서비스를 제공합니다.',
+    'Daitora Co., Ltd.成立於2018年3月，今年邁入創業第9年。公司以大阪為據點，將「安全、謙遜、迅敏」作為企業準則，致力為每一位顧客提供安心且安全的服務。'
   ),
-  '現在は、訪日外国人のお客様を中心としたハイヤー・貸切送迎サービスを主力事業として、大阪・京都を中心に高品質な輸送サービスを提供しています。また、インバウンド向けの医療ツーリズム事業では、人間ドックや先進医療に関する受診支援をはじめ、多言語対応や医療機関との連携を通じて、訪日外国人のお客様の安心で円滑な滞在を支援しています。': t(
-    '現在は、訪日外国人のお客様を中心としたハイヤー・貸切送迎サービスを主力事業として、大阪・京都を中心に高品質な輸送サービスを提供しています。また、インバウンド向けの医療ツーリズム事業では、人間ドックや先進医療に関する受診支援をはじめ、多言語対応や医療機関との連携を通じて、訪日外国人のお客様の安心で円滑な滞在を支援しています。',
-    '目前，我们以面向访日旅客的包车及私人接送为核心业务，在大阪、京都提供高品质交通服务。同时，在面向入境旅客的医疗旅游服务中，我们提供健康检查及先进医疗相关就诊支持，并通过多语言沟通、医疗机构日程协调及交通安排，协助访日旅客安心、顺利地完成在日行程。',
-    'Today, chauffeur and private transportation for international visitors is our core business, with high-quality services centred on Osaka and Kyoto. Our inbound medical tourism support covers arrangements for health screenings and advanced medical consultations, multilingual communication, scheduling with medical providers and transportation, helping visitors navigate their stay in Japan with confidence.',
-    '현재는 방일 외국인 고객을 위한 전용 차량 및 대절 송영 서비스를 핵심 사업으로 운영하며, 오사카와 교토를 중심으로 수준 높은 이동 서비스를 제공합니다. 인바운드 의료 관광 지원에서는 건강검진과 첨단의료 관련 진료 지원, 다국어 안내, 의료기관 일정 조정과 이동 지원을 통해 고객이 일본 체류 일정을 안심하고 원활하게 진행할 수 있도록 돕습니다.',
-    '目前以服務訪日旅客的包車及私人接送為核心事業，在大阪、京都提供高品質交通服務。同時，面向入境旅客的醫療旅遊服務提供健康檢查及先進醫療相關就診支援，並透過多語言溝通、醫療機構日程協調與交通安排，協助訪日旅客安心且順利地完成在日行程。'
+  '現在は、訪日外国人を中心としたハイヤー・貸切送迎サービスを主力事業とし、大阪・京都を中心に高品質な輸送サービスを提供しております。また、インバウンド向け医療ツーリズム事業では、日本の高度な医療技術と観光を組み合わせたサービスを展開し、多言語対応や医療機関との連携を通じて、訪日外国人のお客様の安心・安全な滞在を支援しております。': t(
+    '現在は、訪日外国人を中心としたハイヤー・貸切送迎サービスを主力事業とし、大阪・京都を中心に高品質な輸送サービスを提供しております。また、インバウンド向け医療ツーリズム事業では、日本の高度な医療技術と観光を組み合わせたサービスを展開し、多言語対応や医療機関との連携を通じて、訪日外国人のお客様の安心・安全な滞在を支援しております。',
+    '目前，公司以面向访日外国人的包车及私人接送服务为核心业务，主要在大阪、京都提供高品质交通服务。同时，我们开展面向入境旅客的医疗旅游支持服务，将日本先进医疗资源与旅行安排相结合，通过多语言服务和医疗机构协调，支持访日旅客安心、安全地在日本停留。',
+    'Our principal business is chauffeur and private transportation for international visitors, delivered primarily across Osaka and Kyoto. We also provide inbound medical tourism support that connects access to Japan’s advanced medical services with travel arrangements, multilingual assistance and coordination with medical institutions, helping international visitors stay in Japan with confidence and peace of mind.',
+    '현재는 방일 외국인을 위한 전용 차량 및 대절 송영 서비스를 주력 사업으로 운영하며, 오사카와 교토를 중심으로 수준 높은 운송 서비스를 제공합니다. 또한 인바운드 의료 관광 지원에서는 일본의 선진 의료 서비스와 여행 일정을 연계하고, 다국어 지원과 의료기관 조정을 통해 방일 고객이 안심하고 안전하게 체류할 수 있도록 돕습니다.',
+    '目前，公司以服務訪日外國人的包車及私人接送為核心事業，主要在大阪、京都提供高品質交通服務。同時，我們開展面向入境旅客的醫療旅遊支援服務，結合日本先進醫療資源與旅行安排，並透過多語言服務及醫療機構協調，支援訪日旅客安心、安全地在日本停留。'
   ),
-  'さらに、SNSやデジタルコンテンツを活用したデジタルマーケティング・プロモーション支援、中古車販売などへ事業領域を広げ、多角的な事業基盤を構築しています。': t(
-    'さらに、SNSやデジタルコンテンツを活用したデジタルマーケティング・プロモーション支援、中古車販売などへ事業領域を広げ、多角的な事業基盤を構築しています。',
-    '此外，我们还拓展至利用社交媒体和数字内容开展的数字营销与推广支持，以及二手车销售等领域，构建多元化的业务基础。',
-    'We have also expanded into digital marketing and promotion support using social media and digital content, as well as used car sales, creating a diversified business foundation.',
-    '또한 SNS와 디지털 콘텐츠를 활용한 디지털 마케팅·프로모션 지원과 중고차 판매로 사업 영역을 넓혀 다각적인 사업 기반을 구축하고 있습니다.',
-    '此外，我們亦拓展至運用社群媒體與數位內容的數位行銷及推廣支援，以及中古車銷售等領域，建立多元化的事業基礎。'
+  'このほか、SNSやデジタルコンテンツを活用したデジタルマーケティング・プロモーション支援事業、中古車販売事業などを展開し、多角的な事業基盤を構築しております。': t(
+    'このほか、SNSやデジタルコンテンツを活用したデジタルマーケティング・プロモーション支援事業、中古車販売事業などを展開し、多角的な事業基盤を構築しております。',
+    '此外，公司还开展运用社交媒体和数字内容的数字营销与推广支持业务，以及二手车销售业务，构建多元化的业务基础。',
+    'In addition, we operate digital marketing and promotion support services using social media and digital content, alongside used car sales, forming a diversified business foundation.',
+    '이 밖에도 SNS와 디지털 콘텐츠를 활용한 디지털 마케팅·프로모션 지원 사업과 중고차 판매 사업을 전개하며 다각적인 사업 기반을 구축하고 있습니다.',
+    '此外，公司亦開展運用社群媒體及數位內容的數位行銷與推廣支援事業，以及中古車銷售事業，建立多元化的事業基礎。'
   ),
   'DAITORA 社訓': t('DAITORA 社訓', 'DAITORA 企业准则', 'THE DAITORA STANDARD', 'DAITORA 운영 원칙', 'DAITORA 企業準則'),
   '安全・謙遜・迅敏': t('安全・謙遜・迅敏', '安全・谦逊・迅敏', 'Safety, Humility and Agility', '안전·겸손·민첩', '安全・謙遜・迅敏'),
@@ -47,7 +47,7 @@ const about = {
   '大寅グループは、大阪本社を中心に、京都、堺など関西複数拠点で運行体制を整えています。': t('大寅グループは、大阪本社を中心に、京都、堺など関西複数拠点で運行体制を整えています。', 'Daitora Group以大阪总部为中心，在京都、堺等关西多个据点建立运营体系。', 'Centred on our Osaka head office, Daitora Group operates through multiple Kansai bases including Kyoto and Sakai.', 'Daitora Group은 오사카 본사를 중심으로 교토와 사카이 등 간사이 여러 거점에서 운행 체계를 운영합니다.', 'Daitora Group以大阪總部為中心，在京都、堺等關西多個據點建立營運體系。'),
   '空港送迎、京都発着の観光貸切、企業送迎、大型案件における複数台運行まで、拠点ごとの連携により柔軟な配車を行います。': t('空港送迎、京都発着の観光貸切、企業送迎、大型案件における複数台運行まで、拠点ごとの連携により柔軟な配車を行います。', '从机场接送、京都出发的观光包车、企业接送，到大型项目的多车协同运营，各据点联动提供灵活调度。', 'Our bases coordinate flexible dispatch for airport transfers, Kyoto-based private tours, corporate transportation and multi-vehicle operations for large assignments.', '공항 송영, 교토 출발 관광 전세, 기업 송영부터 대형 프로젝트의 복수 차량 운행까지 거점 간 연계로 유연하게 배차합니다.', '從機場接送、京都出發的觀光包車、企業接送，到大型案件的多車協同營運，各據點聯動提供彈性派車。'),
   '関西南部エリアの運行・車両連携拠点': t('関西南部エリアの運行・車両連携拠点', '关西南部地区的运营与车辆协同据点', 'Operations and fleet coordination for southern Kansai', '간사이 남부 지역 운행 및 차량 연계 거점', '關西南部地區的營運與車輛協同據點'),
-  '大阪本社 / 京都営業所 / 堺エリア': t('大阪本社 / 京都営業所 / 堺エリア', '大阪总部 / 京都营业所 / 堺地区', 'Osaka Head Office / Kyoto Office / Sakai Area', '오사카 본사 / 교토 영업소 / 사카이 지역', '大阪總部 / 京都營業所 / 堺地區'),
+  '大阪・大正区 / 大阪・港区 / 京都・伏見区 / 堺市・西区': t('大阪・大正区 / 大阪・港区 / 京都・伏見区 / 堺市・西区', '大阪・大正区 / 大阪・港区 / 京都・伏見区 / 堺市・西区', '大阪・大正区 / 大阪・港区 / 京都・伏見区 / 堺市・西区', '大阪・大正区 / 大阪・港区 / 京都・伏見区 / 堺市・西区', '大阪・大正区 / 大阪・港区 / 京都・伏見区 / 堺市・西区'),
   'ハイヤー事業 / タクシー事業 / 中古車販売事業 / 旅行関連サービス / 医療ツーリズム事業 / デジタルマーケティング・プロモーション支援事業': t('ハイヤー事業 / タクシー事業 / 中古車販売事業 / 旅行関連サービス / 医療ツーリズム事業 / デジタルマーケティング・プロモーション支援事業', '包车及私人接送 / 出租车 / 二手车销售 / 旅行相关服务 / 医疗旅游服务 / 数字营销与推广支持', 'Chauffeur and private transportation / Taxi / Used car sales / Travel-related services / Medical tourism support / Digital marketing and promotion support', '전용 차량 및 대절 송영 / 택시 / 중고차 판매 / 여행 관련 서비스 / 의료 관광 지원 / 디지털 마케팅·프로모션 지원', '包車及私人接送 / 計程車 / 中古車銷售 / 旅行相關服務 / 醫療旅遊服務 / 數位行銷與推廣支援'),
   '英文社名': t('英文社名', '英文公司名称', 'English Company Name', '영문 회사명', '英文公司名稱'),
   '所在地': t('所在地', '所在地', 'Address', '소재지', '所在地'),
