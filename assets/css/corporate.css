@@ -192,22 +192,6 @@ html[lang="en"], .lang-en { font-family: -apple-system, BlinkMacSystemFont, "Seg
   margin-bottom: 0;
 }
 
-.president-message-copy .president-message-quote {
-  margin: 24px 0;
-  padding: 2px 0 2px 18px;
-  border-left: 2px solid var(--gold);
-  color: var(--navy);
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: 700;
-  letter-spacing: 0;
-  text-wrap: pretty;
-}
-
-.president-message-copy .president-message-quote br {
-  display: none;
-}
-
 @media (max-width: 960px) {
   .president-message-inner {
     grid-template-columns: 1fr;
@@ -252,8 +236,4 @@ html[lang="en"], .lang-en { font-family: -apple-system, BlinkMacSystemFont, "Seg
     margin-bottom: 19px;
   }
 
-  .president-message-copy .president-message-quote {
-    margin: 22px 0;
-    padding-left: 16px;
-  }
 }
