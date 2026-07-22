@@ -164,11 +164,11 @@ html[lang="en"], .lang-en { font-family: -apple-system, BlinkMacSystemFont, "Seg
 }
 
 .president-message-content .section-kicker {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .president-message-title {
-  margin: 0 0 34px;
+  margin: 0 0 26px;
   color: var(--navy);
   font-size: clamp(36px, 3.5vw, 52px);
   line-height: 1.15;
@@ -180,12 +180,12 @@ html[lang="en"], .lang-en { font-family: -apple-system, BlinkMacSystemFont, "Seg
 .president-message-copy {
   color: var(--muted);
   font-size: 16px;
-  line-height: 1.95;
+  line-height: 1.72;
   font-weight: 500;
 }
 
 .president-message-copy p {
-  margin: 0 0 22px;
+  margin: 0 0 14px;
 }
 
 .president-message-copy p:last-child {
@@ -229,11 +229,11 @@ html[lang="en"], .lang-en { font-family: -apple-system, BlinkMacSystemFont, "Seg
 
   .president-message-copy {
     font-size: 15px;
-    line-height: 1.9;
+    line-height: 1.8;
   }
 
   .president-message-copy p {
-    margin-bottom: 19px;
+    margin-bottom: 16px;
   }
 
 }
