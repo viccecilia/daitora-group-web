@@ -16,7 +16,7 @@ const PAGES = ['index.html','about.html','business.html','business-hire.html','b
 const CONTENT_PAGES = PAGES.filter((page) => page !== 'company.html');
 const SITEMAP_PAGES = PAGES.filter((page) => !['company.html', '404.html'].includes(page));
 const SERVICE_PAGES = new Set(['business-hire.html','business-taxi.html','business-auto.html','business-medical.html','business-digital.html']);
-const MEDICAL_DISCLAIMER_JA = '当社は医療機関ではなく、診断・治療等の医療行為は行いません。医療行為および医学的判断は、受診先の医療機関が行います。';
+const MEDICAL_DISCLAIMER_JA = '当社は医療機関ではなく、診断・治療等の医療行為は行いません。受診の可否、検査・治療内容、医療行為および医学的判断は、受診先の医療機関が行います。';
 const LANGUAGES = {
   ja: { dir: '', html: 'ja' },
   'zh-CN': { dir: 'zh-cn', html: 'zh-CN' },
