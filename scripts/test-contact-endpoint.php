@@ -44,6 +44,13 @@ function japan_travel_payload(): array
     return [
         'type' => 'japan_travel',
         'source_site' => 'Japan Travel',
+        'source_channel' => 'Japan Travel website',
+        'landing_page' => '/ja/?utm_source=instagram',
+        'utm_source' => 'instagram',
+        'utm_medium' => 'social',
+        'utm_campaign' => 'kansai-summer',
+        'ref_code' => 'JTTEST01',
+        'visitor_id' => 'vis_test_001',
         'request_id' => 'inq_test_001',
         'name' => 'Test Traveler',
         'email' => 'traveler@example.com',
@@ -133,6 +140,9 @@ test_assert($captured['replyTo'] === 'traveler@example.com', 'Japan Travel custo
 test_assert(strpos($captured['subject'], '[Japan Travel 予約相談] 2026-08-20｜Test Traveler') !== false, 'Japan Travel subject must use the agreed format');
 test_assert(strpos($captured['body'], 'This message records an inquiry only') !== false, 'Japan Travel mail must state that no booking is confirmed');
 test_assert(strpos($captured['body'], 'Kyoto Station') !== false, 'Japan Travel mail must include consultation details');
+test_assert(strpos($captured['body'], "Source channel:\nJapan Travel website") !== false, 'Japan Travel mail must identify its source channel');
+test_assert(strpos($captured['body'], "UTM source:\ninstagram") !== false, 'Japan Travel mail must include consented campaign attribution');
+test_assert(strpos($captured['body'], "Referral code:\nJTTEST01") !== false, 'Japan Travel mail must include referral attribution');
 
 $unsignedJapan = process_payload(japan_travel_payload(), $mailSender);
 test_assert($unsignedJapan['status'] === 403, 'unsigned Japan Travel request must be rejected');

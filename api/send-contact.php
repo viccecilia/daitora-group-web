@@ -173,7 +173,9 @@ function daitora_validate_payload(array $data): array
         'flight_number' => 40, 'pickup_location' => 300, 'dropoff_location' => 300,
         'passenger_count' => 3, 'vehicle_preference' => 120, 'itinerary' => 4000,
         'contact_method' => 80, 'page_language' => 10, 'request_id' => 80,
-        'source_site' => 80
+        'source_site' => 80, 'source_channel' => 80, 'landing_page' => 500,
+        'visitor_id' => 120, 'ref_code' => 100, 'utm_source' => 120,
+        'utm_medium' => 120, 'utm_campaign' => 120, 'utm_content' => 120
     ];
 
     foreach ($requiredCommon as $name) {
@@ -408,8 +410,12 @@ function daitora_group_mail_content(array $data, int $submittedAt, bool $staging
         'zh-tw' => 'Traditional Chinese'
     ];
     $fieldLabels = [
-        'source_site' => 'Source site', 'site_language' => 'Page language',
-        'source_page' => 'Submission page URL', 'request_id' => 'Request ID',
+        'source_site' => 'Source site', 'source_channel' => 'Source channel',
+        'landing_page' => 'First landing page', 'source_page' => 'Submission page URL',
+        'site_language' => 'Page language', 'utm_source' => 'UTM source',
+        'utm_medium' => 'UTM medium', 'utm_campaign' => 'UTM campaign',
+        'utm_content' => 'UTM content', 'ref_code' => 'Referral code',
+        'visitor_id' => 'Visitor ID', 'request_id' => 'Request ID',
         'name' => 'Name / お名前', 'email' => 'Email', 'phone' => 'Phone / 電話番号',
         'contact_method' => 'Preferred contact method', 'service_type' => 'Service type',
         'travel_date' => 'Travel date', 'travel_time' => 'Travel time',
