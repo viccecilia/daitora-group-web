@@ -7,6 +7,7 @@ desktop.ini
 .playwright-cli/
 screenshots/
 output/playwright/
+output/*.html
 daitora-group-review-sample/
 daitora-group-review-sample.zip
 
