@@ -4489,5 +4489,89 @@
     "en": "Website",
     "ko": "웹사이트",
     "zh-TW": "網站"
+  },
+  "出庫前の確認": {
+    "zh-CN": "出车前确认",
+    "en": "Pre-departure Checks",
+    "ko": "출고 전 확인",
+    "zh-TW": "出車前確認"
+  },
+  "車両状態、清掃、備品、当日の行程を確認し、乗務員と配車担当で必要事項を共有します。": {
+    "zh-CN": "确认车辆状态、清洁、随车用品和当日行程，并由司机与调度人员共享必要信息。",
+    "en": "We confirm vehicle condition, cleanliness, equipment and the day's itinerary, then share essential details between chauffeurs and dispatch.",
+    "ko": "차량 상태, 청결, 비품, 당일 일정을 확인하고 운전기사와 배차 담당자가 필요한 정보를 공유합니다.",
+    "zh-TW": "確認車輛狀態、清潔、隨車用品與當日行程，並由駕駛與調度人員共享必要資訊。"
+  },
+  "運行中の連携": {
+    "zh-CN": "运行中的协同",
+    "en": "Coordination During Service",
+    "ko": "운행 중 연계",
+    "zh-TW": "運行中的協同"
+  },
+  "道路状況や時間変更を確認し、現場と配車担当が連携して運行を調整します。": {
+    "zh-CN": "确认道路情况和时间变更，由现场人员与调度协同调整运行安排。",
+    "en": "We monitor road conditions and schedule changes, coordinating between the field team and dispatch to adjust operations.",
+    "ko": "도로 상황과 시간 변경을 확인하고 현장과 배차 담당자가 연계해 운행을 조정합니다.",
+    "zh-TW": "確認道路狀況與時間變更，由現場人員與調度協同調整運行安排。"
+  },
+  "運行後の振り返り": {
+    "zh-CN": "运行后的复盘",
+    "en": "Post-service Review",
+    "ko": "운행 후 검토",
+    "zh-TW": "運行後的檢討"
+  },
+  "運行時の注意点と改善事項を記録し、次回の手配と乗務員教育に反映します。": {
+    "zh-CN": "记录运行中的注意事项和改进点，并用于下一次派车安排和司机培训。",
+    "en": "We record operational notes and improvement points and apply them to future dispatch planning and chauffeur training.",
+    "ko": "운행 중 주의사항과 개선점을 기록해 다음 배차와 운전기사 교육에 반영합니다.",
+    "zh-TW": "記錄運行中的注意事項與改善重點，並用於下一次派車安排與駕駛培訓。"
+  },
+  "品質管理の現場": {
+    "zh-CN": "品质管理现场",
+    "en": "Quality management in practice",
+    "ko": "품질 관리 현장",
+    "zh-TW": "品質管理現場"
+  },
+  "ホテル出発前に車内を確認する乗務員": {
+    "zh-CN": "司机在酒店出发前检查车内",
+    "en": "Chauffeur checking the cabin before departure from a hotel",
+    "ko": "호텔 출발 전 차량 내부를 확인하는 운전기사",
+    "zh-TW": "駕駛於飯店出發前檢查車內"
+  },
+  "整備場で車両を点検する担当者": {
+    "zh-CN": "工作人员在整备区检查车辆",
+    "en": "Staff member inspecting a vehicle in the maintenance bay",
+    "ko": "정비 구역에서 차량을 점검하는 담당자",
+    "zh-TW": "工作人員在整備區檢查車輛"
+  },
+  "大寅社訓": {
+    "zh-CN": "大寅社训",
+    "en": "Daitora principles",
+    "ko": "다이토라 사훈",
+    "zh-TW": "大寅社訓"
+  },
+  "安全をすべての判断の基準に": {
+    "zh-CN": "将安全作为一切判断的标准",
+    "en": "Safety is the standard for every decision",
+    "ko": "안전을 모든 판단의 기준으로",
+    "zh-TW": "將安全作為一切判斷的標準"
+  },
+  "相手を尊重し、誠実に向き合う": {
+    "zh-CN": "尊重他人，以诚相待",
+    "en": "Respect others and engage with sincerity",
+    "ko": "상대를 존중하고 성실하게 마주한다",
+    "zh-TW": "尊重他人，真誠以待"
+  },
+  "状況を捉え、速やかに行動する": {
+    "zh-CN": "把握状况，迅速行动",
+    "en": "Read the situation and act promptly",
+    "ko": "상황을 파악하고 신속하게 행동한다",
+    "zh-TW": "掌握狀況，迅速行動"
+  },
+  "空港で待機する大寅の車両": {
+    "zh-CN": "在机场待命的大寅车辆",
+    "en": "Daitora vehicles standing by at the airport",
+    "ko": "공항에서 대기 중인 Daitora 차량",
+    "zh-TW": "在機場待命的 Daitora 車輛"
   }
 }

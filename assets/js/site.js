@@ -276,7 +276,7 @@
     video.loop = clips.length === 1;
     video.playsInline = true;
     video.preload = index === 0 ? 'auto' : 'metadata';
-    video.playbackRate = 0.45;
+    video.playbackRate = 1;
     if (index === 0) video.classList.add('active');
     stage.appendChild(video);
     return video;
@@ -290,7 +290,8 @@
       const active = index === currentIndex;
       video.classList.toggle('active', active);
       if (active && document.visibilityState === 'visible') {
-        video.playbackRate = 0.45;
+        video.currentTime = 0;
+        video.playbackRate = 1;
         video.play().catch(() => {});
       } else {
         video.pause();
