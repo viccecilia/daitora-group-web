@@ -1,5 +1,14 @@
 # Daitora Group Deployment Checklist
 
+## News Admin Gate
+
+- Copy `api/news-config.example.php` to `api/news-config.php` on the server and set a unique username and password of at least 16 characters.
+- Confirm the PHP process can write to `data/news.json`, `data/`, and `assets/uploads/news/`.
+- Confirm PHP GD supports JPEG, PNG and WebP input; each test image must publish as a 1600×900 JPEG.
+- Confirm `/admin/news.php` is served only over HTTPS and is not indexed.
+- Add a draft, publish it, verify all five language pages and the home page, then unpublish it.
+- Confirm `/api/news.php?lang=ja&limit=4` returns JSON and does not expose drafts.
+
 ## Current Release State
 
 - 本サイトは静的 HTML と共通アセットで構成されています。
@@ -75,14 +84,14 @@ Taxi Airport Host から受け付けた通知件名には `[STAGING]` を付け�
 - PHP 7.4 以上または互換性のある PHP 8.x。
 - `mbstring` 拡張と `mb_send_mail()`。
 - PHP が使用する一時ディレクトリへの書き込み権限（IP をハッシュ化したレート制限データのみを保存）。
-- `no-reply@daitora-jp.com` から `info@daitora-jp.com` へ送信できるメール配送設定。
+- `no-reply@daitora-jp.com` から `DAITORA_CONTACT_TO`（現在は `pangvic9@gmail.com`）へ送信できるメール配送設定。
 - `daitora-jp.com` の SPF、DKIM、DMARC を設定し、送信元整合性と迷惑メール判定を確認。
 - PHP ソースがテキストとして配信されず、サーバー上で実行される設定。
 
 ### Server Verification
 
 1. `php scripts/test-contact-endpoint.php` を実行し、入力検証、Host-aware Origin、ステージング件名、honeypot、レート制限、メール失敗時の 500 を確認します。
-2. ステージングの HTTPS URL から各問い合わせ種別を送信し、`info@daitora-jp.com` で実メールを受信します。
+2. ステージングの HTTPS URL から各問い合わせ種別を送信し、`DAITORA_CONTACT_TO` で実メールを受信します。
 3. Reply-To が検証済みの顧客メールになり、From が必ず `no-reply@daitora-jp.com` であることを確認します。
 4. 同一内容の連続送信、上限超過、無効メール、必須項目欠落が成功表示にならないことを確認します。
 5. Web サーバーログに本文や個人情報を不用意に記録しないことを確認します。
@@ -132,7 +141,7 @@ node scripts/audit-i18n.mjs
 
 ## Production Release Gates
 
-- **BLOCKER:** `/api/send-contact.php` is implemented, but real delivery from the production PHP host has not yet been verified. Do not advertise the form as available until a test message is received at `info@daitora-jp.com` and Reply-To behavior is confirmed.
+- **BLOCKER:** `/api/send-contact.php` is implemented, but real delivery from the production PHP host has not yet been verified. Do not advertise the form as available until a test message is received at the configured `DAITORA_CONTACT_TO` mailbox and Reply-To behavior is confirmed.
 - The frontend aborts a stalled contact request after 15 seconds and shows the localized network-failure message. The server should return within that window or provide an agreed timeout policy.
 - Confirm PHP, `mbstring`, outbound mail, writable temporary storage, SPF, DKIM and DMARC on the production host.
 - Confirm the privacy-policy legal wording and the retention/deletion policy before collecting personal information.

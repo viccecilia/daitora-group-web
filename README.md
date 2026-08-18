@@ -12,7 +12,7 @@ Open `http://localhost:8080/`.
 
 ## Contact Form Integration
 
-The Daitora Group forms submit to the same-origin endpoint at `/api/send-contact.php`. The endpoint sends all validated inquiries to the fixed recipient `info@daitora-jp.com` with the validated visitor email as `Reply-To`.
+The Daitora Group forms submit to the same-origin endpoint at `/api/send-contact.php`. The endpoint sends all validated inquiries to `DAITORA_CONTACT_TO` (currently `pangvic9@gmail.com` by default) with the validated visitor email as `Reply-To`.
 
 Japan Travel uses the same group mail channel through a server-to-server request. Configure the same strong `DAITORA_CONTACT_SHARED_SECRET` value on both servers. The signature is an HMAC-SHA256 of the Unix timestamp, a newline, and the exact JSON body. The secret must never be exposed to browser JavaScript or committed to Git.
 
@@ -105,3 +105,20 @@ node scripts/audit-i18n.mjs
 ```
 
 The same checks run in `.github/workflows/site-qa.yml`. Automated language and markup checks do not replace native-language, legal, or business-fact approval.
+
+## News Management
+
+The public news list is loaded from `/api/news.php`, with the existing static markup retained as a resilient fallback. The management screen is `/admin/news.php`.
+
+Production setup:
+
+1. Copy `api/news-config.example.php` to `api/news-config.php` on the server.
+2. Set a unique username and a password of at least 16 characters in that file, or set `DAITORA_NEWS_ADMIN_USERNAME` and `DAITORA_NEWS_ADMIN_PASSWORD` in the server environment.
+3. Ensure the PHP process can write to `data/news.json`, `data/`, and `assets/uploads/news/`.
+4. Open `/admin/news.php`, log in, and manage publication state, the five language fields, and the main image. Uploaded JPEG, PNG, and WebP files are center-cropped and converted to a consistent 1600×900 JPEG. Public typography and spacing are controlled by the site stylesheet rather than the editor.
+
+`api/news-config.php` is ignored by Git and must not be included in public archives.
+
+## Official SNS links
+
+Official social links are managed centrally in `scripts/sns-config.json`. YouTube, Facebook, WeChat and RED (Xiaohongshu) are reserved there and hidden by default. To publish an account, add its full HTTPS URL, set `enabled` to `true`, and run the multilingual build. The footer on every language page will be updated automatically.

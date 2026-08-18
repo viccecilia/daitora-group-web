@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 define('DAITORA_CONTACT_TEST', true);
 putenv('DAITORA_CONTACT_SHARED_SECRET=test-shared-secret-for-contact-channel');
+putenv('DAITORA_CONTACT_TO=pangvic9@gmail.com');
 require dirname(__DIR__) . '/api/send-contact.php';
 
 function test_assert(bool $condition, string $message): void
@@ -126,7 +127,7 @@ $mailSender = static function (string $to, string $subject, string $body, string
 
 $result = process_payload(valid_payload(), $mailSender);
 test_assert($result['status'] === 200 && $result['payload'] === ['success' => true], 'valid JSON request must succeed');
-test_assert($captured['to'] === 'info@daitora-jp.com', 'recipient must be fixed');
+test_assert($captured['to'] === 'pangvic9@gmail.com', 'recipient must use the configured mailbox');
 test_assert(DAITORA_CONTACT_FROM === 'no-reply@daitora-jp.com', 'From address must be fixed');
 test_assert($captured['replyTo'] === 'customer@example.com', 'validated customer email must be Reply-To');
 test_assert(strpos($captured['body'], 'Kansai International Airport') !== false, 'mail body must contain validated transport details');
@@ -135,7 +136,7 @@ test_assert(strpos($captured['subject'], '[STAGING]') === false, 'production sub
 $captured = [];
 $japanResult = signed_japan_travel_request(japan_travel_payload(), $mailSender);
 test_assert($japanResult['status'] === 200, 'signed Japan Travel server request must succeed without Origin');
-test_assert($captured['to'] === 'info@daitora-jp.com', 'Japan Travel inquiry recipient must remain fixed');
+test_assert($captured['to'] === 'pangvic9@gmail.com', 'Japan Travel inquiry must use the configured mailbox');
 test_assert($captured['replyTo'] === 'traveler@example.com', 'Japan Travel customer email must be Reply-To');
 test_assert(strpos($captured['subject'], '[Japan Travel 予約相談] 2026-08-20｜Test Traveler') !== false, 'Japan Travel subject must use the agreed format');
 test_assert(strpos($captured['body'], 'This message records an inquiry only') !== false, 'Japan Travel mail must state that no booking is confirmed');

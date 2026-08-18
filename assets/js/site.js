@@ -257,6 +257,32 @@
     });
   }
 
+  const newsLang = document.documentElement.lang || 'ja';
+  const newsHome = document.querySelector('[data-news-home]');
+  const newsList = document.querySelector('[data-news-list]');
+  const newsDetails = document.querySelector('[data-news-details]');
+  if (newsHome || newsList || newsDetails) {
+    const escapeNews = (value) => String(value ?? '').replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
+    const newsDate = (value) => escapeNews(value).replaceAll('-', '.');
+    const newsImageUrl = (item) => typeof item.image === 'string' && /^assets\/uploads\/news\/[a-zA-Z0-9_-]+\.jpg$/.test(item.image)
+      ? `${apiRoot}${item.image}?v=${encodeURIComponent(item.updatedAt || '')}` : '';
+    const newsImage = (item, className) => {
+      const src = newsImageUrl(item);
+      return src ? `<figure class="${className}"><img src="${escapeNews(src)}" alt="${escapeNews(item.imageAlt || item.title)}" width="1600" height="900" loading="lazy"></figure>` : '';
+    };
+    const newsTags = (tags, className) => Array.isArray(tags) && tags.length
+      ? `<div class="${className}">${tags.map((tag) => `<span>${escapeNews(tag)}</span>`).join('')}</div>` : '';
+    const apiRoot = document.body.classList.contains('lang-ja') ? '' : '../';
+    fetch(`${apiRoot}api/news.php?lang=${encodeURIComponent(newsLang)}&limit=${newsHome ? 4 : 100}`, { headers: { Accept: 'application/json' } })
+      .then((response) => response.ok ? response.json() : Promise.reject(new Error('news api')))
+      .then(({ items }) => {
+        if (!Array.isArray(items) || items.length === 0) return;
+        if (newsHome) newsHome.innerHTML = items.map((item) => `<tr><td class="date"><time datetime="${escapeNews(item.date)}">${newsDate(item.date)}</time></td><td class="category">${escapeNews(item.category)}</td><td><h3>${escapeNews(item.title)}</h3><p class="news-summary">${escapeNews(item.summary)}</p></td></tr>`).join('');
+        if (newsList) newsList.innerHTML = items.map((item) => `<tr><td class="date"><time datetime="${escapeNews(item.date)}">${newsDate(item.date)}</time></td><td class="category">${escapeNews(item.category)}</td><td>${newsImage(item, 'news-list-media')}<h3>${escapeNews(item.title)}</h3><p class="news-summary">${escapeNews(item.summary)}</p>${newsTags(item.tags, 'news-tags')}</td></tr>`).join('');
+        if (newsDetails) newsDetails.innerHTML = items.map((item) => `<article><time datetime="${escapeNews(item.date)}">${newsDate(item.date)} / ${escapeNews(item.category)}</time><div>${newsImage(item, 'news-detail-media')}<h3>${escapeNews(item.title)}</h3><p class="news-lead">${escapeNews(item.body || item.summary).replaceAll('\n', '<br>')}</p>${newsTags(item.tags, 'case-tags')}</div></article>`).join('');
+      }).catch(() => {});
+  }
+
   const stage = document.querySelector('[data-hero-videos]');
   if (!stage) return;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

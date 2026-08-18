@@ -1,4 +1,172 @@
 {
+  "すべての移動に、安心と感動を。": {
+    "en": "Confidence and inspiration in every journey.",
+    "ko": "모든 이동에 안심과 감동을.",
+    "zh-CN": "让每一次移动，都安心而感动。",
+    "zh-TW": "讓每一次移動，都安心而感動。"
+  },
+  "空港送迎｜観光ハイヤー｜企業送迎": {
+    "en": "Airport Transfers | Sightseeing Chauffeur | Corporate Transport",
+    "ko": "공항 송영｜관광 하이어｜기업 송영",
+    "zh-CN": "机场接送｜观光包车｜企业接送",
+    "zh-TW": "機場接送｜觀光包車｜企業接送"
+  },
+  "VIPトランスポート｜タクシーサービス": {
+    "en": "VIP Transport | Taxi Services",
+    "ko": "VIP 트랜스포트｜택시 서비스",
+    "zh-CN": "VIP专属交通｜出租车服务",
+    "zh-TW": "VIP專屬交通｜計程車服務"
+  },
+  "中古車販売・車両ソリューション": {
+    "en": "Used Car Sales & Vehicle Solutions",
+    "ko": "중고차 판매·차량 솔루션",
+    "zh-CN": "二手车销售・车辆解决方案",
+    "zh-TW": "中古車銷售・車輛解決方案"
+  },
+  "DAITORA GROUPは、ハイヤー・タクシー・旅行サービス・中古車販売を中心に、お客様一人ひとりに安心・安全・快適な移動をご提供しています。毎日５００人を超える運行実績と、法人・VIP・訪日旅行のお客様から培った信頼を基盤に、より高品質なサービスを追求しています。": {
+    "en": "Centered on chauffeur transport, taxi, travel services and used car sales, DAITORA GROUP provides every customer with reassuring, safe and comfortable mobility. Building on a daily record of serving more than 500 passengers and the trust earned from corporate, VIP and inbound travel clients, we continue to pursue higher-quality service.",
+    "ko": "DAITORA GROUP은 하이어·택시·여행 서비스·중고차 판매를 중심으로 고객 한 분 한 분께 안심할 수 있고 안전하며 쾌적한 이동을 제공합니다. 매일 500명이 넘는 운행 실적과 법인·VIP·방일 여행 고객에게 쌓아 온 신뢰를 기반으로 더욱 높은 품질의 서비스를 추구합니다.",
+    "zh-CN": "DAITORA GROUP以包车接送、出租车、旅行服务及二手车销售为核心，为每一位客户提供安心、安全、舒适的移动服务。以每日服务超过500人的运营实绩，以及从企业、VIP和访日旅行客户中积累的信赖为基础，持续追求更高品质的服务。",
+    "zh-TW": "DAITORA GROUP以包車接送、計程車、旅行服務及中古車銷售為核心，為每一位客戶提供安心、安全、舒適的移動服務。以每日服務超過500人的營運實績，以及從企業、VIP和訪日旅行客戶中累積的信賴為基礎，持續追求更高品質的服務。"
+  },
+  "沿革": {
+    "en": "History",
+    "ko": "연혁",
+    "zh-CN": "发展沿革",
+    "zh-TW": "發展沿革"
+  },
+  "大寅グループの歩み": {
+    "en": "The journey of Daitora Group",
+    "ko": "Daitora Group의 발자취",
+    "zh-CN": "大寅集团的发展历程",
+    "zh-TW": "大寅集團的發展歷程"
+  },
+  "2018年3月": {
+    "en": "March 2018",
+    "ko": "2018년 3월",
+    "zh-CN": "2018年3月",
+    "zh-TW": "2018年3月"
+  },
+  "会社設立。旅行サービス事業を開始": {
+    "en": "Company established. Travel services business launched",
+    "ko": "회사 설립. 여행 서비스 사업 개시",
+    "zh-CN": "公司成立，开始旅行服务业务",
+    "zh-TW": "公司成立，開始旅行服務業務"
+  },
+  "2018年4月": {
+    "en": "April 2018",
+    "ko": "2018년 4월",
+    "zh-CN": "2018年4月",
+    "zh-TW": "2018年4月"
+  },
+  "家電製品の卸売・小売事業を開始": {
+    "en": "Wholesale and retail business for consumer electronics launched",
+    "ko": "가전제품 도매·소매 사업 개시",
+    "zh-CN": "开始家电产品批发及零售业务",
+    "zh-TW": "開始家電產品批發及零售業務"
+  },
+  "2018年8月": {
+    "en": "August 2018",
+    "ko": "2018년 8월",
+    "zh-CN": "2018年8月",
+    "zh-TW": "2018年8月"
+  },
+  "楽天市場にECサイトを開設": {
+    "en": "E-commerce store opened on Rakuten Marketplace",
+    "ko": "라쿠텐 시장에 온라인 스토어 개설",
+    "zh-CN": "在乐天市场开设电商网站",
+    "zh-TW": "於樂天市場開設電商網站"
+  },
+  "2018年12月": {
+    "en": "December 2018",
+    "ko": "2018년 12월",
+    "zh-CN": "2018年12月",
+    "zh-TW": "2018年12月"
+  },
+  "一般貸切旅客自動車運送事業を開始": {
+    "en": "General charter passenger transport business launched",
+    "ko": "일반 전세 여객자동차 운송사업 개시",
+    "zh-CN": "开始一般包车旅客汽车运输业务",
+    "zh-TW": "開始一般包車旅客汽車運輸業務"
+  },
+  "2020年4月": {
+    "en": "April 2020",
+    "ko": "2020년 4월",
+    "zh-CN": "2020年4月",
+    "zh-TW": "2020年4月"
+  },
+  "自動車販売事業を開始": {
+    "en": "Automobile sales business launched",
+    "ko": "자동차 판매 사업 개시",
+    "zh-CN": "开始汽车销售业务",
+    "zh-TW": "開始汽車銷售業務"
+  },
+  "2022年5月": {
+    "en": "May 2022",
+    "ko": "2022년 5월",
+    "zh-CN": "2022年5月",
+    "zh-TW": "2022年5月"
+  },
+  "自社ビルを取得し、本社を移転": {
+    "en": "Acquired a company-owned building and relocated the head office",
+    "ko": "사옥을 취득하고 본사를 이전",
+    "zh-CN": "购置自有办公楼并迁移总部",
+    "zh-TW": "購置自有辦公大樓並遷移總部"
+  },
+  "（貿易・卸売部門）": {
+    "en": "(Trade and wholesale division)",
+    "ko": "(무역·도매 부문)",
+    "zh-CN": "（贸易及批发部门）",
+    "zh-TW": "（貿易及批發部門）"
+  },
+  "2023年6月": {
+    "en": "June 2023",
+    "ko": "2023년 6월",
+    "zh-CN": "2023年6月",
+    "zh-TW": "2023年6月"
+  },
+  "一般乗用旅客自動車運送事業を開始": {
+    "en": "General passenger vehicle transport business launched",
+    "ko": "일반 승용 여객자동차 운송사업 개시",
+    "zh-CN": "开始一般乘用旅客汽车运输业务",
+    "zh-TW": "開始一般乘用旅客汽車運輸業務"
+  },
+  "2023年12月": {
+    "en": "December 2023",
+    "ko": "2023년 12월",
+    "zh-CN": "2023年12月",
+    "zh-TW": "2023年12月"
+  },
+  "再生医療・美容医療サービス事業を開始": {
+    "en": "Regenerative medicine and aesthetic medical services business launched",
+    "ko": "재생의료·미용의료 서비스 사업 개시",
+    "zh-CN": "开始再生医疗及美容医疗服务业务",
+    "zh-TW": "開始再生醫療及美容醫療服務業務"
+  },
+  "2025年2月": {
+    "en": "February 2025",
+    "ko": "2025년 2월",
+    "zh-CN": "2025年2月",
+    "zh-TW": "2025年2月"
+  },
+  "京都営業所を開設": {
+    "en": "Kyoto office opened",
+    "ko": "교토 영업소 개설",
+    "zh-CN": "开设京都营业所",
+    "zh-TW": "開設京都營業所"
+  },
+  "2026年3月": {
+    "en": "March 2026",
+    "ko": "2026년 3월",
+    "zh-CN": "2026年3月",
+    "zh-TW": "2026年3月"
+  },
+  "グループ会社にて一般タクシー事業を開始": {
+    "en": "General taxi business launched by a group company",
+    "ko": "그룹사에서 일반 택시 사업 개시",
+    "zh-CN": "集团公司开始一般出租车业务",
+    "zh-TW": "集團公司開始一般計程車業務"
+  },
   "/ お問い合わせ": {
     "en": "/ Contact",
     "ko": "/ 문의",
@@ -1067,6 +1235,12 @@
     "zh-CN": "三个业务支持关西地区的交通和车辆利用。",
     "zh-TW": "三個業務支持關西地區的交通和車輛利用。"
   },
+  "人・企業・地域の移動を、もっと快適に。": {
+    "en": "Making mobility more comfortable for people, businesses, and communities.",
+    "ko": "사람・기업・지역의 이동을 더욱 쾌적하게.",
+    "zh-CN": "让个人、企业与地区出行更加舒适。",
+    "zh-TW": "讓個人、企業與地區移動更加舒適。"
+  },
   "中古車・ローン相談": {
     "en": "Used car/loan consultation",
     "ko": "중고차·대출 상담",
@@ -1110,6 +1284,12 @@
     "zh-CN": "提供二手车销售、业务用车及贷款咨询。凭借实际车辆运营经验，我们会综合用途、车况、维护管理和交车后的使用便利性，协助选择合适车辆。",
     "zh-TW": "提供中古車銷售、事業用車輛及貸款諮詢。憑藉實際車輛營運經驗，我們會綜合用途、車況、維護管理與交車後的使用便利性，協助選擇合適車輛。"
   },
+  "運送会社として培った車両管理ノウハウを活かし、販売だけではなく、整備・点検・車検・買取まで一貫してサポートします。": {
+    "en": "Drawing on the vehicle management expertise developed as a transport operator, we provide integrated support not only for sales, but also maintenance, inspections, vehicle testing and purchasing.",
+    "ko": "운송회사로서 축적한 차량 관리 노하우를 바탕으로 판매뿐 아니라 정비・점검・차량 검사・매입까지 일관되게 지원합니다.",
+    "zh-CN": "运用运输公司积累的车辆管理经验，不仅提供销售服务，还一站式支持维修、检查、车检及收购。",
+    "zh-TW": "運用運輸公司累積的車輛管理經驗，不僅提供銷售服務，亦一站式支援維修、檢查、驗車及收購。"
+  },
   "中古車販売、事業用車両、ローン相談に対応し、用途に合った車両選びを支援します。": {
     "en": "We handle used car sales, commercial vehicles, and loan consultation, and help you choose the vehicle that best suits your purpose.",
     "ko": "중고차 판매, 사업용 차량, 대출 상담에 대응해, 용도에 맞는 차량 선택을 지원합니다.",
@@ -1133,6 +1313,30 @@
     "ko": "중고차 판매·사업용 차량·대출 상담",
     "zh-CN": "二手车销售/商务用车/贷款咨询",
     "zh-TW": "二手車銷售/商務用車/貸款諮詢"
+  },
+  "中古車販売・整備・車検・買取・法人サポート": {
+    "en": "Used Vehicle Sales・Maintenance・Inspection・Purchasing・Corporate Support",
+    "ko": "중고차 판매・정비・차량 검사・매입・법인 지원",
+    "zh-CN": "二手车销售・维修・车检・收购・企业支持",
+    "zh-TW": "中古車銷售・維修・驗車・收購・企業支援"
+  },
+  "法人販売": {
+    "en": "Corporate Sales",
+    "ko": "법인 판매",
+    "zh-CN": "企业销售",
+    "zh-TW": "企業銷售"
+  },
+  "商用車": {
+    "en": "Commercial Vehicles",
+    "ko": "상용차",
+    "zh-CN": "商用车",
+    "zh-TW": "商用車"
+  },
+  "ローン対応": {
+    "en": "Financing Available",
+    "ko": "대출 지원",
+    "zh-CN": "贷款支持",
+    "zh-TW": "貸款支援"
   },
   "中古車販売・仕入体制を強化し、業務用車両から一般向け車両まで、より幅広いご提案が可能になりました。": {
     "en": "Expanded our sales and sourcing capabilities to support a broader range of business and personal vehicle requirements.",
@@ -1991,6 +2195,12 @@
     "zh-CN": "区域交通/日常交通/旅游利用",
     "zh-TW": "區域交通/日常交通/旅遊利用"
   },
+  "地域に寄り添う、毎日の移動を。": {
+    "en": "Everyday mobility, rooted in the community.",
+    "ko": "지역과 함께하는 매일의 이동.",
+    "zh-CN": "贴近地区生活，服务每日出行。",
+    "zh-TW": "貼近地區生活，服務每日移動。"
+  },
   "地域対応": {
     "en": "Regional support",
     "ko": "지역 대응",
@@ -2190,6 +2400,12 @@
     "zh-CN": "Daitora Group以包车接送、出租车与二手车销售为核心，综合支持机场接送、观光包车、企业接送、区域交通及车辆使用。",
     "zh-TW": "Daitora Group以包車接送、計程車與中古車銷售為核心，綜合支援機場接送、觀光包車、企業接送、區域交通及車輛使用。"
   },
+  "大寅グループは、ハイヤー・タクシー・中古車販売を中心に、人の移動から車両活用までを一貫して支えるモビリティ企業です。": {
+    "en": "Centered on chauffeur services, taxis and used vehicle sales, Daitora Group is a mobility company providing integrated support from passenger transportation to vehicle utilization.",
+    "ko": "Daitora Group은 하이어・택시・중고차 판매를 중심으로 사람의 이동부터 차량 활용까지 일관되게 지원하는 모빌리티 기업입니다.",
+    "zh-CN": "大寅集团以包车接送、出租车及二手车销售为核心，是一家从人员出行到车辆应用均提供一体化支持的综合移动服务企业。",
+    "zh-TW": "大寅集團以包車接送、計程車及中古車銷售為核心，是一家從人員移動到車輛運用均提供一體化支援的綜合移動服務企業。"
+  },
   "大寅グループは、ハイヤー、タクシー、送迎車両を日々運行している会社です。そのため、車両を単なる商品としてではなく、実際に使う場面、乗りやすさ、荷物の積みやすさ、維持管理、納車後の使いやすさまで含めて考えています。": {
     "en": "Daitora Group operates chauffeur, taxi and transfer vehicles every day. We therefore assess a vehicle not simply as a product, but in terms of real-world use, ease of access, luggage capacity, maintenance and usability after handover.",
     "ko": "Daitora Group은 전용 차량, 택시, 송영 차량을 매일 직접 운영합니다. 그래서 차량을 단순한 상품으로 보지 않고 실제 사용 환경, 승하차 편의성, 적재 공간, 유지관리, 차량 인도 후의 사용 편의성까지 함께 고려합니다.",
@@ -2245,6 +2461,12 @@
     "zh-CN": "Daitora Auto / Used Car Sales",
     "zh-TW": "Daitora Auto / Used Car Sales",
     "ja": "大寅中古車販売"
+  },
+  "大寅オートサービス": {
+    "en": "Daitora Auto Service",
+    "ko": "Daitora Auto Service",
+    "zh-CN": "Daitora Auto Service",
+    "zh-TW": "Daitora Auto Service"
   },
   "大寅中古車販売 | 大寅グループ": {
     "en": "Daitora Auto / Used Car Sales | Daitora Group",
@@ -2318,17 +2540,41 @@
     "zh-CN": "介绍支持大阪、京都、堺、港区等关西地区区域交通的“Toramaru Taxi”。",
     "zh-TW": "介紹支援大阪、京都、堺、港區等關西地區區域交通的「Toramaru計程車」。"
   },
-  "大阪・京都・堺・港区など関西エリアの移動を支える。": {
-    "en": "Supporting everyday mobility across Osaka, Kyoto, Sakai and Minato.",
-    "ko": "오사카・교토・사카이・미나토구 등 간사이 지역의 이동을 지원한다.",
-    "zh-CN": "支援大阪、京都、堺、港区等关西地区的活动。",
-    "zh-TW": "支援大阪、京都、堺、港區等關西地區的活動。"
+  "大阪市域圏＆関西空港エリアの移動を支える。": {
+    "en": "Supporting mobility across the Osaka city service area and Kansai Airport area.",
+    "ko": "오사카 시내권 및 간사이공항 지역의 이동을 지원합니다.",
+    "zh-CN": "支持大阪市域圈及关西机场区域的出行。",
+    "zh-TW": "支援大阪市域圈及關西機場區域的移動。"
   },
   "大阪・京都・堺・港区など関西エリアを中心に、駅、ホテル、空港周辺、観光地、ビジネス先への日常移動を支えるタクシー事業。見つけやすい車両と安定した運行管理で、短距離移動から観光利用まで対応します。": {
     "en": "Toramaru Taxi supports everyday travel to stations, hotels, airport areas, sightseeing destinations and business appointments across Osaka, Kyoto, Sakai, Minato and the wider Kansai region. Recognisable vehicles and consistent operating standards support both short local trips and sightseeing use.",
     "ko": "Toramaru Taxi는 오사카, 교토, 사카이, 미나토구 등 간사이 지역에서 역, 호텔, 공항 주변, 관광지, 비즈니스 목적지로의 일상 이동을 지원합니다. 알아보기 쉬운 차량과 안정적인 운행 관리로 단거리 이동부터 관광 이용까지 대응합니다.",
     "zh-CN": "Toramaru Taxi以大阪、京都、堺、港区等关西地区为中心，为前往车站、酒店、机场周边、观光景点及商务地点的日常出行提供服务。易于识别的车辆与稳定的运营管理，可满足短途出行及观光用车需求。",
     "zh-TW": "Toramaru Taxi以大阪、京都、堺、港區等關西地區為中心，為前往車站、飯店、機場周邊、觀光景點及商務地點的日常移動提供服務。易於辨識的車輛與穩定的營運管理，可滿足短程移動及觀光用車需求。"
+  },
+  "大阪を中心に、駅・ホテル・空港・観光地・ビジネスエリアまで幅広く対応。地域のお客様の日常利用から、観光・ビジネス利用まで、安全・快適な移動をご提供します。分かりやすい車両デザインと徹底した運行管理で、安心してご利用いただけます。": {
+    "en": "Serving a wide range of destinations across Osaka, including stations, hotels, airports, sightseeing spots and business districts. We provide safe, comfortable transportation for local customers' everyday journeys as well as sightseeing and business use. Clearly identifiable vehicle design and thorough operations management ensure dependable service.",
+    "ko": "오사카를 중심으로 역・호텔・공항・관광지・비즈니스 지역까지 폭넓게 대응합니다. 지역 고객의 일상 이용부터 관광・비즈니스 이용까지 안전하고 쾌적한 이동을 제공합니다. 알아보기 쉬운 차량 디자인과 철저한 운행 관리로 안심하고 이용하실 수 있습니다.",
+    "zh-CN": "以大阪为中心，广泛覆盖车站、酒店、机场、观光景点及商务区域。从地区客户的日常出行到观光和商务用车，均提供安全、舒适的移动服务。通过清晰易识别的车辆设计和完善的运营管理，让客户安心乘坐。",
+    "zh-TW": "以大阪為中心，廣泛涵蓋車站、飯店、機場、觀光景點及商務區域。從地區客戶的日常移動到觀光及商務用車，均提供安全、舒適的移動服務。透過清晰易辨識的車輛設計與完善的營運管理，讓客戶安心搭乘。"
+  },
+  "地域密着": {
+    "en": "Community Focused",
+    "ko": "지역 밀착",
+    "zh-CN": "扎根地区",
+    "zh-TW": "深耕地區"
+  },
+  "GO・DiDi・Uber対応": {
+    "en": "GO・DiDi・Uber Available",
+    "ko": "GO・DiDi・Uber 지원",
+    "zh-CN": "支持GO・DiDi・Uber",
+    "zh-TW": "支援GO・DiDi・Uber"
+  },
+  "安全運行": {
+    "en": "Safe Operations",
+    "ko": "안전 운행",
+    "zh-CN": "安全运营",
+    "zh-TW": "安全營運"
   },
   "大阪・京都・堺・港区など関西複数拠点と、グループ全体で約100台規模の車両ネットワークを活用し、空港送迎、観光貸切、企業送迎、地域交通、中古車販売まで一体で支えています。": {
     "en": "Utilizing multiple locations in Kansai, including Osaka, Kyoto, Sakai, and Minato Ward, and a group-wide network of approximately 100 vehicles, we provide integrated support for airport transportation, sightseeing charters, corporate transportation, regional transportation, and used car sales.",
@@ -2517,7 +2763,7 @@
     "zh-CN": "安全管理",
     "zh-TW": "安全管理"
   },
-  "安全管理は、社内だけの仕組みではありません。時間に正確な運行、清潔な車内、丁寧な接遇、落ち着いた運転。お客様が実際に感じる一つひとつの品質を大切にしています。": {
+  "安全管理は、社内だけの仕組みではありません。時間に正確な運行、清潔な車内、丁寧な接遇、落ち着いた運転。お客様が実際に感じる一つ一つの品質を大切にしています。": {
     "en": "Safety management is reflected in the customer experience: punctual operation, a clean cabin, professional service and calm driving. We value each detail customers can see and feel.",
     "ko": "안전 관리는 사내 절차에만 머물지 않습니다. 정확한 시간 관리, 청결한 차내, 정중한 고객 응대, 안정적인 운전 등 고객이 직접 느끼는 모든 품질을 중요하게 생각합니다.",
     "zh-CN": "安全管理不仅是内部制度，也体现在准时运营、整洁车厢、礼貌服务与平稳驾驶中。我们重视客户能够切身感受到的每一项品质。",
@@ -3350,6 +3596,96 @@
     "zh-CN": "我们重视“安全、谦逊、迅敏”的企业准则。以安全作为所有判断的基础，以谦逊态度面对客户，并通过迅速准确的应对超越期待。这一准则落实在每日运营、服务礼仪、车辆管理与现场应对的每个环节。",
     "zh-TW": "我們重視「安全、謙遜、迅敏」的企業準則。以安全作為所有判斷的基礎，以謙遜態度面對客戶，並透過迅速準確的應對超越期待。這項準則落實在每日營運、服務禮儀、車輛管理與現場應對的每個環節。"
   },
+  "私たちは、「安全・謙遜・迅敏」をすべての判断と行動の基準としています。安全を最優先に考え、謙虚な姿勢でお客様と向き合い、変化には迅敏かつ正確に対応する。その積み重ねが、お客様からの信頼につながると信じています。私たちは、この理念を日々の運行、接遇、車両管理、チームワーク、そのすべてに反映します。": {
+    "en": "Safety, Humility and Agility guide every decision and action we take. We put safety first, serve customers with humility, and respond to change promptly and accurately. We believe that consistently living these values earns our customers' trust. These principles shape every part of our daily operations, hospitality, vehicle management and teamwork.",
+    "ko": "저희는 안전・겸손・신속을 모든 판단과 행동의 기준으로 삼습니다. 안전을 최우선으로 생각하고 겸손한 자세로 고객을 대하며 변화에는 신속하고 정확하게 대응합니다. 이러한 실천의 축적이 고객의 신뢰로 이어진다고 믿습니다. 이 이념을 매일의 운행, 고객 응대, 차량 관리와 팀워크 전반에 반영합니다.",
+    "zh-CN": "我们以“安全、谦逊、迅敏”作为所有判断与行动的准则。始终将安全放在首位，以谦逊的态度面对客户，并迅速、准确地应对变化。我们相信，日复一日的坚持能够赢得客户的信赖。我们将这一理念落实到日常运营、接待服务、车辆管理与团队协作的每一个环节。",
+    "zh-TW": "我們以「安全、謙遜、迅敏」作為所有判斷與行動的準則。始終將安全放在首位，以謙遜的態度面對客戶，並迅速、準確地應對變化。我們相信，日復一日的堅持能夠贏得客戶的信賴。我們將這項理念落實於日常營運、接待服務、車輛管理與團隊合作的每一個環節。"
+  },
+  "法令を遵守した安全運行": {
+    "en": "Safe operations in full legal compliance",
+    "ko": "법령을 준수한 안전 운행",
+    "zh-CN": "遵守法规，安全运营",
+    "zh-TW": "遵守法規，安全營運"
+  },
+  "日々の車両点検を徹底する": {
+    "en": "Thorough daily vehicle inspections",
+    "ko": "철저한 일일 차량 점검",
+    "zh-CN": "彻底落实每日车辆检查",
+    "zh-TW": "徹底落實每日車輛檢查"
+  },
+  "安全を最優先に判断する": {
+    "en": "Make every decision with safety first",
+    "ko": "안전을 최우선으로 판단",
+    "zh-CN": "所有判断以安全为先",
+    "zh-TW": "所有判斷以安全為先"
+  },
+  "「三分遅れても、一秒も危険を冒さない。」": {
+    "en": "“Better three minutes late than risk a single second of danger.”",
+    "ko": "“3분 늦더라도 단 1초의 위험도 감수하지 않는다.”",
+    "zh-CN": "“即使晚三分钟，也绝不冒一秒钟的危险。”",
+    "zh-TW": "「即使晚三分鐘，也絕不冒一秒鐘的危險。」"
+  },
+  "すべての人に、敬意を持って接すること。": {
+    "en": "Treat every person with respect.",
+    "ko": "모든 사람을 존중하는 자세로 대한다.",
+    "zh-CN": "尊重并真诚对待每一个人。",
+    "zh-TW": "尊重並真誠對待每一個人。"
+  },
+  "お客様の話を最後まで聞く": {
+    "en": "Listen to every customer through to the end",
+    "ko": "고객의 이야기를 끝까지 경청",
+    "zh-CN": "认真听完客户的诉求",
+    "zh-TW": "認真聽完客戶的訴求"
+  },
+  "相手の立場で考え行動する": {
+    "en": "Think and act from the other person's perspective",
+    "ko": "상대의 입장에서 생각하고 행동",
+    "zh-CN": "站在对方立场思考并行动",
+    "zh-TW": "站在對方立場思考並行動"
+  },
+  "社内外を問わず礼節を大切にする": {
+    "en": "Value courtesy inside and outside the company",
+    "ko": "사내외를 막론하고 예의를 중시",
+    "zh-CN": "无论公司内外都重视礼节",
+    "zh-TW": "無論公司內外都重視禮節"
+  },
+  "「謙遜とは、自分を小さくすることではない。すべての人に敬意を持って接する姿勢である。」": {
+    "en": "“Humility is not making yourself smaller. It is the attitude of treating everyone with respect.”",
+    "ko": "“겸손은 자신을 낮추는 것이 아니라 모든 사람을 존중하는 자세이다.”",
+    "zh-CN": "“谦逊并非贬低自己，而是以尊重的态度对待每一个人。”",
+    "zh-TW": "「謙遜並非貶低自己，而是以尊重的態度對待每一個人。」"
+  },
+  "変化に気づき、素早く正確に行動すること。": {
+    "en": "Notice change and act quickly and accurately.",
+    "ko": "변화를 알아차리고 신속하고 정확하게 행동한다.",
+    "zh-CN": "洞察变化，迅速且准确地行动。",
+    "zh-TW": "洞察變化，迅速且準確地行動。"
+  },
+  "状況を先読みして準備する": {
+    "en": "Anticipate situations and prepare ahead",
+    "ko": "상황을 예측하고 미리 준비",
+    "zh-CN": "预判情况并提前准备",
+    "zh-TW": "預判情況並提前準備"
+  },
+  "必要な情報を迅速に共有する": {
+    "en": "Share essential information promptly",
+    "ko": "필요한 정보를 신속하게 공유",
+    "zh-CN": "迅速共享必要信息",
+    "zh-TW": "迅速共享必要資訊"
+  },
+  "お客様を待たせない判断と行動を徹底する": {
+    "en": "Make timely decisions and act without keeping customers waiting",
+    "ko": "고객을 기다리게 하지 않는 판단과 행동을 철저히 실천",
+    "zh-CN": "坚持及时判断和行动，不让客户等待",
+    "zh-TW": "堅持及時判斷與行動，不讓客戶等待"
+  },
+  "「速さとは、慌てることではない。準備ができていることである。」": {
+    "en": "“Speed is not rushing. It is being prepared.”",
+    "ko": "“속도는 서두르는 것이 아니라 준비되어 있는 것이다.”",
+    "zh-CN": "“速度不是慌乱，而是准备充分。”",
+    "zh-TW": "「速度不是慌亂，而是準備充分。」"
+  },
   "私たちは、社訓である「安全・謙遜・迅敏」を大切にしております。": {
     "en": "We value our company principles of Safety, Humility and Agility.",
     "ko": "저희는 사훈인 「안전・겸손・신속」을 소중히 합니다.",
@@ -3493,6 +3829,12 @@
     "ko": "공항 송영·관광 전세·기업/VIP 송영",
     "zh-CN": "机场接送、观光包机、企业/VIP 接送",
     "zh-TW": "機場接送、觀光包機、企業/VIP 接送"
+  },
+  "空港送迎からVIPトランスポートまで。": {
+    "en": "From airport transfers to VIP transportation.",
+    "ko": "공항 송영부터 VIP 트랜스포트까지.",
+    "zh-CN": "从机场接送到VIP专属交通。",
+    "zh-TW": "從機場接送到VIP專屬交通。"
   },
   "空港送迎・観光貸切・企業送迎・VIP接待・地域タクシー・中古車販売": {
     "en": "Airport Transfers / Private Tours / Corporate Transportation / VIP Transportation / Local Taxi / Used Car Sales",
@@ -4291,6 +4633,48 @@
     "zh-CN": "承接关西、伊丹及神户机场接送，以及京都、奈良、神户方向的观光包车、企业考察和VIP接送。根据人数、行李与服务要求，安排Alphard、Hiace、Mercedes-Benz S-Class等车辆及专业司机。",
     "zh-TW": "承接關西、伊丹及神戶機場接送，以及京都、奈良、神戶方向的觀光包車、企業考察與VIP接送。依人數、行李與服務需求，安排Alphard、Hiace、Mercedes-Benz S-Class等車輛及專業司機。"
   },
+  "関西国際空港・伊丹空港を拠点に、空港送迎、観光、企業送迎、VIP接待まで幅広く対応。お客様の人数・ご要望・目的に合わせ、Alphard・Hiace・Mercedes-Benz S-Classなど最適な車両をご用意します。": {
+    "en": "Based around Kansai International and Itami airports, we provide a broad range of services including airport transfers, sightseeing, corporate transportation and VIP reception. We arrange the most suitable vehicle, including Alphard, Hiace and Mercedes-Benz S-Class models, according to passenger numbers, requirements and purpose.",
+    "ko": "간사이국제공항과 이타미공항을 거점으로 공항 송영, 관광, 기업 송영, VIP 접대까지 폭넓게 대응합니다. 고객의 인원수, 요청 사항과 목적에 맞춰 Alphard・Hiace・Mercedes-Benz S-Class 등 최적의 차량을 준비합니다.",
+    "zh-CN": "以关西国际机场和伊丹机场为主要服务据点，广泛承接机场接送、观光、企业接送及VIP接待。根据客户人数、需求与使用目的，安排Alphard、Hiace、Mercedes-Benz S-Class等最合适的车辆。",
+    "zh-TW": "以關西國際機場與伊丹機場為主要服務據點，廣泛承接機場接送、觀光、企業接送及VIP接待。依客戶人數、需求與使用目的，安排Alphard、Hiace、Mercedes-Benz S-Class等最合適的車輛。"
+  },
+  "365日対応": {
+    "en": "365-Day Service",
+    "ko": "365일 대응",
+    "zh-CN": "全年365天服务",
+    "zh-TW": "全年365天服務"
+  },
+  "多言語サポート": {
+    "en": "Multilingual Support",
+    "ko": "다국어 지원",
+    "zh-CN": "多语言支持",
+    "zh-TW": "多語言支援"
+  },
+  "法人契約対応": {
+    "en": "Corporate Contracts",
+    "ko": "법인 계약 지원",
+    "zh-CN": "企业签约服务",
+    "zh-TW": "企業簽約服務"
+  },
+  "VIP接遇": {
+    "en": "VIP Hospitality",
+    "ko": "VIP 접객",
+    "zh-CN": "VIP接待",
+    "zh-TW": "VIP接待"
+  },
+  "観光プラン提案": {
+    "en": "Sightseeing Plan Proposals",
+    "ko": "관광 플랜 제안",
+    "zh-CN": "观光行程建议",
+    "zh-TW": "觀光行程建議"
+  },
+  "安全運行管理": {
+    "en": "Safe Operations Management",
+    "ko": "안전 운행 관리",
+    "zh-CN": "安全运营管理",
+    "zh-TW": "安全營運管理"
+  },
   "関西複数拠点": {
     "en": "Multiple Kansai bases",
     "ko": "간사이 여러 거점",
@@ -4459,6 +4843,18 @@
     "en": "Discover Kansai with local insight.",
     "ko": "간사이 여행을 더 알기 쉽게.",
     "zh-TW": "更輕鬆地認識關西旅行。"
+  },
+  "関西の旅を、": {
+    "zh-CN": "关西旅行，",
+    "en": "Discover Kansai",
+    "ko": "간사이 여행을",
+    "zh-TW": "關西旅行，"
+  },
+  "もっと分かりやすく。": {
+    "zh-CN": "更轻松地了解。",
+    "en": "with local insight.",
+    "ko": "더 알기 쉽게.",
+    "zh-TW": "更輕鬆地認識。"
   },
   "Japan Travelは、株式会社大寅／Daitora Groupが運営する訪日旅行情報サイトです。大阪・京都を中心に、観光情報、多言語音声ガイド、移動や旅行サービスの入口をご案内しています。": {
     "zh-CN": "Japan Travel 是由株式会社大寅／Daitora Group 运营的访日旅行信息平台，提供以大阪、京都为中心的景点介绍、多语言语音导览以及旅行服务入口。",

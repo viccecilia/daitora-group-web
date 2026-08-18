@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-const DAITORA_CONTACT_TO = 'info@daitora-jp.com';
+const DAITORA_CONTACT_TO_DEFAULT = 'info@daitora-jp.com';
 const DAITORA_CONTACT_FROM = 'no-reply@daitora-jp.com';
 const DAITORA_CONTACT_RATE_WINDOW = 600;
 const DAITORA_CONTACT_RATE_MAX = 5;
@@ -11,7 +11,29 @@ const DAITORA_CONTACT_SIGNATURE_WINDOW = 300;
 function daitora_env(string $key, string $default = ''): string
 {
     $value = getenv($key);
-    return $value === false ? $default : trim((string)$value);
+    if ($value !== false && trim((string)$value) !== '') {
+        return trim((string)$value);
+    }
+
+    static $contactConfig = null;
+    if ($contactConfig === null) {
+        $configFile = __DIR__ . '/contact-config.php';
+        $loaded = is_file($configFile) ? require $configFile : [];
+        $contactConfig = is_array($loaded) ? $loaded : [];
+    }
+
+    $configured = $contactConfig[$key] ?? $default;
+    return is_scalar($configured) ? trim((string)$configured) : $default;
+}
+
+function daitora_contact_recipient(): string
+{
+    $configured = daitora_env('DAITORA_CONTACT_TO', DAITORA_CONTACT_TO_DEFAULT);
+    if (preg_match('/[\r\n]/', $configured) || !filter_var($configured, FILTER_VALIDATE_EMAIL)) {
+        return DAITORA_CONTACT_TO_DEFAULT;
+    }
+
+    return $configured;
 }
 
 function daitora_json_result(int $status, array $payload, array $headers = []): array
@@ -405,34 +427,34 @@ function daitora_group_mail_content(array $data, int $submittedAt, bool $staging
     }
 
     $languageLabels = [
-        'ja' => 'Japanese', 'en' => 'English', 'zh-CN' => 'Simplified Chinese',
-        'zh-cn' => 'Simplified Chinese', 'ko' => 'Korean', 'zh-TW' => 'Traditional Chinese',
-        'zh-tw' => 'Traditional Chinese'
+        'ja' => '日语', 'en' => '英语', 'zh-CN' => '简体中文',
+        'zh-cn' => '简体中文', 'ko' => '韩语', 'zh-TW' => '繁体中文',
+        'zh-tw' => '繁体中文'
     ];
     $fieldLabels = [
-        'source_site' => 'Source site', 'source_channel' => 'Source channel',
-        'landing_page' => 'First landing page', 'source_page' => 'Submission page URL',
-        'site_language' => 'Page language', 'utm_source' => 'UTM source',
-        'utm_medium' => 'UTM medium', 'utm_campaign' => 'UTM campaign',
-        'utm_content' => 'UTM content', 'ref_code' => 'Referral code',
-        'visitor_id' => 'Visitor ID', 'request_id' => 'Request ID',
-        'name' => 'Name / お名前', 'email' => 'Email', 'phone' => 'Phone / 電話番号',
-        'contact_method' => 'Preferred contact method', 'service_type' => 'Service type',
-        'travel_date' => 'Travel date', 'travel_time' => 'Travel time',
-        'flight_number' => 'Flight number', 'pickup_location' => 'Pickup location',
-        'dropoff_location' => 'Drop-off location', 'passenger_count' => 'Passengers',
-        'luggage_count' => 'Luggage', 'vehicle_preference' => 'Vehicle preference',
-        'itinerary' => 'Requested itinerary', 'message' => 'Inquiry details'
+        'name' => '姓名', 'email' => '电子邮箱', 'phone' => '电话号码',
+        'contact_method' => '希望的联系方式', 'service_type' => '咨询服务',
+        'travel_date' => '出行日期', 'travel_time' => '出行时间',
+        'flight_number' => '航班号', 'pickup_location' => '上车地点',
+        'dropoff_location' => '下车地点', 'passenger_count' => '乘客人数',
+        'luggage_count' => '行李数量', 'vehicle_preference' => '车型偏好',
+        'itinerary' => '行程与具体需求', 'message' => '咨询内容',
+        'site_language' => '访客页面语言', 'source_page' => '提交页面',
+        'landing_page' => '首次进入页面', 'source_site' => '来源网站',
+        'source_channel' => '来源渠道', 'request_id' => '咨询编号',
+        'ref_code' => '推荐码', 'utm_source' => 'UTM 来源',
+        'utm_medium' => 'UTM 媒介', 'utm_campaign' => 'UTM 活动',
+        'utm_content' => 'UTM 内容', 'visitor_id' => '访客编号'
     ];
-    $date = daitora_field($data, 'travel_date') ?: '日付未定';
-    $subject = '[Japan Travel 予約相談] ' . $date . '｜' . daitora_subject_piece(daitora_field($data, 'name'));
+    $date = daitora_field($data, 'travel_date') ?: '日期待确认';
+    $subject = '[Japan Travel 咨询] ' . $date . '｜' . daitora_subject_piece(daitora_field($data, 'name'));
     if ($staging) {
         $subject = '[STAGING] ' . $subject;
     }
     $lines = [
-        'Japan Travel reservation inquiry',
+        'Japan Travel 咨询通知',
         '',
-        'This message records an inquiry only. It does not confirm a booking, vehicle or payment.',
+        '重要提示：此邮件仅表示已收到客户咨询，尚未确认预约、车辆、费用或付款。',
         ''
     ];
     foreach ($fieldLabels as $name => $label) {
@@ -445,7 +467,9 @@ function daitora_group_mail_content(array $data, int $submittedAt, bool $staging
             $lines[] = '';
         }
     }
-    $lines[] = 'Submitted at: ' . date('Y-m-d H:i:s O', $submittedAt);
+    $lines[] = '提交时间：' . date('Y-m-d H:i:s O', $submittedAt);
+    $lines[] = '';
+    $lines[] = '请直接回复此邮件联系客户；Reply-To 已设置为客户填写的邮箱。';
     return ['subject' => $subject, 'body' => implode("\n", $lines)];
 }
 
@@ -522,7 +546,7 @@ function daitora_process_contact(
 
     $mail = daitora_group_mail_content($data, $timestamp, daitora_request_site($requestHost) === 'staging');
     $sender = $mailSender ?? 'daitora_real_mail_sender';
-    $sent = (bool)$sender(DAITORA_CONTACT_TO, $mail['subject'], $mail['body'], daitora_field($data, 'email'));
+    $sent = (bool)$sender(daitora_contact_recipient(), $mail['subject'], $mail['body'], daitora_field($data, 'email'));
     if (!$sent) {
         return daitora_json_result(500, ['success' => false, 'error' => 'mail_send_failed']);
     }

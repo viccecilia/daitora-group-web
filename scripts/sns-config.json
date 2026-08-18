@@ -1,0 +1,22 @@
+{
+  "youtube": {
+    "label": "YouTube",
+    "url": "",
+    "enabled": false
+  },
+  "facebook": {
+    "label": "Facebook",
+    "url": "",
+    "enabled": false
+  },
+  "wechat": {
+    "label": "WeChat",
+    "url": "",
+    "enabled": false
+  },
+  "xiaohongshu": {
+    "label": "RED",
+    "url": "",
+    "enabled": false
+  }
+}
