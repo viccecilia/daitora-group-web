@@ -36,11 +36,10 @@
       <nav class="nav" aria-label="Main navigation">
         <!-- i18n:mobile-switcher --><div class="language-switcher language-switcher-mobile" data-language-switcher><button class="language-button" type="button" data-language-button aria-haspopup="true" aria-expanded="false" aria-controls="mobile-language-menu-contact-html"><span class="language-globe" aria-hidden="true"></span><span>English</span></button><div class="language-menu" id="mobile-language-menu-contact-html" data-language-menu><a href="../contact.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-cn/contact.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="contact.html" hreflang="en" lang="en" aria-current="true">English</a><a href="../ko/contact.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-tw/contact.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a></div></div><!-- /i18n:mobile-switcher -->
         <a href="index.html">Home</a>
-        <a href="about.html">About Daitora</a>
+        <a href="about.html">Company Profile</a>
         <!-- i18n:business-nav --><div class="nav-business-menu" data-business-menu><span class="nav-business-top"><a href="business.html">Business</a><button class="nav-business-toggle" type="button" data-business-menu-button aria-label="Business" aria-expanded="false" aria-controls="business-menu-contact-html"></button></span><div class="nav-business-panel" id="business-menu-contact-html" data-business-menu-panel><a href="business-hire.html">Daitora Chauffeur & Private Transportation</a><a href="business-taxi.html">Toramaru Taxi</a><a href="business-auto.html">Daitora Auto / Used Car Sales</a><a href="business-medical.html">Medical Tourism Support</a><a href="business-digital.html">Digital Marketing & Promotion Support</a></div></div><!-- /i18n:business-nav -->
         <a href="quality.html">Safety & Quality</a>
         <a href="works.html">Track Record</a>
-        <a href="about.html#company-profile">Company Profile</a>
         <a href="news.html">News</a>
       </nav>
       <!-- i18n:desktop-switcher --><div class="language-switcher language-switcher-desktop" data-language-switcher><button class="language-button" type="button" data-language-button aria-haspopup="true" aria-expanded="false" aria-controls="desktop-language-menu-contact-html"><span class="language-globe" aria-hidden="true"></span><span>English</span></button><div class="language-menu" id="desktop-language-menu-contact-html" data-language-menu><a href="../contact.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-cn/contact.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="contact.html" hreflang="en" lang="en" aria-current="true">English</a><a href="../ko/contact.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-tw/contact.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a></div></div><!-- /i18n:desktop-switcher -->
@@ -106,6 +105,47 @@
       </div>
     </section>
 
+    <section class="section soft contact-messaging-section" id="messaging-contact">
+      <div class="container">
+        <div class="section-head contact-messaging-head">
+          <p class="section-kicker">Quick Contact</p>
+          <h2 class="section-title">Contact us via LINE, WhatsApp or WeChat</h2>
+          <p class="section-copy">Contact us easily about transportation or vehicles using your preferred app. Scan the QR code with your smartphone.</p>
+        </div>
+        <div class="messaging-mobile-tabs" role="group" aria-label="Choose a contact method">
+          <button class="is-active" type="button" data-messaging-tab="line" aria-pressed="true">LINE</button>
+          <button type="button" data-messaging-tab="whatsapp" aria-pressed="false">WhatsApp</button>
+          <button type="button" data-messaging-tab="wechat" aria-pressed="false">WeChat</button>
+        </div>
+        <div class="messaging-contact-grid">
+          <article class="messaging-contact-card is-active" data-messaging-panel="line">
+            <span>LINE</span>
+            <h3>Chat on LINE</h3>
+            <div class="messaging-qr-image">
+              <img src="../assets/images/contact/line-qr.jpg" alt="LINE contact QR code" loading="lazy" decoding="async">
+            </div>
+            <p>Scan the QR code.</p>
+          </article>
+          <article class="messaging-contact-card" data-messaging-panel="whatsapp">
+            <span>WhatsApp</span>
+            <h3>Chat on WhatsApp</h3>
+            <a class="messaging-qr-link" href="https://wa.me/message/U5JG5JSBLLLIP1?src=qr" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp">
+              <img src="../assets/images/contact/whatsapp-qr.webp" alt="WhatsApp contact QR code" loading="lazy" decoding="async">
+            </a>
+            <p>Scan the QR code.</p>
+          </article>
+          <article class="messaging-contact-card" data-messaging-panel="wechat">
+            <span>WeChat</span>
+            <h3>Chat on WeChat</h3>
+            <div class="messaging-qr-image">
+              <img src="../assets/images/contact/wechat-qr.webp" alt="WeChat contact QR code" loading="lazy" decoding="async">
+            </div>
+            <p>Scan the QR code.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section soft">
       <div class="container">
         <div class="section-head">
@@ -122,7 +162,6 @@
               <li>Number of people/baggage</li>
               <li>Preferred Vehicle</li>
               <li>Flight number/arrival time</li>
-              <li>Purpose of use</li>
             </ul>
           </article>
           <article>
@@ -225,15 +264,46 @@
               <div class="form-wide form-dynamic-group" data-type-field="hire corporate">
                 <h3>Transportation Details</h3>
                 <div class="form-grid">
-                  <label><span>Service Date</span><input type="date" name="ride_date" required></label>
-                  <label><span>Pickup Time</span><input type="time" name="ride_time" required></label>
-                  <label><span>Pickup Location</span><input type="text" name="pickup" placeholder="Airport, hotel, address etc." required></label>
+                  <label class="form-wide"><span>Inquiry type</span><select name="transport_plan" required><option value="">Please select</option><option value="airport_only">Airport transfer only</option><option value="airport_charter">Airport transfer + daytime charter / sightseeing</option><option value="charter_only">Daytime charter / sightseeing only</option></select></label>
+                  <div class="form-ride-schedule-fields" data-ride-schedule-fields>
+                    <label><span data-ride-date-label>Transfer date</span><input type="date" name="ride_date" required></label>
+                    <label><span data-ride-time-label>Vehicle dispatch time</span><input type="time" name="ride_time" required></label>
+                  </div>
+                  <label><span>Pickup location</span><input type="text" name="pickup" placeholder="Airport, hotel, address etc." required></label>
                   <label><span>Destination</span><input type="text" name="destination" placeholder="Hotel, venue or sightseeing destination" required></label>
-                  <label><span>Flight Number</span><input type="text" name="flight_no" placeholder="Example: JL000/MM000"></label>
+                  <div class="form-flight-fields" data-flight-fields hidden>
+                    <label><span>Flight Number</span><input type="text" name="flight_no" placeholder="Example: JL000/MM000"></label>
+                    <label><span>Flight type</span><select name="flight_direction"><option value="">Please select</option><option>Arrival flight (pickup from the airport)</option><option>Departure flight (transfer to the airport)</option></select></label>
+                    <label><span>Scheduled flight time</span><input type="time" name="flight_time"></label>
+                    <label class="flight-unknown-check"><input type="checkbox" name="flight_no_unknown" value="yes"><span>Flight number undecided</span></label>
+                  </div>
                   <label><span>Number of Passengers</span><input type="number" name="passengers" min="1" inputmode="numeric"></label>
                   <label><span>Number of Luggage Items</span><input type="number" name="luggage_count" min="0" inputmode="numeric"></label>
                   <label><span>Preferred Vehicle</span><select name="vehicle_type"><option value="">To be discussed</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>Discuss Based on Requirements</option></select></label>
-                  <label class="form-wide"><span>Service Type</span><select name="ride_purpose"><option value="">Please select</option><option>Airport Transfer</option><option>Private Sightseeing Charter</option><option>Corporate Transportation</option><option>VIP Transportation</option><option>Large-Scale / Multi-Vehicle Transportation</option><option>Other</option></select></label>
+                  <label><span>Passenger nationality</span><input type="text" name="nationality" placeholder="e.g. Japan, China, United States"></label>
+                  <label><span>Preferred driver language</span><select name="driver_language"><option value="">No preference</option><option>Japanese</option><option>中国語</option><option>英語</option><option>韓国語</option><option>Other</option></select></label>
+                  <div class="form-wide form-itinerary-fields" data-itinerary-fields hidden>
+                    <h4>Daytime charter / sightseeing itinerary</h4>
+                    <div class="form-grid">
+                      <label><span>Start date</span><input type="date" name="itinerary_date" required></label>
+                      <label><span>Start time</span><input type="time" name="itinerary_start_time" required></label>
+                      <label><span>End date</span><input type="date" name="itinerary_end_date" required></label>
+                      <label><span>End time</span><input type="time" name="itinerary_end_time" required></label>
+                      <label><span>Accommodation hotel (if applicable)</span><input type="text" name="itinerary_hotel"></label>
+                      <label class="form-wide"><span>Itinerary</span><textarea name="itinerary_route" rows="4" placeholder="e.g. Hotel → sightseeing spot → lunch → hotel"></textarea></label>
+                      <label><span>Service duration</span><input type="text" name="itinerary_duration" placeholder="Calculated automatically" readonly></label>
+                    </div>
+                  </div>
+                  <details class="form-wide form-cost-fields">
+                    <summary>Payment and quotation details (optional)</summary>
+                    <div class="form-grid">
+                      <label><span>Consumption tax</span><select name="tax_status"><option value="">Undecided / confirmation required</option><option>Included in price</option><option>Charged separately</option></select></label>
+                      <label><span>Expressway tolls</span><select name="toll_status"><option value="">Undecided / confirmation required</option><option>Included in price</option><option>Charged separately</option><option>Not used</option></select></label>
+                      <label><span>Parking fees</span><select name="parking_status"><option value="">Undecided / confirmation required</option><option>Included in price</option><option>Charged separately</option><option>Not expected</option></select></label>
+                      <label><span>Driver accommodation</span><select name="driver_lodging"><option value="">Undecided / confirmation required</option><option>有</option><option>無</option></select></label>
+                      <label class="form-wide"><span>Payment method</span><select name="payment_timing"><option value="">Undecided / confirmation required</option><option>Advance payment</option><option>Post-payment / invoice</option><option>Payment on the day</option><option>Other</option></select></label>
+                    </div>
+                  </details>
                   <label class="form-wide"><span>Transportation Notes</span><textarea name="ride_notes" rows="4" placeholder="Itinerary, meeting point, number of vehicles and any special requirements"></textarea></label>
                 </div>
               </div>
@@ -272,8 +342,8 @@
                 <label><span>Enquiry Subject</span><input type="text" name="general_subject" placeholder="Company information, media enquiries, partnership enquiries, etc." required></label>
               </div>
               <label class="form-wide">
-                <span>Enquiry Details</span>
-                <textarea name="message" rows="6" required></textarea>
+                <span>Other requests or notes (optional)</span>
+                <textarea name="message" rows="6"></textarea>
               </label>
             </div>
             <label class="privacy-check">
@@ -388,6 +458,7 @@
       </article>
       </div>
     </section>
+
     <div class="footer-inner footer-legal">
       <span>&copy; Daitora Co., Ltd. All Rights Reserved.</span>
       <a href="privacy.html">Privacy Policy</a>

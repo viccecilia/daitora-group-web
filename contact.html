@@ -36,11 +36,10 @@
       <nav class="nav" aria-label="Main navigation">
         <!-- i18n:mobile-switcher --><div class="language-switcher language-switcher-mobile" data-language-switcher><button class="language-button" type="button" data-language-button aria-haspopup="true" aria-expanded="false" aria-controls="mobile-language-menu-contact-html"><span class="language-globe" aria-hidden="true"></span><span>日本語</span></button><div class="language-menu" id="mobile-language-menu-contact-html" data-language-menu><a href="contact.html" hreflang="ja" lang="ja" aria-current="true">日本語</a><a href="zh-cn/contact.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="en/contact.html" hreflang="en" lang="en">English</a><a href="ko/contact.html" hreflang="ko" lang="ko">한국어</a><a href="zh-tw/contact.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a></div></div><!-- /i18n:mobile-switcher -->
         <a href="index.html">ホーム</a>
-        <a href="about.html">大寅について</a>
+        <a href="about.html">会社概要</a>
         <!-- i18n:business-nav --><div class="nav-business-menu" data-business-menu><span class="nav-business-top"><a href="business.html">事業紹介</a><button class="nav-business-toggle" type="button" data-business-menu-button aria-label="事業紹介" aria-expanded="false" aria-controls="business-menu-contact-html"></button></span><div class="nav-business-panel" id="business-menu-contact-html" data-business-menu-panel><a href="business-hire.html">大寅ハイヤー</a><a href="business-taxi.html">寅丸タクシー</a><a href="business-auto.html">大寅中古車販売</a><a href="business-medical.html">医療ツーリズム事業</a><a href="business-digital.html">デジタルマーケティング・プロモーション支援事業</a></div></div><!-- /i18n:business-nav -->
         <a href="quality.html">安全・品質</a>
         <a href="works.html">実績紹介</a>
-        <a href="about.html#company-profile">会社概要</a>
         <a href="news.html">ニュース</a>
       </nav>
       <!-- i18n:desktop-switcher --><div class="language-switcher language-switcher-desktop" data-language-switcher><button class="language-button" type="button" data-language-button aria-haspopup="true" aria-expanded="false" aria-controls="desktop-language-menu-contact-html"><span class="language-globe" aria-hidden="true"></span><span>日本語</span></button><div class="language-menu" id="desktop-language-menu-contact-html" data-language-menu><a href="contact.html" hreflang="ja" lang="ja" aria-current="true">日本語</a><a href="zh-cn/contact.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="en/contact.html" hreflang="en" lang="en">English</a><a href="ko/contact.html" hreflang="ko" lang="ko">한국어</a><a href="zh-tw/contact.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a></div></div><!-- /i18n:desktop-switcher -->
@@ -106,6 +105,47 @@
       </div>
     </section>
 
+    <section class="section soft contact-messaging-section" id="messaging-contact">
+      <div class="container">
+        <div class="section-head contact-messaging-head">
+          <p class="section-kicker">Quick Contact</p>
+          <h2 class="section-title">LINE・WhatsApp・WeChatで相談</h2>
+          <p class="section-copy">お使いのアプリから、送迎や車両について気軽にお問い合わせいただけます。スマートフォンでQR&#8288;コ&#8288;ー&#8288;ドを読み取ってください。</p>
+        </div>
+        <div class="messaging-mobile-tabs" role="group" aria-label="お問い合わせ方法を選択">
+          <button class="is-active" type="button" data-messaging-tab="line" aria-pressed="true">LINE</button>
+          <button type="button" data-messaging-tab="whatsapp" aria-pressed="false">WhatsApp</button>
+          <button type="button" data-messaging-tab="wechat" aria-pressed="false">WeChat</button>
+        </div>
+        <div class="messaging-contact-grid">
+          <article class="messaging-contact-card is-active" data-messaging-panel="line">
+            <span>LINE</span>
+            <h3>LINEで相談</h3>
+            <div class="messaging-qr-image">
+              <img src="assets/images/contact/line-qr.jpg" alt="LINE相談用QRコード" loading="lazy" decoding="async">
+            </div>
+            <p>QRコードを読み取ってください。</p>
+          </article>
+          <article class="messaging-contact-card" data-messaging-panel="whatsapp">
+            <span>WhatsApp</span>
+            <h3>WhatsAppで相談</h3>
+            <a class="messaging-qr-link" href="https://wa.me/message/U5JG5JSBLLLIP1?src=qr" target="_blank" rel="noopener noreferrer" aria-label="WhatsAppを開く">
+              <img src="assets/images/contact/whatsapp-qr.webp" alt="WhatsApp相談用QRコード" loading="lazy" decoding="async">
+            </a>
+            <p>QRコードを読み取ってください。</p>
+          </article>
+          <article class="messaging-contact-card" data-messaging-panel="wechat">
+            <span>WeChat</span>
+            <h3>WeChatで相談</h3>
+            <div class="messaging-qr-image">
+              <img src="assets/images/contact/wechat-qr.webp" alt="WeChat相談用QRコード" loading="lazy" decoding="async">
+            </div>
+            <p>QRコードを読み取ってください。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section soft">
       <div class="container">
         <div class="section-head">
@@ -122,7 +162,6 @@
               <li>人数・荷物数</li>
               <li>希望車種</li>
               <li>便名・到着時刻</li>
-              <li>ご利用目的</li>
             </ul>
           </article>
           <article>
@@ -225,15 +264,46 @@
               <div class="form-wide form-dynamic-group" data-type-field="hire corporate">
                 <h3>送迎内容</h3>
                 <div class="form-grid">
-                  <label><span>ご利用日</span><input type="date" name="ride_date" required></label>
-                  <label><span>ご利用時間</span><input type="time" name="ride_time" required></label>
-                  <label><span>出発地</span><input type="text" name="pickup" placeholder="空港、ホテル、住所など" required></label>
+                  <label class="form-wide"><span>ご相談内容</span><select name="transport_plan" required><option value="">選択してください</option><option value="airport_only">空港送迎のみ</option><option value="airport_charter">空港送迎＋日中貸切・観光</option><option value="charter_only">日中貸切・観光のみ</option></select></label>
+                  <div class="form-ride-schedule-fields" data-ride-schedule-fields>
+                    <label><span data-ride-date-label>送迎日</span><input type="date" name="ride_date" required></label>
+                    <label><span data-ride-time-label>配車時間</span><input type="time" name="ride_time" required></label>
+                  </div>
+                  <label><span>配車場所</span><input type="text" name="pickup" placeholder="空港、ホテル、住所など" required></label>
                   <label><span>目的地</span><input type="text" name="destination" placeholder="ホテル、会場、観光地など" required></label>
-                  <label><span>航空便名</span><input type="text" name="flight_no" placeholder="例：JL000 / MM000"></label>
+                  <div class="form-flight-fields" data-flight-fields hidden>
+                    <label><span>航空便名</span><input type="text" name="flight_no" placeholder="例：JL000 / MM000"></label>
+                    <label><span>便の区分</span><select name="flight_direction"><option value="">選択してください</option><option>到着便（空港からお迎え）</option><option>出発便（空港までお送り）</option></select></label>
+                    <label><span>便の予定時刻</span><input type="time" name="flight_time"></label>
+                    <label class="flight-unknown-check"><input type="checkbox" name="flight_no_unknown" value="yes"><span>便名は未定</span></label>
+                  </div>
                   <label><span>人数</span><input type="number" name="passengers" min="1" inputmode="numeric"></label>
                   <label><span>手荷物数</span><input type="number" name="luggage_count" min="0" inputmode="numeric"></label>
                   <label><span>希望車種</span><select name="vehicle_type"><option value="">未定</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>用途に合わせて相談</option></select></label>
-                  <label class="form-wide"><span>用途</span><select name="ride_purpose"><option value="">選択してください</option><option>空港送迎</option><option>観光貸切</option><option>企業送迎</option><option>VIP接待</option><option>大型案件・複数台運行</option><option>その他</option></select></label>
+                  <label><span>お客様の国籍</span><input type="text" name="nationality" placeholder="例：日本、中国、米国"></label>
+                  <label><span>希望するドライバー言語</span><select name="driver_language"><option value="">指定なし</option><option>日本語</option><option>中国語</option><option>英語</option><option>韓国語</option><option>その他</option></select></label>
+                  <div class="form-wide form-itinerary-fields" data-itinerary-fields hidden>
+                    <h4>日中貸切・観光の行程</h4>
+                    <div class="form-grid">
+                      <label><span>開始日</span><input type="date" name="itinerary_date" required></label>
+                      <label><span>開始時間</span><input type="time" name="itinerary_start_time" required></label>
+                      <label><span>終了日</span><input type="date" name="itinerary_end_date" required></label>
+                      <label><span>終了時間</span><input type="time" name="itinerary_end_time" required></label>
+                      <label><span>宿泊ホテル名（該当する場合）</span><input type="text" name="itinerary_hotel"></label>
+                      <label class="form-wide"><span>行程</span><textarea name="itinerary_route" rows="4" placeholder="例：ホテル → 観光地 → 昼食 → ホテル"></textarea></label>
+                      <label><span>利用時間</span><input type="text" name="itinerary_duration" placeholder="自動計算" readonly></label>
+                    </div>
+                  </div>
+                  <details class="form-wide form-cost-fields">
+                    <summary>お支払い・見積条件（分かる範囲で・任意）</summary>
+                    <div class="form-grid">
+                      <label><span>消費税</span><select name="tax_status"><option value="">未定・要確認</option><option>料金に含む</option><option>料金と別</option></select></label>
+                      <label><span>高速料金</span><select name="toll_status"><option value="">未定・要確認</option><option>料金に含む</option><option>料金と別</option><option>利用しない</option></select></label>
+                      <label><span>駐車場代</span><select name="parking_status"><option value="">未定・要確認</option><option>料金に含む</option><option>料金と別</option><option>発生予定なし</option></select></label>
+                      <label><span>ドライバー宿泊費</span><select name="driver_lodging"><option value="">未定・要確認</option><option>有</option><option>無</option></select></label>
+                      <label class="form-wide"><span>お支払い方法</span><select name="payment_timing"><option value="">未定・要確認</option><option>事前払い</option><option>後払い・請求書払い</option><option>当日払い</option><option>その他</option></select></label>
+                    </div>
+                  </details>
                   <label class="form-wide"><span>送迎に関する備考</span><textarea name="ride_notes" rows="4" placeholder="行程、待ち合わせ場所、車両台数、配慮事項など"></textarea></label>
                 </div>
               </div>
@@ -272,8 +342,8 @@
                 <label><span>お問い合わせ件名</span><input type="text" name="general_subject" placeholder="会社情報、取材、パートナー相談など" required></label>
               </div>
               <label class="form-wide">
-                <span>お問い合わせ内容</span>
-                <textarea name="message" rows="6" required></textarea>
+                <span>その他のご要望・連絡事項（任意）</span>
+                <textarea name="message" rows="6"></textarea>
               </label>
             </div>
             <label class="privacy-check">
@@ -388,6 +458,7 @@
       </article>
       </div>
     </section>
+
     <div class="footer-inner footer-legal">
       <span>&copy; Daitora Co., Ltd. All Rights Reserved.</span>
       <a href="privacy.html">プライバシーポリシー</a>

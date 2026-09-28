@@ -36,11 +36,10 @@
       <nav class="nav" aria-label="Main navigation">
         <!-- i18n:mobile-switcher --><div class="language-switcher language-switcher-mobile" data-language-switcher><button class="language-button" type="button" data-language-button aria-haspopup="true" aria-expanded="false" aria-controls="mobile-language-menu-contact-html"><span class="language-globe" aria-hidden="true"></span><span>한국어</span></button><div class="language-menu" id="mobile-language-menu-contact-html" data-language-menu><a href="../contact.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-cn/contact.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="../en/contact.html" hreflang="en" lang="en">English</a><a href="contact.html" hreflang="ko" lang="ko" aria-current="true">한국어</a><a href="../zh-tw/contact.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a></div></div><!-- /i18n:mobile-switcher -->
         <a href="index.html">홈</a>
-        <a href="about.html">Daitora 소개</a>
+        <a href="about.html">회사 개요</a>
         <!-- i18n:business-nav --><div class="nav-business-menu" data-business-menu><span class="nav-business-top"><a href="business.html">사업 소개</a><button class="nav-business-toggle" type="button" data-business-menu-button aria-label="사업 소개" aria-expanded="false" aria-controls="business-menu-contact-html"></button></span><div class="nav-business-panel" id="business-menu-contact-html" data-business-menu-panel><a href="business-hire.html">Daitora Chauffeur & Private Transportation</a><a href="business-taxi.html">Toramaru Taxi</a><a href="business-auto.html">Daitora Auto / Used Car Sales</a><a href="business-medical.html">의료 관광 지원</a><a href="business-digital.html">디지털 마케팅·프로모션 지원</a></div></div><!-- /i18n:business-nav -->
         <a href="quality.html">안전・품질</a>
         <a href="works.html">실적 소개</a>
-        <a href="about.html#company-profile">회사 개요</a>
         <a href="news.html">뉴스</a>
       </nav>
       <!-- i18n:desktop-switcher --><div class="language-switcher language-switcher-desktop" data-language-switcher><button class="language-button" type="button" data-language-button aria-haspopup="true" aria-expanded="false" aria-controls="desktop-language-menu-contact-html"><span class="language-globe" aria-hidden="true"></span><span>한국어</span></button><div class="language-menu" id="desktop-language-menu-contact-html" data-language-menu><a href="../contact.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-cn/contact.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="../en/contact.html" hreflang="en" lang="en">English</a><a href="contact.html" hreflang="ko" lang="ko" aria-current="true">한국어</a><a href="../zh-tw/contact.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a></div></div><!-- /i18n:desktop-switcher -->
@@ -106,6 +105,47 @@
       </div>
     </section>
 
+    <section class="section soft contact-messaging-section" id="messaging-contact">
+      <div class="container">
+        <div class="section-head contact-messaging-head">
+          <p class="section-kicker">Quick Contact</p>
+          <h2 class="section-title">LINE・WhatsApp・WeChat으로 상담</h2>
+          <p class="section-copy">사용 중인 앱에서 송영이나 차량에 대해 편하게 문의하실 수 있습니다. 스마트폰으로 QR 코드를 스캔해 주세요.</p>
+        </div>
+        <div class="messaging-mobile-tabs" role="group" aria-label="문의 방법 선택">
+          <button class="is-active" type="button" data-messaging-tab="line" aria-pressed="true">LINE</button>
+          <button type="button" data-messaging-tab="whatsapp" aria-pressed="false">WhatsApp</button>
+          <button type="button" data-messaging-tab="wechat" aria-pressed="false">WeChat</button>
+        </div>
+        <div class="messaging-contact-grid">
+          <article class="messaging-contact-card is-active" data-messaging-panel="line">
+            <span>LINE</span>
+            <h3>LINE으로 상담</h3>
+            <div class="messaging-qr-image">
+              <img src="../assets/images/contact/line-qr.jpg" alt="LINE 상담용 QR 코드" loading="lazy" decoding="async">
+            </div>
+            <p>QR 코드를 스캔해 주세요.</p>
+          </article>
+          <article class="messaging-contact-card" data-messaging-panel="whatsapp">
+            <span>WhatsApp</span>
+            <h3>WhatsApp으로 상담</h3>
+            <a class="messaging-qr-link" href="https://wa.me/message/U5JG5JSBLLLIP1?src=qr" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 열기">
+              <img src="../assets/images/contact/whatsapp-qr.webp" alt="WhatsApp 상담용 QR 코드" loading="lazy" decoding="async">
+            </a>
+            <p>QR 코드를 스캔해 주세요.</p>
+          </article>
+          <article class="messaging-contact-card" data-messaging-panel="wechat">
+            <span>WeChat</span>
+            <h3>WeChat으로 상담</h3>
+            <div class="messaging-qr-image">
+              <img src="../assets/images/contact/wechat-qr.webp" alt="WeChat 상담용 QR 코드" loading="lazy" decoding="async">
+            </div>
+            <p>QR 코드를 스캔해 주세요.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section soft">
       <div class="container">
         <div class="section-head">
@@ -122,7 +162,6 @@
               <li>인원수・짐수</li>
               <li>희망 차종</li>
               <li>편명・도착 시각</li>
-              <li>이용 목적</li>
             </ul>
           </article>
           <article>
@@ -225,15 +264,46 @@
               <div class="form-wide form-dynamic-group" data-type-field="hire corporate">
                 <h3>송영 내용</h3>
                 <div class="form-grid">
-                  <label><span>이용일</span><input type="date" name="ride_date" required></label>
-                  <label><span>이용시간</span><input type="time" name="ride_time" required></label>
-                  <label><span>출발지</span><input type="text" name="pickup" placeholder="공항, 호텔, 주소 등" required></label>
+                  <label class="form-wide"><span>상담 내용</span><select name="transport_plan" required><option value="">선택해 주세요</option><option value="airport_only">공항 송영만</option><option value="airport_charter">공항 송영＋주간 전세·관광</option><option value="charter_only">주간 전세·관광만</option></select></label>
+                  <div class="form-ride-schedule-fields" data-ride-schedule-fields>
+                    <label><span data-ride-date-label>송영일</span><input type="date" name="ride_date" required></label>
+                    <label><span data-ride-time-label>배차 시간</span><input type="time" name="ride_time" required></label>
+                  </div>
+                  <label><span>배차 장소</span><input type="text" name="pickup" placeholder="공항, 호텔, 주소 등" required></label>
                   <label><span>목적지</span><input type="text" name="destination" placeholder="호텔, 행사장, 관광지 등" required></label>
-                  <label><span>항공편명</span><input type="text" name="flight_no" placeholder="예: JL000/MM000"></label>
+                  <div class="form-flight-fields" data-flight-fields hidden>
+                    <label><span>항공편명</span><input type="text" name="flight_no" placeholder="예: JL000/MM000"></label>
+                    <label><span>항공편 구분</span><select name="flight_direction"><option value="">선택해 주세요</option><option>도착편(공항에서 픽업)</option><option>출발편(공항까지 송영)</option></select></label>
+                    <label><span>항공편 예정 시각</span><input type="time" name="flight_time"></label>
+                    <label class="flight-unknown-check"><input type="checkbox" name="flight_no_unknown" value="yes"><span>편명 미정</span></label>
+                  </div>
                   <label><span>인원수</span><input type="number" name="passengers" min="1" inputmode="numeric"></label>
                   <label><span>수하물 수</span><input type="number" name="luggage_count" min="0" inputmode="numeric"></label>
                   <label><span>희망 차종</span><select name="vehicle_type"><option value="">미정</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>용도에 맞춰 상담</option></select></label>
-                  <label class="form-wide"><span>용도</span><select name="ride_purpose"><option value="">선택해 주세요</option><option>공항 송영</option><option>관광 전세</option><option>기업 송영</option><option>VIP 송영</option><option>대형 프로젝트·복수 차량 운행</option><option>기타</option></select></label>
+                  <label><span>고객 국적</span><input type="text" name="nationality" placeholder="예: 일본, 중국, 미국"></label>
+                  <label><span>희망 드라이버 언어</span><select name="driver_language"><option value="">지정 없음</option><option>일본어</option><option>中国語</option><option>英語</option><option>韓国語</option><option>기타</option></select></label>
+                  <div class="form-wide form-itinerary-fields" data-itinerary-fields hidden>
+                    <h4>주간 전세·관광 일정</h4>
+                    <div class="form-grid">
+                      <label><span>시작일</span><input type="date" name="itinerary_date" required></label>
+                      <label><span>시작 시간</span><input type="time" name="itinerary_start_time" required></label>
+                      <label><span>종료일</span><input type="date" name="itinerary_end_date" required></label>
+                      <label><span>종료 시간</span><input type="time" name="itinerary_end_time" required></label>
+                      <label><span>숙박 호텔명(해당하는 경우)</span><input type="text" name="itinerary_hotel"></label>
+                      <label class="form-wide"><span>일정</span><textarea name="itinerary_route" rows="4" placeholder="예: 호텔 → 관광지 → 점심 → 호텔"></textarea></label>
+                      <label><span>이용 시간</span><input type="text" name="itinerary_duration" placeholder="자동 계산" readonly></label>
+                    </div>
+                  </div>
+                  <details class="form-wide form-cost-fields">
+                    <summary>결제·견적 조건(아는 범위에서·선택)</summary>
+                    <div class="form-grid">
+                      <label><span>소비세</span><select name="tax_status"><option value="">미정·확인 필요</option><option>요금에 포함</option><option>요금 별도</option></select></label>
+                      <label><span>고속도로 요금</span><select name="toll_status"><option value="">미정·확인 필요</option><option>요금에 포함</option><option>요금 별도</option><option>이용하지 않음</option></select></label>
+                      <label><span>주차 요금</span><select name="parking_status"><option value="">미정·확인 필요</option><option>요금에 포함</option><option>요금 별도</option><option>발생 예정 없음</option></select></label>
+                      <label><span>드라이버 숙박비</span><select name="driver_lodging"><option value="">미정·확인 필요</option><option>有</option><option>無</option></select></label>
+                      <label class="form-wide"><span>결제 방법</span><select name="payment_timing"><option value="">미정·확인 필요</option><option>사전 결제</option><option>후불·청구서 결제</option><option>당일 결제</option><option>기타</option></select></label>
+                    </div>
+                  </details>
                   <label class="form-wide"><span>송영 관련 요청사항</span><textarea name="ride_notes" rows="4" placeholder="일정, 미팅 장소, 차량 대수, 요청 사항 등"></textarea></label>
                 </div>
               </div>
@@ -272,8 +342,8 @@
                 <label><span>문의 주제</span><input type="text" name="general_subject" placeholder="회사 정보, 취재, 파트너 상담 등" required></label>
               </div>
               <label class="form-wide">
-                <span>문의 내용</span>
-                <textarea name="message" rows="6" required></textarea>
+                <span>기타 요청·연락 사항(선택)</span>
+                <textarea name="message" rows="6"></textarea>
               </label>
             </div>
             <label class="privacy-check">
@@ -388,6 +458,7 @@
       </article>
       </div>
     </section>
+
     <div class="footer-inner footer-legal">
       <span>&copy; Daitora Co., Ltd. All Rights Reserved.</span>
       <a href="privacy.html">개인정보 처리방침</a>

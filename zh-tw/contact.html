@@ -36,11 +36,10 @@
       <nav class="nav" aria-label="Main navigation">
         <!-- i18n:mobile-switcher --><div class="language-switcher language-switcher-mobile" data-language-switcher><button class="language-button" type="button" data-language-button aria-haspopup="true" aria-expanded="false" aria-controls="mobile-language-menu-contact-html"><span class="language-globe" aria-hidden="true"></span><span>繁體中文</span></button><div class="language-menu" id="mobile-language-menu-contact-html" data-language-menu><a href="../contact.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-cn/contact.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="../en/contact.html" hreflang="en" lang="en">English</a><a href="../ko/contact.html" hreflang="ko" lang="ko">한국어</a><a href="contact.html" hreflang="zh-TW" lang="zh-TW" aria-current="true">繁體中文</a></div></div><!-- /i18n:mobile-switcher -->
         <a href="index.html">首頁</a>
-        <a href="about.html">關於大寅</a>
+        <a href="about.html">公司概要</a>
         <!-- i18n:business-nav --><div class="nav-business-menu" data-business-menu><span class="nav-business-top"><a href="business.html">事業介紹</a><button class="nav-business-toggle" type="button" data-business-menu-button aria-label="事業介紹" aria-expanded="false" aria-controls="business-menu-contact-html"></button></span><div class="nav-business-panel" id="business-menu-contact-html" data-business-menu-panel><a href="business-hire.html">Daitora Chauffeur & Private Transportation</a><a href="business-taxi.html">Toramaru Taxi</a><a href="business-auto.html">Daitora Auto / Used Car Sales</a><a href="business-medical.html">醫療旅遊服務</a><a href="business-digital.html">數位行銷與推廣支援</a></div></div><!-- /i18n:business-nav -->
         <a href="quality.html">安全・品質</a>
         <a href="works.html">實績介紹</a>
-        <a href="about.html#company-profile">公司概要</a>
         <a href="news.html">最新消息</a>
       </nav>
       <!-- i18n:desktop-switcher --><div class="language-switcher language-switcher-desktop" data-language-switcher><button class="language-button" type="button" data-language-button aria-haspopup="true" aria-expanded="false" aria-controls="desktop-language-menu-contact-html"><span class="language-globe" aria-hidden="true"></span><span>繁體中文</span></button><div class="language-menu" id="desktop-language-menu-contact-html" data-language-menu><a href="../contact.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-cn/contact.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="../en/contact.html" hreflang="en" lang="en">English</a><a href="../ko/contact.html" hreflang="ko" lang="ko">한국어</a><a href="contact.html" hreflang="zh-TW" lang="zh-TW" aria-current="true">繁體中文</a></div></div><!-- /i18n:desktop-switcher -->
@@ -106,6 +105,47 @@
       </div>
     </section>
 
+    <section class="section soft contact-messaging-section" id="messaging-contact">
+      <div class="container">
+        <div class="section-head contact-messaging-head">
+          <p class="section-kicker">Quick Contact</p>
+          <h2 class="section-title">透過LINE、WhatsApp或WeChat諮詢</h2>
+          <p class="section-copy">您可以透過常用應用程式輕鬆諮詢接送或車輛事宜，請使用手機掃描QR碼。</p>
+        </div>
+        <div class="messaging-mobile-tabs" role="group" aria-label="選擇諮詢方式">
+          <button class="is-active" type="button" data-messaging-tab="line" aria-pressed="true">LINE</button>
+          <button type="button" data-messaging-tab="whatsapp" aria-pressed="false">WhatsApp</button>
+          <button type="button" data-messaging-tab="wechat" aria-pressed="false">WeChat</button>
+        </div>
+        <div class="messaging-contact-grid">
+          <article class="messaging-contact-card is-active" data-messaging-panel="line">
+            <span>LINE</span>
+            <h3>透過LINE諮詢</h3>
+            <div class="messaging-qr-image">
+              <img src="../assets/images/contact/line-qr.jpg" alt="LINE諮詢QR碼" loading="lazy" decoding="async">
+            </div>
+            <p>請掃描QR碼。</p>
+          </article>
+          <article class="messaging-contact-card" data-messaging-panel="whatsapp">
+            <span>WhatsApp</span>
+            <h3>透過WhatsApp諮詢</h3>
+            <a class="messaging-qr-link" href="https://wa.me/message/U5JG5JSBLLLIP1?src=qr" target="_blank" rel="noopener noreferrer" aria-label="開啟WhatsApp">
+              <img src="../assets/images/contact/whatsapp-qr.webp" alt="WhatsApp諮詢QR碼" loading="lazy" decoding="async">
+            </a>
+            <p>請掃描QR碼。</p>
+          </article>
+          <article class="messaging-contact-card" data-messaging-panel="wechat">
+            <span>WeChat</span>
+            <h3>透過WeChat諮詢</h3>
+            <div class="messaging-qr-image">
+              <img src="../assets/images/contact/wechat-qr.webp" alt="WeChat諮詢QR碼" loading="lazy" decoding="async">
+            </div>
+            <p>請掃描QR碼。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section soft">
       <div class="container">
         <div class="section-head">
@@ -122,7 +162,6 @@
               <li>人數/行李數</li>
               <li>希望車型</li>
               <li>航班號碼/到達時間</li>
-              <li>使用目的</li>
             </ul>
           </article>
           <article>
@@ -225,15 +264,46 @@
               <div class="form-wide form-dynamic-group" data-type-field="hire corporate">
                 <h3>接送詳情</h3>
                 <div class="form-grid">
-                  <label><span>使用日期</span><input type="date" name="ride_date" required></label>
-                  <label><span>使用時間</span><input type="time" name="ride_time" required></label>
-                  <label><span>出發地</span><input type="text" name="pickup" placeholder="機場、飯店、地址等" required></label>
+                  <label class="form-wide"><span>諮詢內容</span><select name="transport_plan" required><option value="">請選擇</option><option value="airport_only">僅機場接送</option><option value="airport_charter">機場接送＋白天包車／觀光</option><option value="charter_only">僅白天包車／觀光</option></select></label>
+                  <div class="form-ride-schedule-fields" data-ride-schedule-fields>
+                    <label><span data-ride-date-label>接送日期</span><input type="date" name="ride_date" required></label>
+                    <label><span data-ride-time-label>派車時間</span><input type="time" name="ride_time" required></label>
+                  </div>
+                  <label><span>派車地點</span><input type="text" name="pickup" placeholder="機場、飯店、地址等" required></label>
                   <label><span>目的地</span><input type="text" name="destination" placeholder="飯店、會場、觀光景點等" required></label>
-                  <label><span>航班號碼</span><input type="text" name="flight_no" placeholder="範例：JL000/MM000"></label>
+                  <div class="form-flight-fields" data-flight-fields hidden>
+                    <label><span>航班號碼</span><input type="text" name="flight_no" placeholder="範例：JL000/MM000"></label>
+                    <label><span>航班類別</span><select name="flight_direction"><option value="">請選擇</option><option>抵達航班（從機場接客）</option><option>出發航班（送至機場）</option></select></label>
+                    <label><span>航班預定時間</span><input type="time" name="flight_time"></label>
+                    <label class="flight-unknown-check"><input type="checkbox" name="flight_no_unknown" value="yes"><span>航班號未定</span></label>
+                  </div>
                   <label><span>人數</span><input type="number" name="passengers" min="1" inputmode="numeric"></label>
                   <label><span>行李件數</span><input type="number" name="luggage_count" min="0" inputmode="numeric"></label>
                   <label><span>希望車型</span><select name="vehicle_type"><option value="">待討論</option><option>Alphard</option><option>Hiace</option><option>Mercedes-Benz S-Class</option><option>依用途討論</option></select></label>
-                  <label class="form-wide"><span>服務用途</span><select name="ride_purpose"><option value="">請選擇</option><option>機場接送</option><option>觀光包車</option><option>企業接送</option><option>VIP接送</option><option>大型專案 / 多車協同</option><option>其他</option></select></label>
+                  <label><span>客戶國籍</span><input type="text" name="nationality" placeholder="例如：日本、中國、美國"></label>
+                  <label><span>希望司機使用的語言</span><select name="driver_language"><option value="">不限</option><option>日語</option><option>中国語</option><option>英語</option><option>韓国語</option><option>其他</option></select></label>
+                  <div class="form-wide form-itinerary-fields" data-itinerary-fields hidden>
+                    <h4>白天包車／觀光行程</h4>
+                    <div class="form-grid">
+                      <label><span>開始日期</span><input type="date" name="itinerary_date" required></label>
+                      <label><span>開始時間</span><input type="time" name="itinerary_start_time" required></label>
+                      <label><span>結束日期</span><input type="date" name="itinerary_end_date" required></label>
+                      <label><span>結束時間</span><input type="time" name="itinerary_end_time" required></label>
+                      <label><span>住宿飯店名稱（如適用）</span><input type="text" name="itinerary_hotel"></label>
+                      <label class="form-wide"><span>行程</span><textarea name="itinerary_route" rows="4" placeholder="例如：飯店 → 景點 → 午餐 → 飯店"></textarea></label>
+                      <label><span>使用時間</span><input type="text" name="itinerary_duration" placeholder="自動計算" readonly></label>
+                    </div>
+                  </div>
+                  <details class="form-wide form-cost-fields">
+                    <summary>付款與報價條件（選填）</summary>
+                    <div class="form-grid">
+                      <label><span>消費稅</span><select name="tax_status"><option value="">未定／需確認</option><option>包含在費用中</option><option>另行收費</option></select></label>
+                      <label><span>高速公路費</span><select name="toll_status"><option value="">未定／需確認</option><option>包含在費用中</option><option>另行收費</option><option>不使用</option></select></label>
+                      <label><span>停車費</span><select name="parking_status"><option value="">未定／需確認</option><option>包含在費用中</option><option>另行收費</option><option>預計不會產生</option></select></label>
+                      <label><span>司機住宿費</span><select name="driver_lodging"><option value="">未定／需確認</option><option>有</option><option>無</option></select></label>
+                      <label class="form-wide"><span>付款方式</span><select name="payment_timing"><option value="">未定／需確認</option><option>提前付款</option><option>後付／帳單支付</option><option>當日支付</option><option>其他</option></select></label>
+                    </div>
+                  </details>
                   <label class="form-wide"><span>接送備註</span><textarea name="ride_notes" rows="4" placeholder="行程、集合地點、車輛數量、注意事項等"></textarea></label>
                 </div>
               </div>
@@ -272,8 +342,8 @@
                 <label><span>諮詢主旨</span><input type="text" name="general_subject" placeholder="公司資訊、採訪、合作夥伴諮詢等" required></label>
               </div>
               <label class="form-wide">
-                <span>諮詢內容</span>
-                <textarea name="message" rows="6" required></textarea>
+                <span>其他需求或聯絡事項（選填）</span>
+                <textarea name="message" rows="6"></textarea>
               </label>
             </div>
             <label class="privacy-check">
@@ -388,6 +458,7 @@
       </article>
       </div>
     </section>
+
     <div class="footer-inner footer-legal">
       <span>&copy; Daitora Co., Ltd. All Rights Reserved.</span>
       <a href="privacy.html">隱私權政策</a>

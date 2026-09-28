@@ -9,6 +9,7 @@ import {
 } from './i18n-config.mjs';
 
 const ROOT = process.cwd();
+const snsConfig = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'sns-config.json'), 'utf8'));
 const pages = ['index.html','about.html','business.html','business-hire.html','business-taxi.html','business-auto.html','business-medical.html','business-digital.html','quality.html','works.html','company.html','news.html','contact.html','privacy.html','404.html'];
 const langs = {
   ja: { dir: '', html: 'ja', label: '日本語', name: '日本語' },
@@ -29,7 +30,7 @@ const japanTravelUrls = {
 
 const meta = {
   'index.html': ['大寅グループ | 大阪・京都のハイヤー・タクシー・中古車販売','大阪・京都を拠点に、ハイヤー、タクシー、中古車販売を展開するDaitora Groupの公式サイトです。'],
-  'about.html': ['大寅について | 大寅グループ','大寅グループの企業理念、社訓、会社概要、許認可、拠点情報をご紹介します。'],
+  'about.html': ['会社概要 | 大寅グループ','大寅グループの企業理念、社訓、会社概要、沿革、関西の拠点情報をご紹介します。'],
   'business.html': ['事業紹介 | 大寅グループ','ハイヤー、タクシー、中古車販売を中心に、医療ツーリズムとデジタルマーケティング支援を展開する大寅グループの事業をご紹介します。'],
   'business-hire.html': ['大寅ハイヤー | 大寅グループ','空港送迎、観光貸切、企業・VIP送迎に対応する大寅ハイヤーをご紹介します。'],
   'business-taxi.html': ['寅丸タクシー | 大寅グループ','大阪・京都・堺・港区など関西エリアの地域移動を支える寅丸タクシーをご紹介します。'],
@@ -276,11 +277,11 @@ function injectBusinessNavigation(html, lang, page){
   return html;
 }
 const footerLabels = {
-  ja: { locations: '営業拠点', privacy: 'プライバシーポリシー' },
-  'zh-CN': { locations: '营业据点', privacy: '隐私政策' },
-  en: { locations: 'OUR LOCATIONS', privacy: 'Privacy Policy' },
-  ko: { locations: '영업 거점', privacy: '개인정보 처리방침' },
-  'zh-TW': { locations: '營業據點', privacy: '隱私權政策' }
+  ja: { locations: '営業拠点', sns: '公式SNS', privacy: 'プライバシーポリシー' },
+  'zh-CN': { locations: '营业据点', sns: '官方社交媒体', privacy: '隐私政策' },
+  en: { locations: 'OUR LOCATIONS', sns: 'OFFICIAL SOCIAL MEDIA', privacy: 'Privacy Policy' },
+  ko: { locations: '영업 거점', sns: '공식 SNS', privacy: '개인정보 처리방침' },
+  'zh-TW': { locations: '營業據點', sns: '官方社群媒體', privacy: '隱私權政策' }
 };
 const footerLocations = [
   { region: 'OSAKA / TAISHO', name: '大阪・大正区', address: OFFICIAL_FACTS.osakaAddress },
@@ -290,6 +291,15 @@ const footerLocations = [
 ];
 function injectLocationsFooter(html, lang){
   const labels = footerLabels[lang] || footerLabels.ja;
+  const snsLinks = Object.values(snsConfig)
+    .filter(({ enabled, url }) => enabled && /^https:\/\//i.test(url))
+    .map(({ label, url }) => `<a href="${escapeAttr(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`)
+    .join('');
+  const snsSection = snsLinks ? `
+    <section class="footer-sns" aria-labelledby="footer-sns-title">
+      <p class="footer-sns-title" id="footer-sns-title">${labels.sns}</p>
+      <div class="footer-sns-links">${snsLinks}</div>
+    </section>` : '';
   const locations = footerLocations.map(({region,name,address}) => `
       <article class="footer-location">
         <span class="footer-location-region">${region}</span>
@@ -302,6 +312,7 @@ function injectLocationsFooter(html, lang){
       <div class="footer-location-grid">${locations}
       </div>
     </section>
+${snsSection}
     <div class="footer-inner footer-legal">
       <span>&copy; Daitora Co., Ltd. All Rights Reserved.</span>
       <a href="privacy.html">${labels.privacy}</a>

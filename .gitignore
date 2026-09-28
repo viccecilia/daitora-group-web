@@ -6,6 +6,9 @@ desktop.ini
 # Tooling and temporary artifacts
 .playwright-cli/
 screenshots/
+output/
+api/contact-config.php
+api/news-config.php
 output/playwright/
 output/*.html
 daitora-group-review-sample/
@@ -30,6 +33,8 @@ assets/videos/**
 !assets/videos/curated/
 !assets/videos/curated/wakayama-coast-nature.mp4
 !assets/videos/curated/shiga-shirahige-shrine.mp4
+!assets/videos/hero/
+!assets/videos/hero/*.mp4
 
 # Archives and generated packages
 *.zip
@@ -40,3 +45,8 @@ assets/videos/**
 !.env.example
 *.pem
 *.key
+assets/uploads/news/*
+!assets/uploads/news/.gitkeep
+!assets/uploads/news/.htaccess
+data/contact-inquiries/
+data/contact-report-state.json

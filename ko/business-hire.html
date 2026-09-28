@@ -28,7 +28,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"대도라 하이어","description":"Daitora Chauffeur & Private Transportation의 공항 송영, 관광 전세, 기업 및 VIP 송영 서비스를 소개합니다.","provider":{"@type":"Organization","name":"Daitora Group","url":"https://daitora-jp.com/"},"areaServed":{"@type":"AdministrativeArea","name":"Kansai, Japan"},"url":"https://daitora-jp.com/ko/business-hire.html"}</script>
   <!-- /i18n:head -->
   <title>대도라 하이어 | Daitora Group</title>
-  <link rel="stylesheet" href="../assets/css/corporate.css">
+  <link rel="stylesheet" href="../assets/css/corporate.css?v=20260727b">
 </head>
 <body class="lang-ko">
   <header class="site-header">
@@ -37,11 +37,10 @@
       <nav class="nav" aria-label="Main navigation">
         <!-- i18n:mobile-switcher --><div class="language-switcher language-switcher-mobile" data-language-switcher><button class="language-button" type="button" data-language-button aria-haspopup="true" aria-expanded="false" aria-controls="mobile-language-menu-business-hire-html"><span class="language-globe" aria-hidden="true"></span><span>한국어</span></button><div class="language-menu" id="mobile-language-menu-business-hire-html" data-language-menu><a href="../business-hire.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-cn/business-hire.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="../en/business-hire.html" hreflang="en" lang="en">English</a><a href="business-hire.html" hreflang="ko" lang="ko" aria-current="true">한국어</a><a href="../zh-tw/business-hire.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a></div></div><!-- /i18n:mobile-switcher -->
         <a href="index.html">홈</a>
-        <a href="about.html">Daitora 소개</a>
+        <a href="about.html">회사 개요</a>
         <!-- i18n:business-nav --><div class="nav-business-menu" data-business-menu><span class="nav-business-top"><a class="active" href="business.html">사업 소개</a><button class="nav-business-toggle" type="button" data-business-menu-button aria-label="사업 소개" aria-expanded="false" aria-controls="business-menu-business-hire-html"></button></span><div class="nav-business-panel" id="business-menu-business-hire-html" data-business-menu-panel><a href="business-hire.html">Daitora Chauffeur & Private Transportation</a><a href="business-taxi.html">Toramaru Taxi</a><a href="business-auto.html">Daitora Auto / Used Car Sales</a><a href="business-medical.html">의료 관광 지원</a><a href="business-digital.html">디지털 마케팅·프로모션 지원</a></div></div><!-- /i18n:business-nav -->
         <a href="quality.html">안전・품질</a>
         <a href="works.html">실적 소개</a>
-        <a href="about.html#company-profile">회사 개요</a>
         <a href="news.html">뉴스</a>
       </nav>
       <!-- i18n:desktop-switcher --><div class="language-switcher language-switcher-desktop" data-language-switcher><button class="language-button" type="button" data-language-button aria-haspopup="true" aria-expanded="false" aria-controls="desktop-language-menu-business-hire-html"><span class="language-globe" aria-hidden="true"></span><span>한국어</span></button><div class="language-menu" id="desktop-language-menu-business-hire-html" data-language-menu><a href="../business-hire.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-cn/business-hire.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="../en/business-hire.html" hreflang="en" lang="en">English</a><a href="business-hire.html" hreflang="ko" lang="ko" aria-current="true">한국어</a><a href="../zh-tw/business-hire.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a></div></div><!-- /i18n:desktop-switcher -->
@@ -50,8 +49,8 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="page-hero-bg" style="background-image:url('../assets/images/content/hire-airport-alphard.jpg')" aria-hidden="true"></div>
+    <section class="page-hero business-hire-hero">
+      <div class="page-hero-bg" style="background-image:url('../assets/images/content/hire-hero-real-fleet-v3.webp')" aria-hidden="true"></div>
       <div class="page-hero-inner">
         <p class="breadcrumb"><a href="index.html">홈</a> / 사업 소개 / Daitora Chauffeur & Private Transportation</p>
         <h1>Daitora Chauffeur & Private Transportation</h1>
@@ -106,18 +105,13 @@
       </div>
     </section>
 
-    <section class="section driver-quality">
+    <section class="section driver-quality" id="driver-quality">
       <div class="container">
-        <div class="grid-2">
+        <div class="driver-quality-intro">
           <div>
             <p class="section-kicker">Driver Quality</p>
             <h2 class="section-title">드라이버는, 서비스의 요.</h2>
             <p class="section-copy">Daitora가 중요하게 생각하는 것은 운전 기술만이 아닙니다. 서비스 태도, 안전 의식, 시간 관리, 지리 지식, 기밀 유지까지 갖춘 신뢰할 수 있는 운전기사를 양성합니다.</p>
-          </div>
-          <div class="media-collage">
-            <div style="background-image:url('../assets/images/content/hire-driver-lineup.jpg')"></div>
-            <div style="background-image:url('../assets/images/content/hire-training-room.jpg')"></div>
-            <div style="background-image:url('../assets/images/content/hire-kyoto-office.jpg')"></div>
           </div>
         </div>
         <div class="line-grid">
@@ -138,15 +132,26 @@
         </div>
         <div class="vehicle-grid">
           <article class="vehicle-card">
-            <div class="vehicle-image" style="background-image:url('../assets/images/content/hire-fleet-lineup.jpg')"></div>
+            <div class="vehicle-gallery">
+              <img class="vehicle-gallery-main" src="../assets/images/content/hire-alphard-exterior.png" alt="Alphard exterior">
+              <img src="../assets/images/content/hire-alphard-interior.png" alt="Alphard interior">
+              <img src="../assets/images/content/hire-alphard-layout.png" alt="Alphard seating layout">
+            </div>
             <div class="vehicle-body"><span>Alphard</span><h3>소규모 수의 고급 이동에.</h3><p>최대 5명까지 탑승할 수 있으며 공항 송영, VIP 송영, 가족 여행, 기업 송영 등 쾌적한 실내 공간이 필요한 상황에 적합합니다.</p><dl class="vehicle-specs"><dt>수하물 기준</dt><dd>가방 4~6개</dd><dt>용도</dt><dd>공항 송영 / VIP 송영 / 관광 전세</dd></dl></div>
           </article>
           <article class="vehicle-card">
-            <div class="vehicle-image" style="background-image:url('../assets/images/content/hire-airport-alphard.jpg')"></div>
+            <div class="vehicle-gallery">
+              <img class="vehicle-gallery-main" src="../assets/images/content/hire-hiace-exterior.png" alt="Hiace exterior">
+              <img src="../assets/images/content/hire-hiace-interior.png" alt="Hiace interior">
+              <img src="../assets/images/content/hire-hiace-layout.png" alt="Hiace seating layout">
+            </div>
             <div class="vehicle-body"><span>Hiace</span><h3>단체 이동이나 수하물이 많은 일정에.</h3><p>고객 9명까지. 기업 시찰, 단체 송영, 관광 전세, 짐이 많은 이동에 대응할 수 있는 대형 왜건입니다.</p><dl class="vehicle-specs"><dt>수하물 기준</dt><dd>가방 10~12개</dd><dt>용도</dt><dd>단체 송영 / 기업 시찰 / 다인 이동</dd></dl></div>
           </article>
           <article class="vehicle-card">
-            <div class="vehicle-image" style="background-image:url('../assets/images/content/hire-hotel-alphard.jpg')"></div>
+            <div class="vehicle-gallery vehicle-gallery-pair">
+              <img class="vehicle-gallery-main" src="../assets/images/content/hire-sclass-exterior.png" alt="Mercedes-Benz S-Class exterior">
+              <img src="../assets/images/content/hire-sclass-layout.png" alt="Mercedes-Benz S-Class seating layout">
+            </div>
             <div class="vehicle-body"><span>Mercedes-Benz S-Class</span><h3>VIP・임원・주요 인사 송영에.</h3><p>차분한 실내와 높은 수준의 서비스가 필요한 임원 및 VIP 송영에 대응합니다.</p><dl class="vehicle-specs"><dt>대상</dt><dd>VIP / 임원 / 주요 인사</dd><dt>용도</dt><dd>고급 송영 / VIP 서비스 / 주요 업무</dd></dl></div>
           </article>
         </div>
@@ -221,6 +226,7 @@
       </article>
       </div>
     </section>
+
     <div class="footer-inner footer-legal">
       <span>&copy; Daitora Co., Ltd. All Rights Reserved.</span>
       <a href="privacy.html">개인정보 처리방침</a>

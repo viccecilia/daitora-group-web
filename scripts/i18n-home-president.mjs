@@ -1,88 +1,75 @@
 const t = (ja, zhCN, en, ko, zhTW) => ({ ja, 'zh-CN': zhCN, en, ko, 'zh-TW': zhTW });
 
 export const HOME_PRESIDENT_OVERRIDES = {
-  '社長あいさつ': t(
-    '社長あいさつ',
-    '社长致辞',
-    'Message from the President',
-    '대표 인사말',
-    '社長致辭'
+  '社長あいさつ': t('社長あいさつ', '社长致辞', 'Message from the President', '사장 인사말', '社長致辭'),
+  '株式会社大寅は、2018年の創業以来、「安全・謙遜・迅敏」を社訓とし、人と社会に安心と信頼を届ける企業として歩んでまいりました。': t(
+    '株式会社大寅は、2018年の創業以来、「安全・謙遜・迅敏」を社訓とし、人と社会に安心と信頼を届ける企業として歩んでまいりました。',
+    '大寅股份有限公司自2018年创立以来，始终秉持“安全・谦逊・迅敏”的社训，致力于成为为人与社会带来安心与信赖的企业。',
+    'Since its founding in 2018, Daitora Co., Ltd. has upheld Safety, Humility and Agility as its guiding principles and has worked to bring peace of mind and trust to people and society.',
+    '주식회사 다이토라는 2018년 창업 이래 「안전・겸손・신속」을 사훈으로 삼고, 사람과 사회에 안심과 신뢰를 전하는 기업으로 성장해 왔습니다.',
+    '大寅股份有限公司自2018年創立以來，始終秉持「安全・謙遜・迅敏」的社訓，致力成為為人與社會帶來安心與信賴的企業。'
   ),
-  '株式会社大寅は、2018年の創業以来、「安全・謙遜・迅敏」を社訓とし、お客様一人ひとりに安心と信頼をお届けすることを使命として歩んでまいりました。': t(
-    '株式会社大寅は、2018年の創業以来、「安全・謙遜・迅敏」を社訓とし、お客様一人ひとりに安心と信頼をお届けすることを使命として歩んでまいりました。',
-    'Daitora Co., Ltd. 自2018年创立以来，始终秉持“安全、谦逊、迅敏”的企业准则，以向每一位客户传递安心与信赖为使命，稳步前行。',
-    'Since its founding in 2018, Daitora Co., Ltd. has been guided by the principles of Safety, Humility and Agility, with a mission to bring every customer peace of mind and confidence.',
-    'Daitora Co., Ltd.는 2018년 창립 이래 ‘안전·겸손·민첩’을 사훈으로 삼고, 고객 한 분 한 분께 안심과 신뢰를 전하는 것을 사명으로 걸어왔습니다.',
-    'Daitora Co., Ltd. 自2018年創立以來，始終秉持「安全、謙遜、迅敏」的企業準則，以向每一位客戶傳遞安心與信賴為使命，穩步前行。'
+  '現在、当社はハイヤー事業をはじめ、医療ツーリズム事業、デジタルマーケティング事業、中古車販売事業など、多様な分野で事業を展開しております。': t(
+    '現在、当社はハイヤー事業をはじめ、医療ツーリズム事業、デジタルマーケティング事業、中古車販売事業など、多様な分野で事業を展開しております。',
+    '目前，本公司以包车接送业务为主，同时开展医疗旅游、数字营销、二手车销售等多领域业务。',
+    'Today, our operations span a wide range of fields, including chauffeur services, medical tourism, digital marketing and used car sales.',
+    '현재 당사는 하이어 사업을 비롯해 의료 관광, 디지털 마케팅, 중고차 판매 등 다양한 분야에서 사업을 전개하고 있습니다.',
+    '目前，本公司以包車接送業務為主，同時拓展醫療旅遊、數位行銷、中古車銷售等多元領域。'
   ),
-  '私たちは、単にお客様を目的地までお送りする会社ではありません。': t(
-    '私たちは、単にお客様を目的地までお送りする会社ではありません。',
-    '我们并非只是一家将客户送达目的地的公司。',
-    'We are not simply a company that takes customers from one place to another.',
-    '저희는 단순히 고객을 목적지까지 모시는 회사가 아닙니다.',
-    '我們並非只是一家將客戶送達目的地的公司。'
+  '事業の内容は異なりますが、私たちが目指すものは創業以来変わることはありません。': t(
+    '事業の内容は異なりますが、私たちが目指すものは創業以来変わることはありません。',
+    '尽管各项业务内容不同，但我们自创立以来所追求的目标始终不变。',
+    'Although these businesses differ in nature, what we strive for has remained unchanged since our founding.',
+    '사업의 내용은 서로 다르지만, 창업 이래 저희가 지향하는 바는 변함이 없습니다.',
+    '儘管各項業務內容不同，但我們自創立以來所追求的目標始終不變。'
   ),
-  '移動を提供するのではなく、': t(
-    '移動を提供するのではなく、',
-    '我们提供的不只是出行，',
-    'More than transportation,',
-    '이동 수단을 제공하는 데 그치지 않고,',
-    '我們提供的不只是移動，'
+  'お客様に価値を提供し、信頼を築き、社会に必要とされる企業であり続けること。': t(
+    'お客様に価値を提供し、信頼を築き、社会に必要とされる企業であり続けること。',
+    '那就是为客户创造价值、建立信赖，并始终成为社会所需要的企业。',
+    'It is to deliver value to our customers, build trust and remain a company that society needs.',
+    '고객에게 가치를 제공하고 신뢰를 쌓으며, 사회에 필요한 기업으로 계속 존재하는 것입니다.',
+    '那就是為客戶創造價值、建立信賴，並始終成為社會所需要的企業。'
   ),
-  '安心を届ける。': t(
-    '安心を届ける。',
-    '更是安心。',
-    'we deliver peace of mind.',
-    '안심을 전합니다.',
-    '更是安心。'
+  'その想いを支えているのが、「安全・謙遜・迅敏」という三つの価値観です。': t(
+    'その想いを支えているのが、「安全・謙遜・迅敏」という三つの価値観です。',
+    '支撑这一信念的，正是“安全・谦逊・迅敏”这三项价值观。',
+    'This commitment is supported by three core values: Safety, Humility and Agility.',
+    '그 뜻을 뒷받침하는 것이 바로 「안전・겸손・신속」이라는 세 가지 가치입니다.',
+    '支撐這份信念的，正是「安全・謙遜・迅敏」這三項價值觀。'
   ),
-  '移動を提供するのではなく、安心を届ける。': t(
-    '移動を提供するのではなく、安心を届ける。',
-    '我们提供的不只是出行，更是安心。',
-    'More than transportation, we deliver peace of mind.',
-    '이동 수단을 제공하는 데 그치지 않고, 안심을 전합니다.',
-    '我們提供的不只是移動，更是安心。'
+  '安全とは、すべての判断の基準であり、責任ある行動の原点です。': t(
+    '安全とは、すべての判断の基準であり、責任ある行動の原点です。',
+    '安全，是一切判断的标准，也是负责任行动的起点。',
+    'Safety is the standard for every decision and the foundation of responsible action.',
+    '안전은 모든 판단의 기준이며 책임 있는 행동의 출발점입니다.',
+    '安全，是一切判斷的標準，也是負責任行動的起點。'
   ),
-  'この理念のもと、お客様が車に乗られた瞬間から目的地に到着されるまで、すべての時間が快適で心地よいものとなるよう、サービスの品質を追求し続けています。': t(
-    'この理念のもと、お客様が車に乗られた瞬間から目的地に到着されるまで、すべての時間が快適で心地よいものとなるよう、サービスの品質を追求し続けています。',
-    '秉持这一理念，从客户上车的那一刻起直至抵达目的地，我们始终追求服务品质，努力让旅途中的每一段时间都舒适而愉悦。',
-    'Guided by this philosophy, we continually refine our service so that every moment, from the instant a customer enters the vehicle until arrival, is comfortable and reassuring.',
-    '이 철학을 바탕으로 고객이 차량에 탑승하는 순간부터 목적지에 도착할 때까지 모든 시간이 편안하고 기분 좋은 경험이 되도록 서비스 품질을 끊임없이 높이고 있습니다.',
-    '秉持這一理念，從客戶上車的那一刻起直至抵達目的地，我們始終追求服務品質，努力讓旅途中的每一段時間都舒適而愉悅。'
+  '謙遜とは、すべての人に敬意を持ち、感謝を忘れない姿勢です。': t(
+    '謙遜とは、すべての人に敬意を持ち、感謝を忘れない姿勢です。',
+    '谦逊，是尊重每一个人并常怀感恩的态度。',
+    'Humility is an attitude of respect for every person and a commitment never to lose sight of gratitude.',
+    '겸손은 모든 사람을 존중하고 감사하는 마음을 잊지 않는 자세입니다.',
+    '謙遜，是尊重每一個人並常懷感恩的態度。'
   ),
-  'そのために私たちが最も大切にしているのが、「安全・謙遜・迅敏」という三つの価値観です。': t(
-    'そのために私たちが最も大切にしているのが、「安全・謙遜・迅敏」という三つの価値観です。',
-    '为此，我们最为重视的是“安全、谦逊、迅敏”三项价值观。',
-    'At the heart of this commitment are three values: Safety, Humility and Agility.',
-    '이를 위해 저희가 가장 중요하게 여기는 가치는 ‘안전·겸손·민첩’입니다.',
-    '為此，我們最為重視的是「安全、謙遜、迅敏」三項價值觀。'
+  '迅敏とは、変化を恐れず、自ら考え、迅速に行動する力です。': t(
+    '迅敏とは、変化を恐れず、自ら考え、迅速に行動する力です。',
+    '迅敏，是不惧变化、主动思考并迅速行动的能力。',
+    'Agility is the ability to embrace change, think independently and act swiftly.',
+    '신속은 변화를 두려워하지 않고 스스로 생각하여 빠르게 행동하는 힘입니다.',
+    '迅敏，是不懼變化、主動思考並迅速行動的能力。'
   ),
-  '安全はすべての判断基準であり、謙遜はすべての人への敬意であり、迅敏とは状況を見て自ら考え行動する力です。': t(
-    '安全はすべての判断基準であり、謙遜はすべての人への敬意であり、迅敏とは状況を見て自ら考え行動する力です。',
-    '安全是所有判断的基准；谦逊是对每一个人的尊重；迅敏则是观察情况、独立思考并付诸行动的能力。',
-    'Safety guides every decision. Humility means respect for every person. Agility is the ability to assess a situation, think independently and act.',
-    '안전은 모든 판단의 기준이며, 겸손은 모든 사람을 존중하는 자세이고, 민첩은 상황을 살펴 스스로 생각하고 행동하는 힘입니다.',
-    '安全是所有判斷的基準；謙遜是對每一個人的尊重；迅敏則是觀察情況、獨立思考並付諸行動的能力。'
+  '私たちは、この理念をすべての事業に共通する行動指針として、人づくりを大切にし、一人ひとりがプロフェッショナルとして成長できる企業を目&#8288;指&#8288;し&#8288;て&#8288;い&#8288;ま&#8288;す&#8288;。': t(
+    '私たちは、この理念をすべての事業に共通する行動指針として、人づくりを大切にし、一人ひとりがプロフェッショナルとして成長できる企業を目&#8288;指&#8288;し&#8288;て&#8288;い&#8288;ま&#8288;す&#8288;。',
+    '我们将这一理念作为所有业务共同的行动准则，重视人才培养，致力于建设让每个人都能成长为专业人才的企业。',
+    'We apply these principles as a common code of conduct across all our businesses, value the development of our people and aim to be a company where every individual can grow as a professional.',
+    '저희는 이 이념을 모든 사업에 공통되는 행동 지침으로 삼아 인재 육성을 소중히 여기며, 구성원 한 사람 한 사람이 전문가로 성장할 수 있는 기업을 지향합니다.',
+    '我們將這一理念作為所有業務共同的行動準則，重視人才培育，致力打造讓每個人都能成長為專業人才的企業。'
   ),
-  'これらは単なる社訓ではなく、日々のサービスを支える行動指針でもあります。': t(
-    'これらは単なる社訓ではなく、日々のサービスを支える行動指針でもあります。',
-    '这并非只是挂在墙上的企业准则，更是支撑我们日常服务的行动指南。',
-    'These are more than corporate principles; they are the standards that guide our work every day.',
-    '이 가치는 단순한 사훈이 아니라 매일의 서비스를 지탱하는 행동 지침입니다.',
-    '這不只是企業準則，更是支撐我們日常服務的行動指南。'
-  ),
-  'これからも株式会社大寅は、お客様、取引先、地域社会から信頼される企業を目指し、人を育て、サービスを磨き、社会に必要とされる企業であり続けます。': t(
-    'これからも株式会社大寅は、お客様、取引先、地域社会から信頼される企業を目指し、人を育て、サービスを磨き、社会に必要とされる企業であり続けます。',
-    '展望未来，Daitora Co., Ltd. 将继续以成为客户、合作伙伴与当地社会信赖的企业为目标，培养人才、精进服务，始终做一家社会所需要的企业。',
-    'Daitora Co., Ltd. will continue to earn the trust of customers, partners and local communities by developing our people, refining our service and remaining a company that society can rely on.',
-    '앞으로도 Daitora Co., Ltd.는 고객과 파트너, 지역사회가 신뢰하는 기업을 목표로 인재를 키우고 서비스를 발전시키며 사회에 필요한 기업으로 성장해 나가겠습니다.',
-    '展望未來，Daitora Co., Ltd. 將繼續以成為客戶、合作夥伴與在地社會信賴的企業為目標，培養人才、精進服務，始終做一家社會所需要的企業。'
-  ),
-  '今後ともご支援、ご愛顧を賜りますようお願い申し上げます。': t(
-    '今後ともご支援、ご愛顧を賜りますようお願い申し上げます。',
-    '诚挚感谢各位一如既往的支持与厚爱。',
-    'We sincerely appreciate your continued support and patronage.',
-    '앞으로도 변함없는 성원과 관심을 부탁드립니다.',
-    '誠摯感謝各位一如既往的支持與厚愛。'
+  'そして、お客様、お取引先、地域社会とともに歩みながら、新しい価値を創造し、より豊かな未来に貢献してまいります。これからも、挑戦を続け、信頼され、必要とされる企業であり続けるために、社員一同さらなる努力を重ねてまいります。今後とも変わらぬご支援、ご愛顧を賜りますよう、心よりお願い申し上げます。': t(
+    'そして、お客様、お取引先、地域社会とともに歩みながら、新しい価値を創造し、より豊かな未来に貢献してまいります。これからも、挑戦を続け、信頼され、必要とされる企業であり続けるために、社員一同さらなる努力を重ねてまいります。今後とも変わらぬご支援、ご愛顧を賜りますよう、心よりお願い申し上げます。',
+    '同时，我们将与客户、合作伙伴及当地社会携手前行，创造新的价值，为更加美好的未来作出贡献。今后，为了持续挑战自我，成为值得信赖且不可或缺的企业，全体员工将继续不懈努力。衷心恳请各位今后继续给予我们一如既往的支持与厚爱。',
+    'Together with our customers, business partners and local communities, we will continue to create new value and contribute to a more prosperous future. All of us at Daitora will continue to take on new challenges and redouble our efforts to remain a trusted and essential company. We sincerely ask for your continued support and patronage.',
+    '또한 고객, 거래처, 지역사회와 함께 걸으며 새로운 가치를 창출하고 더욱 풍요로운 미래에 기여하겠습니다. 앞으로도 도전을 이어가며 신뢰받고 필요한 기업으로 남기 위해 임직원 모두가 더욱 노력하겠습니다. 앞으로도 변함없는 성원과 관심을 보내주시기를 진심으로 부탁드립니다.',
+    '同時，我們將與客戶、合作夥伴及地方社會攜手前行，創造新的價值，為更美好的未來作出貢獻。今後，為了持續迎接挑戰，成為值得信賴且不可或缺的企業，全體員工將繼續不懈努力。衷心懇請各位今後繼續給予我們一如既往的支持與厚愛。'
   )
 };
