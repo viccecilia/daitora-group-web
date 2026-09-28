@@ -1686,6 +1686,18 @@
     "zh-CN": "我们将通过企业理念、公司政策、公司简介、许可证和基础信息来介绍Daitora Group的理念和业务基础。",
     "zh-TW": "我們將透過企業理念、公司政策、公司簡介、許可證和基礎資訊來介紹Daitora Group的理念和業務基礎。"
   },
+  "企業理念、社訓、会社概要、沿革、拠点情報を通じて、": {
+    "en": "Through our philosophy, operating principles, company profile, history and office network,",
+    "ko": "기업 이념, 운영 원칙, 회사 개요, 연혁 및 거점 정보를 통해",
+    "zh-CN": "通过企业理念、运营准则、公司概要、发展历程及营业据点，",
+    "zh-TW": "透過企業理念、營運準則、公司概要、發展歷程及營業據點，"
+  },
+  "大寅グループの考え方と歩みをご紹介します。": {
+    "en": "learn about Daitora Group's values and journey.",
+    "ko": "Daitora Group의 가치와 발자취를 소개합니다.",
+    "zh-CN": "了解Daitora Group的理念与发展历程。",
+    "zh-TW": "了解Daitora Group的理念與發展歷程。"
+  },
   "企業視察": {
     "en": "Company inspection",
     "ko": "기업 시찰",
@@ -1769,6 +1781,12 @@
     "ko": "회사 개요 | Daitora Group",
     "zh-CN": "公司简介 |Daitora Group",
     "zh-TW": "公司簡介 |Daitora Group"
+  },
+  "大寅グループの企業理念、社訓、会社概要、沿革、関西の拠点情報をご紹介します。": {
+    "en": "Learn about Daitora Group's philosophy, operating principles, company profile, history and Kansai office network.",
+    "ko": "Daitora Group의 기업 이념, 운영 원칙, 회사 개요, 연혁 및 간사이 거점 정보를 소개합니다.",
+    "zh-CN": "介绍Daitora Group的企业理念、运营准则、公司概要、发展历程及关西营业据点。",
+    "zh-TW": "介紹Daitora Group的企業理念、營運準則、公司概要、發展歷程及關西營業據點。"
   },
   "会社概要は移動しました。": {
     "en": "Company profile has been moved.",
@@ -3656,35 +3674,35 @@
     "zh-CN": "“谦逊并非贬低自己，而是以尊重的态度对待每一个人。”",
     "zh-TW": "「謙遜並非貶低自己，而是以尊重的態度對待每一個人。」"
   },
-  "変化に気づき、素早く正確に行動すること。": {
-    "en": "Notice change and act quickly and accurately.",
-    "ko": "변화를 알아차리고 신속하고 정확하게 행동한다.",
-    "zh-CN": "洞察变化，迅速且准确地行动。",
-    "zh-TW": "洞察變化，迅速且準確地行動。"
+  "状況に気づき、自ら考え、最も適切な行動を選ぶこと。": {
+    "en": "Notice the situation, think for yourself, and choose the most appropriate action.",
+    "ko": "상황을 파악하고 스스로 생각하여 가장 적절한 행동을 선택한다.",
+    "zh-CN": "察觉状况，独立思考，并选择最恰当的行动。",
+    "zh-TW": "察覺狀況，獨立思考，並選擇最恰當的行動。"
   },
-  "状況を先読みして準備する": {
-    "en": "Anticipate situations and prepare ahead",
-    "ko": "상황을 예측하고 미리 준비",
-    "zh-CN": "预判情况并提前准备",
-    "zh-TW": "預判情況並提前準備"
+  "変化に気づく。": {
+    "en": "Notice change.",
+    "ko": "변화를 알아차린다.",
+    "zh-CN": "察觉变化。",
+    "zh-TW": "察覺變化。"
   },
-  "必要な情報を迅速に共有する": {
-    "en": "Share essential information promptly",
-    "ko": "필요한 정보를 신속하게 공유",
-    "zh-CN": "迅速共享必要信息",
-    "zh-TW": "迅速共享必要資訊"
+  "自分の頭で考える。": {
+    "en": "Think for yourself.",
+    "ko": "스스로 생각한다.",
+    "zh-CN": "独立思考。",
+    "zh-TW": "獨立思考。"
   },
-  "お客様を待たせない判断と行動を徹底する": {
-    "en": "Make timely decisions and act without keeping customers waiting",
-    "ko": "고객을 기다리게 하지 않는 판단과 행동을 철저히 실천",
-    "zh-CN": "坚持及时判断和行动，不让客户等待",
-    "zh-TW": "堅持及時判斷與行動，不讓客戶等待"
+  "最も適切な行動を選ぶ。": {
+    "en": "Choose the most appropriate action.",
+    "ko": "가장 적절한 행동을 선택한다.",
+    "zh-CN": "选择最恰当的行动。",
+    "zh-TW": "選擇最恰當的行動。"
   },
-  "「速さとは、慌てることではない。準備ができていることである。」": {
-    "en": "“Speed is not rushing. It is being prepared.”",
-    "ko": "“속도는 서두르는 것이 아니라 준비되어 있는 것이다.”",
-    "zh-CN": "“速度不是慌乱，而是准备充分。”",
-    "zh-TW": "「速度不是慌亂，而是準備充分。」"
+  "速さを求めるのは、車速ではなく、思考力と行動力である。": {
+    "en": "The speed we seek is not vehicle speed, but the power to think and act.",
+    "ko": "우리가 추구하는 속도는 차량의 속도가 아니라 사고력과 행동력이다.",
+    "zh-CN": "我们追求的速度，并非车速，而是思考力与行动力。",
+    "zh-TW": "我們追求的速度，並非車速，而是思考力與行動力。"
   },
   "私たちは、社訓である「安全・謙遜・迅敏」を大切にしております。": {
     "en": "We value our company principles of Safety, Humility and Agility.",
@@ -4964,10 +4982,134 @@
     "ko": "상황을 파악하고 신속하게 행동한다",
     "zh-TW": "掌握狀況，迅速行動"
   },
+  "ご相談内容": {"en":"Inquiry type","ko":"상담 내용","zh-CN":"咨询内容","zh-TW":"諮詢內容"},
+  "空港送迎のみ": {"en":"Airport transfer only","ko":"공항 송영만","zh-CN":"仅机场接送","zh-TW":"僅機場接送"},
+  "空港送迎＋日中貸切・観光": {"en":"Airport transfer + daytime charter / sightseeing","ko":"공항 송영＋주간 전세·관광","zh-CN":"机场接送＋白天包车／观光","zh-TW":"機場接送＋白天包車／觀光"},
+  "日中貸切・観光のみ": {"en":"Daytime charter / sightseeing only","ko":"주간 전세·관광만","zh-CN":"仅白天包车／观光","zh-TW":"僅白天包車／觀光"},
+  "送迎日": {"en":"Transfer date","ko":"송영일","zh-CN":"接送日期","zh-TW":"接送日期"},
+  "配車時間": {"en":"Vehicle dispatch time","ko":"배차 시간","zh-CN":"派车时间","zh-TW":"派車時間"},
+  "配車場所": {"en":"Pickup location","ko":"배차 장소","zh-CN":"派车地点","zh-TW":"派車地點"},
+  "便の区分": {"en":"Flight type","ko":"항공편 구분","zh-CN":"航班类别","zh-TW":"航班類別"},
+  "到着便（空港からお迎え）": {"en":"Arrival flight (pickup from the airport)","ko":"도착편(공항에서 픽업)","zh-CN":"到达航班（从机场接客）","zh-TW":"抵達航班（從機場接客）"},
+  "出発便（空港までお送り）": {"en":"Departure flight (transfer to the airport)","ko":"출발편(공항까지 송영)","zh-CN":"出发航班（送至机场）","zh-TW":"出發航班（送至機場）"},
+  "該当なし・未定": {"en":"Not applicable / undecided","ko":"해당 없음·미정","zh-CN":"不适用／未定","zh-TW":"不適用／未定"},
+  "出発便": {"en":"Departure flight","ko":"출발편","zh-CN":"出发航班","zh-TW":"出發航班"},
+  "到着便": {"en":"Arrival flight","ko":"도착편","zh-CN":"到达航班","zh-TW":"抵達航班"},
+  "便の予定時刻": {"en":"Scheduled flight time","ko":"항공편 예정 시각","zh-CN":"航班计划时间","zh-TW":"航班預定時間"},
+  "便名は未定": {"en":"Flight number undecided","ko":"편명 미정","zh-CN":"航班号未定","zh-TW":"航班號未定"},
+  "お客様の国籍": {"en":"Passenger nationality","ko":"고객 국적","zh-CN":"客户国籍","zh-TW":"客戶國籍"},
+  "例：日本、中国、米国": {"en":"e.g. Japan, China, United States","ko":"예: 일본, 중국, 미국","zh-CN":"例如：日本、中国、美国","zh-TW":"例如：日本、中國、美國"},
+  "希望するドライバー言語": {"en":"Preferred driver language","ko":"희망 드라이버 언어","zh-CN":"希望司机使用的语言","zh-TW":"希望司機使用的語言"},
+  "指定なし": {"en":"No preference","ko":"지정 없음","zh-CN":"不限","zh-TW":"不限"},
+  "日中貸切・観光の行程": {"en":"Daytime charter / sightseeing itinerary","ko":"주간 전세·관광 일정","zh-CN":"白天包车／观光行程","zh-TW":"白天包車／觀光行程"},
+  "開始日": {"en":"Start date","ko":"시작일","zh-CN":"开始日期","zh-TW":"開始日期"},
+  "開始時間": {"en":"Start time","ko":"시작 시간","zh-CN":"开始时间","zh-TW":"開始時間"},
+  "終了時間": {"en":"End time","ko":"종료 시간","zh-CN":"结束时间","zh-TW":"結束時間"},
+  "終了日": {"en":"End date","ko":"종료일","zh-CN":"结束日期","zh-TW":"結束日期"},
+  "ホテル名": {"en":"Hotel name","ko":"호텔명","zh-CN":"酒店名称","zh-TW":"飯店名稱"},
+  "宿泊ホテル名（該当する場合）": {"en":"Accommodation hotel (if applicable)","ko":"숙박 호텔명(해당하는 경우)","zh-CN":"住宿酒店名称（如适用）","zh-TW":"住宿飯店名稱（如適用）"},
+  "行程": {"en":"Itinerary","ko":"일정","zh-CN":"行程","zh-TW":"行程"},
+  "例：ホテル → 観光地 → 昼食 → ホテル": {"en":"e.g. Hotel → sightseeing spot → lunch → hotel","ko":"예: 호텔 → 관광지 → 점심 → 호텔","zh-CN":"例如：酒店 → 景点 → 午餐 → 酒店","zh-TW":"例如：飯店 → 景點 → 午餐 → 飯店"},
+  "利用時間": {"en":"Service duration","ko":"이용 시간","zh-CN":"使用时长","zh-TW":"使用時間"},
+  "自動計算": {"en":"Calculated automatically","ko":"자동 계산","zh-CN":"自动计算","zh-TW":"自動計算"},
+  "料金・お支払い条件": {"en":"Fees and payment terms","ko":"요금·결제 조건","zh-CN":"费用与付款条件","zh-TW":"費用與付款條件"},
+  "お支払い・見積条件（分かる範囲で・任意）": {"en":"Payment and quotation details (optional)","ko":"결제·견적 조건(아는 범위에서·선택)","zh-CN":"付款与报价条件（选填）","zh-TW":"付款與報價條件（選填）"},
+  "その他のご要望・連絡事項（任意）": {"en":"Other requests or notes (optional)","ko":"기타 요청·연락 사항(선택)","zh-CN":"其他需求或联系事项（选填）","zh-TW":"其他需求或聯絡事項（選填）"},
+  "消費税": {"en":"Consumption tax","ko":"소비세","zh-CN":"消费税","zh-TW":"消費稅"},
+  "未定・要確認": {"en":"Undecided / confirmation required","ko":"미정·확인 필요","zh-CN":"未定／需确认","zh-TW":"未定／需確認"},
+  "料金に含む": {"en":"Included in price","ko":"요금에 포함","zh-CN":"包含在费用中","zh-TW":"包含在費用中"},
+  "料金と別": {"en":"Charged separately","ko":"요금 별도","zh-CN":"另行收费","zh-TW":"另行收費"},
+  "高速料金": {"en":"Expressway tolls","ko":"고속도로 요금","zh-CN":"高速公路费","zh-TW":"高速公路費"},
+  "利用しない": {"en":"Not used","ko":"이용하지 않음","zh-CN":"不使用","zh-TW":"不使用"},
+  "駐車場代": {"en":"Parking fees","ko":"주차 요금","zh-CN":"停车费","zh-TW":"停車費"},
+  "発生予定なし": {"en":"Not expected","ko":"발생 예정 없음","zh-CN":"预计不会产生","zh-TW":"預計不會產生"},
+  "ドライバー宿泊費": {"en":"Driver accommodation","ko":"드라이버 숙박비","zh-CN":"司机住宿费","zh-TW":"司機住宿費"},
+  "お支払い方法": {"en":"Payment method","ko":"결제 방법","zh-CN":"付款方式","zh-TW":"付款方式"},
+  "事前払い": {"en":"Advance payment","ko":"사전 결제","zh-CN":"提前支付","zh-TW":"提前付款"},
+  "後払い・請求書払い": {"en":"Post-payment / invoice","ko":"후불·청구서 결제","zh-CN":"后付／账单支付","zh-TW":"後付／帳單支付"},
+  "当日払い": {"en":"Payment on the day","ko":"당일 결제","zh-CN":"当日支付","zh-TW":"當日支付"},
   "空港で待機する大寅の車両": {
     "zh-CN": "在机场待命的大寅车辆",
     "en": "Daitora vehicles standing by at the airport",
     "ko": "공항에서 대기 중인 Daitora 차량",
     "zh-TW": "在機場待命的 Daitora 車輛"
+  },
+  "LINE・WhatsApp・WeChatで相談": {
+    "en": "Contact us via LINE, WhatsApp or WeChat",
+    "ko": "LINE・WhatsApp・WeChat으로 상담",
+    "zh-CN": "通过LINE、WhatsApp或微信咨询",
+    "zh-TW": "透過LINE、WhatsApp或WeChat諮詢"
+  },
+  "お使いのアプリから、送迎や車両について気軽にお問い合わせいただけます。スマートフォンでQR&#8288;コ&#8288;ー&#8288;ドを読み取ってください。": {
+    "en": "Contact us easily about transportation or vehicles using your preferred app. Scan the QR code with your smartphone.",
+    "ko": "사용 중인 앱에서 송영이나 차량에 대해 편하게 문의하실 수 있습니다. 스마트폰으로 QR 코드를 스캔해 주세요.",
+    "zh-CN": "您可以通过常用应用轻松咨询接送或车辆事宜，请使用手机扫描二维码。",
+    "zh-TW": "您可以透過常用應用程式輕鬆諮詢接送或車輛事宜，請使用手機掃描QR碼。"
+  },
+  "LINEで相談": {
+    "en": "Chat on LINE",
+    "ko": "LINE으로 상담",
+    "zh-CN": "通过LINE咨询",
+    "zh-TW": "透過LINE諮詢"
+  },
+  "LINEのQRコードは準備中です。": {
+    "en": "The LINE QR code is being prepared.",
+    "ko": "LINE QR 코드는 준비 중입니다.",
+    "zh-CN": "LINE二维码正在准备中。",
+    "zh-TW": "LINE QR碼正在準備中。"
+  },
+  "WhatsAppで相談": {
+    "en": "Chat on WhatsApp",
+    "ko": "WhatsApp으로 상담",
+    "zh-CN": "通过WhatsApp咨询",
+    "zh-TW": "透過WhatsApp諮詢"
+  },
+  "QRコードを読み取ってください。": {
+    "en": "Scan the QR code.",
+    "ko": "QR 코드를 스캔해 주세요.",
+    "zh-CN": "请扫描二维码。",
+    "zh-TW": "請掃描QR碼。"
+  },
+  "WeChatで相談": {
+    "en": "Chat on WeChat",
+    "ko": "WeChat으로 상담",
+    "zh-CN": "通过微信咨询",
+    "zh-TW": "透過WeChat諮詢"
+  },
+  "LINE QRコード準備中": {
+    "en": "LINE QR code coming soon",
+    "ko": "LINE QR 코드 준비 중",
+    "zh-CN": "LINE二维码准备中",
+    "zh-TW": "LINE QR碼準備中"
+  },
+  "WhatsAppを開く": {
+    "en": "Open WhatsApp",
+    "ko": "WhatsApp 열기",
+    "zh-CN": "打开WhatsApp",
+    "zh-TW": "開啟WhatsApp"
+  },
+  "WhatsApp相談用QRコード": {
+    "en": "WhatsApp contact QR code",
+    "ko": "WhatsApp 상담용 QR 코드",
+    "zh-CN": "WhatsApp咨询二维码",
+    "zh-TW": "WhatsApp諮詢QR碼"
+  },
+  "WeChat相談用QRコード": {
+    "en": "WeChat contact QR code",
+    "ko": "WeChat 상담용 QR 코드",
+    "zh-CN": "微信咨询二维码",
+    "zh-TW": "WeChat諮詢QR碼"
+  },
+  "LINE相談用QRコード": {
+    "en": "LINE contact QR code",
+    "ko": "LINE 상담용 QR 코드",
+    "zh-CN": "LINE咨询二维码",
+    "zh-TW": "LINE諮詢QR碼"
+  },
+  "お問い合わせ方法を選択": {
+    "en": "Choose a contact method",
+    "ko": "문의 방법 선택",
+    "zh-CN": "选择咨询方式",
+    "zh-TW": "選擇諮詢方式"
   }
 }

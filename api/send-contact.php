@@ -2,11 +2,14 @@
 declare(strict_types=1);
 
 const DAITORA_CONTACT_TO_DEFAULT = 'info@daitora-jp.com';
+const DAITORA_CONTACT_BACKUP_TO_DEFAULT = 's_pang@daitora-jp.com';
 const DAITORA_CONTACT_FROM = 'no-reply@daitora-jp.com';
 const DAITORA_CONTACT_RATE_WINDOW = 600;
 const DAITORA_CONTACT_RATE_MAX = 5;
 const DAITORA_CONTACT_DUPLICATE_WINDOW = 30;
 const DAITORA_CONTACT_SIGNATURE_WINDOW = 300;
+
+require_once __DIR__ . '/contact-store.php';
 
 function daitora_env(string $key, string $default = ''): string
 {
@@ -31,6 +34,16 @@ function daitora_contact_recipient(): string
     $configured = daitora_env('DAITORA_CONTACT_TO', DAITORA_CONTACT_TO_DEFAULT);
     if (preg_match('/[\r\n]/', $configured) || !filter_var($configured, FILTER_VALIDATE_EMAIL)) {
         return DAITORA_CONTACT_TO_DEFAULT;
+    }
+
+    return $configured;
+}
+
+function daitora_contact_backup_recipient(): string
+{
+    $configured = daitora_env('DAITORA_CONTACT_BACKUP_TO', DAITORA_CONTACT_BACKUP_TO_DEFAULT);
+    if (preg_match('/[\r\n]/', $configured) || !filter_var($configured, FILTER_VALIDATE_EMAIL)) {
+        return DAITORA_CONTACT_BACKUP_TO_DEFAULT;
     }
 
     return $configured;
@@ -170,10 +183,10 @@ function daitora_validate_payload(array $data): array
 {
     $allowedTypes = ['hire', 'taxi', 'auto', 'corporate', 'recruit', 'general', 'japan_travel'];
     $allowedLanguages = ['ja', 'en', 'zh-CN', 'ko', 'zh-TW', 'zh-cn', 'zh-tw'];
-    $requiredCommon = ['type', 'name', 'email', 'message', 'site_language'];
+    $requiredCommon = ['type', 'name', 'email', 'site_language'];
     $requiredByType = [
-        'hire' => ['ride_date', 'ride_time', 'pickup', 'destination'],
-        'corporate' => ['ride_date', 'ride_time', 'pickup', 'destination'],
+        'hire' => ['transport_plan', 'pickup', 'destination'],
+        'corporate' => ['transport_plan', 'pickup', 'destination'],
         'taxi' => ['taxi_area', 'taxi_time', 'taxi_pickup', 'taxi_destination'],
         'auto' => ['auto_model', 'auto_purpose', 'applicant_type'],
         'recruit' => ['recruit_role', 'work_area', 'experience', 'contact_time'],
@@ -185,7 +198,13 @@ function daitora_validate_payload(array $data): array
         'language' => 40, 'site_language' => 10, 'message' => 4000, 'source_page' => 500,
         'ride_date' => 10, 'ride_time' => 5, 'pickup' => 300, 'destination' => 300,
         'flight_no' => 40, 'passengers' => 3, 'luggage_count' => 3, 'vehicle_type' => 100,
-        'ride_purpose' => 120, 'ride_notes' => 2000, 'taxi_area' => 200, 'taxi_time' => 120,
+        'ride_notes' => 2000, 'taxi_area' => 200, 'taxi_time' => 120,
+        'transport_plan' => 40, 'flight_direction' => 80, 'flight_time' => 5, 'flight_no_unknown' => 3,
+        'nationality' => 100, 'driver_language' => 80, 'itinerary_date' => 10,
+        'itinerary_start_time' => 5, 'itinerary_end_date' => 10, 'itinerary_end_time' => 5, 'itinerary_hotel' => 200,
+        'itinerary_route' => 3000, 'itinerary_duration' => 80,
+        'tax_status' => 80, 'toll_status' => 80, 'parking_status' => 80,
+        'driver_lodging' => 40, 'payment_timing' => 100,
         'taxi_pickup' => 300, 'taxi_destination' => 300, 'taxi_notes' => 2000,
         'auto_model' => 160, 'auto_purpose' => 120, 'applicant_type' => 120,
         'loan_interest' => 80, 'auto_notes' => 2000, 'recruit_role' => 160,
@@ -256,13 +275,43 @@ function daitora_validate_payload(array $data): array
     }
 
     if (in_array($type, ['hire', 'corporate'], true)) {
-        if (!daitora_valid_date(daitora_field($data, 'ride_date')) || !preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/', daitora_field($data, 'ride_time'))) {
-            return ['ok' => false, 'error' => 'invalid_schedule'];
-        }
         foreach ([['passengers', 1, 100], ['luggage_count', 0, 100]] as $numeric) {
             $value = daitora_field($data, $numeric[0]);
             if ($value !== '' && (!ctype_digit($value) || (int)$value < $numeric[1] || (int)$value > $numeric[2])) {
                 return ['ok' => false, 'error' => 'invalid_number'];
+            }
+        }
+        if (!in_array(daitora_field($data, 'transport_plan'), ['airport_only', 'airport_charter', 'charter_only'], true)) {
+            return ['ok' => false, 'error' => 'invalid_transport_plan'];
+        }
+        $transportPlan = daitora_field($data, 'transport_plan');
+        if ($transportPlan !== 'charter_only') {
+            if (!daitora_valid_date(daitora_field($data, 'ride_date')) || !preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/', daitora_field($data, 'ride_time'))) {
+                return ['ok' => false, 'error' => 'invalid_schedule'];
+            }
+            if (daitora_field($data, 'flight_no') === '' && daitora_field($data, 'flight_no_unknown') !== 'yes') {
+                return ['ok' => false, 'error' => 'missing_flight_number'];
+            }
+        }
+        foreach (['flight_time', 'itinerary_start_time', 'itinerary_end_time'] as $timeField) {
+            $value = daitora_field($data, $timeField);
+            if ($value !== '' && !preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/', $value)) {
+                return ['ok' => false, 'error' => 'invalid_schedule'];
+            }
+        }
+        $itineraryDate = daitora_field($data, 'itinerary_date');
+        $itineraryEndDate = daitora_field($data, 'itinerary_end_date');
+        if (($itineraryDate !== '' && !daitora_valid_date($itineraryDate)) || ($itineraryEndDate !== '' && !daitora_valid_date($itineraryEndDate))) {
+            return ['ok' => false, 'error' => 'invalid_schedule'];
+        }
+        if (in_array($transportPlan, ['airport_charter', 'charter_only'], true)) {
+            if ($itineraryDate === '' || $itineraryEndDate === '' || daitora_field($data, 'itinerary_start_time') === '' || daitora_field($data, 'itinerary_end_time') === '') {
+                return ['ok' => false, 'error' => 'missing_required_fields'];
+            }
+            $start = strtotime($itineraryDate . ' ' . daitora_field($data, 'itinerary_start_time'));
+            $end = strtotime($itineraryEndDate . ' ' . daitora_field($data, 'itinerary_end_time'));
+            if ($start === false || $end === false || $end <= $start) {
+                return ['ok' => false, 'error' => 'invalid_schedule'];
             }
         }
     }
@@ -345,79 +394,150 @@ function daitora_subject_piece(string $value): string
     return daitora_string_slice($value, 70);
 }
 
+function daitora_html(string $value): string
+{
+    return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+
+function daitora_mail_rows(array $data, array $fields, bool $showEmpty = false): string
+{
+    $html = '';
+    foreach ($fields as $name => $label) {
+        $value = daitora_field($data, $name);
+        if ($value === '' && !$showEmpty) {
+            continue;
+        }
+        $display = $value !== '' ? nl2br(daitora_html($value)) : '<span style="color:#7a8796">未入力</span>';
+        $html .= '<tr><th style="width:32%;padding:10px 12px;border:1px solid #d7dde5;background:#f3f6f9;color:#123761;text-align:left;vertical-align:top">'
+            . daitora_html($label)
+            . '</th><td style="padding:10px 12px;border:1px solid #d7dde5;color:#24364a;vertical-align:top">'
+            . $display . '</td></tr>';
+    }
+    return $html;
+}
+
+function daitora_mail_section(string $title, string $rows): string
+{
+    if ($rows === '') {
+        return '';
+    }
+    return '<h2 style="margin:26px 0 8px;padding:10px 14px;background:#123761;color:#fff;font-size:16px">'
+        . daitora_html($title)
+        . '</h2><table role="presentation" style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.65">'
+        . $rows . '</table>';
+}
+
+function daitora_mail_plain_text(string $html): string
+{
+    $text = preg_replace_callback('/<tr>\s*<th[^>]*>(.*?)<\/th>\s*<td[^>]*>(.*?)<\/td>\s*<\/tr>/is', static function (array $match): string {
+        $label = html_entity_decode(strip_tags(str_ireplace(['<br>', '<br/>', '<br />'], "\n", $match[1])), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $value = html_entity_decode(strip_tags(str_ireplace(['<br>', '<br/>', '<br />'], "\n", $match[2])), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $value = preg_replace('/\n+/', "\n    ", trim($value)) ?? trim($value);
+        return '■ ' . trim($label) . '：' . ($value !== '' ? $value : '未入力') . "\n";
+    }, $html) ?? $html;
+    $text = preg_replace_callback('/<h2[^>]*>(.*?)<\/h2>/is', static function (array $match): string {
+        return "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n【" . trim(html_entity_decode(strip_tags($match[1]), ENT_QUOTES | ENT_HTML5, 'UTF-8')) . "】\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
+    }, $text) ?? $text;
+    $text = preg_replace_callback('/<h1[^>]*>(.*?)<\/h1>/is', static function (array $match): string {
+        return trim(html_entity_decode(strip_tags($match[1]), ENT_QUOTES | ENT_HTML5, 'UTF-8')) . "\n";
+    }, $text) ?? $text;
+    $text = preg_replace('/<br\s*\/?>/i', "\n", $text) ?? $text;
+    $text = preg_replace('/<\/p>/i', "\n", $text) ?? $text;
+    $text = html_entity_decode(strip_tags($text), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $text = preg_replace('/[ \t]+\n/', "\n", $text) ?? $text;
+    $text = preg_replace('/\n{3,}/', "\n\n", $text) ?? $text;
+    return trim($text) . "\n";
+}
+
 function daitora_mail_content(array $data, int $submittedAt, bool $staging): array
 {
     $typeLabels = [
-        'hire' => 'Chauffeur Service',
-        'taxi' => 'Taxi',
-        'auto' => 'Used Cars / Auto Loan',
-        'corporate' => 'Corporate / Travel / Hotel',
-        'recruit' => 'Recruitment',
-        'general' => 'General Inquiry'
+        'hire' => 'ハイヤー・空港送迎', 'taxi' => 'タクシー利用',
+        'auto' => '中古車販売・ローン相談', 'corporate' => '法人・旅行会社・ホテル様',
+        'recruit' => '採用・乗務員応募', 'general' => 'その他のお問い合わせ'
     ];
     $languageLabels = [
-        'ja' => 'Japanese', 'en' => 'English', 'zh-CN' => 'Simplified Chinese',
-        'ko' => 'Korean', 'zh-TW' => 'Traditional Chinese'
-    ];
-    $fieldLabels = [
-        'name' => 'Name / お名前', 'company' => 'Company / 会社名', 'email' => 'Email',
-        'phone' => 'Phone / 電話番号', 'language' => 'Preferred language / 希望言語',
-        'ride_date' => 'Service date / ご利用日', 'ride_time' => 'Service time / ご利用時間',
-        'pickup' => 'Pickup / 出発地', 'destination' => 'Destination / 目的地',
-        'flight_no' => 'Flight / 航空便名', 'passengers' => 'Passengers / 人数',
-        'luggage_count' => 'Luggage / 手荷物数', 'vehicle_type' => 'Vehicle / 希望車種',
-        'ride_purpose' => 'Purpose / 用途', 'ride_notes' => 'Transportation notes / 送迎備考',
-        'taxi_area' => 'Taxi area / 利用予定エリア', 'taxi_time' => 'Taxi time / 利用予定日時',
-        'taxi_pickup' => 'Taxi pickup / 乗車地', 'taxi_destination' => 'Taxi destination / 目的地',
-        'taxi_notes' => 'Taxi notes / タクシー備考', 'auto_model' => 'Desired model / 希望車種',
-        'auto_purpose' => 'Vehicle use / 利用目的', 'applicant_type' => 'Applicant / 申込区分',
-        'loan_interest' => 'Loan consultation / ローン相談', 'auto_notes' => 'Vehicle purchase notes / 購入備考',
-        'recruit_role' => 'Desired role / 希望職種', 'work_area' => 'Preferred work area / 勤務希望エリア',
-        'experience' => 'Experience / 経験', 'contact_time' => 'Contact time / 連絡可能時間',
-        'recruit_notes' => 'Recruitment notes / 採用備考', 'general_subject' => 'Subject / 件名',
-        'message' => 'Inquiry / お問い合わせ内容', 'source_page' => 'Source page / 送信元ページ'
-    ];
-    $commonFields = ['name', 'company', 'email', 'phone', 'language', 'message', 'source_page'];
-    $fieldsByType = [
-        'hire' => ['ride_date', 'ride_time', 'pickup', 'destination', 'flight_no', 'passengers', 'luggage_count', 'vehicle_type', 'ride_purpose', 'ride_notes'],
-        'corporate' => ['ride_date', 'ride_time', 'pickup', 'destination', 'flight_no', 'passengers', 'luggage_count', 'vehicle_type', 'ride_purpose', 'ride_notes'],
-        'taxi' => ['taxi_area', 'taxi_time', 'taxi_pickup', 'taxi_destination', 'taxi_notes'],
-        'auto' => ['auto_model', 'auto_purpose', 'applicant_type', 'loan_interest', 'auto_notes'],
-        'recruit' => ['recruit_role', 'work_area', 'experience', 'contact_time', 'recruit_notes'],
-        'general' => ['general_subject']
+        'ja' => '日本語', 'en' => '英語', 'zh-CN' => '簡体字中国語',
+        'zh-cn' => '簡体字中国語', 'ko' => '韓国語', 'zh-TW' => '繁体字中国語',
+        'zh-tw' => '繁体字中国語'
     ];
     $type = daitora_field($data, 'type');
     $siteLanguage = daitora_field($data, 'site_language');
-    $subject = implode(' / ', [
-        '[DAITORA Website Inquiry]',
-        $typeLabels[$type],
-        $languageLabels[$siteLanguage],
-        daitora_subject_piece(daitora_field($data, 'name'))
-    ]);
+    $subject = '[DAITORA お問い合わせ] ' . $typeLabels[$type] . '｜' . daitora_subject_piece(daitora_field($data, 'name'));
     if ($staging) {
         $subject = '[STAGING] ' . $subject;
     }
-    $lines = [
-        'Daitora Group Website Inquiry',
-        '',
-        'Inquiry type: ' . $typeLabels[$type],
-        'Page language: ' . $languageLabels[$siteLanguage],
-        ''
-    ];
-    foreach (array_merge($commonFields, $fieldsByType[$type]) as $name) {
-        $label = $fieldLabels[$name];
-        $value = daitora_field($data, $name);
-        if ($value !== '') {
-            $lines[] = $label . ':';
-            $lines[] = $value;
-            $lines[] = '';
-        }
-    }
-    $lines[] = 'Submitted at: ' . date('Y-m-d H:i:s O', $submittedAt);
-    $lines[] = '';
-    $lines[] = 'This message is an inquiry only. It does not confirm a booking, vehicle, loan or employment offer.';
 
-    return ['subject' => $subject, 'body' => implode("\n", $lines)];
+    $common = [
+        'name' => 'お客様代表者名', 'company' => '会社名・団体名', 'email' => 'メールアドレス',
+        'phone' => '連絡先', 'language' => '希望言語', 'message' => 'お問い合わせ内容'
+    ];
+    $fieldsByType = [
+        'taxi' => ['taxi_area' => '利用予定エリア', 'taxi_time' => '利用予定日時', 'taxi_pickup' => '乗車地', 'taxi_destination' => '目的地', 'taxi_notes' => 'タクシー利用に関する備考'],
+        'auto' => ['auto_model' => '希望車種', 'auto_purpose' => '利用目的', 'applicant_type' => '申込区分', 'loan_interest' => 'ローン相談', 'auto_notes' => '車両購入に関する備考'],
+        'recruit' => ['recruit_role' => '希望職種', 'work_area' => '勤務希望エリア', 'experience' => '運転・接客経験', 'contact_time' => '連絡可能時間', 'recruit_notes' => '採用に関する備考'],
+        'general' => ['general_subject' => 'お問い合わせ件名']
+    ];
+    $body = '<!doctype html><html lang="ja"><body style="margin:0;background:#f2f5f8;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Meiryo,sans-serif">'
+        . '<div style="max-width:760px;margin:0 auto;padding:28px 18px"><div style="padding:24px;background:#fff;border-top:4px solid #b78a2f">'
+        . '<p style="margin:0;color:#b07d1e;font-size:12px;font-weight:700;letter-spacing:.14em">DAITORA GROUP</p>'
+        . '<h1 style="margin:6px 0 4px;color:#123761;font-size:24px">ウェブサイトお問い合わせ</h1>'
+        . '<p style="margin:0;color:#607083">' . daitora_html($typeLabels[$type]) . ' / 表示言語：' . daitora_html($languageLabels[$siteLanguage] ?? $siteLanguage) . '</p>';
+
+    $body .= daitora_mail_section('お客様情報', daitora_mail_rows($data, $common, true));
+
+    if (in_array($type, ['hire', 'corporate'], true)) {
+        $transportPlanLabels = ['airport_only' => '空港送迎のみ', 'airport_charter' => '空港送迎＋日中貸切・観光', 'charter_only' => '日中貸切・観光のみ'];
+        $data['transport_plan'] = $transportPlanLabels[daitora_field($data, 'transport_plan')] ?? daitora_field($data, 'transport_plan');
+        if (daitora_field($data, 'flight_no_unknown') === 'yes') {
+            $data['flight_no_unknown'] = '未定';
+        }
+        $transportPlan = daitora_field($data, 'transport_plan');
+        $transportFields = ['transport_plan' => 'ご相談内容'];
+        if ($transportPlan !== '日中貸切・観光のみ') {
+            $transportFields += [
+                'ride_date' => $transportPlan === '空港送迎＋日中貸切・観光' ? '空港送迎日' : '送迎日',
+                'ride_time' => $transportPlan === '空港送迎＋日中貸切・観光' ? '空港配車時間' : '配車時間',
+                'flight_no' => '便名', 'flight_no_unknown' => '便名未定',
+                'flight_direction' => '便の区分', 'flight_time' => '便の予定時刻'
+            ];
+        }
+        $transportFields += [
+            'pickup' => '配車場所', 'destination' => '目的地', 'passengers' => 'ご乗車人数',
+            'luggage_count' => '手荷物数', 'vehicle_type' => '車種', 'nationality' => 'お客様の国籍',
+            'driver_language' => '希望するドライバー言語'
+        ];
+        $transportSectionTitle = $transportPlan === '日中貸切・観光のみ'
+            ? '日中貸切・観光の基本情報'
+            : '空港送迎の内容';
+        $body .= daitora_mail_section($transportSectionTitle, daitora_mail_rows($data, $transportFields, true));
+        if (in_array($transportPlan, ['空港送迎＋日中貸切・観光', '日中貸切・観光のみ'], true)) {
+            $itineraryFields = [
+                'itinerary_date' => '開始日', 'itinerary_start_time' => '開始時間',
+                'itinerary_end_date' => '終了日', 'itinerary_end_time' => '終了時間',
+                'itinerary_route' => '行程', 'itinerary_hotel' => '宿泊ホテル名（該当する場合）',
+                'itinerary_duration' => '利用時間'
+            ];
+            $body .= daitora_mail_section('日中貸切・観光の行程', daitora_mail_rows($data, $itineraryFields, true));
+        }
+        $costFields = [
+            'tax_status' => '消費税', 'toll_status' => '高速料金', 'parking_status' => '駐車場代',
+            'driver_lodging' => 'ドライバー宿泊費', 'payment_timing' => 'お支払い方法',
+            'ride_notes' => '送迎に関する備考'
+        ];
+        $body .= daitora_mail_section('料金・お支払い条件', daitora_mail_rows($data, $costFields, true));
+    } else {
+        $body .= daitora_mail_section('ご相談内容', daitora_mail_rows($data, $fieldsByType[$type] ?? [], true));
+    }
+
+    $meta = ['source_page' => '送信元ページ'];
+    $data['submitted_at'] = date('Y-m-d H:i:s O', $submittedAt);
+    $meta['submitted_at'] = '送信日時';
+    $body .= daitora_mail_section('送信情報', daitora_mail_rows($data, $meta, true));
+    $body .= '<p style="margin:24px 0 0;padding:14px;background:#fff8e8;color:#654d1c;font-size:13px">このメールはお問い合わせ受付通知です。予約、車両、料金、採用等の確定を意味しません。</p>'
+        . '</div></div></body></html>';
+
+    return ['subject' => $subject, 'body' => daitora_mail_plain_text($body), 'is_html' => false];
 }
 
 function daitora_group_mail_content(array $data, int $submittedAt, bool $staging): array
@@ -473,21 +593,49 @@ function daitora_group_mail_content(array $data, int $submittedAt, bool $staging
     return ['subject' => $subject, 'body' => implode("\n", $lines)];
 }
 
-function daitora_real_mail_sender(string $to, string $subject, string $body, string $replyTo): bool
+function daitora_real_mail_sender(string $to, string $subject, string $body, string $replyTo, string $bcc = ''): bool
 {
-    if (!function_exists('mb_send_mail')) {
+    if (!function_exists('mail')) {
         return false;
     }
-    mb_language('Japanese');
-    mb_internal_encoding('UTF-8');
+    $isHtml = stripos(ltrim($body), '<!doctype html>') === 0;
+    $mimeType = $isHtml ? 'text/html' : 'text/plain';
+    $previousMimeType = ini_get('default_mimetype');
+    $previousCharset = ini_get('default_charset');
+    ini_set('default_mimetype', $mimeType);
+    ini_set('default_charset', 'UTF-8');
     $headers = [
         'MIME-Version: 1.0',
-        'Content-Type: text/plain; charset=UTF-8',
-        'Content-Transfer-Encoding: 8bit',
+        'Content-Type: ' . $mimeType . '; charset=UTF-8',
+        'Content-Transfer-Encoding: base64',
         'From: Daitora Group Website <' . DAITORA_CONTACT_FROM . '>',
         'Reply-To: ' . $replyTo
     ];
-    return mb_send_mail($to, $subject, $body, implode("\r\n", $headers));
+    if ($bcc !== '' && filter_var($bcc, FILTER_VALIDATE_EMAIL) && !preg_match('/[\r\n]/', $bcc)) {
+        $headers[] = 'Bcc: ' . $bcc;
+    }
+    $encodedSubject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
+    $encodedBody = rtrim(chunk_split(base64_encode($body), 76, "\r\n"));
+    $sent = mail($to, $encodedSubject, $encodedBody, implode("\r\n", $headers));
+    if ($previousMimeType !== false) ini_set('default_mimetype', (string)$previousMimeType);
+    if ($previousCharset !== false) ini_set('default_charset', (string)$previousCharset);
+    return $sent;
+}
+
+function daitora_itinerary_duration(array $data): string
+{
+    $start = strtotime(daitora_field($data, 'itinerary_date') . ' ' . daitora_field($data, 'itinerary_start_time'));
+    $end = strtotime(daitora_field($data, 'itinerary_end_date') . ' ' . daitora_field($data, 'itinerary_end_time'));
+    if ($start === false || $end === false || $end <= $start) return '';
+    $minutes = intdiv($end - $start, 60);
+    $days = intdiv($minutes, 1440);
+    $hours = intdiv($minutes % 1440, 60);
+    $remainingMinutes = $minutes % 60;
+    $parts = [];
+    if ($days > 0) $parts[] = $days . '日';
+    if ($hours > 0) $parts[] = $hours . '時間';
+    if ($remainingMinutes > 0 || $parts === []) $parts[] = $remainingMinutes . '分';
+    return implode(' ', $parts);
 }
 
 function daitora_process_contact(
@@ -525,10 +673,16 @@ function daitora_process_contact(
     if (!$validation['ok']) {
         return daitora_json_result(422, ['success' => false, 'error' => $validation['error']]);
     }
+    if (in_array(daitora_field($data, 'transport_plan'), ['airport_charter', 'charter_only'], true)) {
+        $data['itinerary_duration'] = daitora_itinerary_duration($data);
+    } else {
+        unset($data['itinerary_duration']);
+    }
 
-    $fingerprint = hash('sha256', implode('|', [
-        daitora_field($data, 'type'), daitora_field($data, 'email'), daitora_field($data, 'message')
-    ]));
+    $fingerprintData = $data;
+    unset($fingerprintData['website']);
+    ksort($fingerprintData);
+    $fingerprint = hash('sha256', (string)json_encode($fingerprintData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
     $rateResult = $rateChecker
         ? (string)$rateChecker((string)($server['REMOTE_ADDR'] ?? ''), $fingerprint, $timestamp)
         : daitora_rate_limit(
@@ -544,14 +698,37 @@ function daitora_process_contact(
         return daitora_json_result(500, ['success' => false, 'error' => 'service_unavailable']);
     }
 
-    $mail = daitora_group_mail_content($data, $timestamp, daitora_request_site($requestHost) === 'staging');
+    $site = daitora_request_site($requestHost);
+    $archiveId = '';
+    if (!(defined('DAITORA_CONTACT_TEST') && DAITORA_CONTACT_TEST === true)) {
+        try {
+            $archiveId = daitora_contact_archive($data, $timestamp, $site);
+        } catch (RuntimeException $exception) {
+            error_log('Daitora contact archive failed: ' . $exception->getMessage());
+            return daitora_json_result(500, ['success' => false, 'error' => 'archive_failed']);
+        }
+    }
+
+    $mail = daitora_group_mail_content($data, $timestamp, $site === 'staging');
     $sender = $mailSender ?? 'daitora_real_mail_sender';
-    $sent = (bool)$sender(daitora_contact_recipient(), $mail['subject'], $mail['body'], daitora_field($data, 'email'));
+    $replyTo = daitora_field($data, 'email');
+    $sent = (bool)$sender(
+        daitora_contact_recipient(),
+        $mail['subject'],
+        $mail['body'],
+        $replyTo,
+        daitora_contact_backup_recipient()
+    );
     if (!$sent) {
+        if ($archiveId !== '') daitora_contact_set_delivery_status($archiveId, 'mail_failed');
         return daitora_json_result(500, ['success' => false, 'error' => 'mail_send_failed']);
     }
 
-    return daitora_json_result(200, ['success' => true]);
+    if ($archiveId !== '') daitora_contact_set_delivery_status($archiveId, 'sent');
+
+    $response = ['success' => true];
+    if ($archiveId !== '') $response['inquiry_id'] = $archiveId;
+    return daitora_json_result(200, $response);
 }
 
 function daitora_emit_result(array $result): void

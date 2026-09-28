@@ -13,7 +13,7 @@ const t = (ja, zhCN, en, ko, zhTW) => ({ ja, 'zh-CN': zhCN, en, ko, 'zh-TW': zhT
 // different translation in navigation and form contexts.
 export const SEMANTIC_LOCKS = {
   'nav.home': t('ホーム', '首页', 'Home', '홈', '首頁'),
-  'nav.about': t('大寅について', '关于大寅', 'About Daitora', 'Daitora 소개', '關於大寅'),
+  'nav.about': t('会社概要', '公司概要', 'Company Profile', '회사 개요', '公司概要'),
   'nav.business': t('事業紹介', '业务介绍', 'Business', '사업 소개', '事業介紹'),
   'nav.quality': t('安全・品質', '安全・品质', 'Safety & Quality', '안전・품질', '安全・品質'),
   'nav.works': t('実績紹介', '实绩介绍', 'Track Record', '실적 소개', '實績介紹'),

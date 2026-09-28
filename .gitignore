@@ -48,3 +48,5 @@ assets/videos/**
 assets/uploads/news/*
 !assets/uploads/news/.gitkeep
 !assets/uploads/news/.htaccess
+data/contact-inquiries/
+data/contact-report-state.json

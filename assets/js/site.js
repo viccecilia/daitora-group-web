@@ -154,6 +154,53 @@
     const configuredEndpoint = contactForm.dataset.submitEndpoint || window.DAITORA_CONTACT_FORM_URL || '';
     const serviceUrl = formCore?.resolveEndpoint(configuredEndpoint, location.href) || '';
     const submitRequest = formCore?.createSubmitter(window.fetch.bind(window));
+    const transportPlan = contactForm.querySelector('select[name="transport_plan"]');
+    const rideScheduleFields = contactForm.querySelector('[data-ride-schedule-fields]');
+    const rideDateLabel = contactForm.querySelector('[data-ride-date-label]');
+    const rideTimeLabel = contactForm.querySelector('[data-ride-time-label]');
+    const itineraryFields = contactForm.querySelector('[data-itinerary-fields]');
+    const flightFields = contactForm.querySelector('[data-flight-fields]');
+    const flightNumber = contactForm.querySelector('[name="flight_no"]');
+    const flightNumberUnknown = contactForm.querySelector('[name="flight_no_unknown"]');
+    const itineraryStartDate = contactForm.querySelector('[name="itinerary_date"]');
+    const itineraryStartTime = contactForm.querySelector('[name="itinerary_start_time"]');
+    const itineraryEndDate = contactForm.querySelector('[name="itinerary_end_date"]');
+    const itineraryEndTime = contactForm.querySelector('[name="itinerary_end_time"]');
+    const itineraryDuration = contactForm.querySelector('[name="itinerary_duration"]');
+
+    const durationText = (totalMinutes) => {
+      const days = Math.floor(totalMinutes / 1440);
+      const hours = Math.floor((totalMinutes % 1440) / 60);
+      const minutes = totalMinutes % 60;
+      const units = {
+        ja: ['日', '時間', '分'], en: ['day', 'hour', 'min'],
+        ko: ['일', '시간', '분'], 'zh-CN': ['天', '小时', '分钟'], 'zh-TW': ['天', '小時', '分鐘']
+      }[currentLang] || ['日', '時間', '分'];
+      const parts = [];
+      if (days) parts.push(`${days}${units[0]}`);
+      if (hours) parts.push(`${hours}${units[1]}`);
+      if (minutes || parts.length === 0) parts.push(`${minutes}${units[2]}`);
+      return parts.join(' ');
+    };
+    const updateItineraryDuration = () => {
+      if (!itineraryDuration) return;
+      itineraryDuration.value = '';
+      itineraryEndDate?.setCustomValidity('');
+      if (!itineraryStartDate?.value || !itineraryStartTime?.value || !itineraryEndDate?.value || !itineraryEndTime?.value) return;
+      const start = new Date(`${itineraryStartDate.value}T${itineraryStartTime.value}:00`);
+      const end = new Date(`${itineraryEndDate.value}T${itineraryEndTime.value}:00`);
+      const totalMinutes = Math.round((end.getTime() - start.getTime()) / 60000);
+      if (!Number.isFinite(totalMinutes) || totalMinutes <= 0) {
+        const errorText = {
+          ja: '終了日時は開始日時より後に設定してください。', en: 'The end date and time must be after the start.',
+          ko: '종료 일시는 시작 일시보다 이후로 설정해 주세요.',
+          'zh-CN': '结束日期和时间必须晚于开始日期和时间。', 'zh-TW': '結束日期和時間必須晚於開始日期和時間。'
+        }[currentLang];
+        itineraryEndDate?.setCustomValidity(errorText || 'Please check the end date and time.');
+        return;
+      }
+      itineraryDuration.value = durationText(totalMinutes);
+    };
 
     const setStatus = (message, state = '') => {
       if (!status) return;
@@ -185,6 +232,50 @@
           field.disabled = !allowed;
         });
       });
+      const isTransportType = ['hire', 'corporate'].includes(value);
+      const plan = transportPlan?.value || '';
+      const showRideSchedule = isTransportType && plan !== 'charter_only';
+      if (rideScheduleFields) {
+        rideScheduleFields.hidden = !showRideSchedule;
+        rideScheduleFields.querySelectorAll('input, select, textarea').forEach((field) => {
+          field.disabled = !showRideSchedule;
+        });
+      }
+      const scheduleLabels = {
+        ja: { date: '送迎日', airportDate: '空港送迎日', time: '配車時間', airportTime: '空港配車時間' },
+        en: { date: 'Transfer date', airportDate: 'Airport transfer date', time: 'Pickup time', airportTime: 'Airport pickup time' },
+        ko: { date: '송영일', airportDate: '공항 송영일', time: '배차 시간', airportTime: '공항 배차 시간' },
+        'zh-CN': { date: '接送日期', airportDate: '机场接送日期', time: '派车时间', airportTime: '机场派车时间' },
+        'zh-TW': { date: '接送日期', airportDate: '機場接送日期', time: '派車時間', airportTime: '機場派車時間' }
+      }[currentLang] || { date: '送迎日', airportDate: '空港送迎日', time: '配車時間', airportTime: '空港配車時間' };
+      if (rideDateLabel) rideDateLabel.textContent = plan === 'airport_charter' ? scheduleLabels.airportDate : scheduleLabels.date;
+      if (rideTimeLabel) rideTimeLabel.textContent = plan === 'airport_charter' ? scheduleLabels.airportTime : scheduleLabels.time;
+      const showItinerary = isTransportType && ['airport_charter', 'charter_only'].includes(plan);
+      if (itineraryFields) {
+        itineraryFields.hidden = !showItinerary;
+        itineraryFields.querySelectorAll('input, select, textarea').forEach((field) => {
+          field.disabled = !showItinerary;
+        });
+        if (!showItinerary) itineraryEndDate?.setCustomValidity('');
+      }
+      const showFlight = isTransportType && ['airport_only', 'airport_charter'].includes(plan);
+      if (flightFields) {
+        flightFields.hidden = !showFlight;
+        flightFields.querySelectorAll('input, select, textarea').forEach((field) => {
+          field.disabled = !showFlight;
+        });
+      }
+      if (flightNumber) {
+        const missingFlight = showFlight && !flightNumber.value.trim() && !flightNumberUnknown?.checked;
+        const flightError = {
+          ja: '航空便名を入力するか、「便名は未定」を選択してください。',
+          en: 'Enter the flight number or select “Flight number undecided”.',
+          ko: '항공편명을 입력하거나 “편명 미정”을 선택해 주세요.',
+          'zh-CN': '请输入航班号，或选择“航班号未定”。',
+          'zh-TW': '請輸入航班號，或選擇「航班號未定」。'
+        }[currentLang] || 'Please enter the flight number.';
+        flightNumber.setCustomValidity(missingFlight ? flightError : '');
+      }
     };
     const setType = (type) => {
       if (!typeSelect || !type) return;
@@ -199,12 +290,20 @@
       updateFields();
       setSubmitReady();
     });
+    transportPlan?.addEventListener('change', updateFields);
+    flightNumber?.addEventListener('input', updateFields);
+    flightNumberUnknown?.addEventListener('change', updateFields);
+    [itineraryStartDate, itineraryStartTime, itineraryEndDate, itineraryEndTime].forEach((field) => {
+      field?.addEventListener('input', updateItineraryDuration);
+      field?.addEventListener('change', updateItineraryDuration);
+    });
     const queryType = new URLSearchParams(location.search).get('type');
     setType(queryType || typeSelect?.value);
     document.querySelectorAll('[data-contact-type]').forEach((trigger) => {
       trigger.addEventListener('click', () => setType(trigger.dataset.contactType));
     });
     updateFields();
+    updateItineraryDuration();
     setSubmitReady();
 
     contactForm.addEventListener('submit', async (event) => {
@@ -281,6 +380,23 @@
         if (newsList) newsList.innerHTML = items.map((item) => `<tr><td class="date"><time datetime="${escapeNews(item.date)}">${newsDate(item.date)}</time></td><td class="category">${escapeNews(item.category)}</td><td>${newsImage(item, 'news-list-media')}<h3>${escapeNews(item.title)}</h3><p class="news-summary">${escapeNews(item.summary)}</p>${newsTags(item.tags, 'news-tags')}</td></tr>`).join('');
         if (newsDetails) newsDetails.innerHTML = items.map((item) => `<article><time datetime="${escapeNews(item.date)}">${newsDate(item.date)} / ${escapeNews(item.category)}</time><div>${newsImage(item, 'news-detail-media')}<h3>${escapeNews(item.title)}</h3><p class="news-lead">${escapeNews(item.body || item.summary).replaceAll('\n', '<br>')}</p>${newsTags(item.tags, 'case-tags')}</div></article>`).join('');
       }).catch(() => {});
+  }
+
+  const messagingSection = document.querySelector('.contact-messaging-section');
+  if (messagingSection) {
+    const messagingTabs = [...messagingSection.querySelectorAll('[data-messaging-tab]')];
+    const messagingPanels = [...messagingSection.querySelectorAll('[data-messaging-panel]')];
+    const activateMessaging = (channel) => {
+      messagingTabs.forEach((tab) => {
+        const active = tab.dataset.messagingTab === channel;
+        tab.classList.toggle('is-active', active);
+        tab.setAttribute('aria-pressed', String(active));
+      });
+      messagingPanels.forEach((panel) => panel.classList.toggle('is-active', panel.dataset.messagingPanel === channel));
+    };
+    messagingSection.classList.add('messaging-tabs-enabled');
+    messagingTabs.forEach((tab) => tab.addEventListener('click', () => activateMessaging(tab.dataset.messagingTab)));
+    activateMessaging('line');
   }
 
   const stage = document.querySelector('[data-hero-videos]');

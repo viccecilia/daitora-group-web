@@ -4,6 +4,7 @@ declare(strict_types=1);
 define('DAITORA_CONTACT_TEST', true);
 putenv('DAITORA_CONTACT_SHARED_SECRET=test-shared-secret-for-contact-channel');
 putenv('DAITORA_CONTACT_TO=pangvic9@gmail.com');
+putenv('DAITORA_CONTACT_BACKUP_TO=s_pang@daitora-jp.com');
 require dirname(__DIR__) . '/api/send-contact.php';
 
 function test_assert(bool $condition, string $message): void
@@ -35,7 +36,7 @@ function valid_payload(): array
         'passengers' => '3',
         'luggage_count' => '4',
         'vehicle_type' => 'Alphard',
-        'ride_purpose' => 'Corporate travel',
+        'transport_plan' => 'airport_only',
         'source_page' => 'https://daitora-jp.com/en/contact.html?type=hire'
     ];
 }
@@ -120,30 +121,33 @@ function process_payload(
 }
 
 $captured = [];
-$mailSender = static function (string $to, string $subject, string $body, string $replyTo) use (&$captured): bool {
-    $captured = compact('to', 'subject', 'body', 'replyTo');
+$mailSender = static function (string $to, string $subject, string $body, string $replyTo, string $bcc = '') use (&$captured): bool {
+    $captured[] = compact('to', 'subject', 'body', 'replyTo', 'bcc');
     return true;
 };
 
 $result = process_payload(valid_payload(), $mailSender);
 test_assert($result['status'] === 200 && $result['payload'] === ['success' => true], 'valid JSON request must succeed');
-test_assert($captured['to'] === 'pangvic9@gmail.com', 'recipient must use the configured mailbox');
+test_assert($captured[0]['to'] === 'pangvic9@gmail.com', 'recipient must use the configured mailbox');
+test_assert(count($captured) === 1, 'inquiry must be sent as one message');
+test_assert($captured[0]['bcc'] === 's_pang@daitora-jp.com', 'backup recipient must be included as BCC');
 test_assert(DAITORA_CONTACT_FROM === 'no-reply@daitora-jp.com', 'From address must be fixed');
-test_assert($captured['replyTo'] === 'customer@example.com', 'validated customer email must be Reply-To');
-test_assert(strpos($captured['body'], 'Kansai International Airport') !== false, 'mail body must contain validated transport details');
-test_assert(strpos($captured['subject'], '[STAGING]') === false, 'production subject must not contain the staging prefix');
+test_assert($captured[0]['replyTo'] === 'customer@example.com', 'validated customer email must be Reply-To');
+test_assert(strpos($captured[0]['body'], '<table') !== false, 'website inquiry email must use an HTML table');
+test_assert(strpos($captured[0]['body'], 'Kansai International Airport') !== false, 'mail body must contain validated transport details');
+test_assert(strpos($captured[0]['subject'], '[STAGING]') === false, 'production subject must not contain the staging prefix');
 
 $captured = [];
 $japanResult = signed_japan_travel_request(japan_travel_payload(), $mailSender);
 test_assert($japanResult['status'] === 200, 'signed Japan Travel server request must succeed without Origin');
-test_assert($captured['to'] === 'pangvic9@gmail.com', 'Japan Travel inquiry must use the configured mailbox');
-test_assert($captured['replyTo'] === 'traveler@example.com', 'Japan Travel customer email must be Reply-To');
-test_assert(strpos($captured['subject'], '[Japan Travel 予約相談] 2026-08-20｜Test Traveler') !== false, 'Japan Travel subject must use the agreed format');
-test_assert(strpos($captured['body'], 'This message records an inquiry only') !== false, 'Japan Travel mail must state that no booking is confirmed');
-test_assert(strpos($captured['body'], 'Kyoto Station') !== false, 'Japan Travel mail must include consultation details');
-test_assert(strpos($captured['body'], "Source channel:\nJapan Travel website") !== false, 'Japan Travel mail must identify its source channel');
-test_assert(strpos($captured['body'], "UTM source:\ninstagram") !== false, 'Japan Travel mail must include consented campaign attribution');
-test_assert(strpos($captured['body'], "Referral code:\nJTTEST01") !== false, 'Japan Travel mail must include referral attribution');
+test_assert($captured[0]['to'] === 'pangvic9@gmail.com', 'Japan Travel inquiry must use the configured mailbox');
+test_assert($captured[0]['replyTo'] === 'traveler@example.com', 'Japan Travel customer email must be Reply-To');
+test_assert(strpos($captured[0]['subject'], '[Japan Travel 予約相談] 2026-08-20｜Test Traveler') !== false, 'Japan Travel subject must use the agreed format');
+test_assert(strpos($captured[0]['body'], 'This message records an inquiry only') !== false, 'Japan Travel mail must state that no booking is confirmed');
+test_assert(strpos($captured[0]['body'], 'Kyoto Station') !== false, 'Japan Travel mail must include consultation details');
+test_assert(strpos($captured[0]['body'], "Source channel:\nJapan Travel website") !== false, 'Japan Travel mail must identify its source channel');
+test_assert(strpos($captured[0]['body'], "UTM source:\ninstagram") !== false, 'Japan Travel mail must include consented campaign attribution');
+test_assert(strpos($captured[0]['body'], "Referral code:\nJTTEST01") !== false, 'Japan Travel mail must include referral attribution');
 
 $unsignedJapan = process_payload(japan_travel_payload(), $mailSender);
 test_assert($unsignedJapan['status'] === 403, 'unsigned Japan Travel request must be rejected');
@@ -168,7 +172,7 @@ foreach ([
     $captured = [];
     $siteResult = process_payload(valid_payload(), $mailSender, null, $host, $origin);
     test_assert($siteResult['status'] === 200, "allowed Host/Origin pair must succeed: {$host}");
-    test_assert((strpos($captured['subject'], '[STAGING]') === 0) === $staging, "subject environment prefix must match Host: {$host}");
+    test_assert((strpos($captured[0]['subject'], '[STAGING]') === 0) === $staging, "subject environment prefix must match Host: {$host}");
 }
 
 $formPayload = valid_payload();
@@ -193,6 +197,29 @@ test_assert($result['status'] === 400, 'invalid JSON must return 400');
 $missing = valid_payload();
 unset($missing['pickup']);
 test_assert(process_payload($missing, $mailSender)['status'] === 422, 'missing type-specific required field must return 422');
+
+$withoutMessage = valid_payload();
+unset($withoutMessage['message']);
+test_assert(process_payload($withoutMessage, $mailSender)['status'] === 200, 'free-text notes must be optional when structured fields are complete');
+
+$unknownFlight = valid_payload();
+$unknownFlight['flight_no'] = '';
+$unknownFlight['flight_no_unknown'] = 'yes';
+test_assert(process_payload($unknownFlight, $mailSender)['status'] === 200, 'airport inquiry may mark the flight number as undecided');
+
+$missingFlight = valid_payload();
+$missingFlight['flight_no'] = '';
+test_assert(process_payload($missingFlight, $mailSender)['status'] === 422, 'airport inquiry must include a flight number or mark it undecided');
+
+$charterOnly = valid_payload();
+$charterOnly['transport_plan'] = 'charter_only';
+unset($charterOnly['ride_date'], $charterOnly['ride_time'], $charterOnly['flight_no']);
+$charterOnly['itinerary_date'] = '2026-08-20';
+$charterOnly['itinerary_start_time'] = '09:00';
+$charterOnly['itinerary_end_date'] = '2026-08-22';
+$charterOnly['itinerary_end_time'] = '18:00';
+$charterResult = process_payload($charterOnly, $mailSender);
+test_assert($charterResult['status'] === 200, 'charter-only inquiry must not require duplicate airport schedule fields');
 
 $invalidEmail = valid_payload();
 $invalidEmail['email'] = "customer@example.com\r\nBcc: victim@example.com";
@@ -224,7 +251,7 @@ test_assert(daitora_rate_limit($rateIp, 'test-fingerprint', 1784500000) === 'ok'
 test_assert(daitora_rate_limit($rateIp, 'test-fingerprint', 1784500001) === 'limited', 'duplicate submission must be limited');
 @unlink($rateFile);
 
-$failedSender = static function (string $to, string $subject, string $body, string $replyTo): bool { return false; };
+$failedSender = static function (string $to, string $subject, string $body, string $replyTo, string $bcc = ''): bool { return false; };
 $result = process_payload(valid_payload(), $failedSender);
 test_assert($result['status'] === 500 && $result['payload']['success'] === false, 'mail transport failure must not report success');
 
