@@ -133,7 +133,7 @@ test_assert(count($captured) === 1, 'inquiry must be sent as one message');
 test_assert($captured[0]['bcc'] === 's_pang@daitora-jp.com', 'backup recipient must be included as BCC');
 test_assert(DAITORA_CONTACT_FROM === 'no-reply@daitora-jp.com', 'From address must be fixed');
 test_assert($captured[0]['replyTo'] === 'customer@example.com', 'validated customer email must be Reply-To');
-test_assert(strpos($captured[0]['body'], '<table') !== false, 'website inquiry email must use an HTML table');
+test_assert(strpos($captured[0]['body'], '<table') === false, 'website inquiry email must use the current plain-text body');
 test_assert(strpos($captured[0]['body'], 'Kansai International Airport') !== false, 'mail body must contain validated transport details');
 test_assert(strpos($captured[0]['subject'], '[STAGING]') === false, 'production subject must not contain the staging prefix');
 
@@ -142,12 +142,12 @@ $japanResult = signed_japan_travel_request(japan_travel_payload(), $mailSender);
 test_assert($japanResult['status'] === 200, 'signed Japan Travel server request must succeed without Origin');
 test_assert($captured[0]['to'] === 'pangvic9@gmail.com', 'Japan Travel inquiry must use the configured mailbox');
 test_assert($captured[0]['replyTo'] === 'traveler@example.com', 'Japan Travel customer email must be Reply-To');
-test_assert(strpos($captured[0]['subject'], '[Japan Travel 予約相談] 2026-08-20｜Test Traveler') !== false, 'Japan Travel subject must use the agreed format');
-test_assert(strpos($captured[0]['body'], 'This message records an inquiry only') !== false, 'Japan Travel mail must state that no booking is confirmed');
+test_assert(strpos($captured[0]['subject'], '[Japan Travel 咨询] 2026-08-20｜Test Traveler') !== false, 'Japan Travel subject must use the current format');
+test_assert(strpos($captured[0]['body'], '重要提示：此邮件仅表示已收到客户咨询，尚未确认预约、车辆、费用或付款。') !== false, 'Japan Travel mail must state that no booking is confirmed');
 test_assert(strpos($captured[0]['body'], 'Kyoto Station') !== false, 'Japan Travel mail must include consultation details');
-test_assert(strpos($captured[0]['body'], "Source channel:\nJapan Travel website") !== false, 'Japan Travel mail must identify its source channel');
-test_assert(strpos($captured[0]['body'], "UTM source:\ninstagram") !== false, 'Japan Travel mail must include consented campaign attribution');
-test_assert(strpos($captured[0]['body'], "Referral code:\nJTTEST01") !== false, 'Japan Travel mail must include referral attribution');
+test_assert(strpos($captured[0]['body'], "来源渠道:\nJapan Travel website") !== false, 'Japan Travel mail must identify its source channel');
+test_assert(strpos($captured[0]['body'], "UTM 来源:\ninstagram") !== false, 'Japan Travel mail must include consented campaign attribution');
+test_assert(strpos($captured[0]['body'], "推荐码:\nJTTEST01") !== false, 'Japan Travel mail must include referral attribution');
 
 $unsignedJapan = process_payload(japan_travel_payload(), $mailSender);
 test_assert($unsignedJapan['status'] === 403, 'unsigned Japan Travel request must be rejected');
